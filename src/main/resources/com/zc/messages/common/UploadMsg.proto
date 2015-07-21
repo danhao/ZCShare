@@ -1,0 +1,11 @@
+//需要上传文件
+option java_outer_classname = "UploadMsgProto";
+
+package com.zc.web.message.common;
+
+message UploadMsg{
+	optional string ossId = 1; // OSSAccessKeyId
+	optional string signature = 2; // 签名
+	optional string policy = 3;	// Policy
+	optional string url = 4; // POST地址
+}

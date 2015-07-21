@@ -1,0 +1,7 @@
+option java_outer_classname = "ValidateMobileReqProto";
+
+package com.zc.web.message.player;
+
+message ValidateMobileReq{
+	optional int32 code = 1;
+}

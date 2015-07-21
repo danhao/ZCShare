@@ -1,0 +1,10 @@
+// 错误信息
+option java_outer_classname = "ErrorMsgProto";
+
+package com.zc.web.message;
+
+message ErrorMsg{
+	optional int32 code = 1; //错误码
+	optional string text = 2; //错误信息
+	optional string extraData = 3; //额外数据
+}

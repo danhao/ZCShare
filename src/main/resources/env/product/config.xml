@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<global key="1234567" mode="test">
+	    <!-- 公共的资源库 -->
+		<res id="0" username="ppseaer" password="ppseaer@ppsea.com" url="jdbc:mysql://127.0.0.1:3306/mh_res" driver="com.mysql.jdbc.Driver" />
+		<!-- 公共的DB -->
+		<data masterHost="127.0.0.1" masterPort="27017" dbname="mh_share" username="" password=""/> 
+	</global>
+	
+	<zone id="1" name="zone1" host="127.0.0.1" httpPort="30001" adminPort="31001" websocketPort="32001" socketPort="33001" >
+		<db>
+		    <mongo masterHost="127.0.0.1" masterPort="27017" dbname="mh_data_1" username="" password="" />
+		</db>
+	</zone>
+</root>

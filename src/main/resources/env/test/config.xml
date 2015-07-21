@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<global key="1234567890" mode="dev">
+	    <!-- 公共的资源库 -->
+		<res id="0" username="zc" password="zc" url="jdbc:mysql://127.0.0.1:3306/zc_res" driver="com.mysql.jdbc.Driver" />
+		<allinpay key="1234567890" merchantId="100020091218001"/>
+	</global>
+	
+	<zone id="1" name="zone1" host="0.0.0.0" hostOut="203.195.133.243" httpPort="30001" adminPort="31001" payPort="32001">
+		<db>
+		    <mongo masterHost="127.0.0.1" masterPort="27017" dbname="zc_data" username="" password="" />
+		</db>
+	</zone>
+</root>

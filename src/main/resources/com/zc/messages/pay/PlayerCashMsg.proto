@@ -1,0 +1,18 @@
+option java_outer_classname = "PlayerCashMsgProto";
+package com.zc.web.message.pay;
+
+message PlayerCashMsg {
+	optional int64 id = 1;
+	optional int64 playerId = 13;
+	optional int32 amount = 2; //'金额（以分为单位）',
+	optional string name = 3;	// 开户名
+	optional int32 type = 4; // 账户类型
+	optional string bankName = 5; // 银行
+	optional string bankAddr = 6; // 开户行所在地
+	optional string bankBranch = 7; // 开户行网点
+	optional string cardNo = 8; // 银行卡号
+	optional string status = 9; //'结果（ 0未处理 1成功2失败）',
+	optional string description = 10; //'补充说明',
+	optional string createAt = 11; //'创建时间',
+	optional string finishAt = 12; //完成时间
+}

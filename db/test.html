@@ -1,0 +1,61 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>通联网上支付平台-商户接口范例-支付请求信息签名</title>
+	</head>
+	<body>
+	<center> <h2>支付请求信息签名</h2></center>	
+	
+	<!--
+		1、订单可以通过post方式或get方式提交，建议使用post方式；
+		   提交支付请求可以使用http或https方式，建议使用https方式。
+		2、通联支付网关地址、商户号及key值，在接入测试时由通联提供；
+		   通联支付网关地址、商户号，在接入生产时由通联提供，key值在通联支付网关会员服务网站上设置。
+	-->
+	
+	<!--================= post 方式提交支付请求 start =====================-->
+    <!--================= 测试地址为 http://ceshi.allinpay.com/gateway/index.do =====================-->
+	<!--================= 生产地址请在测试环境下通过后从业务人员获取 (https://service.allinpay.com/gateway/index.do )=====================-->
+	<form name="form2" action="http://ceshi.allinpay.com/gateway/index.do" method="post">
+		inputCharset <input type="text" name="inputCharset" value="1"/><br>
+		pickupUrl<input type="text" name="pickupUrl" value="http://203.195.133.243/#/member/"/><br>
+		receiveUrl<input type="text" name="receiveUrl" value="http://203.195.133.243:32001"/><br>
+		version<input type="text" name="version" value="v1.0"/><br>
+		language<input type="text" name="language" value="1"/><br>
+		signType<input type="text" name="signType" value="1"/><br>
+		merchantId<input type="text" name="merchantId" value="100020091218001"/><br>
+		payerName<input type="text" name="payerName" value=""/><br>
+		payerEmail<input type="text" name="payerEmail" value=""/><br>
+		payerTelephone<input type="text" name="payerTelephone" value=""/><br>
+		payerIDCard<input type="text" name="payerIDCard" value=""/><br>
+		pid<input type="text" name="pid" value=""/><br>
+		orderNo<input type="text" name="orderNo" value=""/><br>
+		orderAmount<input type="text" name="orderAmount" value="200"/><br>
+		orderCurrency<input type="text" name="orderCurrency" value="0"/><br>
+		orderDatetime<input type="text" name="orderDatetime" value=""/><br>
+		orderExpireDatetime<input type="text" name="orderExpireDatetime" value="60"/><br>
+		productName<input type="text" name="productName" value=""/><br>
+		productPrice<input type="text" name="productPrice" value=""/><br>
+		productNum<input type="text" name="productNum" value=""/><br>
+		productId<input type="text" name="productId" value=""/><br>
+		productDesc<input type="text" name="productDesc" value=""/><br>
+		ext1<input type="text" name="ext1" value="614766165704577025"/><br>
+		ext2<input type="text" name="ext2" value=""/><br>
+		payType<input type="text" name="payType" value="0"/><br>
+		issuerId<input type="text" name="issuerId" value=""/><br>
+		pan<input type="text" name="pan" value=""/><br>
+		tradeNature<input type="text" name="tradeNature" value=""/><br>
+		signMsg<input type="text" name="signMsg" value=""/><br>
+		
+	    <input type="submit" value="确认付款，到通联支付去啦"/>
+	 </form>
+
+	<BODY BGCOLOR='#FFFFFF' TEXT='#000000' LINK='#0000FF' VLINK='#0000FF' ALINK='#FF0000'>
+	
+	<center>
+
+	<div>&nbsp;</div>
+	</center>
+	</body>
+	</html>

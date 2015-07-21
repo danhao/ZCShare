@@ -1,0 +1,8 @@
+//单一字段协议
+option java_outer_classname = "SingleMsgProto";
+
+package com.zc.web.message.common;
+
+message SingleMsg{
+	optional string param = 1; //参数
+}

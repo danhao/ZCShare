@@ -1,0 +1,10 @@
+// 投标
+option java_outer_classname = "BidReqProto";
+
+package com.zc.web.message.debt;
+
+message BidReq{
+	optional string id = 1;	 			// id
+	optional int32 money = 2;			// 投标价格
+	optional int32 rate = 3;			// 代理费率
+}

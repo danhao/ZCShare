@@ -1,0 +1,9 @@
+// 中标
+option java_outer_classname = "BidWinReqProto";
+
+package com.zc.web.message.debt;
+
+message BidWinReq{
+	optional string debtId = 1;	 			// 债务id
+	optional string playerId = 2;			// 用户id
+}

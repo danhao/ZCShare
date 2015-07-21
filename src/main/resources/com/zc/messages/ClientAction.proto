@@ -1,0 +1,37 @@
+//客户端请求命令列表
+option java_outer_classname = "ClientActionProto";
+
+package com.zc.web.message;
+
+enum ClientAction{
+	ACTION_LOGIN = 1; 				// 登录操作(player.LoginReq---->player.PlayerMsg)
+	ACTION_CREATE_USER = 2; 		// 注册(player.PlayerMsg---->player.PlayerMsg)
+	ACTION_GET_USER = 3; 			// 获取用户(null---->player.PlayerMsg)
+	ACTION_VALIDATE = 4; 			// 验证用户(player.ValidateReq---->null)
+	ACTION_VALIDATE_EMAIL = 5; 		// 验证Email(null---->null)
+	ACTION_UPDATE_USER = 6; 		// 更新用户(player.UpdateReq---->null)
+	ACTION_SEND_MOBILE_CODE = 7;	// 发短信验证码(null---->null)
+	ACTION_VALIDATE_MOBILE = 8;		// 验证手机(player.ValidateMobileReq---->null)
+	ACTION_CHANGE_PWD_ONE = 9;		// 重置密码第一步(player.ChangePwdReq---->null)
+	ACTION_CHANGE_PWD_TWO = 10;		// 重置密码第二步(player.ChangePwdReq---->null)
+	ACTION_CHANGE_PWD_THREE = 11;	// 重置密码第三步(player.ChangePwdReq---->null)
+	ACTION_GET_OTHER = 12;			// 查看他人(common.SingleMsg---->player.SimplePlayerMsg)
+	ACTION_LIST_MONEY_HISTORY = 13; // 查看资金使用情况(player.ListMoneyHistoryReq---->player.ListMoneyHistoryRsp)
+	ACTION_LIST_SITUAION = 14; 		// 查看动态(null---->player.ListSituationRsp)
+	ACTION_LIST_CO_PLAYERS = 15;	// 最新企业用户(null---->player.ListCoPlayersRsp)
+
+	ACTION_UPLOAD_PREPARE = 51;		// 准备上传文件(null---->common.UploadMsg)
+
+	ACTION_CREATE_DEBT = 100; 		// 创建债务(debt.DebtMsg---->debt.DebtMsg)
+	ACTION_LIST_DEBTS = 101; 		// 债务列表(debt.ListDebtsReq---->debt.ListDebtsRsp)
+	ACTION_VIEW_DEBT = 102; 		// 债务详情(common.SingleMsg---->debt.DebtMsg)
+	ACTION_LIST_VIEW_DEBTS = 103; 	// 首页债务列表(null---->debt.ListDebtsRsp)
+	ACTION_BID = 104; 				// 投标(debt.BidReq---->null)
+	ACTION_BID_WIN = 105;			// 中标(debt.BidWinReq---->debt.DebtMsg)
+	ACTION_ADD_MESSAGE = 106;		// 增加动态(debt.MessageMsg---->null)
+	ACTION_LIST_SELF_DEBTS = 107; 	// 我相关的债务(common.SingleMsg(1:我发布的 2:我投标的 3:我中标的)---->debt.ListDebtsRsp)
+
+	ACTION_CREATE_ORDER = 200; 		// 创建订单(pay.CreateOrderReq---->pay.CreateOrderRsp)
+	ACTION_DRAW_CASH = 201; 		// 提现申请(pay.PlayerCashMsg---->null)
+
+}

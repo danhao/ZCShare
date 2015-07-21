@@ -1,0 +1,8 @@
+option java_outer_classname = "ValidateReqProto";
+
+package com.zc.web.message.player;
+
+message ValidateReq{
+	optional string email = 1;
+	optional string mobile = 2;
+}

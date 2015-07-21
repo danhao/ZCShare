@@ -1,0 +1,37 @@
+//错误码信息
+option java_outer_classname = "ErrorCodeProto";
+
+package com.zc.web.message;
+
+enum ErrorCode{
+	//-----------------系统相关错误码----------------------------
+ 	ERR_SYSTEM = 1;//系统异常
+	ERR_UNKNOWN = 2; //未知错误
+	ERR_PARAMETER = 3; //错误的参数
+	ERR_NET_TIMEOUT = 4; //网络超时
+	ERR_PLATFORM_INVALID = 5; //平台校验无效
+	ERR_ILLEGAL_REQUEST = 6; //非法请求
+	ERR_MAINTAIN = 7; //服务器维护中
+	ERR_MAX_ONLINE = 8; //最大在线人数
+	ERR_OTHER_LOGIN = 9; //异地登陆
+	ERR_SERVER_STOPPING = 10;//停服中
+
+	//---------------------玩家相关错误码-----------------------------------
+	ERR_ACCOUNT_FORBIDDEN = 100; //封号
+	ERR_LOGOUT = 101; //登出
+	ERR_NO_MONEY = 102; //RMB不足
+	ERR_NO_PLAYER = 103; //不存在
+	ERR_EMAIL_EXIST = 104; //存在email
+	ERR_MOBILE_EXIST = 105; //存在mobile
+	ERR_PASSWD_NOT_SAME = 106; //密码不一致
+	ERR_MOBILE_FAILED = 107; //手机验证失败
+	ERR_CODE_FAILED = 108; //验证码不一致
+	ERR_AUTHORIZED_FAILED = 109; //权限不足
+
+	//---------------------债务相关错误码-----------------------------------
+	ERR_DEBT_INVALID = 200; //非法单
+	ERR_DEBT_BID_LOW = 201; //投标金额不足
+	ERR_DEBT_EXPIRED = 202; //过期
+
+	//---------------------债务相关错误码-----------------------------------
+}

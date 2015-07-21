@@ -1,0 +1,62 @@
+// 债务
+option java_outer_classname = "DebtMsgProto";
+
+package com.zc.web.message.debt;
+
+import "main/resources/com/zc/messages/common/FileMsg.proto";
+
+message DebtMsg{
+	optional int64 id = 1; 					// id
+	optional int32 money = 2;				// 标的价格
+	optional int32 type = 3;				// 2：拍卖；1：代理
+	optional int32 price = 4;				// 起拍价格
+	optional int32 rate = 5;				// 代理费率
+	optional int32 duration = 20;			// 代理期限
+	optional int32 expireDays = 21;			// 竞标到期时间
+	optional int32 bidIncrease = 23;		// 加价幅度
+
+	optional int64 ownerId = 24;			// 发布人
+	optional string ownerName = 25;			// 发布人昵称
+	optional int64 winnerId = 26;			// 获单人ID
+	optional string winnerName = 27;		// 获单人昵称
+
+	optional string creditorName = 30;		// 债权人姓名
+	optional common.FileMsg creditorIdFile = 31; // 债权人身份证文件
+
+	optional string debtorName = 9;			// 债务人名称
+	optional string debtorPhone = 10;		// 债务人电话
+	optional string debtorId = 11;			// 债务人身份证号
+	optional string debtorLocation = 13;	// 地区/城市/区
+	optional string debtorAddr = 12;		// 详细地址
+	optional int32 debtExpireTime = 14; 	// 应归还时间
+	optional string mortgage = 15;			// 抵押
+	optional int32 judgementTime = 16;		// 判决时间
+	optional string reason = 17;			// 债务成因
+	optional string descript = 18;			// 其他
+	repeated common.FileMsg files = 19;		// 文件名称，唯一
+
+	optional int32 publishTime = 6; 		// 审核通过正式发布时间
+	optional int32 endTime = 7; 			// 结束时间
+	optional int32 createTime = 32; 		// 创建时间
+
+	optional common.FileMsg contract = 33;	// 委托协议
+
+	optional int32 state = 22;				// -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+
+	repeated Bidder bidders = 28;
+	repeated Message messages = 29;
+
+	message Bidder{
+		optional int64 id = 1;				// 竞标人ID
+		optional string name = 2;			// 竞标人名称
+		optional int32 money = 3;			// 投标价格
+		optional int32 rate = 5;			// 代理费率
+		optional int32 createTime = 4;		// 投标时间
+	}
+
+	message Message {
+		optional int32 time = 1;	// 时间
+		optional int32 type = 2;	// 类型
+		optional string memo = 3;	// 说明
+	}
+}

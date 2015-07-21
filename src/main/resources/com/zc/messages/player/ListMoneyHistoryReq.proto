@@ -1,0 +1,10 @@
+// 资金使用情况
+option java_outer_classname = "ListMoneyHistoryReqProto";
+
+package com.zc.web.message.player;
+
+message ListMoneyHistoryReq{
+	optional int32 timeFrom = 1;	// 时间（起）
+	optional int32 timeTo = 2;		// 时间（止）
+	optional int32 type = 3;		// 1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+}

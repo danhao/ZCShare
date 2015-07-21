@@ -1,0 +1,10 @@
+// 文件
+option java_outer_classname = "FileMsgProto";
+
+package com.zc.web.message.common;
+
+message FileMsg{
+	optional string id = 1;
+	optional string name = 2;
+	optional string url = 3;		// 可下载地址，上传时不需要设置
+}

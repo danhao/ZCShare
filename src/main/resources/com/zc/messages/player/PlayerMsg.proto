@@ -1,0 +1,49 @@
+// 玩家基本属性
+option java_outer_classname = "PlayerMsgProto";
+
+package com.zc.web.message.player;
+
+import "main/resources/com/zc/messages/common/FileMsg.proto";
+
+message PlayerMsg{
+	optional int64 id = 1; //玩家id
+	optional string name = 2; //玩家名称
+	optional string email = 9;
+	optional string mobile = 10;
+	optional string qq = 37;	// qq号
+	optional int32 createTime = 3; //账号创建时间
+	optional int32 loginTime = 4; //当前登录时间
+	optional int32 lastLoginTime = 5; //上次登录时间
+	optional int32 money = 6; //RMB
+	optional string sid = 7; // session
+	optional string passwd = 8; // 仅请求用
+	optional int32 type = 11; // 0个人；1企业
+	optional int32 role = 12; // 0有债务；1催债
+	optional int32 status = 13;	// 0：新注册；0001；email已验证；0010：mobile已验证；0100：身份已验证；1000：企业已验证
+	optional int32 gender = 14;			// 0:无；1：男；2：女
+	optional int32 rating = 32;	// 信用
+	optional string userId = 15;		// 用户身份证/组织机构代码
+	optional string userName = 16;	// 用户真实姓名
+	optional string companyName = 38;// 企业名称
+	optional string artificialPerson = 17;	// 法人
+	optional string address = 18;		// 地址
+	optional string companyAddress = 39;	// 注册地址
+	optional common.FileMsg idFile = 19;	// 用于认证的身份证文件
+	optional common.FileMsg organizationCodeFile = 20;	// 组织机构代码证文件
+	optional string businessLicence = 21;	// 营业执照号
+	optional common.FileMsg businessLicenceFile = 22;	// 营业执照文件
+	optional string taxNumber = 23;	// 税务登记号
+	optional common.FileMsg taxNumberFile = 24;	// 税务登记证文件
+	optional string accountPermit = 25;	// 开户许可核准号
+	optional common.FileMsg accountPermitFile = 26;	// 开户许可证
+	optional int32 registeredCapital = 27;	// 注册资金
+	optional int32 reqisteredType = 28;		// 注册类型
+	optional int32 foundTime = 29;	// 成立时间
+	optional string businessScope = 30;	// 经营范围
+	optional string businessAddress = 31;	// 经营地址
+	optional string companyPhone = 36;	// 公司联系电话
+	optional common.FileMsg noneCrimeFile = 33;	// 无犯罪证明
+	optional common.FileMsg creditFile = 34;	// 信用报告
+	optional int32 frozen = 35;	// 冻结资金
+	optional string descript = 40; // 描述
+}

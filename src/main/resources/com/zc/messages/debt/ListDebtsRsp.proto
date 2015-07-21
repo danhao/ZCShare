@@ -1,0 +1,22 @@
+// 债务列表
+option java_outer_classname = "ListDebtsRspProto";
+
+package com.zc.web.message.debt;
+
+message ListDebtsRsp{
+	repeated SimpleDebtMsg debt = 1;
+
+	message SimpleDebtMsg{
+		optional int64 id = 1; 					// id
+		optional int32 money = 2;				// 标的价格
+		optional int32 type = 3;				// 2：拍卖；1：代理
+		optional int32 price = 7;				// 起拍价格
+		optional int32 rate = 8;				// 代理费率
+		optional int32 duration = 4;			// 代理期限
+		optional string debtorLocation = 5;		// 地区/城市/区
+		optional int32 publishTime = 6; 		// 审核通过正式发布时间
+		optional int32 debtExpireTime = 9; 		// 应归还时间
+		optional int32 state = 10;				// -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+		optional int32 createTime = 11; 		// 创建时间
+	}
+}

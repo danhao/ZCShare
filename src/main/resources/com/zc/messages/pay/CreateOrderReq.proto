@@ -1,0 +1,29 @@
+option java_outer_classname = "CreateOrderReqProto";
+package com.zc.web.message.pay;
+
+message CreateOrderReq {
+	optional string version = 1;
+	optional string language = 2;
+	optional string inputCharset = 3;
+	optional string pickupUrl = 4;
+	optional string payType = 7;
+	optional string signType = 8;
+	optional string orderAmount = 10;
+	optional string orderCurrency = 12;
+	optional string orderExpireDatetime = 13;
+	optional string payerTelephone = 14;
+	optional string payerEmail = 15;
+	optional string payerName = 16;
+	optional string payerIDCard = 17;
+	optional string pid = 18;
+	optional string productName = 19;
+	optional string productId = 20;
+	optional string productNum = 21;
+	optional string productPrice = 22;
+	optional string productDesc = 23;
+	optional string ext2 = 25;
+	optional string extTL = 26;
+	optional string issuerId = 27;
+	optional string pan = 28;
+	optional string tradeNature = 29;
+}

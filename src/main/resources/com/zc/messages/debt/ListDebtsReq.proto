@@ -1,0 +1,22 @@
+// 债务列表
+option java_outer_classname = "ListDebtsReqProto";
+
+package com.zc.web.message.debt;
+
+message ListDebtsReq{
+	optional int32 page = 1;			// 第n页
+	optional int32 type = 2;			// 1：拍卖；2：代理
+	optional int32 state = 3;			// -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+	optional string location = 4;		// 地址，模糊查询
+	optional int32 publishDays = 5;		// 审核时间
+	optional int32 moneyLow = 6;		// 资产金额（低）
+	optional int32 moneyUp = 7;			// 资产金额（高）
+	optional int32 expireLow = 8;		// 代理期限（低）
+	optional int32 expireUp = 9;		// 代理期限（高）
+	optional string ownerId = 10;		// 发布人ID
+	optional string deputyId = 11;		// 代理人ID
+	optional int32 createTimeFrom = 12;	// 创建时间（起）
+	optional int32 createTimeTo = 13;	// 创建时间（止）
+	optional string id = 14;			// id
+	optional string keyword = 15;		// 关键字
+}

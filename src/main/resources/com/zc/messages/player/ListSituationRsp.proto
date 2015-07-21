@@ -1,0 +1,16 @@
+// 动态
+option java_outer_classname = "ListSituationRspProto";
+
+package com.zc.web.message.player;
+
+message ListSituationRsp{
+
+	repeated SituationMsg situation = 1;
+
+	message SituationMsg{
+		optional int64 id = 1; 					// id
+		optional int32 type = 2;				// 1：发布债务；
+		optional int32 time = 3;	 			// 操作时间
+		optional string content = 4;			// 内容
+	}
+}

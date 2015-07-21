@@ -1,0 +1,10 @@
+option java_outer_classname = "ChangePwdReqProto";
+
+package com.zc.web.message.player;
+
+message ChangePwdReq{
+	optional string email = 1;
+	optional string mobile = 2;
+	optional int32 code = 3;	// 验证时需要传
+	optional string passwd = 4;	// 重置密码需要传
+}

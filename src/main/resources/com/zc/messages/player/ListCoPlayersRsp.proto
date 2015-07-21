@@ -1,0 +1,10 @@
+// 最新加入企业
+option java_outer_classname = "ListCoPlayersRspProto";
+
+package com.zc.web.message.player;
+
+import "main/resources/com/zc/messages/player/PlayerMsg.proto";
+
+message ListCoPlayersRsp{
+	repeated PlayerMsg player = 1;
+}

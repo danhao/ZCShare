@@ -1,0 +1,9 @@
+option java_outer_classname = "LoginReqProto";
+
+package com.zc.web.message.player;
+
+message LoginReq{
+	optional string email = 1;
+	optional string mobile = 2;
+	optional string passwd = 3;
+}

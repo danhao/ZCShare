@@ -1,0 +1,14 @@
+// 玩家基本属性
+option java_outer_classname = "SimplePlayerMsgProto";
+
+package com.zc.web.message.player;
+
+message SimplePlayerMsg{
+	optional int64 id = 1; //玩家id
+	optional string name = 2; //玩家名称
+	optional int32 createTime = 3; //账号创建时间
+	optional int32 type = 4; // 0个人；1企业
+	optional int32 role = 5; // 0有债务；1催债
+	optional int32 status = 6;	// 0：新注册；0001；email已验证；0010：mobile已验证；0100：身份已验证；1000：企业已验证
+	optional int32 gender = 7;	// 0:无；1：男；2：女
+}

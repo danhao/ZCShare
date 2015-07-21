@@ -1,0 +1,12 @@
+option java_outer_classname = "CreateOrderRspProto";
+
+package com.zc.web.message.pay;
+
+message CreateOrderRsp {
+	optional string signMsg = 1;
+	optional string orderNo = 2;
+	optional string orderDatetime = 3;
+	optional string merchantId = 4;
+	optional string receiveUrl = 5;
+	optional string ext1 = 6;
+}

@@ -1,0 +1,6 @@
+compiler.cppOutputDirectory=client/libProtos
+compiler.javaOutputDirectory=src/main/java
+compiler.protocFilePath=/usr/local/bin/protoc
+eclipse.preferences.version=1
+general.enableProjectSettings=true
+general.validateFilesOnActivation=false

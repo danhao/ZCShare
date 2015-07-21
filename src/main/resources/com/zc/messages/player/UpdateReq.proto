@@ -1,0 +1,36 @@
+option java_outer_classname = "UpdateReqProto";
+
+package com.zc.web.message.player;
+
+import "main/resources/com/zc/messages/common/FileMsg.proto";
+
+message UpdateReq{
+	optional string oldPasswd = 1;			// 旧密码
+	optional string newPasswd = 2;			// 新密码
+	optional int32 gender = 3;				// 性别
+	optional string userId = 15;		// 用户身份证/组织机构代码
+	optional string userName = 16;	// 用户真实姓名
+	optional string companyName = 39;	// 企业名称
+	optional string artificialPerson = 17;	// 法人
+	optional string address = 18;		// 地址
+	optional string companyAddress = 40;	// 注册地址
+	optional common.FileMsg idFile = 19;	// 用于认证的身份证文件
+	optional common.FileMsg noneCrimeFile = 37;	// 无犯罪证明
+	optional common.FileMsg creditFile = 38;	// 信用报告
+	optional common.FileMsg organizationCodeFile = 20;	// 组织机构代码证文件
+	optional string businessLicence = 21;	// 营业执照号
+	optional common.FileMsg businessLicenceFile = 22;	// 营业执照文件
+	optional string taxNumber = 23;	// 税务登记号
+	optional common.FileMsg taxNumberFile = 24;	// 税务登记证文件
+	optional string accountPermit = 25;	// 开户许可核准号
+	optional common.FileMsg accountPermitFile = 26;	// 开户许可证
+	optional int32 registeredCapital = 27;	// 注册资金
+	optional int32 reqisteredType = 28;		// 注册类型
+	optional int32 foundTime = 29;	// 成立时间
+	optional string businessScope = 30;	// 经营范围
+	optional string businessAddress = 31;	// 经营地址
+	optional string email = 32;		// Email
+	optional string mobile = 33;	// 手机号
+	optional int32 idValidating = 34; // 1:申请验证身份
+	optional int32 coValidating = 35; // 1:申请验证公司
+}
