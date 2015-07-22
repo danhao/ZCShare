@@ -29,6 +29,13 @@ message DebtMsg{
 	optional string debtorLocation = 13;	// 地区/城市/区
 	optional string debtorAddr = 12;		// 详细地址
 	optional int32 debtExpireTime = 14; 	// 应归还时间
+	optional string debtorContactAddr = 40;	// 债务人通讯地址
+	optional string debtorPostcode = 34;	// 债务人邮编
+	optional string debtorHomePhone = 35;	// 债务人家庭电话
+	optional string debtorHukouAddr = 36;	// 债务人户口所在地
+	optional string debtorCorpAddr = 37;	// 债务人单位地址
+	optional string debtorCorpName = 38;	// 债务人单位名称
+	optional string debtorCorpPhone = 39;	// 债务人单位电话
 	optional string mortgage = 15;			// 抵押
 	optional int32 judgementTime = 16;		// 判决时间
 	optional string reason = 17;			// 债务成因
