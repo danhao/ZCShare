@@ -451,6 +451,195 @@ public final class DebtMsgProto {
      */
     int getDebtExpireTime();
 
+    // optional string debtorContactAddr = 40;
+    /**
+     * <code>optional string debtorContactAddr = 40;</code>
+     *
+     * <pre>
+     * 债务人通讯地址
+     * </pre>
+     */
+    boolean hasDebtorContactAddr();
+    /**
+     * <code>optional string debtorContactAddr = 40;</code>
+     *
+     * <pre>
+     * 债务人通讯地址
+     * </pre>
+     */
+    java.lang.String getDebtorContactAddr();
+    /**
+     * <code>optional string debtorContactAddr = 40;</code>
+     *
+     * <pre>
+     * 债务人通讯地址
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorContactAddrBytes();
+
+    // optional string debtorPostcode = 34;
+    /**
+     * <code>optional string debtorPostcode = 34;</code>
+     *
+     * <pre>
+     * 债务人邮编
+     * </pre>
+     */
+    boolean hasDebtorPostcode();
+    /**
+     * <code>optional string debtorPostcode = 34;</code>
+     *
+     * <pre>
+     * 债务人邮编
+     * </pre>
+     */
+    java.lang.String getDebtorPostcode();
+    /**
+     * <code>optional string debtorPostcode = 34;</code>
+     *
+     * <pre>
+     * 债务人邮编
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorPostcodeBytes();
+
+    // optional string debtorHomePhone = 35;
+    /**
+     * <code>optional string debtorHomePhone = 35;</code>
+     *
+     * <pre>
+     * 债务人家庭电话
+     * </pre>
+     */
+    boolean hasDebtorHomePhone();
+    /**
+     * <code>optional string debtorHomePhone = 35;</code>
+     *
+     * <pre>
+     * 债务人家庭电话
+     * </pre>
+     */
+    java.lang.String getDebtorHomePhone();
+    /**
+     * <code>optional string debtorHomePhone = 35;</code>
+     *
+     * <pre>
+     * 债务人家庭电话
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorHomePhoneBytes();
+
+    // optional string debtorHukouAddr = 36;
+    /**
+     * <code>optional string debtorHukouAddr = 36;</code>
+     *
+     * <pre>
+     * 债务人户口所在地
+     * </pre>
+     */
+    boolean hasDebtorHukouAddr();
+    /**
+     * <code>optional string debtorHukouAddr = 36;</code>
+     *
+     * <pre>
+     * 债务人户口所在地
+     * </pre>
+     */
+    java.lang.String getDebtorHukouAddr();
+    /**
+     * <code>optional string debtorHukouAddr = 36;</code>
+     *
+     * <pre>
+     * 债务人户口所在地
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorHukouAddrBytes();
+
+    // optional string debtorCorpAddr = 37;
+    /**
+     * <code>optional string debtorCorpAddr = 37;</code>
+     *
+     * <pre>
+     * 债务人单位地址
+     * </pre>
+     */
+    boolean hasDebtorCorpAddr();
+    /**
+     * <code>optional string debtorCorpAddr = 37;</code>
+     *
+     * <pre>
+     * 债务人单位地址
+     * </pre>
+     */
+    java.lang.String getDebtorCorpAddr();
+    /**
+     * <code>optional string debtorCorpAddr = 37;</code>
+     *
+     * <pre>
+     * 债务人单位地址
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorCorpAddrBytes();
+
+    // optional string debtorCorpName = 38;
+    /**
+     * <code>optional string debtorCorpName = 38;</code>
+     *
+     * <pre>
+     * 债务人单位名称
+     * </pre>
+     */
+    boolean hasDebtorCorpName();
+    /**
+     * <code>optional string debtorCorpName = 38;</code>
+     *
+     * <pre>
+     * 债务人单位名称
+     * </pre>
+     */
+    java.lang.String getDebtorCorpName();
+    /**
+     * <code>optional string debtorCorpName = 38;</code>
+     *
+     * <pre>
+     * 债务人单位名称
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorCorpNameBytes();
+
+    // optional string debtorCorpPhone = 39;
+    /**
+     * <code>optional string debtorCorpPhone = 39;</code>
+     *
+     * <pre>
+     * 债务人单位电话
+     * </pre>
+     */
+    boolean hasDebtorCorpPhone();
+    /**
+     * <code>optional string debtorCorpPhone = 39;</code>
+     *
+     * <pre>
+     * 债务人单位电话
+     * </pre>
+     */
+    java.lang.String getDebtorCorpPhone();
+    /**
+     * <code>optional string debtorCorpPhone = 39;</code>
+     *
+     * <pre>
+     * 债务人单位电话
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorCorpPhoneBytes();
+
     // optional string mortgage = 15;
     /**
      * <code>optional string mortgage = 15;</code>
@@ -777,6 +966,7 @@ public final class DebtMsgProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -820,12 +1010,12 @@ public final class DebtMsgProto {
               break;
             }
             case 48: {
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x80000000;
               publishTime_ = input.readInt32();
               break;
             }
             case 56: {
-              bitField0_ |= 0x02000000;
+              bitField1_ |= 0x00000001;
               endTime_ = input.readInt32();
               break;
             }
@@ -860,29 +1050,29 @@ public final class DebtMsgProto {
               break;
             }
             case 122: {
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x08000000;
               mortgage_ = input.readBytes();
               break;
             }
             case 128: {
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x10000000;
               judgementTime_ = input.readInt32();
               break;
             }
             case 138: {
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x20000000;
               reason_ = input.readBytes();
               break;
             }
             case 146: {
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x40000000;
               descript_ = input.readBytes();
               break;
             }
             case 154: {
-              if (!((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+              if (!((mutable_bitField0_ & 0x80000000) == 0x80000000)) {
                 files_ = new java.util.ArrayList<com.zc.web.message.common.FileMsgProto.FileMsg>();
-                mutable_bitField0_ |= 0x01000000;
+                mutable_bitField0_ |= 0x80000000;
               }
               files_.add(input.readMessage(com.zc.web.message.common.FileMsgProto.FileMsg.PARSER, extensionRegistry));
               break;
@@ -898,7 +1088,7 @@ public final class DebtMsgProto {
               break;
             }
             case 176: {
-              bitField0_ |= 0x10000000;
+              bitField1_ |= 0x00000008;
               state_ = input.readInt32();
               break;
             }
@@ -928,17 +1118,17 @@ public final class DebtMsgProto {
               break;
             }
             case 226: {
-              if (!((mutable_bitField0_ & 0x40000000) == 0x40000000)) {
+              if (!((mutable_bitField1_ & 0x00000020) == 0x00000020)) {
                 bidders_ = new java.util.ArrayList<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Bidder>();
-                mutable_bitField0_ |= 0x40000000;
+                mutable_bitField1_ |= 0x00000020;
               }
               bidders_.add(input.readMessage(com.zc.web.message.debt.DebtMsgProto.DebtMsg.Bidder.PARSER, extensionRegistry));
               break;
             }
             case 234: {
-              if (!((mutable_bitField0_ & 0x80000000) == 0x80000000)) {
+              if (!((mutable_bitField1_ & 0x00000040) == 0x00000040)) {
                 messages_ = new java.util.ArrayList<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message>();
-                mutable_bitField0_ |= 0x80000000;
+                mutable_bitField1_ |= 0x00000040;
               }
               messages_.add(input.readMessage(com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.PARSER, extensionRegistry));
               break;
@@ -962,13 +1152,13 @@ public final class DebtMsgProto {
               break;
             }
             case 256: {
-              bitField0_ |= 0x04000000;
+              bitField1_ |= 0x00000002;
               createTime_ = input.readInt32();
               break;
             }
             case 266: {
               com.zc.web.message.common.FileMsgProto.FileMsg.Builder subBuilder = null;
-              if (((bitField0_ & 0x08000000) == 0x08000000)) {
+              if (((bitField1_ & 0x00000004) == 0x00000004)) {
                 subBuilder = contract_.toBuilder();
               }
               contract_ = input.readMessage(com.zc.web.message.common.FileMsgProto.FileMsg.PARSER, extensionRegistry);
@@ -976,7 +1166,42 @@ public final class DebtMsgProto {
                 subBuilder.mergeFrom(contract_);
                 contract_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x08000000;
+              bitField1_ |= 0x00000004;
+              break;
+            }
+            case 274: {
+              bitField0_ |= 0x00200000;
+              debtorPostcode_ = input.readBytes();
+              break;
+            }
+            case 282: {
+              bitField0_ |= 0x00400000;
+              debtorHomePhone_ = input.readBytes();
+              break;
+            }
+            case 290: {
+              bitField0_ |= 0x00800000;
+              debtorHukouAddr_ = input.readBytes();
+              break;
+            }
+            case 298: {
+              bitField0_ |= 0x01000000;
+              debtorCorpAddr_ = input.readBytes();
+              break;
+            }
+            case 306: {
+              bitField0_ |= 0x02000000;
+              debtorCorpName_ = input.readBytes();
+              break;
+            }
+            case 314: {
+              bitField0_ |= 0x04000000;
+              debtorCorpPhone_ = input.readBytes();
+              break;
+            }
+            case 322: {
+              bitField0_ |= 0x00100000;
+              debtorContactAddr_ = input.readBytes();
               break;
             }
           }
@@ -987,13 +1212,13 @@ public final class DebtMsgProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+        if (((mutable_bitField0_ & 0x80000000) == 0x80000000)) {
           files_ = java.util.Collections.unmodifiableList(files_);
         }
-        if (((mutable_bitField0_ & 0x40000000) == 0x40000000)) {
+        if (((mutable_bitField1_ & 0x00000020) == 0x00000020)) {
           bidders_ = java.util.Collections.unmodifiableList(bidders_);
         }
-        if (((mutable_bitField0_ & 0x80000000) == 0x80000000)) {
+        if (((mutable_bitField1_ & 0x00000040) == 0x00000040)) {
           messages_ = java.util.Collections.unmodifiableList(messages_);
         }
         this.unknownFields = unknownFields.build();
@@ -2744,6 +2969,7 @@ public final class DebtMsgProto {
     }
 
     private int bitField0_;
+    private int bitField1_;
     // optional int64 id = 1;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_;
@@ -3482,6 +3708,391 @@ public final class DebtMsgProto {
       return debtExpireTime_;
     }
 
+    // optional string debtorContactAddr = 40;
+    public static final int DEBTORCONTACTADDR_FIELD_NUMBER = 40;
+    private java.lang.Object debtorContactAddr_;
+    /**
+     * <code>optional string debtorContactAddr = 40;</code>
+     *
+     * <pre>
+     * 债务人通讯地址
+     * </pre>
+     */
+    public boolean hasDebtorContactAddr() {
+      return ((bitField0_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional string debtorContactAddr = 40;</code>
+     *
+     * <pre>
+     * 债务人通讯地址
+     * </pre>
+     */
+    public java.lang.String getDebtorContactAddr() {
+      java.lang.Object ref = debtorContactAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorContactAddr_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorContactAddr = 40;</code>
+     *
+     * <pre>
+     * 债务人通讯地址
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorContactAddrBytes() {
+      java.lang.Object ref = debtorContactAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorContactAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string debtorPostcode = 34;
+    public static final int DEBTORPOSTCODE_FIELD_NUMBER = 34;
+    private java.lang.Object debtorPostcode_;
+    /**
+     * <code>optional string debtorPostcode = 34;</code>
+     *
+     * <pre>
+     * 债务人邮编
+     * </pre>
+     */
+    public boolean hasDebtorPostcode() {
+      return ((bitField0_ & 0x00200000) == 0x00200000);
+    }
+    /**
+     * <code>optional string debtorPostcode = 34;</code>
+     *
+     * <pre>
+     * 债务人邮编
+     * </pre>
+     */
+    public java.lang.String getDebtorPostcode() {
+      java.lang.Object ref = debtorPostcode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorPostcode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorPostcode = 34;</code>
+     *
+     * <pre>
+     * 债务人邮编
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorPostcodeBytes() {
+      java.lang.Object ref = debtorPostcode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorPostcode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string debtorHomePhone = 35;
+    public static final int DEBTORHOMEPHONE_FIELD_NUMBER = 35;
+    private java.lang.Object debtorHomePhone_;
+    /**
+     * <code>optional string debtorHomePhone = 35;</code>
+     *
+     * <pre>
+     * 债务人家庭电话
+     * </pre>
+     */
+    public boolean hasDebtorHomePhone() {
+      return ((bitField0_ & 0x00400000) == 0x00400000);
+    }
+    /**
+     * <code>optional string debtorHomePhone = 35;</code>
+     *
+     * <pre>
+     * 债务人家庭电话
+     * </pre>
+     */
+    public java.lang.String getDebtorHomePhone() {
+      java.lang.Object ref = debtorHomePhone_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorHomePhone_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorHomePhone = 35;</code>
+     *
+     * <pre>
+     * 债务人家庭电话
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorHomePhoneBytes() {
+      java.lang.Object ref = debtorHomePhone_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorHomePhone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string debtorHukouAddr = 36;
+    public static final int DEBTORHUKOUADDR_FIELD_NUMBER = 36;
+    private java.lang.Object debtorHukouAddr_;
+    /**
+     * <code>optional string debtorHukouAddr = 36;</code>
+     *
+     * <pre>
+     * 债务人户口所在地
+     * </pre>
+     */
+    public boolean hasDebtorHukouAddr() {
+      return ((bitField0_ & 0x00800000) == 0x00800000);
+    }
+    /**
+     * <code>optional string debtorHukouAddr = 36;</code>
+     *
+     * <pre>
+     * 债务人户口所在地
+     * </pre>
+     */
+    public java.lang.String getDebtorHukouAddr() {
+      java.lang.Object ref = debtorHukouAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorHukouAddr_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorHukouAddr = 36;</code>
+     *
+     * <pre>
+     * 债务人户口所在地
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorHukouAddrBytes() {
+      java.lang.Object ref = debtorHukouAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorHukouAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string debtorCorpAddr = 37;
+    public static final int DEBTORCORPADDR_FIELD_NUMBER = 37;
+    private java.lang.Object debtorCorpAddr_;
+    /**
+     * <code>optional string debtorCorpAddr = 37;</code>
+     *
+     * <pre>
+     * 债务人单位地址
+     * </pre>
+     */
+    public boolean hasDebtorCorpAddr() {
+      return ((bitField0_ & 0x01000000) == 0x01000000);
+    }
+    /**
+     * <code>optional string debtorCorpAddr = 37;</code>
+     *
+     * <pre>
+     * 债务人单位地址
+     * </pre>
+     */
+    public java.lang.String getDebtorCorpAddr() {
+      java.lang.Object ref = debtorCorpAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorCorpAddr_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorCorpAddr = 37;</code>
+     *
+     * <pre>
+     * 债务人单位地址
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorCorpAddrBytes() {
+      java.lang.Object ref = debtorCorpAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorCorpAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string debtorCorpName = 38;
+    public static final int DEBTORCORPNAME_FIELD_NUMBER = 38;
+    private java.lang.Object debtorCorpName_;
+    /**
+     * <code>optional string debtorCorpName = 38;</code>
+     *
+     * <pre>
+     * 债务人单位名称
+     * </pre>
+     */
+    public boolean hasDebtorCorpName() {
+      return ((bitField0_ & 0x02000000) == 0x02000000);
+    }
+    /**
+     * <code>optional string debtorCorpName = 38;</code>
+     *
+     * <pre>
+     * 债务人单位名称
+     * </pre>
+     */
+    public java.lang.String getDebtorCorpName() {
+      java.lang.Object ref = debtorCorpName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorCorpName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorCorpName = 38;</code>
+     *
+     * <pre>
+     * 债务人单位名称
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorCorpNameBytes() {
+      java.lang.Object ref = debtorCorpName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorCorpName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string debtorCorpPhone = 39;
+    public static final int DEBTORCORPPHONE_FIELD_NUMBER = 39;
+    private java.lang.Object debtorCorpPhone_;
+    /**
+     * <code>optional string debtorCorpPhone = 39;</code>
+     *
+     * <pre>
+     * 债务人单位电话
+     * </pre>
+     */
+    public boolean hasDebtorCorpPhone() {
+      return ((bitField0_ & 0x04000000) == 0x04000000);
+    }
+    /**
+     * <code>optional string debtorCorpPhone = 39;</code>
+     *
+     * <pre>
+     * 债务人单位电话
+     * </pre>
+     */
+    public java.lang.String getDebtorCorpPhone() {
+      java.lang.Object ref = debtorCorpPhone_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorCorpPhone_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorCorpPhone = 39;</code>
+     *
+     * <pre>
+     * 债务人单位电话
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorCorpPhoneBytes() {
+      java.lang.Object ref = debtorCorpPhone_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorCorpPhone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     // optional string mortgage = 15;
     public static final int MORTGAGE_FIELD_NUMBER = 15;
     private java.lang.Object mortgage_;
@@ -3493,7 +4104,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasMortgage() {
-      return ((bitField0_ & 0x00100000) == 0x00100000);
+      return ((bitField0_ & 0x08000000) == 0x08000000);
     }
     /**
      * <code>optional string mortgage = 15;</code>
@@ -3548,7 +4159,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasJudgementTime() {
-      return ((bitField0_ & 0x00200000) == 0x00200000);
+      return ((bitField0_ & 0x10000000) == 0x10000000);
     }
     /**
      * <code>optional int32 judgementTime = 16;</code>
@@ -3572,7 +4183,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasReason() {
-      return ((bitField0_ & 0x00400000) == 0x00400000);
+      return ((bitField0_ & 0x20000000) == 0x20000000);
     }
     /**
      * <code>optional string reason = 17;</code>
@@ -3627,7 +4238,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasDescript() {
-      return ((bitField0_ & 0x00800000) == 0x00800000);
+      return ((bitField0_ & 0x40000000) == 0x40000000);
     }
     /**
      * <code>optional string descript = 18;</code>
@@ -3738,7 +4349,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasPublishTime() {
-      return ((bitField0_ & 0x01000000) == 0x01000000);
+      return ((bitField0_ & 0x80000000) == 0x80000000);
     }
     /**
      * <code>optional int32 publishTime = 6;</code>
@@ -3762,7 +4373,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x02000000) == 0x02000000);
+      return ((bitField1_ & 0x00000001) == 0x00000001);
     }
     /**
      * <code>optional int32 endTime = 7;</code>
@@ -3786,7 +4397,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x04000000) == 0x04000000);
+      return ((bitField1_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>optional int32 createTime = 32;</code>
@@ -3810,7 +4421,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasContract() {
-      return ((bitField0_ & 0x08000000) == 0x08000000);
+      return ((bitField1_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>optional .com.zc.web.message.common.FileMsg contract = 33;</code>
@@ -3844,7 +4455,7 @@ public final class DebtMsgProto {
      * </pre>
      */
     public boolean hasState() {
-      return ((bitField0_ & 0x10000000) == 0x10000000);
+      return ((bitField1_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>optional int32 state = 22;</code>
@@ -3950,6 +4561,13 @@ public final class DebtMsgProto {
       debtorLocation_ = "";
       debtorAddr_ = "";
       debtExpireTime_ = 0;
+      debtorContactAddr_ = "";
+      debtorPostcode_ = "";
+      debtorHomePhone_ = "";
+      debtorHukouAddr_ = "";
+      debtorCorpAddr_ = "";
+      debtorCorpName_ = "";
+      debtorCorpPhone_ = "";
       mortgage_ = "";
       judgementTime_ = 0;
       reason_ = "";
@@ -3990,10 +4608,10 @@ public final class DebtMsgProto {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeInt32(5, rate_);
       }
-      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+      if (((bitField0_ & 0x80000000) == 0x80000000)) {
         output.writeInt32(6, publishTime_);
       }
-      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+      if (((bitField1_ & 0x00000001) == 0x00000001)) {
         output.writeInt32(7, endTime_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
@@ -4014,16 +4632,16 @@ public final class DebtMsgProto {
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeInt32(14, debtExpireTime_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
         output.writeBytes(15, getMortgageBytes());
       }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+      if (((bitField0_ & 0x10000000) == 0x10000000)) {
         output.writeInt32(16, judgementTime_);
       }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
         output.writeBytes(17, getReasonBytes());
       }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
         output.writeBytes(18, getDescriptBytes());
       }
       for (int i = 0; i < files_.size(); i++) {
@@ -4035,7 +4653,7 @@ public final class DebtMsgProto {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeInt32(21, expireDays_);
       }
-      if (((bitField0_ & 0x10000000) == 0x10000000)) {
+      if (((bitField1_ & 0x00000008) == 0x00000008)) {
         output.writeInt32(22, state_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
@@ -4065,11 +4683,32 @@ public final class DebtMsgProto {
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeMessage(31, creditorIdFile_);
       }
-      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+      if (((bitField1_ & 0x00000002) == 0x00000002)) {
         output.writeInt32(32, createTime_);
       }
-      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+      if (((bitField1_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(33, contract_);
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        output.writeBytes(34, getDebtorPostcodeBytes());
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        output.writeBytes(35, getDebtorHomePhoneBytes());
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        output.writeBytes(36, getDebtorHukouAddrBytes());
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        output.writeBytes(37, getDebtorCorpAddrBytes());
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        output.writeBytes(38, getDebtorCorpNameBytes());
+      }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        output.writeBytes(39, getDebtorCorpPhoneBytes());
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        output.writeBytes(40, getDebtorContactAddrBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4100,11 +4739,11 @@ public final class DebtMsgProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, rate_);
       }
-      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+      if (((bitField0_ & 0x80000000) == 0x80000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, publishTime_);
       }
-      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+      if (((bitField1_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, endTime_);
       }
@@ -4132,19 +4771,19 @@ public final class DebtMsgProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(14, debtExpireTime_);
       }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(15, getMortgageBytes());
       }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+      if (((bitField0_ & 0x10000000) == 0x10000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(16, judgementTime_);
       }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(17, getReasonBytes());
       }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(18, getDescriptBytes());
       }
@@ -4160,7 +4799,7 @@ public final class DebtMsgProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(21, expireDays_);
       }
-      if (((bitField0_ & 0x10000000) == 0x10000000)) {
+      if (((bitField1_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(22, state_);
       }
@@ -4200,13 +4839,41 @@ public final class DebtMsgProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(31, creditorIdFile_);
       }
-      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+      if (((bitField1_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(32, createTime_);
       }
-      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+      if (((bitField1_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(33, contract_);
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(34, getDebtorPostcodeBytes());
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(35, getDebtorHomePhoneBytes());
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(36, getDebtorHukouAddrBytes());
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(37, getDebtorCorpAddrBytes());
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(38, getDebtorCorpNameBytes());
+      }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(39, getDebtorCorpPhoneBytes());
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(40, getDebtorContactAddrBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4373,43 +5040,57 @@ public final class DebtMsgProto {
         bitField0_ = (bitField0_ & ~0x00040000);
         debtExpireTime_ = 0;
         bitField0_ = (bitField0_ & ~0x00080000);
-        mortgage_ = "";
+        debtorContactAddr_ = "";
         bitField0_ = (bitField0_ & ~0x00100000);
-        judgementTime_ = 0;
+        debtorPostcode_ = "";
         bitField0_ = (bitField0_ & ~0x00200000);
-        reason_ = "";
+        debtorHomePhone_ = "";
         bitField0_ = (bitField0_ & ~0x00400000);
-        descript_ = "";
+        debtorHukouAddr_ = "";
         bitField0_ = (bitField0_ & ~0x00800000);
+        debtorCorpAddr_ = "";
+        bitField0_ = (bitField0_ & ~0x01000000);
+        debtorCorpName_ = "";
+        bitField0_ = (bitField0_ & ~0x02000000);
+        debtorCorpPhone_ = "";
+        bitField0_ = (bitField0_ & ~0x04000000);
+        mortgage_ = "";
+        bitField0_ = (bitField0_ & ~0x08000000);
+        judgementTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x10000000);
+        reason_ = "";
+        bitField0_ = (bitField0_ & ~0x20000000);
+        descript_ = "";
+        bitField0_ = (bitField0_ & ~0x40000000);
         if (filesBuilder_ == null) {
           files_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x01000000);
+          bitField0_ = (bitField0_ & ~0x80000000);
         } else {
           filesBuilder_.clear();
         }
         publishTime_ = 0;
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         endTime_ = 0;
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField1_ = (bitField1_ & ~0x00000002);
         createTime_ = 0;
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField1_ = (bitField1_ & ~0x00000004);
         if (contractBuilder_ == null) {
           contract_ = com.zc.web.message.common.FileMsgProto.FileMsg.getDefaultInstance();
         } else {
           contractBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField1_ = (bitField1_ & ~0x00000008);
         state_ = 0;
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField1_ = (bitField1_ & ~0x00000010);
         if (biddersBuilder_ == null) {
           bidders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x40000000);
+          bitField1_ = (bitField1_ & ~0x00000020);
         } else {
           biddersBuilder_.clear();
         }
         if (messagesBuilder_ == null) {
           messages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x80000000);
+          bitField1_ = (bitField1_ & ~0x00000040);
         } else {
           messagesBuilder_.clear();
         }
@@ -4440,7 +5121,9 @@ public final class DebtMsgProto {
       public com.zc.web.message.debt.DebtMsgProto.DebtMsg buildPartial() {
         com.zc.web.message.debt.DebtMsgProto.DebtMsg result = new com.zc.web.message.debt.DebtMsgProto.DebtMsg(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
+        int to_bitField1_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
@@ -4528,71 +5211,100 @@ public final class DebtMsgProto {
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00100000;
         }
-        result.mortgage_ = mortgage_;
+        result.debtorContactAddr_ = debtorContactAddr_;
         if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
           to_bitField0_ |= 0x00200000;
         }
-        result.judgementTime_ = judgementTime_;
+        result.debtorPostcode_ = debtorPostcode_;
         if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
           to_bitField0_ |= 0x00400000;
         }
-        result.reason_ = reason_;
+        result.debtorHomePhone_ = debtorHomePhone_;
         if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
           to_bitField0_ |= 0x00800000;
         }
+        result.debtorHukouAddr_ = debtorHukouAddr_;
+        if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
+          to_bitField0_ |= 0x01000000;
+        }
+        result.debtorCorpAddr_ = debtorCorpAddr_;
+        if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
+          to_bitField0_ |= 0x02000000;
+        }
+        result.debtorCorpName_ = debtorCorpName_;
+        if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
+          to_bitField0_ |= 0x04000000;
+        }
+        result.debtorCorpPhone_ = debtorCorpPhone_;
+        if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
+          to_bitField0_ |= 0x08000000;
+        }
+        result.mortgage_ = mortgage_;
+        if (((from_bitField0_ & 0x10000000) == 0x10000000)) {
+          to_bitField0_ |= 0x10000000;
+        }
+        result.judgementTime_ = judgementTime_;
+        if (((from_bitField0_ & 0x20000000) == 0x20000000)) {
+          to_bitField0_ |= 0x20000000;
+        }
+        result.reason_ = reason_;
+        if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
+          to_bitField0_ |= 0x40000000;
+        }
         result.descript_ = descript_;
         if (filesBuilder_ == null) {
-          if (((bitField0_ & 0x01000000) == 0x01000000)) {
+          if (((bitField0_ & 0x80000000) == 0x80000000)) {
             files_ = java.util.Collections.unmodifiableList(files_);
-            bitField0_ = (bitField0_ & ~0x01000000);
+            bitField0_ = (bitField0_ & ~0x80000000);
           }
           result.files_ = files_;
         } else {
           result.files_ = filesBuilder_.build();
         }
-        if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
-          to_bitField0_ |= 0x01000000;
+        if (((from_bitField1_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x80000000;
         }
         result.publishTime_ = publishTime_;
-        if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
-          to_bitField0_ |= 0x02000000;
+        if (((from_bitField1_ & 0x00000002) == 0x00000002)) {
+          to_bitField1_ |= 0x00000001;
         }
         result.endTime_ = endTime_;
-        if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
-          to_bitField0_ |= 0x04000000;
+        if (((from_bitField1_ & 0x00000004) == 0x00000004)) {
+          to_bitField1_ |= 0x00000002;
         }
         result.createTime_ = createTime_;
-        if (((from_bitField0_ & 0x10000000) == 0x10000000)) {
-          to_bitField0_ |= 0x08000000;
+        if (((from_bitField1_ & 0x00000008) == 0x00000008)) {
+          to_bitField1_ |= 0x00000004;
         }
         if (contractBuilder_ == null) {
           result.contract_ = contract_;
         } else {
           result.contract_ = contractBuilder_.build();
         }
-        if (((from_bitField0_ & 0x20000000) == 0x20000000)) {
-          to_bitField0_ |= 0x10000000;
+        if (((from_bitField1_ & 0x00000010) == 0x00000010)) {
+          to_bitField1_ |= 0x00000008;
         }
         result.state_ = state_;
         if (biddersBuilder_ == null) {
-          if (((bitField0_ & 0x40000000) == 0x40000000)) {
+          if (((bitField1_ & 0x00000020) == 0x00000020)) {
             bidders_ = java.util.Collections.unmodifiableList(bidders_);
-            bitField0_ = (bitField0_ & ~0x40000000);
+            bitField1_ = (bitField1_ & ~0x00000020);
           }
           result.bidders_ = bidders_;
         } else {
           result.bidders_ = biddersBuilder_.build();
         }
         if (messagesBuilder_ == null) {
-          if (((bitField0_ & 0x80000000) == 0x80000000)) {
+          if (((bitField1_ & 0x00000040) == 0x00000040)) {
             messages_ = java.util.Collections.unmodifiableList(messages_);
-            bitField0_ = (bitField0_ & ~0x80000000);
+            bitField1_ = (bitField1_ & ~0x00000040);
           }
           result.messages_ = messages_;
         } else {
           result.messages_ = messagesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
+        result.bitField1_ = to_bitField1_;
         onBuilt();
         return result;
       }
@@ -4684,8 +5396,43 @@ public final class DebtMsgProto {
         if (other.hasDebtExpireTime()) {
           setDebtExpireTime(other.getDebtExpireTime());
         }
-        if (other.hasMortgage()) {
+        if (other.hasDebtorContactAddr()) {
           bitField0_ |= 0x00100000;
+          debtorContactAddr_ = other.debtorContactAddr_;
+          onChanged();
+        }
+        if (other.hasDebtorPostcode()) {
+          bitField0_ |= 0x00200000;
+          debtorPostcode_ = other.debtorPostcode_;
+          onChanged();
+        }
+        if (other.hasDebtorHomePhone()) {
+          bitField0_ |= 0x00400000;
+          debtorHomePhone_ = other.debtorHomePhone_;
+          onChanged();
+        }
+        if (other.hasDebtorHukouAddr()) {
+          bitField0_ |= 0x00800000;
+          debtorHukouAddr_ = other.debtorHukouAddr_;
+          onChanged();
+        }
+        if (other.hasDebtorCorpAddr()) {
+          bitField0_ |= 0x01000000;
+          debtorCorpAddr_ = other.debtorCorpAddr_;
+          onChanged();
+        }
+        if (other.hasDebtorCorpName()) {
+          bitField0_ |= 0x02000000;
+          debtorCorpName_ = other.debtorCorpName_;
+          onChanged();
+        }
+        if (other.hasDebtorCorpPhone()) {
+          bitField0_ |= 0x04000000;
+          debtorCorpPhone_ = other.debtorCorpPhone_;
+          onChanged();
+        }
+        if (other.hasMortgage()) {
+          bitField0_ |= 0x08000000;
           mortgage_ = other.mortgage_;
           onChanged();
         }
@@ -4693,12 +5440,12 @@ public final class DebtMsgProto {
           setJudgementTime(other.getJudgementTime());
         }
         if (other.hasReason()) {
-          bitField0_ |= 0x00400000;
+          bitField0_ |= 0x20000000;
           reason_ = other.reason_;
           onChanged();
         }
         if (other.hasDescript()) {
-          bitField0_ |= 0x00800000;
+          bitField0_ |= 0x40000000;
           descript_ = other.descript_;
           onChanged();
         }
@@ -4706,7 +5453,7 @@ public final class DebtMsgProto {
           if (!other.files_.isEmpty()) {
             if (files_.isEmpty()) {
               files_ = other.files_;
-              bitField0_ = (bitField0_ & ~0x01000000);
+              bitField0_ = (bitField0_ & ~0x80000000);
             } else {
               ensureFilesIsMutable();
               files_.addAll(other.files_);
@@ -4719,7 +5466,7 @@ public final class DebtMsgProto {
               filesBuilder_.dispose();
               filesBuilder_ = null;
               files_ = other.files_;
-              bitField0_ = (bitField0_ & ~0x01000000);
+              bitField0_ = (bitField0_ & ~0x80000000);
               filesBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getFilesFieldBuilder() : null;
@@ -4747,7 +5494,7 @@ public final class DebtMsgProto {
           if (!other.bidders_.isEmpty()) {
             if (bidders_.isEmpty()) {
               bidders_ = other.bidders_;
-              bitField0_ = (bitField0_ & ~0x40000000);
+              bitField1_ = (bitField1_ & ~0x00000020);
             } else {
               ensureBiddersIsMutable();
               bidders_.addAll(other.bidders_);
@@ -4760,7 +5507,7 @@ public final class DebtMsgProto {
               biddersBuilder_.dispose();
               biddersBuilder_ = null;
               bidders_ = other.bidders_;
-              bitField0_ = (bitField0_ & ~0x40000000);
+              bitField1_ = (bitField1_ & ~0x00000020);
               biddersBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getBiddersFieldBuilder() : null;
@@ -4773,7 +5520,7 @@ public final class DebtMsgProto {
           if (!other.messages_.isEmpty()) {
             if (messages_.isEmpty()) {
               messages_ = other.messages_;
-              bitField0_ = (bitField0_ & ~0x80000000);
+              bitField1_ = (bitField1_ & ~0x00000040);
             } else {
               ensureMessagesIsMutable();
               messages_.addAll(other.messages_);
@@ -4786,7 +5533,7 @@ public final class DebtMsgProto {
               messagesBuilder_.dispose();
               messagesBuilder_ = null;
               messages_ = other.messages_;
-              bitField0_ = (bitField0_ & ~0x80000000);
+              bitField1_ = (bitField1_ & ~0x00000040);
               messagesBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getMessagesFieldBuilder() : null;
@@ -4821,6 +5568,7 @@ public final class DebtMsgProto {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       // optional int64 id = 1;
       private long id_ ;
@@ -6298,6 +7046,692 @@ public final class DebtMsgProto {
         return this;
       }
 
+      // optional string debtorContactAddr = 40;
+      private java.lang.Object debtorContactAddr_ = "";
+      /**
+       * <code>optional string debtorContactAddr = 40;</code>
+       *
+       * <pre>
+       * 债务人通讯地址
+       * </pre>
+       */
+      public boolean hasDebtorContactAddr() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>optional string debtorContactAddr = 40;</code>
+       *
+       * <pre>
+       * 债务人通讯地址
+       * </pre>
+       */
+      public java.lang.String getDebtorContactAddr() {
+        java.lang.Object ref = debtorContactAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorContactAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorContactAddr = 40;</code>
+       *
+       * <pre>
+       * 债务人通讯地址
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorContactAddrBytes() {
+        java.lang.Object ref = debtorContactAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorContactAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorContactAddr = 40;</code>
+       *
+       * <pre>
+       * 债务人通讯地址
+       * </pre>
+       */
+      public Builder setDebtorContactAddr(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00100000;
+        debtorContactAddr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorContactAddr = 40;</code>
+       *
+       * <pre>
+       * 债务人通讯地址
+       * </pre>
+       */
+      public Builder clearDebtorContactAddr() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        debtorContactAddr_ = getDefaultInstance().getDebtorContactAddr();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorContactAddr = 40;</code>
+       *
+       * <pre>
+       * 债务人通讯地址
+       * </pre>
+       */
+      public Builder setDebtorContactAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00100000;
+        debtorContactAddr_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string debtorPostcode = 34;
+      private java.lang.Object debtorPostcode_ = "";
+      /**
+       * <code>optional string debtorPostcode = 34;</code>
+       *
+       * <pre>
+       * 债务人邮编
+       * </pre>
+       */
+      public boolean hasDebtorPostcode() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <code>optional string debtorPostcode = 34;</code>
+       *
+       * <pre>
+       * 债务人邮编
+       * </pre>
+       */
+      public java.lang.String getDebtorPostcode() {
+        java.lang.Object ref = debtorPostcode_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorPostcode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorPostcode = 34;</code>
+       *
+       * <pre>
+       * 债务人邮编
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorPostcodeBytes() {
+        java.lang.Object ref = debtorPostcode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorPostcode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorPostcode = 34;</code>
+       *
+       * <pre>
+       * 债务人邮编
+       * </pre>
+       */
+      public Builder setDebtorPostcode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00200000;
+        debtorPostcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorPostcode = 34;</code>
+       *
+       * <pre>
+       * 债务人邮编
+       * </pre>
+       */
+      public Builder clearDebtorPostcode() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        debtorPostcode_ = getDefaultInstance().getDebtorPostcode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorPostcode = 34;</code>
+       *
+       * <pre>
+       * 债务人邮编
+       * </pre>
+       */
+      public Builder setDebtorPostcodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00200000;
+        debtorPostcode_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string debtorHomePhone = 35;
+      private java.lang.Object debtorHomePhone_ = "";
+      /**
+       * <code>optional string debtorHomePhone = 35;</code>
+       *
+       * <pre>
+       * 债务人家庭电话
+       * </pre>
+       */
+      public boolean hasDebtorHomePhone() {
+        return ((bitField0_ & 0x00400000) == 0x00400000);
+      }
+      /**
+       * <code>optional string debtorHomePhone = 35;</code>
+       *
+       * <pre>
+       * 债务人家庭电话
+       * </pre>
+       */
+      public java.lang.String getDebtorHomePhone() {
+        java.lang.Object ref = debtorHomePhone_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorHomePhone_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorHomePhone = 35;</code>
+       *
+       * <pre>
+       * 债务人家庭电话
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorHomePhoneBytes() {
+        java.lang.Object ref = debtorHomePhone_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorHomePhone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorHomePhone = 35;</code>
+       *
+       * <pre>
+       * 债务人家庭电话
+       * </pre>
+       */
+      public Builder setDebtorHomePhone(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00400000;
+        debtorHomePhone_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorHomePhone = 35;</code>
+       *
+       * <pre>
+       * 债务人家庭电话
+       * </pre>
+       */
+      public Builder clearDebtorHomePhone() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        debtorHomePhone_ = getDefaultInstance().getDebtorHomePhone();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorHomePhone = 35;</code>
+       *
+       * <pre>
+       * 债务人家庭电话
+       * </pre>
+       */
+      public Builder setDebtorHomePhoneBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00400000;
+        debtorHomePhone_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string debtorHukouAddr = 36;
+      private java.lang.Object debtorHukouAddr_ = "";
+      /**
+       * <code>optional string debtorHukouAddr = 36;</code>
+       *
+       * <pre>
+       * 债务人户口所在地
+       * </pre>
+       */
+      public boolean hasDebtorHukouAddr() {
+        return ((bitField0_ & 0x00800000) == 0x00800000);
+      }
+      /**
+       * <code>optional string debtorHukouAddr = 36;</code>
+       *
+       * <pre>
+       * 债务人户口所在地
+       * </pre>
+       */
+      public java.lang.String getDebtorHukouAddr() {
+        java.lang.Object ref = debtorHukouAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorHukouAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorHukouAddr = 36;</code>
+       *
+       * <pre>
+       * 债务人户口所在地
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorHukouAddrBytes() {
+        java.lang.Object ref = debtorHukouAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorHukouAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorHukouAddr = 36;</code>
+       *
+       * <pre>
+       * 债务人户口所在地
+       * </pre>
+       */
+      public Builder setDebtorHukouAddr(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00800000;
+        debtorHukouAddr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorHukouAddr = 36;</code>
+       *
+       * <pre>
+       * 债务人户口所在地
+       * </pre>
+       */
+      public Builder clearDebtorHukouAddr() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        debtorHukouAddr_ = getDefaultInstance().getDebtorHukouAddr();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorHukouAddr = 36;</code>
+       *
+       * <pre>
+       * 债务人户口所在地
+       * </pre>
+       */
+      public Builder setDebtorHukouAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00800000;
+        debtorHukouAddr_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string debtorCorpAddr = 37;
+      private java.lang.Object debtorCorpAddr_ = "";
+      /**
+       * <code>optional string debtorCorpAddr = 37;</code>
+       *
+       * <pre>
+       * 债务人单位地址
+       * </pre>
+       */
+      public boolean hasDebtorCorpAddr() {
+        return ((bitField0_ & 0x01000000) == 0x01000000);
+      }
+      /**
+       * <code>optional string debtorCorpAddr = 37;</code>
+       *
+       * <pre>
+       * 债务人单位地址
+       * </pre>
+       */
+      public java.lang.String getDebtorCorpAddr() {
+        java.lang.Object ref = debtorCorpAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorCorpAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorCorpAddr = 37;</code>
+       *
+       * <pre>
+       * 债务人单位地址
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorCorpAddrBytes() {
+        java.lang.Object ref = debtorCorpAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorCorpAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorCorpAddr = 37;</code>
+       *
+       * <pre>
+       * 债务人单位地址
+       * </pre>
+       */
+      public Builder setDebtorCorpAddr(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x01000000;
+        debtorCorpAddr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorCorpAddr = 37;</code>
+       *
+       * <pre>
+       * 债务人单位地址
+       * </pre>
+       */
+      public Builder clearDebtorCorpAddr() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        debtorCorpAddr_ = getDefaultInstance().getDebtorCorpAddr();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorCorpAddr = 37;</code>
+       *
+       * <pre>
+       * 债务人单位地址
+       * </pre>
+       */
+      public Builder setDebtorCorpAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x01000000;
+        debtorCorpAddr_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string debtorCorpName = 38;
+      private java.lang.Object debtorCorpName_ = "";
+      /**
+       * <code>optional string debtorCorpName = 38;</code>
+       *
+       * <pre>
+       * 债务人单位名称
+       * </pre>
+       */
+      public boolean hasDebtorCorpName() {
+        return ((bitField0_ & 0x02000000) == 0x02000000);
+      }
+      /**
+       * <code>optional string debtorCorpName = 38;</code>
+       *
+       * <pre>
+       * 债务人单位名称
+       * </pre>
+       */
+      public java.lang.String getDebtorCorpName() {
+        java.lang.Object ref = debtorCorpName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorCorpName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorCorpName = 38;</code>
+       *
+       * <pre>
+       * 债务人单位名称
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorCorpNameBytes() {
+        java.lang.Object ref = debtorCorpName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorCorpName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorCorpName = 38;</code>
+       *
+       * <pre>
+       * 债务人单位名称
+       * </pre>
+       */
+      public Builder setDebtorCorpName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x02000000;
+        debtorCorpName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorCorpName = 38;</code>
+       *
+       * <pre>
+       * 债务人单位名称
+       * </pre>
+       */
+      public Builder clearDebtorCorpName() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        debtorCorpName_ = getDefaultInstance().getDebtorCorpName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorCorpName = 38;</code>
+       *
+       * <pre>
+       * 债务人单位名称
+       * </pre>
+       */
+      public Builder setDebtorCorpNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x02000000;
+        debtorCorpName_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string debtorCorpPhone = 39;
+      private java.lang.Object debtorCorpPhone_ = "";
+      /**
+       * <code>optional string debtorCorpPhone = 39;</code>
+       *
+       * <pre>
+       * 债务人单位电话
+       * </pre>
+       */
+      public boolean hasDebtorCorpPhone() {
+        return ((bitField0_ & 0x04000000) == 0x04000000);
+      }
+      /**
+       * <code>optional string debtorCorpPhone = 39;</code>
+       *
+       * <pre>
+       * 债务人单位电话
+       * </pre>
+       */
+      public java.lang.String getDebtorCorpPhone() {
+        java.lang.Object ref = debtorCorpPhone_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorCorpPhone_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorCorpPhone = 39;</code>
+       *
+       * <pre>
+       * 债务人单位电话
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorCorpPhoneBytes() {
+        java.lang.Object ref = debtorCorpPhone_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorCorpPhone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorCorpPhone = 39;</code>
+       *
+       * <pre>
+       * 债务人单位电话
+       * </pre>
+       */
+      public Builder setDebtorCorpPhone(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x04000000;
+        debtorCorpPhone_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorCorpPhone = 39;</code>
+       *
+       * <pre>
+       * 债务人单位电话
+       * </pre>
+       */
+      public Builder clearDebtorCorpPhone() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        debtorCorpPhone_ = getDefaultInstance().getDebtorCorpPhone();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorCorpPhone = 39;</code>
+       *
+       * <pre>
+       * 债务人单位电话
+       * </pre>
+       */
+      public Builder setDebtorCorpPhoneBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x04000000;
+        debtorCorpPhone_ = value;
+        onChanged();
+        return this;
+      }
+
       // optional string mortgage = 15;
       private java.lang.Object mortgage_ = "";
       /**
@@ -6308,7 +7742,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasMortgage() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
+        return ((bitField0_ & 0x08000000) == 0x08000000);
       }
       /**
        * <code>optional string mortgage = 15;</code>
@@ -6360,7 +7794,7 @@ public final class DebtMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00100000;
+  bitField0_ |= 0x08000000;
         mortgage_ = value;
         onChanged();
         return this;
@@ -6373,7 +7807,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder clearMortgage() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         mortgage_ = getDefaultInstance().getMortgage();
         onChanged();
         return this;
@@ -6390,7 +7824,7 @@ public final class DebtMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00100000;
+  bitField0_ |= 0x08000000;
         mortgage_ = value;
         onChanged();
         return this;
@@ -6406,7 +7840,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasJudgementTime() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x10000000) == 0x10000000);
       }
       /**
        * <code>optional int32 judgementTime = 16;</code>
@@ -6426,7 +7860,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder setJudgementTime(int value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x10000000;
         judgementTime_ = value;
         onChanged();
         return this;
@@ -6439,7 +7873,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder clearJudgementTime() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x10000000);
         judgementTime_ = 0;
         onChanged();
         return this;
@@ -6455,7 +7889,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasReason() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
+        return ((bitField0_ & 0x20000000) == 0x20000000);
       }
       /**
        * <code>optional string reason = 17;</code>
@@ -6507,7 +7941,7 @@ public final class DebtMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x20000000;
         reason_ = value;
         onChanged();
         return this;
@@ -6520,7 +7954,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder clearReason() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         reason_ = getDefaultInstance().getReason();
         onChanged();
         return this;
@@ -6537,7 +7971,7 @@ public final class DebtMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00400000;
+  bitField0_ |= 0x20000000;
         reason_ = value;
         onChanged();
         return this;
@@ -6553,7 +7987,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasDescript() {
-        return ((bitField0_ & 0x00800000) == 0x00800000);
+        return ((bitField0_ & 0x40000000) == 0x40000000);
       }
       /**
        * <code>optional string descript = 18;</code>
@@ -6605,7 +8039,7 @@ public final class DebtMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00800000;
+  bitField0_ |= 0x40000000;
         descript_ = value;
         onChanged();
         return this;
@@ -6618,7 +8052,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder clearDescript() {
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x40000000);
         descript_ = getDefaultInstance().getDescript();
         onChanged();
         return this;
@@ -6635,7 +8069,7 @@ public final class DebtMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00800000;
+  bitField0_ |= 0x40000000;
         descript_ = value;
         onChanged();
         return this;
@@ -6645,9 +8079,9 @@ public final class DebtMsgProto {
       private java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> files_ =
         java.util.Collections.emptyList();
       private void ensureFilesIsMutable() {
-        if (!((bitField0_ & 0x01000000) == 0x01000000)) {
+        if (!((bitField0_ & 0x80000000) == 0x80000000)) {
           files_ = new java.util.ArrayList<com.zc.web.message.common.FileMsgProto.FileMsg>(files_);
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x80000000;
          }
       }
 
@@ -6840,7 +8274,7 @@ public final class DebtMsgProto {
       public Builder clearFiles() {
         if (filesBuilder_ == null) {
           files_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x01000000);
+          bitField0_ = (bitField0_ & ~0x80000000);
           onChanged();
         } else {
           filesBuilder_.clear();
@@ -6945,7 +8379,7 @@ public final class DebtMsgProto {
           filesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.zc.web.message.common.FileMsgProto.FileMsg, com.zc.web.message.common.FileMsgProto.FileMsg.Builder, com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder>(
                   files_,
-                  ((bitField0_ & 0x01000000) == 0x01000000),
+                  ((bitField0_ & 0x80000000) == 0x80000000),
                   getParentForChildren(),
                   isClean());
           files_ = null;
@@ -6963,7 +8397,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasPublishTime() {
-        return ((bitField0_ & 0x02000000) == 0x02000000);
+        return ((bitField1_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>optional int32 publishTime = 6;</code>
@@ -6983,7 +8417,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder setPublishTime(int value) {
-        bitField0_ |= 0x02000000;
+        bitField1_ |= 0x00000001;
         publishTime_ = value;
         onChanged();
         return this;
@@ -6996,7 +8430,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder clearPublishTime() {
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         publishTime_ = 0;
         onChanged();
         return this;
@@ -7012,7 +8446,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasEndTime() {
-        return ((bitField0_ & 0x04000000) == 0x04000000);
+        return ((bitField1_ & 0x00000002) == 0x00000002);
       }
       /**
        * <code>optional int32 endTime = 7;</code>
@@ -7032,7 +8466,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder setEndTime(int value) {
-        bitField0_ |= 0x04000000;
+        bitField1_ |= 0x00000002;
         endTime_ = value;
         onChanged();
         return this;
@@ -7045,7 +8479,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder clearEndTime() {
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField1_ = (bitField1_ & ~0x00000002);
         endTime_ = 0;
         onChanged();
         return this;
@@ -7061,7 +8495,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasCreateTime() {
-        return ((bitField0_ & 0x08000000) == 0x08000000);
+        return ((bitField1_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>optional int32 createTime = 32;</code>
@@ -7081,7 +8515,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder setCreateTime(int value) {
-        bitField0_ |= 0x08000000;
+        bitField1_ |= 0x00000004;
         createTime_ = value;
         onChanged();
         return this;
@@ -7094,7 +8528,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder clearCreateTime() {
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField1_ = (bitField1_ & ~0x00000004);
         createTime_ = 0;
         onChanged();
         return this;
@@ -7112,7 +8546,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasContract() {
-        return ((bitField0_ & 0x10000000) == 0x10000000);
+        return ((bitField1_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>optional .com.zc.web.message.common.FileMsg contract = 33;</code>
@@ -7145,7 +8579,7 @@ public final class DebtMsgProto {
         } else {
           contractBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x10000000;
+        bitField1_ |= 0x00000008;
         return this;
       }
       /**
@@ -7163,7 +8597,7 @@ public final class DebtMsgProto {
         } else {
           contractBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x10000000;
+        bitField1_ |= 0x00000008;
         return this;
       }
       /**
@@ -7175,7 +8609,7 @@ public final class DebtMsgProto {
        */
       public Builder mergeContract(com.zc.web.message.common.FileMsgProto.FileMsg value) {
         if (contractBuilder_ == null) {
-          if (((bitField0_ & 0x10000000) == 0x10000000) &&
+          if (((bitField1_ & 0x00000008) == 0x00000008) &&
               contract_ != com.zc.web.message.common.FileMsgProto.FileMsg.getDefaultInstance()) {
             contract_ =
               com.zc.web.message.common.FileMsgProto.FileMsg.newBuilder(contract_).mergeFrom(value).buildPartial();
@@ -7186,7 +8620,7 @@ public final class DebtMsgProto {
         } else {
           contractBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x10000000;
+        bitField1_ |= 0x00000008;
         return this;
       }
       /**
@@ -7203,7 +8637,7 @@ public final class DebtMsgProto {
         } else {
           contractBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField1_ = (bitField1_ & ~0x00000008);
         return this;
       }
       /**
@@ -7214,7 +8648,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public com.zc.web.message.common.FileMsgProto.FileMsg.Builder getContractBuilder() {
-        bitField0_ |= 0x10000000;
+        bitField1_ |= 0x00000008;
         onChanged();
         return getContractFieldBuilder().getBuilder();
       }
@@ -7263,7 +8697,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public boolean hasState() {
-        return ((bitField0_ & 0x20000000) == 0x20000000);
+        return ((bitField1_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>optional int32 state = 22;</code>
@@ -7283,7 +8717,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder setState(int value) {
-        bitField0_ |= 0x20000000;
+        bitField1_ |= 0x00000010;
         state_ = value;
         onChanged();
         return this;
@@ -7296,7 +8730,7 @@ public final class DebtMsgProto {
        * </pre>
        */
       public Builder clearState() {
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField1_ = (bitField1_ & ~0x00000010);
         state_ = 0;
         onChanged();
         return this;
@@ -7306,9 +8740,9 @@ public final class DebtMsgProto {
       private java.util.List<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Bidder> bidders_ =
         java.util.Collections.emptyList();
       private void ensureBiddersIsMutable() {
-        if (!((bitField0_ & 0x40000000) == 0x40000000)) {
+        if (!((bitField1_ & 0x00000020) == 0x00000020)) {
           bidders_ = new java.util.ArrayList<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Bidder>(bidders_);
-          bitField0_ |= 0x40000000;
+          bitField1_ |= 0x00000020;
          }
       }
 
@@ -7457,7 +8891,7 @@ public final class DebtMsgProto {
       public Builder clearBidders() {
         if (biddersBuilder_ == null) {
           bidders_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x40000000);
+          bitField1_ = (bitField1_ & ~0x00000020);
           onChanged();
         } else {
           biddersBuilder_.clear();
@@ -7534,7 +8968,7 @@ public final class DebtMsgProto {
           biddersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.zc.web.message.debt.DebtMsgProto.DebtMsg.Bidder, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Bidder.Builder, com.zc.web.message.debt.DebtMsgProto.DebtMsg.BidderOrBuilder>(
                   bidders_,
-                  ((bitField0_ & 0x40000000) == 0x40000000),
+                  ((bitField1_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
           bidders_ = null;
@@ -7546,9 +8980,9 @@ public final class DebtMsgProto {
       private java.util.List<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message> messages_ =
         java.util.Collections.emptyList();
       private void ensureMessagesIsMutable() {
-        if (!((bitField0_ & 0x80000000) == 0x80000000)) {
+        if (!((bitField1_ & 0x00000040) == 0x00000040)) {
           messages_ = new java.util.ArrayList<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message>(messages_);
-          bitField0_ |= 0x80000000;
+          bitField1_ |= 0x00000040;
          }
       }
 
@@ -7697,7 +9131,7 @@ public final class DebtMsgProto {
       public Builder clearMessages() {
         if (messagesBuilder_ == null) {
           messages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x80000000);
+          bitField1_ = (bitField1_ & ~0x00000040);
           onChanged();
         } else {
           messagesBuilder_.clear();
@@ -7774,7 +9208,7 @@ public final class DebtMsgProto {
           messagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder, com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder>(
                   messages_,
-                  ((bitField0_ & 0x80000000) == 0x80000000),
+                  ((bitField1_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
                   isClean());
           messages_ = null;
@@ -7820,7 +9254,7 @@ public final class DebtMsgProto {
       "\n1main/resources/com/zc/messages/debt/De" +
       "btMsg.proto\022\027com.zc.web.message.debt\0323ma" +
       "in/resources/com/zc/messages/common/File" +
-      "Msg.proto\"\242\007\n\007DebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005mon" +
+      "Msg.proto\"\320\010\n\007DebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005mon" +
       "ey\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\r\n\005price\030\004 \001(\005\022\014\n" +
       "\004rate\030\005 \001(\005\022\020\n\010duration\030\024 \001(\005\022\022\n\nexpireD" +
       "ays\030\025 \001(\005\022\023\n\013bidIncrease\030\027 \001(\005\022\017\n\007ownerI" +
@@ -7830,20 +9264,25 @@ public final class DebtMsgProto {
       "web.message.common.FileMsg\022\022\n\ndebtorName" +
       "\030\t \001(\t\022\023\n\013debtorPhone\030\n \001(\t\022\020\n\010debtorId\030" +
       "\013 \001(\t\022\026\n\016debtorLocation\030\r \001(\t\022\022\n\ndebtorA" +
-      "ddr\030\014 \001(\t\022\026\n\016debtExpireTime\030\016 \001(\005\022\020\n\010mor" +
-      "tgage\030\017 \001(\t\022\025\n\rjudgementTime\030\020 \001(\005\022\016\n\006re" +
-      "ason\030\021 \001(\t\022\020\n\010descript\030\022 \001(\t\0221\n\005files\030\023 " +
-      "\003(\0132\".com.zc.web.message.common.FileMsg\022" +
-      "\023\n\013publishTime\030\006 \001(\005\022\017\n\007endTime\030\007 \001(\005\022\022\n" +
-      "\ncreateTime\030  \001(\005\0224\n\010contract\030! \001(\0132\".co" +
-      "m.zc.web.message.common.FileMsg\022\r\n\005state",
-      "\030\026 \001(\005\0228\n\007bidders\030\034 \003(\0132\'.com.zc.web.mes" +
-      "sage.debt.DebtMsg.Bidder\022:\n\010messages\030\035 \003" +
-      "(\0132(.com.zc.web.message.debt.DebtMsg.Mes" +
-      "sage\032S\n\006Bidder\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t" +
-      "\022\r\n\005money\030\003 \001(\005\022\014\n\004rate\030\005 \001(\005\022\022\n\ncreateT" +
-      "ime\030\004 \001(\005\0323\n\007Message\022\014\n\004time\030\001 \001(\005\022\014\n\004ty" +
-      "pe\030\002 \001(\005\022\014\n\004memo\030\003 \001(\tB\016B\014DebtMsgProto"
+      "ddr\030\014 \001(\t\022\026\n\016debtExpireTime\030\016 \001(\005\022\031\n\021deb" +
+      "torContactAddr\030( \001(\t\022\026\n\016debtorPostcode\030\"" +
+      " \001(\t\022\027\n\017debtorHomePhone\030# \001(\t\022\027\n\017debtorH" +
+      "ukouAddr\030$ \001(\t\022\026\n\016debtorCorpAddr\030% \001(\t\022\026" +
+      "\n\016debtorCorpName\030& \001(\t\022\027\n\017debtorCorpPhon" +
+      "e\030\' \001(\t\022\020\n\010mortgage\030\017 \001(\t\022\025\n\rjudgementTi" +
+      "me\030\020 \001(\005\022\016\n\006reason\030\021 \001(\t\022\020\n\010descript\030\022 \001",
+      "(\t\0221\n\005files\030\023 \003(\0132\".com.zc.web.message.c" +
+      "ommon.FileMsg\022\023\n\013publishTime\030\006 \001(\005\022\017\n\007en" +
+      "dTime\030\007 \001(\005\022\022\n\ncreateTime\030  \001(\005\0224\n\010contr" +
+      "act\030! \001(\0132\".com.zc.web.message.common.Fi" +
+      "leMsg\022\r\n\005state\030\026 \001(\005\0228\n\007bidders\030\034 \003(\0132\'." +
+      "com.zc.web.message.debt.DebtMsg.Bidder\022:" +
+      "\n\010messages\030\035 \003(\0132(.com.zc.web.message.de" +
+      "bt.DebtMsg.Message\032S\n\006Bidder\022\n\n\002id\030\001 \001(\003" +
+      "\022\014\n\004name\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\014\n\004rate\030\005 " +
+      "\001(\005\022\022\n\ncreateTime\030\004 \001(\005\0323\n\007Message\022\014\n\004ti",
+      "me\030\001 \001(\005\022\014\n\004type\030\002 \001(\005\022\014\n\004memo\030\003 \001(\tB\016B\014" +
+      "DebtMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -7855,7 +9294,7 @@ public final class DebtMsgProto {
           internal_static_com_zc_web_message_debt_DebtMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_DebtMsg_descriptor,
-              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "ExpireDays", "BidIncrease", "OwnerId", "OwnerName", "WinnerId", "WinnerName", "CreditorName", "CreditorIdFile", "DebtorName", "DebtorPhone", "DebtorId", "DebtorLocation", "DebtorAddr", "DebtExpireTime", "Mortgage", "JudgementTime", "Reason", "Descript", "Files", "PublishTime", "EndTime", "CreateTime", "Contract", "State", "Bidders", "Messages", });
+              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "ExpireDays", "BidIncrease", "OwnerId", "OwnerName", "WinnerId", "WinnerName", "CreditorName", "CreditorIdFile", "DebtorName", "DebtorPhone", "DebtorId", "DebtorLocation", "DebtorAddr", "DebtExpireTime", "DebtorContactAddr", "DebtorPostcode", "DebtorHomePhone", "DebtorHukouAddr", "DebtorCorpAddr", "DebtorCorpName", "DebtorCorpPhone", "Mortgage", "JudgementTime", "Reason", "Descript", "Files", "PublishTime", "EndTime", "CreateTime", "Contract", "State", "Bidders", "Messages", });
           internal_static_com_zc_web_message_debt_DebtMsg_Bidder_descriptor =
             internal_static_com_zc_web_message_debt_DebtMsg_descriptor.getNestedTypes().get(0);
           internal_static_com_zc_web_message_debt_DebtMsg_Bidder_fieldAccessorTable = new
