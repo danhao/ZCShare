@@ -951,6 +951,42 @@ public final class PlayerMsgProto {
      * </pre>
      */
     int getVip();
+
+    // optional int32 idValidating = 42;
+    /**
+     * <code>optional int32 idValidating = 42;</code>
+     *
+     * <pre>
+     * 1:申请验证身份
+     * </pre>
+     */
+    boolean hasIdValidating();
+    /**
+     * <code>optional int32 idValidating = 42;</code>
+     *
+     * <pre>
+     * 1:申请验证身份
+     * </pre>
+     */
+    int getIdValidating();
+
+    // optional int32 coValidating = 43;
+    /**
+     * <code>optional int32 coValidating = 43;</code>
+     *
+     * <pre>
+     * 1:申请验证公司
+     * </pre>
+     */
+    boolean hasCoValidating();
+    /**
+     * <code>optional int32 coValidating = 43;</code>
+     *
+     * <pre>
+     * 1:申请验证公司
+     * </pre>
+     */
+    int getCoValidating();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.PlayerMsg}
@@ -1263,6 +1299,16 @@ public final class PlayerMsgProto {
             case 328: {
               bitField1_ |= 0x00000100;
               vip_ = input.readInt32();
+              break;
+            }
+            case 336: {
+              bitField1_ |= 0x00000200;
+              idValidating_ = input.readInt32();
+              break;
+            }
+            case 344: {
+              bitField1_ |= 0x00000400;
+              coValidating_ = input.readInt32();
               break;
             }
           }
@@ -2925,6 +2971,54 @@ public final class PlayerMsgProto {
       return vip_;
     }
 
+    // optional int32 idValidating = 42;
+    public static final int IDVALIDATING_FIELD_NUMBER = 42;
+    private int idValidating_;
+    /**
+     * <code>optional int32 idValidating = 42;</code>
+     *
+     * <pre>
+     * 1:申请验证身份
+     * </pre>
+     */
+    public boolean hasIdValidating() {
+      return ((bitField1_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional int32 idValidating = 42;</code>
+     *
+     * <pre>
+     * 1:申请验证身份
+     * </pre>
+     */
+    public int getIdValidating() {
+      return idValidating_;
+    }
+
+    // optional int32 coValidating = 43;
+    public static final int COVALIDATING_FIELD_NUMBER = 43;
+    private int coValidating_;
+    /**
+     * <code>optional int32 coValidating = 43;</code>
+     *
+     * <pre>
+     * 1:申请验证公司
+     * </pre>
+     */
+    public boolean hasCoValidating() {
+      return ((bitField1_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional int32 coValidating = 43;</code>
+     *
+     * <pre>
+     * 1:申请验证公司
+     * </pre>
+     */
+    public int getCoValidating() {
+      return coValidating_;
+    }
+
     private void initFields() {
       id_ = 0L;
       name_ = "";
@@ -2967,6 +3061,8 @@ public final class PlayerMsgProto {
       frozen_ = 0;
       descript_ = "";
       vip_ = 0;
+      idValidating_ = 0;
+      coValidating_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3102,6 +3198,12 @@ public final class PlayerMsgProto {
       }
       if (((bitField1_ & 0x00000100) == 0x00000100)) {
         output.writeInt32(41, vip_);
+      }
+      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        output.writeInt32(42, idValidating_);
+      }
+      if (((bitField1_ & 0x00000400) == 0x00000400)) {
+        output.writeInt32(43, coValidating_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3275,6 +3377,14 @@ public final class PlayerMsgProto {
       if (((bitField1_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(41, vip_);
+      }
+      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(42, idValidating_);
+      }
+      if (((bitField1_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(43, coValidating_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3509,6 +3619,10 @@ public final class PlayerMsgProto {
         bitField1_ = (bitField1_ & ~0x00000080);
         vip_ = 0;
         bitField1_ = (bitField1_ & ~0x00000100);
+        idValidating_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000200);
+        coValidating_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000400);
         return this;
       }
 
@@ -3731,6 +3845,14 @@ public final class PlayerMsgProto {
           to_bitField1_ |= 0x00000100;
         }
         result.vip_ = vip_;
+        if (((from_bitField1_ & 0x00000200) == 0x00000200)) {
+          to_bitField1_ |= 0x00000200;
+        }
+        result.idValidating_ = idValidating_;
+        if (((from_bitField1_ & 0x00000400) == 0x00000400)) {
+          to_bitField1_ |= 0x00000400;
+        }
+        result.coValidating_ = coValidating_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -3908,6 +4030,12 @@ public final class PlayerMsgProto {
         }
         if (other.hasVip()) {
           setVip(other.getVip());
+        }
+        if (other.hasIdValidating()) {
+          setIdValidating(other.getIdValidating());
+        }
+        if (other.hasCoValidating()) {
+          setCoValidating(other.getCoValidating());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7557,6 +7685,104 @@ public final class PlayerMsgProto {
         return this;
       }
 
+      // optional int32 idValidating = 42;
+      private int idValidating_ ;
+      /**
+       * <code>optional int32 idValidating = 42;</code>
+       *
+       * <pre>
+       * 1:申请验证身份
+       * </pre>
+       */
+      public boolean hasIdValidating() {
+        return ((bitField1_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional int32 idValidating = 42;</code>
+       *
+       * <pre>
+       * 1:申请验证身份
+       * </pre>
+       */
+      public int getIdValidating() {
+        return idValidating_;
+      }
+      /**
+       * <code>optional int32 idValidating = 42;</code>
+       *
+       * <pre>
+       * 1:申请验证身份
+       * </pre>
+       */
+      public Builder setIdValidating(int value) {
+        bitField1_ |= 0x00000200;
+        idValidating_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 idValidating = 42;</code>
+       *
+       * <pre>
+       * 1:申请验证身份
+       * </pre>
+       */
+      public Builder clearIdValidating() {
+        bitField1_ = (bitField1_ & ~0x00000200);
+        idValidating_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 coValidating = 43;
+      private int coValidating_ ;
+      /**
+       * <code>optional int32 coValidating = 43;</code>
+       *
+       * <pre>
+       * 1:申请验证公司
+       * </pre>
+       */
+      public boolean hasCoValidating() {
+        return ((bitField1_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional int32 coValidating = 43;</code>
+       *
+       * <pre>
+       * 1:申请验证公司
+       * </pre>
+       */
+      public int getCoValidating() {
+        return coValidating_;
+      }
+      /**
+       * <code>optional int32 coValidating = 43;</code>
+       *
+       * <pre>
+       * 1:申请验证公司
+       * </pre>
+       */
+      public Builder setCoValidating(int value) {
+        bitField1_ |= 0x00000400;
+        coValidating_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 coValidating = 43;</code>
+       *
+       * <pre>
+       * 1:申请验证公司
+       * </pre>
+       */
+      public Builder clearCoValidating() {
+        bitField1_ = (bitField1_ & ~0x00000400);
+        coValidating_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.PlayerMsg)
     }
 
@@ -7585,7 +7811,7 @@ public final class PlayerMsgProto {
       "\n5main/resources/com/zc/messages/player/" +
       "PlayerMsg.proto\022\031com.zc.web.message.play" +
       "er\0323main/resources/com/zc/messages/commo" +
-      "n/FileMsg.proto\"\242\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
+      "n/FileMsg.proto\"\316\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
       "\003\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\t \001(\t\022\016\n\006mobile" +
       "\030\n \001(\t\022\n\n\002qq\030% \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\021" +
       "\n\tloginTime\030\004 \001(\005\022\025\n\rlastLoginTime\030\005 \001(\005" +
@@ -7611,8 +7837,9 @@ public final class PlayerMsgProto {
       "neCrimeFile\030! \001(\0132\".com.zc.web.message.c" +
       "ommon.FileMsg\0226\n\ncreditFile\030\" \001(\0132\".com." +
       "zc.web.message.common.FileMsg\022\016\n\006frozen\030" +
-      "# \001(\005\022\020\n\010descript\030( \001(\t\022\013\n\003vip\030) \001(\005B\020B\016",
-      "PlayerMsgProto"
+      "# \001(\005\022\020\n\010descript\030( \001(\t\022\013\n\003vip\030) \001(\005\022\024\n\014",
+      "idValidating\030* \001(\005\022\024\n\014coValidating\030+ \001(\005" +
+      "B\020B\016PlayerMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -7624,7 +7851,7 @@ public final class PlayerMsgProto {
           internal_static_com_zc_web_message_player_PlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_PlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", });
+              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "IdValidating", "CoValidating", });
           return null;
         }
       };
