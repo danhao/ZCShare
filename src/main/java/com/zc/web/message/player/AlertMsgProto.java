@@ -11,27 +11,9 @@ public final class AlertMsgProto {
   public interface AlertMsgOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // optional int64 id = 1;
+    // optional int32 money = 1;
     /**
-     * <code>optional int64 id = 1;</code>
-     *
-     * <pre>
-     *id
-     * </pre>
-     */
-    boolean hasId();
-    /**
-     * <code>optional int64 id = 1;</code>
-     *
-     * <pre>
-     *id
-     * </pre>
-     */
-    long getId();
-
-    // optional int32 money = 2;
-    /**
-     * <code>optional int32 money = 2;</code>
+     * <code>optional int32 money = 1;</code>
      *
      * <pre>
      * 金额
@@ -39,7 +21,7 @@ public final class AlertMsgProto {
      */
     boolean hasMoney();
     /**
-     * <code>optional int32 money = 2;</code>
+     * <code>optional int32 money = 1;</code>
      *
      * <pre>
      * 金额
@@ -47,9 +29,9 @@ public final class AlertMsgProto {
      */
     int getMoney();
 
-    // optional string location = 3;
+    // optional string location = 2;
     /**
-     * <code>optional string location = 3;</code>
+     * <code>optional string location = 2;</code>
      *
      * <pre>
      * 地点
@@ -57,7 +39,7 @@ public final class AlertMsgProto {
      */
     boolean hasLocation();
     /**
-     * <code>optional string location = 3;</code>
+     * <code>optional string location = 2;</code>
      *
      * <pre>
      * 地点
@@ -65,7 +47,7 @@ public final class AlertMsgProto {
      */
     java.lang.String getLocation();
     /**
-     * <code>optional string location = 3;</code>
+     * <code>optional string location = 2;</code>
      *
      * <pre>
      * 地点
@@ -74,9 +56,9 @@ public final class AlertMsgProto {
     com.google.protobuf.ByteString
         getLocationBytes();
 
-    // optional int32 rate = 4;
+    // optional int32 rate = 3;
     /**
-     * <code>optional int32 rate = 4;</code>
+     * <code>optional int32 rate = 3;</code>
      *
      * <pre>
      * 费率
@@ -84,13 +66,31 @@ public final class AlertMsgProto {
      */
     boolean hasRate();
     /**
-     * <code>optional int32 rate = 4;</code>
+     * <code>optional int32 rate = 3;</code>
      *
      * <pre>
      * 费率
      * </pre>
      */
     int getRate();
+
+    // optional int32 on = 4;
+    /**
+     * <code>optional int32 on = 4;</code>
+     *
+     * <pre>
+     * 1开启；0关闭
+     * </pre>
+     */
+    boolean hasOn();
+    /**
+     * <code>optional int32 on = 4;</code>
+     *
+     * <pre>
+     * 1开启；0关闭
+     * </pre>
+     */
+    int getOn();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.AlertMsg}
@@ -145,22 +145,22 @@ public final class AlertMsgProto {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              id_ = input.readInt64();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
               money_ = input.readInt32();
               break;
             }
-            case 26: {
-              bitField0_ |= 0x00000004;
+            case 18: {
+              bitField0_ |= 0x00000002;
               location_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              rate_ = input.readInt32();
               break;
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              rate_ = input.readInt32();
+              on_ = input.readInt32();
               break;
             }
           }
@@ -203,45 +203,21 @@ public final class AlertMsgProto {
     }
 
     private int bitField0_;
-    // optional int64 id = 1;
-    public static final int ID_FIELD_NUMBER = 1;
-    private long id_;
-    /**
-     * <code>optional int64 id = 1;</code>
-     *
-     * <pre>
-     *id
-     * </pre>
-     */
-    public boolean hasId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional int64 id = 1;</code>
-     *
-     * <pre>
-     *id
-     * </pre>
-     */
-    public long getId() {
-      return id_;
-    }
-
-    // optional int32 money = 2;
-    public static final int MONEY_FIELD_NUMBER = 2;
+    // optional int32 money = 1;
+    public static final int MONEY_FIELD_NUMBER = 1;
     private int money_;
     /**
-     * <code>optional int32 money = 2;</code>
+     * <code>optional int32 money = 1;</code>
      *
      * <pre>
      * 金额
      * </pre>
      */
     public boolean hasMoney() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional int32 money = 2;</code>
+     * <code>optional int32 money = 1;</code>
      *
      * <pre>
      * 金额
@@ -251,21 +227,21 @@ public final class AlertMsgProto {
       return money_;
     }
 
-    // optional string location = 3;
-    public static final int LOCATION_FIELD_NUMBER = 3;
+    // optional string location = 2;
+    public static final int LOCATION_FIELD_NUMBER = 2;
     private java.lang.Object location_;
     /**
-     * <code>optional string location = 3;</code>
+     * <code>optional string location = 2;</code>
      *
      * <pre>
      * 地点
      * </pre>
      */
     public boolean hasLocation() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional string location = 3;</code>
+     * <code>optional string location = 2;</code>
      *
      * <pre>
      * 地点
@@ -286,7 +262,7 @@ public final class AlertMsgProto {
       }
     }
     /**
-     * <code>optional string location = 3;</code>
+     * <code>optional string location = 2;</code>
      *
      * <pre>
      * 地点
@@ -306,21 +282,21 @@ public final class AlertMsgProto {
       }
     }
 
-    // optional int32 rate = 4;
-    public static final int RATE_FIELD_NUMBER = 4;
+    // optional int32 rate = 3;
+    public static final int RATE_FIELD_NUMBER = 3;
     private int rate_;
     /**
-     * <code>optional int32 rate = 4;</code>
+     * <code>optional int32 rate = 3;</code>
      *
      * <pre>
      * 费率
      * </pre>
      */
     public boolean hasRate() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional int32 rate = 4;</code>
+     * <code>optional int32 rate = 3;</code>
      *
      * <pre>
      * 费率
@@ -330,11 +306,35 @@ public final class AlertMsgProto {
       return rate_;
     }
 
+    // optional int32 on = 4;
+    public static final int ON_FIELD_NUMBER = 4;
+    private int on_;
+    /**
+     * <code>optional int32 on = 4;</code>
+     *
+     * <pre>
+     * 1开启；0关闭
+     * </pre>
+     */
+    public boolean hasOn() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 on = 4;</code>
+     *
+     * <pre>
+     * 1开启；0关闭
+     * </pre>
+     */
+    public int getOn() {
+      return on_;
+    }
+
     private void initFields() {
-      id_ = 0L;
       money_ = 0;
       location_ = "";
       rate_ = 0;
+      on_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -349,16 +349,16 @@ public final class AlertMsgProto {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt64(1, id_);
+        output.writeInt32(1, money_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, money_);
+        output.writeBytes(2, getLocationBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getLocationBytes());
+        output.writeInt32(3, rate_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(4, rate_);
+        output.writeInt32(4, on_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -371,19 +371,19 @@ public final class AlertMsgProto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, id_);
+          .computeInt32Size(1, money_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, money_);
+          .computeBytesSize(2, getLocationBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getLocationBytes());
+          .computeInt32Size(3, rate_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, rate_);
+          .computeInt32Size(4, on_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -501,13 +501,13 @@ public final class AlertMsgProto {
 
       public Builder clear() {
         super.clear();
-        id_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         money_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         location_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         rate_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        on_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
@@ -540,19 +540,19 @@ public final class AlertMsgProto {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.id_ = id_;
+        result.money_ = money_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.money_ = money_;
+        result.location_ = location_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.location_ = location_;
+        result.rate_ = rate_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.rate_ = rate_;
+        result.on_ = on_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -569,19 +569,19 @@ public final class AlertMsgProto {
 
       public Builder mergeFrom(com.zc.web.message.player.AlertMsgProto.AlertMsg other) {
         if (other == com.zc.web.message.player.AlertMsgProto.AlertMsg.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          setId(other.getId());
-        }
         if (other.hasMoney()) {
           setMoney(other.getMoney());
         }
         if (other.hasLocation()) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           location_ = other.location_;
           onChanged();
         }
         if (other.hasRate()) {
           setRate(other.getRate());
+        }
+        if (other.hasOn()) {
+          setOn(other.getOn());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -610,69 +610,20 @@ public final class AlertMsgProto {
       }
       private int bitField0_;
 
-      // optional int64 id = 1;
-      private long id_ ;
-      /**
-       * <code>optional int64 id = 1;</code>
-       *
-       * <pre>
-       *id
-       * </pre>
-       */
-      public boolean hasId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional int64 id = 1;</code>
-       *
-       * <pre>
-       *id
-       * </pre>
-       */
-      public long getId() {
-        return id_;
-      }
-      /**
-       * <code>optional int64 id = 1;</code>
-       *
-       * <pre>
-       *id
-       * </pre>
-       */
-      public Builder setId(long value) {
-        bitField0_ |= 0x00000001;
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 id = 1;</code>
-       *
-       * <pre>
-       *id
-       * </pre>
-       */
-      public Builder clearId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      // optional int32 money = 2;
+      // optional int32 money = 1;
       private int money_ ;
       /**
-       * <code>optional int32 money = 2;</code>
+       * <code>optional int32 money = 1;</code>
        *
        * <pre>
        * 金额
        * </pre>
        */
       public boolean hasMoney() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional int32 money = 2;</code>
+       * <code>optional int32 money = 1;</code>
        *
        * <pre>
        * 金额
@@ -682,46 +633,46 @@ public final class AlertMsgProto {
         return money_;
       }
       /**
-       * <code>optional int32 money = 2;</code>
+       * <code>optional int32 money = 1;</code>
        *
        * <pre>
        * 金额
        * </pre>
        */
       public Builder setMoney(int value) {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         money_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 money = 2;</code>
+       * <code>optional int32 money = 1;</code>
        *
        * <pre>
        * 金额
        * </pre>
        */
       public Builder clearMoney() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         money_ = 0;
         onChanged();
         return this;
       }
 
-      // optional string location = 3;
+      // optional string location = 2;
       private java.lang.Object location_ = "";
       /**
-       * <code>optional string location = 3;</code>
+       * <code>optional string location = 2;</code>
        *
        * <pre>
        * 地点
        * </pre>
        */
       public boolean hasLocation() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional string location = 3;</code>
+       * <code>optional string location = 2;</code>
        *
        * <pre>
        * 地点
@@ -739,7 +690,7 @@ public final class AlertMsgProto {
         }
       }
       /**
-       * <code>optional string location = 3;</code>
+       * <code>optional string location = 2;</code>
        *
        * <pre>
        * 地点
@@ -759,7 +710,7 @@ public final class AlertMsgProto {
         }
       }
       /**
-       * <code>optional string location = 3;</code>
+       * <code>optional string location = 2;</code>
        *
        * <pre>
        * 地点
@@ -770,26 +721,26 @@ public final class AlertMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000002;
         location_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string location = 3;</code>
+       * <code>optional string location = 2;</code>
        *
        * <pre>
        * 地点
        * </pre>
        */
       public Builder clearLocation() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         location_ = getDefaultInstance().getLocation();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string location = 3;</code>
+       * <code>optional string location = 2;</code>
        *
        * <pre>
        * 地点
@@ -800,26 +751,26 @@ public final class AlertMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000002;
         location_ = value;
         onChanged();
         return this;
       }
 
-      // optional int32 rate = 4;
+      // optional int32 rate = 3;
       private int rate_ ;
       /**
-       * <code>optional int32 rate = 4;</code>
+       * <code>optional int32 rate = 3;</code>
        *
        * <pre>
        * 费率
        * </pre>
        */
       public boolean hasRate() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional int32 rate = 4;</code>
+       * <code>optional int32 rate = 3;</code>
        *
        * <pre>
        * 费率
@@ -829,28 +780,77 @@ public final class AlertMsgProto {
         return rate_;
       }
       /**
-       * <code>optional int32 rate = 4;</code>
+       * <code>optional int32 rate = 3;</code>
        *
        * <pre>
        * 费率
        * </pre>
        */
       public Builder setRate(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         rate_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 rate = 4;</code>
+       * <code>optional int32 rate = 3;</code>
        *
        * <pre>
        * 费率
        * </pre>
        */
       public Builder clearRate() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         rate_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 on = 4;
+      private int on_ ;
+      /**
+       * <code>optional int32 on = 4;</code>
+       *
+       * <pre>
+       * 1开启；0关闭
+       * </pre>
+       */
+      public boolean hasOn() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 on = 4;</code>
+       *
+       * <pre>
+       * 1开启；0关闭
+       * </pre>
+       */
+      public int getOn() {
+        return on_;
+      }
+      /**
+       * <code>optional int32 on = 4;</code>
+       *
+       * <pre>
+       * 1开启；0关闭
+       * </pre>
+       */
+      public Builder setOn(int value) {
+        bitField0_ |= 0x00000008;
+        on_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 on = 4;</code>
+       *
+       * <pre>
+       * 1开启；0关闭
+       * </pre>
+       */
+      public Builder clearOn() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        on_ = 0;
         onChanged();
         return this;
       }
@@ -882,8 +882,8 @@ public final class AlertMsgProto {
     java.lang.String[] descriptorData = {
       "\n4main/resources/com/zc/messages/player/" +
       "AlertMsg.proto\022\031com.zc.web.message.playe" +
-      "r\"E\n\010AlertMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005money\030\002 \001(\005" +
-      "\022\020\n\010location\030\003 \001(\t\022\014\n\004rate\030\004 \001(\005B\017B\rAler" +
+      "r\"E\n\010AlertMsg\022\r\n\005money\030\001 \001(\005\022\020\n\010location" +
+      "\030\002 \001(\t\022\014\n\004rate\030\003 \001(\005\022\n\n\002on\030\004 \001(\005B\017B\rAler" +
       "tMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
@@ -896,7 +896,7 @@ public final class AlertMsgProto {
           internal_static_com_zc_web_message_player_AlertMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_AlertMsg_descriptor,
-              new java.lang.String[] { "Id", "Money", "Location", "Rate", });
+              new java.lang.String[] { "Money", "Location", "Rate", "On", });
           return null;
         }
       };

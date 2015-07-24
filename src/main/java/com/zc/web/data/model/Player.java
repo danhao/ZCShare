@@ -143,10 +143,10 @@ public class Player extends BaseModel{
 	@Entity(noClassnameStored = true)
 	@Data
 	public static class Alert {
-		private long id; 				// id
 		private int money;				// 金额
 		private String location;		// 地点
 		private int rate;				// 费率
+		private int on;					// 1开启；0关闭
 	}
 	
 	private FileMsg.Builder getFileMsg(File file){
