@@ -41,6 +41,7 @@ public class Player extends BaseModel{
 	private int idValidating; // 1:申请验证身份
 	private int coValidating; // 1:申请验证公司
 	private String descript; // 描述
+	private int vip;	//0非VIP
 	
 	// 认证
 	private String userId;		// 用户身份证/组织机构代码
@@ -71,13 +72,16 @@ public class Player extends BaseModel{
 	private int loginTime; //当前登录时间
 	private int lastLoginTime; //上次登录时间
 	private int banAccountTime = 0; //封号截止时间,单位:s
+
+	private String sid; //请求的session标示
 	
-	private List<Long> bidDebts = new ArrayList<Long>();	// 我参与的债务
+	private Alert alert;	// 提醒设置
+	
+	@Embedded
+	private Map<Long, Boolean> bidDebts = new HashMap<Long, Boolean>();	// 我参与的债务(id, 是否结束)
 	private List<Long> winDebts = new ArrayList<Long>();	// 我获得的债务
 	@Embedded
 	private Map<Long, Integer> frozenMoney = new HashMap<Long, Integer>();	// 冻结资金
-	
-	private String sid; //请求的session标示
 	
 	@Embedded
 	private List<MoneyHistory> histories = new ArrayList<MoneyHistory>();
@@ -134,6 +138,15 @@ public class Player extends BaseModel{
 		private int type;				// 1：发布债务；2：
 		private int time; 				// 产生时间
 		private String content;			// 内容
+	}
+	
+	@Entity(noClassnameStored = true)
+	@Data
+	public static class Alert {
+		private long id; 				// id
+		private int money;				// 金额
+		private String location;		// 地点
+		private int rate;				// 费率
 	}
 	
 	private FileMsg.Builder getFileMsg(File file){

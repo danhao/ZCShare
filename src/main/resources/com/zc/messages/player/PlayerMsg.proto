@@ -46,4 +46,5 @@ message PlayerMsg{
 	optional common.FileMsg creditFile = 34;	// 信用报告
 	optional int32 frozen = 35;	// 冻结资金
 	optional string descript = 40; // 描述
+	optional int32 vip = 41;	// VIP等级，0表示非VIP
 }

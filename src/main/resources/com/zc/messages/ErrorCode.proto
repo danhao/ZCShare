@@ -32,6 +32,8 @@ enum ErrorCode{
 	ERR_DEBT_INVALID = 200; //非法单
 	ERR_DEBT_BID_LOW = 201; //投标金额不足
 	ERR_DEBT_EXPIRED = 202; //过期
+	ERR_DEBT_NO_CORP = 203; //用户不能接企业单
+	ERR_DEBT_OVER_LIMIT = 204; //超过单数限制
 
 	//---------------------债务相关错误码-----------------------------------
 }

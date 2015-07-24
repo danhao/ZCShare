@@ -1,0 +1,11 @@
+// 提醒设置
+option java_outer_classname = "AlertMsgProto";
+
+package com.zc.web.message.player;
+
+message AlertMsg{
+	optional int64 id = 1; 			//id
+	optional int32 money = 2;		// 金额
+	optional string location = 3;	// 地点
+	optional int32 rate = 4;		// 费率
+}

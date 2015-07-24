@@ -933,6 +933,24 @@ public final class PlayerMsgProto {
      */
     com.google.protobuf.ByteString
         getDescriptBytes();
+
+    // optional int32 vip = 41;
+    /**
+     * <code>optional int32 vip = 41;</code>
+     *
+     * <pre>
+     * VIP等级，0表示非VIP
+     * </pre>
+     */
+    boolean hasVip();
+    /**
+     * <code>optional int32 vip = 41;</code>
+     *
+     * <pre>
+     * VIP等级，0表示非VIP
+     * </pre>
+     */
+    int getVip();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.PlayerMsg}
@@ -1240,6 +1258,11 @@ public final class PlayerMsgProto {
             case 322: {
               bitField1_ |= 0x00000080;
               descript_ = input.readBytes();
+              break;
+            }
+            case 328: {
+              bitField1_ |= 0x00000100;
+              vip_ = input.readInt32();
               break;
             }
           }
@@ -2878,6 +2901,30 @@ public final class PlayerMsgProto {
       }
     }
 
+    // optional int32 vip = 41;
+    public static final int VIP_FIELD_NUMBER = 41;
+    private int vip_;
+    /**
+     * <code>optional int32 vip = 41;</code>
+     *
+     * <pre>
+     * VIP等级，0表示非VIP
+     * </pre>
+     */
+    public boolean hasVip() {
+      return ((bitField1_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional int32 vip = 41;</code>
+     *
+     * <pre>
+     * VIP等级，0表示非VIP
+     * </pre>
+     */
+    public int getVip() {
+      return vip_;
+    }
+
     private void initFields() {
       id_ = 0L;
       name_ = "";
@@ -2919,6 +2966,7 @@ public final class PlayerMsgProto {
       creditFile_ = com.zc.web.message.common.FileMsgProto.FileMsg.getDefaultInstance();
       frozen_ = 0;
       descript_ = "";
+      vip_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3051,6 +3099,9 @@ public final class PlayerMsgProto {
       }
       if (((bitField1_ & 0x00000080) == 0x00000080)) {
         output.writeBytes(40, getDescriptBytes());
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        output.writeInt32(41, vip_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3220,6 +3271,10 @@ public final class PlayerMsgProto {
       if (((bitField1_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(40, getDescriptBytes());
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(41, vip_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3452,6 +3507,8 @@ public final class PlayerMsgProto {
         bitField1_ = (bitField1_ & ~0x00000040);
         descript_ = "";
         bitField1_ = (bitField1_ & ~0x00000080);
+        vip_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000100);
         return this;
       }
 
@@ -3670,6 +3727,10 @@ public final class PlayerMsgProto {
           to_bitField1_ |= 0x00000080;
         }
         result.descript_ = descript_;
+        if (((from_bitField1_ & 0x00000100) == 0x00000100)) {
+          to_bitField1_ |= 0x00000100;
+        }
+        result.vip_ = vip_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -3844,6 +3905,9 @@ public final class PlayerMsgProto {
           bitField1_ |= 0x00000080;
           descript_ = other.descript_;
           onChanged();
+        }
+        if (other.hasVip()) {
+          setVip(other.getVip());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7444,6 +7508,55 @@ public final class PlayerMsgProto {
         return this;
       }
 
+      // optional int32 vip = 41;
+      private int vip_ ;
+      /**
+       * <code>optional int32 vip = 41;</code>
+       *
+       * <pre>
+       * VIP等级，0表示非VIP
+       * </pre>
+       */
+      public boolean hasVip() {
+        return ((bitField1_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional int32 vip = 41;</code>
+       *
+       * <pre>
+       * VIP等级，0表示非VIP
+       * </pre>
+       */
+      public int getVip() {
+        return vip_;
+      }
+      /**
+       * <code>optional int32 vip = 41;</code>
+       *
+       * <pre>
+       * VIP等级，0表示非VIP
+       * </pre>
+       */
+      public Builder setVip(int value) {
+        bitField1_ |= 0x00000100;
+        vip_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 vip = 41;</code>
+       *
+       * <pre>
+       * VIP等级，0表示非VIP
+       * </pre>
+       */
+      public Builder clearVip() {
+        bitField1_ = (bitField1_ & ~0x00000100);
+        vip_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.PlayerMsg)
     }
 
@@ -7472,7 +7585,7 @@ public final class PlayerMsgProto {
       "\n5main/resources/com/zc/messages/player/" +
       "PlayerMsg.proto\022\031com.zc.web.message.play" +
       "er\0323main/resources/com/zc/messages/commo" +
-      "n/FileMsg.proto\"\225\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
+      "n/FileMsg.proto\"\242\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
       "\003\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\t \001(\t\022\016\n\006mobile" +
       "\030\n \001(\t\022\n\n\002qq\030% \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\021" +
       "\n\tloginTime\030\004 \001(\005\022\025\n\rlastLoginTime\030\005 \001(\005" +
@@ -7498,8 +7611,8 @@ public final class PlayerMsgProto {
       "neCrimeFile\030! \001(\0132\".com.zc.web.message.c" +
       "ommon.FileMsg\0226\n\ncreditFile\030\" \001(\0132\".com." +
       "zc.web.message.common.FileMsg\022\016\n\006frozen\030" +
-      "# \001(\005\022\020\n\010descript\030( \001(\tB\020B\016PlayerMsgProt",
-      "o"
+      "# \001(\005\022\020\n\010descript\030( \001(\t\022\013\n\003vip\030) \001(\005B\020B\016",
+      "PlayerMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -7511,7 +7624,7 @@ public final class PlayerMsgProto {
           internal_static_com_zc_web_message_player_PlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_PlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", });
+              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", });
           return null;
         }
       };

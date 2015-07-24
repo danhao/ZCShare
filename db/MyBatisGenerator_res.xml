@@ -12,6 +12,6 @@
 		<sqlMapGenerator targetPackage="com.zc.config.maps" targetProject="ZCShare/src/main/resources" />
 		<javaClientGenerator type="XMLMAPPER" targetPackage="com.zc.web.config.mapper" targetProject="ZCShare/src/main/java" />
 		
-	 	<table tableName="config_city" domainObjectName="ConfigCity"/>
+	 	<table tableName="config_vip" domainObjectName="ConfigVip"/>
 	</context>
 </generatorConfiguration>
