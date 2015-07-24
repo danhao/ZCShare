@@ -141,11 +141,11 @@ public class ImportDebtData {
 	    	}
 	    	
 	    	for(String d : data){
-	    		String createDebt = "{'code':100,'pid':619034302981607425,'sid':'f0f171dd-6ecf-4266-a619-79ffe1381b9c','req':" + d + "}";
+//	    		String createDebt = "{'code':100,'pid':624419524266954752,'sid':'283c7c49-d8c9-4fd3-924b-7d6810a0a182','req':" + d + "}";
+	    		String createDebt = "{'code':100,'pid':606342446812499968,'sid':'8c9e6ff5-dd09-4883-9499-40ad14d353c5','req':" + d + "}";
 	    		System.out.println(createDebt);
 	    		
 	    		post(createDebt);
-	    		break;
 	    	}
 	    }
 	}
