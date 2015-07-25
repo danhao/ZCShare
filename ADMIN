@@ -12,3 +12,6 @@ http://localhost:31001/?cmd=1000010|0|文件名
 
 审核通过债务
 http://localhost:31001/?cmd=1000007|0|债务id_state_1
+
+设置VIP等级
+http://localhost:31001/?cmd=1000015|pid|vip等级

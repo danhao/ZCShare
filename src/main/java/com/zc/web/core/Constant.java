@@ -66,8 +66,9 @@ public class Constant {
 	public static final int MONEY_PLATFORM_DEFAULT = 0;
 	public static final int MONEY_PLATFORM_UNIONPAY = 1;
 	
-	// 1：发布债务
+	// 1：发布债务 2:回款结单
 	public static final int SITUATION_CREATE_DEBT = 1;
+	public static final int SITUATION_DEBT_END = 2;
 	
 	// 用户角色：0有债务；1催债
 	public static final int USER_ROLE_CREDITOR = 0;

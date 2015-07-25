@@ -16,7 +16,6 @@ message DebtMsg{
 	optional int32 bidIncrease = 23;		// 加价幅度
 	optional int32 isCorp = 41;				// 0普通单；1企业单
 
-
 	optional int64 ownerId = 24;			// 发布人
 	optional string ownerName = 25;			// 发布人昵称
 	optional int64 winnerId = 26;			// 获单人ID

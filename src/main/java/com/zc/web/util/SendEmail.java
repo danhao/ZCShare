@@ -17,11 +17,11 @@ import javax.mail.internet.MimeMessage;
  */
 public class SendEmail {
 
-	public static final String HOST = "smtp.qq.com";
+	public static final String HOST = "smtp.mxhichina.com";
 	public static final String PROTOCOL = "smtp";
 	public static final int PORT = 25;
-	public static final String FROM = "shuishou@ppsea.com";// 发件人的email
-	public static final String PWD = "jiujiu99";// 发件人密码
+	public static final String FROM = "webmaster@ddzhai.cn";// 发件人的email
+	public static final String PWD = "Password1";// 发件人密码
 
 	/**
 	 * 获取Session
@@ -66,5 +66,9 @@ public class SendEmail {
 		} catch (MessagingException mex) {
 			mex.printStackTrace();
 		}
+	}
+	
+	public static void main(String[] args){
+		send("daniel.hao@ddzhai.cn", "test", "test");
 	}
 }

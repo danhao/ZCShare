@@ -145,6 +145,51 @@ public final class SimplePlayerMsgProto {
      * </pre>
      */
     int getGender();
+
+    // optional int32 rating = 8;
+    /**
+     * <code>optional int32 rating = 8;</code>
+     *
+     * <pre>
+     * 信用
+     * </pre>
+     */
+    boolean hasRating();
+    /**
+     * <code>optional int32 rating = 8;</code>
+     *
+     * <pre>
+     * 信用
+     * </pre>
+     */
+    int getRating();
+
+    // optional string descript = 9;
+    /**
+     * <code>optional string descript = 9;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    boolean hasDescript();
+    /**
+     * <code>optional string descript = 9;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    java.lang.String getDescript();
+    /**
+     * <code>optional string descript = 9;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDescriptBytes();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.SimplePlayerMsg}
@@ -230,6 +275,16 @@ public final class SimplePlayerMsgProto {
             case 56: {
               bitField0_ |= 0x00000040;
               gender_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              rating_ = input.readInt32();
+              break;
+            }
+            case 74: {
+              bitField0_ |= 0x00000100;
+              descript_ = input.readBytes();
               break;
             }
           }
@@ -471,6 +526,85 @@ public final class SimplePlayerMsgProto {
       return gender_;
     }
 
+    // optional int32 rating = 8;
+    public static final int RATING_FIELD_NUMBER = 8;
+    private int rating_;
+    /**
+     * <code>optional int32 rating = 8;</code>
+     *
+     * <pre>
+     * 信用
+     * </pre>
+     */
+    public boolean hasRating() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional int32 rating = 8;</code>
+     *
+     * <pre>
+     * 信用
+     * </pre>
+     */
+    public int getRating() {
+      return rating_;
+    }
+
+    // optional string descript = 9;
+    public static final int DESCRIPT_FIELD_NUMBER = 9;
+    private java.lang.Object descript_;
+    /**
+     * <code>optional string descript = 9;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public boolean hasDescript() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional string descript = 9;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public java.lang.String getDescript() {
+      java.lang.Object ref = descript_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          descript_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string descript = 9;</code>
+     *
+     * <pre>
+     * 描述
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptBytes() {
+      java.lang.Object ref = descript_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        descript_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       id_ = 0L;
       name_ = "";
@@ -479,6 +613,8 @@ public final class SimplePlayerMsgProto {
       role_ = 0;
       status_ = 0;
       gender_ = 0;
+      rating_ = 0;
+      descript_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -512,6 +648,12 @@ public final class SimplePlayerMsgProto {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeInt32(7, gender_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, rating_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBytes(9, getDescriptBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -549,6 +691,14 @@ public final class SimplePlayerMsgProto {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, gender_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, rating_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(9, getDescriptBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -680,6 +830,10 @@ public final class SimplePlayerMsgProto {
         bitField0_ = (bitField0_ & ~0x00000020);
         gender_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
+        rating_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        descript_ = "";
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -736,6 +890,14 @@ public final class SimplePlayerMsgProto {
           to_bitField0_ |= 0x00000040;
         }
         result.gender_ = gender_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.rating_ = rating_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.descript_ = descript_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -774,6 +936,14 @@ public final class SimplePlayerMsgProto {
         }
         if (other.hasGender()) {
           setGender(other.getGender());
+        }
+        if (other.hasRating()) {
+          setRating(other.getRating());
+        }
+        if (other.hasDescript()) {
+          bitField0_ |= 0x00000100;
+          descript_ = other.descript_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1194,6 +1364,153 @@ public final class SimplePlayerMsgProto {
         return this;
       }
 
+      // optional int32 rating = 8;
+      private int rating_ ;
+      /**
+       * <code>optional int32 rating = 8;</code>
+       *
+       * <pre>
+       * 信用
+       * </pre>
+       */
+      public boolean hasRating() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 rating = 8;</code>
+       *
+       * <pre>
+       * 信用
+       * </pre>
+       */
+      public int getRating() {
+        return rating_;
+      }
+      /**
+       * <code>optional int32 rating = 8;</code>
+       *
+       * <pre>
+       * 信用
+       * </pre>
+       */
+      public Builder setRating(int value) {
+        bitField0_ |= 0x00000080;
+        rating_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 rating = 8;</code>
+       *
+       * <pre>
+       * 信用
+       * </pre>
+       */
+      public Builder clearRating() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        rating_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional string descript = 9;
+      private java.lang.Object descript_ = "";
+      /**
+       * <code>optional string descript = 9;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public boolean hasDescript() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional string descript = 9;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public java.lang.String getDescript() {
+        java.lang.Object ref = descript_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          descript_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string descript = 9;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptBytes() {
+        java.lang.Object ref = descript_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          descript_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string descript = 9;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder setDescript(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        descript_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string descript = 9;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder clearDescript() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        descript_ = getDefaultInstance().getDescript();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string descript = 9;</code>
+       *
+       * <pre>
+       * 描述
+       * </pre>
+       */
+      public Builder setDescriptBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000100;
+        descript_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.SimplePlayerMsg)
     }
 
@@ -1221,10 +1538,11 @@ public final class SimplePlayerMsgProto {
     java.lang.String[] descriptorData = {
       "\n;main/resources/com/zc/messages/player/" +
       "SimplePlayerMsg.proto\022\031com.zc.web.messag" +
-      "e.player\"{\n\017SimplePlayerMsg\022\n\n\002id\030\001 \001(\003\022" +
-      "\014\n\004name\030\002 \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\014\n\004typ" +
-      "e\030\004 \001(\005\022\014\n\004role\030\005 \001(\005\022\016\n\006status\030\006 \001(\005\022\016\n" +
-      "\006gender\030\007 \001(\005B\026B\024SimplePlayerMsgProto"
+      "e.player\"\235\001\n\017SimplePlayerMsg\022\n\n\002id\030\001 \001(\003" +
+      "\022\014\n\004name\030\002 \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\014\n\004ty" +
+      "pe\030\004 \001(\005\022\014\n\004role\030\005 \001(\005\022\016\n\006status\030\006 \001(\005\022\016" +
+      "\n\006gender\030\007 \001(\005\022\016\n\006rating\030\010 \001(\005\022\020\n\010descri" +
+      "pt\030\t \001(\tB\026B\024SimplePlayerMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1236,7 +1554,7 @@ public final class SimplePlayerMsgProto {
           internal_static_com_zc_web_message_player_SimplePlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_SimplePlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "CreateTime", "Type", "Role", "Status", "Gender", });
+              new java.lang.String[] { "Id", "Name", "CreateTime", "Type", "Role", "Status", "Gender", "Rating", "Descript", });
           return null;
         }
       };
