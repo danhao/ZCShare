@@ -121,7 +121,7 @@ public final class ErrorCodeProto {
      * <code>ERR_NO_PLAYER = 103;</code>
      *
      * <pre>
-     *不存在
+     *用户或密码错误
      * </pre>
      */
     ERR_NO_PLAYER(13, 103),
@@ -323,7 +323,7 @@ public final class ErrorCodeProto {
      * <code>ERR_NO_PLAYER = 103;</code>
      *
      * <pre>
-     *不存在
+     *用户或密码错误
      * </pre>
      */
     public static final int ERR_NO_PLAYER_VALUE = 103;

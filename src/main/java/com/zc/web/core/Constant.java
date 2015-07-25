@@ -32,6 +32,7 @@ public class Constant {
 	}
 	
 	public static final int BOND = 10;		// 保证金，百分比
+	public static final int MAX_BOND = 50000;	// 最高保证金（分）
 	
 	// 0未审核；1已通过；2未通过；3已成交；4已完成；
 	public static final int STATE_NEW = 0;
@@ -69,6 +70,7 @@ public class Constant {
 	// 1：发布债务 2:回款结单
 	public static final int SITUATION_CREATE_DEBT = 1;
 	public static final int SITUATION_DEBT_END = 2;
+	public static final int SITUATION_BOND_RETURN = 3;
 	
 	// 用户角色：0有债务；1催债
 	public static final int USER_ROLE_CREDITOR = 0;

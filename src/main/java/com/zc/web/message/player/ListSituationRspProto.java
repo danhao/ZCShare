@@ -163,7 +163,7 @@ public final class ListSituationRspProto {
        * <code>optional int32 type = 2;</code>
        *
        * <pre>
-       * 1：发布债务；
+       * 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
        * </pre>
        */
       boolean hasType();
@@ -171,7 +171,7 @@ public final class ListSituationRspProto {
        * <code>optional int32 type = 2;</code>
        *
        * <pre>
-       * 1：发布债务；
+       * 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
        * </pre>
        */
       int getType();
@@ -194,32 +194,41 @@ public final class ListSituationRspProto {
        */
       int getTime();
 
-      // optional string content = 4;
+      // repeated string data = 4;
       /**
-       * <code>optional string content = 4;</code>
+       * <code>repeated string data = 4;</code>
        *
        * <pre>
        * 内容
        * </pre>
        */
-      boolean hasContent();
+      java.util.List<java.lang.String>
+      getDataList();
       /**
-       * <code>optional string content = 4;</code>
+       * <code>repeated string data = 4;</code>
        *
        * <pre>
        * 内容
        * </pre>
        */
-      java.lang.String getContent();
+      int getDataCount();
       /**
-       * <code>optional string content = 4;</code>
+       * <code>repeated string data = 4;</code>
+       *
+       * <pre>
+       * 内容
+       * </pre>
+       */
+      java.lang.String getData(int index);
+      /**
+       * <code>repeated string data = 4;</code>
        *
        * <pre>
        * 内容
        * </pre>
        */
       com.google.protobuf.ByteString
-          getContentBytes();
+          getDataBytes(int index);
     }
     /**
      * Protobuf type {@code com.zc.web.message.player.ListSituationRsp.SituationMsg}
@@ -288,8 +297,11 @@ public final class ListSituationRspProto {
                 break;
               }
               case 34: {
-                bitField0_ |= 0x00000008;
-                content_ = input.readBytes();
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  data_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                data_.add(input.readBytes());
                 break;
               }
             }
@@ -300,6 +312,9 @@ public final class ListSituationRspProto {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
+          if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            data_ = new com.google.protobuf.UnmodifiableLazyStringList(data_);
+          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -363,7 +378,7 @@ public final class ListSituationRspProto {
        * <code>optional int32 type = 2;</code>
        *
        * <pre>
-       * 1：发布债务；
+       * 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
        * </pre>
        */
       public boolean hasType() {
@@ -373,7 +388,7 @@ public final class ListSituationRspProto {
        * <code>optional int32 type = 2;</code>
        *
        * <pre>
-       * 1：发布债务；
+       * 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
        * </pre>
        */
       public int getType() {
@@ -404,66 +419,57 @@ public final class ListSituationRspProto {
         return time_;
       }
 
-      // optional string content = 4;
-      public static final int CONTENT_FIELD_NUMBER = 4;
-      private java.lang.Object content_;
+      // repeated string data = 4;
+      public static final int DATA_FIELD_NUMBER = 4;
+      private com.google.protobuf.LazyStringList data_;
       /**
-       * <code>optional string content = 4;</code>
+       * <code>repeated string data = 4;</code>
        *
        * <pre>
        * 内容
        * </pre>
        */
-      public boolean hasContent() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+      public java.util.List<java.lang.String>
+          getDataList() {
+        return data_;
       }
       /**
-       * <code>optional string content = 4;</code>
+       * <code>repeated string data = 4;</code>
        *
        * <pre>
        * 内容
        * </pre>
        */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            content_ = s;
-          }
-          return s;
-        }
+      public int getDataCount() {
+        return data_.size();
       }
       /**
-       * <code>optional string content = 4;</code>
+       * <code>repeated string data = 4;</code>
+       *
+       * <pre>
+       * 内容
+       * </pre>
+       */
+      public java.lang.String getData(int index) {
+        return data_.get(index);
+      }
+      /**
+       * <code>repeated string data = 4;</code>
        *
        * <pre>
        * 内容
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          content_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+          getDataBytes(int index) {
+        return data_.getByteString(index);
       }
 
       private void initFields() {
         id_ = 0L;
         type_ = 0;
         time_ = 0;
-        content_ = "";
+        data_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -486,8 +492,8 @@ public final class ListSituationRspProto {
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           output.writeInt32(3, time_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeBytes(4, getContentBytes());
+        for (int i = 0; i < data_.size(); i++) {
+          output.writeBytes(4, data_.getByteString(i));
         }
         getUnknownFields().writeTo(output);
       }
@@ -510,9 +516,14 @@ public final class ListSituationRspProto {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(3, time_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(4, getContentBytes());
+        {
+          int dataSize = 0;
+          for (int i = 0; i < data_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeBytesSizeNoTag(data_.getByteString(i));
+          }
+          size += dataSize;
+          size += 1 * getDataList().size();
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -636,7 +647,7 @@ public final class ListSituationRspProto {
           bitField0_ = (bitField0_ & ~0x00000002);
           time_ = 0;
           bitField0_ = (bitField0_ & ~0x00000004);
-          content_ = "";
+          data_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000008);
           return this;
         }
@@ -678,10 +689,12 @@ public final class ListSituationRspProto {
             to_bitField0_ |= 0x00000004;
           }
           result.time_ = time_;
-          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-            to_bitField0_ |= 0x00000008;
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            data_ = new com.google.protobuf.UnmodifiableLazyStringList(
+                data_);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
-          result.content_ = content_;
+          result.data_ = data_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -707,9 +720,14 @@ public final class ListSituationRspProto {
           if (other.hasTime()) {
             setTime(other.getTime());
           }
-          if (other.hasContent()) {
-            bitField0_ |= 0x00000008;
-            content_ = other.content_;
+          if (!other.data_.isEmpty()) {
+            if (data_.isEmpty()) {
+              data_ = other.data_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureDataIsMutable();
+              data_.addAll(other.data_);
+            }
             onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
@@ -794,7 +812,7 @@ public final class ListSituationRspProto {
          * <code>optional int32 type = 2;</code>
          *
          * <pre>
-         * 1：发布债务；
+         * 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
          * </pre>
          */
         public boolean hasType() {
@@ -804,7 +822,7 @@ public final class ListSituationRspProto {
          * <code>optional int32 type = 2;</code>
          *
          * <pre>
-         * 1：发布债务；
+         * 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
          * </pre>
          */
         public int getType() {
@@ -814,7 +832,7 @@ public final class ListSituationRspProto {
          * <code>optional int32 type = 2;</code>
          *
          * <pre>
-         * 1：发布债务；
+         * 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
          * </pre>
          */
         public Builder setType(int value) {
@@ -827,7 +845,7 @@ public final class ListSituationRspProto {
          * <code>optional int32 type = 2;</code>
          *
          * <pre>
-         * 1：发布债务；
+         * 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
          * </pre>
          */
         public Builder clearType() {
@@ -886,100 +904,131 @@ public final class ListSituationRspProto {
           return this;
         }
 
-        // optional string content = 4;
-        private java.lang.Object content_ = "";
+        // repeated string data = 4;
+        private com.google.protobuf.LazyStringList data_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureDataIsMutable() {
+          if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+            data_ = new com.google.protobuf.LazyStringArrayList(data_);
+            bitField0_ |= 0x00000008;
+           }
+        }
         /**
-         * <code>optional string content = 4;</code>
+         * <code>repeated string data = 4;</code>
          *
          * <pre>
          * 内容
          * </pre>
          */
-        public boolean hasContent() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
+        public java.util.List<java.lang.String>
+            getDataList() {
+          return java.util.Collections.unmodifiableList(data_);
         }
         /**
-         * <code>optional string content = 4;</code>
+         * <code>repeated string data = 4;</code>
          *
          * <pre>
          * 内容
          * </pre>
          */
-        public java.lang.String getContent() {
-          java.lang.Object ref = content_;
-          if (!(ref instanceof java.lang.String)) {
-            java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                .toStringUtf8();
-            content_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+        public int getDataCount() {
+          return data_.size();
         }
         /**
-         * <code>optional string content = 4;</code>
+         * <code>repeated string data = 4;</code>
+         *
+         * <pre>
+         * 内容
+         * </pre>
+         */
+        public java.lang.String getData(int index) {
+          return data_.get(index);
+        }
+        /**
+         * <code>repeated string data = 4;</code>
          *
          * <pre>
          * 内容
          * </pre>
          */
         public com.google.protobuf.ByteString
-            getContentBytes() {
-          java.lang.Object ref = content_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            content_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
+            getDataBytes(int index) {
+          return data_.getByteString(index);
         }
         /**
-         * <code>optional string content = 4;</code>
+         * <code>repeated string data = 4;</code>
          *
          * <pre>
          * 内容
          * </pre>
          */
-        public Builder setContent(
+        public Builder setData(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDataIsMutable();
+          data_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string data = 4;</code>
+         *
+         * <pre>
+         * 内容
+         * </pre>
+         */
+        public Builder addData(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
-          content_ = value;
+  ensureDataIsMutable();
+          data_.add(value);
           onChanged();
           return this;
         }
         /**
-         * <code>optional string content = 4;</code>
+         * <code>repeated string data = 4;</code>
          *
          * <pre>
          * 内容
          * </pre>
          */
-        public Builder clearContent() {
+        public Builder addAllData(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureDataIsMutable();
+          super.addAll(values, data_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string data = 4;</code>
+         *
+         * <pre>
+         * 内容
+         * </pre>
+         */
+        public Builder clearData() {
+          data_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000008);
-          content_ = getDefaultInstance().getContent();
           onChanged();
           return this;
         }
         /**
-         * <code>optional string content = 4;</code>
+         * <code>repeated string data = 4;</code>
          *
          * <pre>
          * 内容
          * </pre>
          */
-        public Builder setContentBytes(
+        public Builder addDataBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
-          content_ = value;
+  ensureDataIsMutable();
+          data_.add(value);
           onChanged();
           return this;
         }
@@ -1561,12 +1610,12 @@ public final class ListSituationRspProto {
     java.lang.String[] descriptorData = {
       "\n<main/resources/com/zc/messages/player/" +
       "ListSituationRsp.proto\022\031com.zc.web.messa" +
-      "ge.player\"\250\001\n\020ListSituationRsp\022K\n\tsituat" +
+      "ge.player\"\245\001\n\020ListSituationRsp\022K\n\tsituat" +
       "ion\030\001 \003(\01328.com.zc.web.message.player.Li" +
-      "stSituationRsp.SituationMsg\032G\n\014Situation" +
+      "stSituationRsp.SituationMsg\032D\n\014Situation" +
       "Msg\022\n\n\002id\030\001 \001(\003\022\014\n\004type\030\002 \001(\005\022\014\n\004time\030\003 " +
-      "\001(\005\022\017\n\007content\030\004 \001(\tB\027B\025ListSituationRsp" +
-      "Proto"
+      "\001(\005\022\014\n\004data\030\004 \003(\tB\027B\025ListSituationRspPro" +
+      "to"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1584,7 +1633,7 @@ public final class ListSituationRspProto {
           internal_static_com_zc_web_message_player_ListSituationRsp_SituationMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_ListSituationRsp_SituationMsg_descriptor,
-              new java.lang.String[] { "Id", "Type", "Time", "Content", });
+              new java.lang.String[] { "Id", "Type", "Time", "Data", });
           return null;
         }
       };

@@ -138,7 +138,7 @@ public class Player extends BaseModel{
 		private long id; 				// id
 		private int type;				// 1：发布债务；2：
 		private int time; 				// 产生时间
-		private String content;			// 内容
+		private List<String> data;		// 内容
 	}
 	
 	@Entity(noClassnameStored = true)

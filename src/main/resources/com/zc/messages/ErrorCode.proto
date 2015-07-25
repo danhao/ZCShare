@@ -20,7 +20,7 @@ enum ErrorCode{
 	ERR_ACCOUNT_FORBIDDEN = 100; //封号
 	ERR_LOGOUT = 101; //登出
 	ERR_NO_MONEY = 102; //RMB不足
-	ERR_NO_PLAYER = 103; //不存在
+	ERR_NO_PLAYER = 103; //用户或密码错误
 	ERR_EMAIL_EXIST = 104; //存在email
 	ERR_MOBILE_EXIST = 105; //存在mobile
 	ERR_PASSWD_NOT_SAME = 106; //密码不一致
