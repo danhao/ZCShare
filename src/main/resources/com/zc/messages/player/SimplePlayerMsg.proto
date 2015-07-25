@@ -13,5 +13,5 @@ message SimplePlayerMsg{
 	optional int32 gender = 7;	// 0:无；1：男；2：女
 	optional int32 rating = 8;	// 信用
 	optional string descript = 9; // 描述
-
+	optional string address = 10;		// 地址
 }
