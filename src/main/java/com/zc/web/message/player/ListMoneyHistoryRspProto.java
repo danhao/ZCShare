@@ -248,6 +248,24 @@ public final class ListMoneyHistoryRspProto {
        */
       int getState();
 
+      // optional int32 balance = 8;
+      /**
+       * <code>optional int32 balance = 8;</code>
+       *
+       * <pre>
+       * 余额
+       * </pre>
+       */
+      boolean hasBalance();
+      /**
+       * <code>optional int32 balance = 8;</code>
+       *
+       * <pre>
+       * 余额
+       * </pre>
+       */
+      int getBalance();
+
       // optional string descript = 7;
       /**
        * <code>optional string descript = 7;</code>
@@ -357,8 +375,13 @@ public final class ListMoneyHistoryRspProto {
                 break;
               }
               case 58: {
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000080;
                 descript_ = input.readBytes();
+                break;
+              }
+              case 64: {
+                bitField0_ |= 0x00000040;
+                balance_ = input.readInt32();
                 break;
               }
             }
@@ -545,6 +568,30 @@ public final class ListMoneyHistoryRspProto {
         return state_;
       }
 
+      // optional int32 balance = 8;
+      public static final int BALANCE_FIELD_NUMBER = 8;
+      private int balance_;
+      /**
+       * <code>optional int32 balance = 8;</code>
+       *
+       * <pre>
+       * 余额
+       * </pre>
+       */
+      public boolean hasBalance() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional int32 balance = 8;</code>
+       *
+       * <pre>
+       * 余额
+       * </pre>
+       */
+      public int getBalance() {
+        return balance_;
+      }
+
       // optional string descript = 7;
       public static final int DESCRIPT_FIELD_NUMBER = 7;
       private java.lang.Object descript_;
@@ -556,7 +603,7 @@ public final class ListMoneyHistoryRspProto {
        * </pre>
        */
       public boolean hasDescript() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
        * <code>optional string descript = 7;</code>
@@ -607,6 +654,7 @@ public final class ListMoneyHistoryRspProto {
         platform_ = 0;
         time_ = 0;
         state_ = 0;
+        balance_ = 0;
         descript_ = "";
       }
       private byte memoizedIsInitialized = -1;
@@ -639,8 +687,11 @@ public final class ListMoneyHistoryRspProto {
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
           output.writeInt32(6, state_);
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
           output.writeBytes(7, getDescriptBytes());
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          output.writeInt32(8, balance_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -675,9 +726,13 @@ public final class ListMoneyHistoryRspProto {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(6, state_);
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBytesSize(7, getDescriptBytes());
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(8, balance_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -807,8 +862,10 @@ public final class ListMoneyHistoryRspProto {
           bitField0_ = (bitField0_ & ~0x00000010);
           state_ = 0;
           bitField0_ = (bitField0_ & ~0x00000020);
-          descript_ = "";
+          balance_ = 0;
           bitField0_ = (bitField0_ & ~0x00000040);
+          descript_ = "";
+          bitField0_ = (bitField0_ & ~0x00000080);
           return this;
         }
 
@@ -864,6 +921,10 @@ public final class ListMoneyHistoryRspProto {
           if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
             to_bitField0_ |= 0x00000040;
           }
+          result.balance_ = balance_;
+          if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+            to_bitField0_ |= 0x00000080;
+          }
           result.descript_ = descript_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
@@ -899,8 +960,11 @@ public final class ListMoneyHistoryRspProto {
           if (other.hasState()) {
             setState(other.getState());
           }
+          if (other.hasBalance()) {
+            setBalance(other.getBalance());
+          }
           if (other.hasDescript()) {
-            bitField0_ |= 0x00000040;
+            bitField0_ |= 0x00000080;
             descript_ = other.descript_;
             onChanged();
           }
@@ -1225,6 +1289,55 @@ public final class ListMoneyHistoryRspProto {
           return this;
         }
 
+        // optional int32 balance = 8;
+        private int balance_ ;
+        /**
+         * <code>optional int32 balance = 8;</code>
+         *
+         * <pre>
+         * 余额
+         * </pre>
+         */
+        public boolean hasBalance() {
+          return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+        /**
+         * <code>optional int32 balance = 8;</code>
+         *
+         * <pre>
+         * 余额
+         * </pre>
+         */
+        public int getBalance() {
+          return balance_;
+        }
+        /**
+         * <code>optional int32 balance = 8;</code>
+         *
+         * <pre>
+         * 余额
+         * </pre>
+         */
+        public Builder setBalance(int value) {
+          bitField0_ |= 0x00000040;
+          balance_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 balance = 8;</code>
+         *
+         * <pre>
+         * 余额
+         * </pre>
+         */
+        public Builder clearBalance() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          balance_ = 0;
+          onChanged();
+          return this;
+        }
+
         // optional string descript = 7;
         private java.lang.Object descript_ = "";
         /**
@@ -1235,7 +1348,7 @@ public final class ListMoneyHistoryRspProto {
          * </pre>
          */
         public boolean hasDescript() {
-          return ((bitField0_ & 0x00000040) == 0x00000040);
+          return ((bitField0_ & 0x00000080) == 0x00000080);
         }
         /**
          * <code>optional string descript = 7;</code>
@@ -1287,7 +1400,7 @@ public final class ListMoneyHistoryRspProto {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000040;
+  bitField0_ |= 0x00000080;
           descript_ = value;
           onChanged();
           return this;
@@ -1300,7 +1413,7 @@ public final class ListMoneyHistoryRspProto {
          * </pre>
          */
         public Builder clearDescript() {
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
           descript_ = getDefaultInstance().getDescript();
           onChanged();
           return this;
@@ -1317,7 +1430,7 @@ public final class ListMoneyHistoryRspProto {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000040;
+  bitField0_ |= 0x00000080;
           descript_ = value;
           onChanged();
           return this;
@@ -1900,13 +2013,14 @@ public final class ListMoneyHistoryRspProto {
     java.lang.String[] descriptorData = {
       "\n?main/resources/com/zc/messages/player/" +
       "ListMoneyHistoryRsp.proto\022\031com.zc.web.me" +
-      "ssage.player\"\343\001\n\023ListMoneyHistoryRsp\022O\n\007" +
+      "ssage.player\"\365\001\n\023ListMoneyHistoryRsp\022O\n\007" +
       "history\030\001 \003(\0132>.com.zc.web.message.playe" +
-      "r.ListMoneyHistoryRsp.MoneyHistoryMsg\032{\n" +
-      "\017MoneyHistoryMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005money\030\002 " +
-      "\001(\005\022\014\n\004type\030\003 \001(\005\022\020\n\010platform\030\004 \001(\005\022\014\n\004t" +
-      "ime\030\005 \001(\005\022\r\n\005state\030\006 \001(\005\022\020\n\010descript\030\007 \001" +
-      "(\tB\032B\030ListMoneyHistoryRspProto"
+      "r.ListMoneyHistoryRsp.MoneyHistoryMsg\032\214\001" +
+      "\n\017MoneyHistoryMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005money\030\002" +
+      " \001(\005\022\014\n\004type\030\003 \001(\005\022\020\n\010platform\030\004 \001(\005\022\014\n\004" +
+      "time\030\005 \001(\005\022\r\n\005state\030\006 \001(\005\022\017\n\007balance\030\010 \001" +
+      "(\005\022\020\n\010descript\030\007 \001(\tB\032B\030ListMoneyHistory" +
+      "RspProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1924,7 +2038,7 @@ public final class ListMoneyHistoryRspProto {
           internal_static_com_zc_web_message_player_ListMoneyHistoryRsp_MoneyHistoryMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_ListMoneyHistoryRsp_MoneyHistoryMsg_descriptor,
-              new java.lang.String[] { "Id", "Money", "Type", "Platform", "Time", "State", "Descript", });
+              new java.lang.String[] { "Id", "Money", "Type", "Platform", "Time", "State", "Balance", "Descript", });
           return null;
         }
       };
