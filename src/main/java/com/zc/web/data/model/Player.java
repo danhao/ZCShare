@@ -42,6 +42,7 @@ public class Player extends BaseModel{
 	private int coValidating; // 1:申请验证公司
 	private String descript; // 描述
 	private int vip;	//0非VIP
+	private String head;	// 头像
 	
 	// 认证
 	private String userId;		// 用户身份证/组织机构代码

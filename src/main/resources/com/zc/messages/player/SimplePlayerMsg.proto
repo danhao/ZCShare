@@ -14,4 +14,5 @@ message SimplePlayerMsg{
 	optional int32 rating = 8;	// 信用
 	optional string descript = 9; // 描述
 	optional string address = 10;		// 地址
+	optional string head = 11;	// 头像
 }

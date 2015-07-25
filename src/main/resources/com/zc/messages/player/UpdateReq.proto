@@ -33,4 +33,6 @@ message UpdateReq{
 	optional string mobile = 33;	// 手机号
 	optional int32 idValidating = 34; // 1:申请验证身份
 	optional int32 coValidating = 35; // 1:申请验证公司
+	optional string descript = 41; // 描述
+	optional string head = 42;	// 头像
 }

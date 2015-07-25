@@ -49,5 +49,6 @@ message PlayerMsg{
 	optional int32 vip = 41;	// VIP等级，0表示非VIP
 	optional int32 idValidating = 42; // 1:申请验证身份
 	optional int32 coValidating = 43; // 1:申请验证公司
+	optional string head = 44;	// 头像
 
 }

@@ -987,6 +987,33 @@ public final class PlayerMsgProto {
      * </pre>
      */
     int getCoValidating();
+
+    // optional string head = 44;
+    /**
+     * <code>optional string head = 44;</code>
+     *
+     * <pre>
+     * 头像
+     * </pre>
+     */
+    boolean hasHead();
+    /**
+     * <code>optional string head = 44;</code>
+     *
+     * <pre>
+     * 头像
+     * </pre>
+     */
+    java.lang.String getHead();
+    /**
+     * <code>optional string head = 44;</code>
+     *
+     * <pre>
+     * 头像
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getHeadBytes();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.PlayerMsg}
@@ -1309,6 +1336,11 @@ public final class PlayerMsgProto {
             case 344: {
               bitField1_ |= 0x00000400;
               coValidating_ = input.readInt32();
+              break;
+            }
+            case 354: {
+              bitField1_ |= 0x00000800;
+              head_ = input.readBytes();
               break;
             }
           }
@@ -3019,6 +3051,61 @@ public final class PlayerMsgProto {
       return coValidating_;
     }
 
+    // optional string head = 44;
+    public static final int HEAD_FIELD_NUMBER = 44;
+    private java.lang.Object head_;
+    /**
+     * <code>optional string head = 44;</code>
+     *
+     * <pre>
+     * 头像
+     * </pre>
+     */
+    public boolean hasHead() {
+      return ((bitField1_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional string head = 44;</code>
+     *
+     * <pre>
+     * 头像
+     * </pre>
+     */
+    public java.lang.String getHead() {
+      java.lang.Object ref = head_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          head_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string head = 44;</code>
+     *
+     * <pre>
+     * 头像
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getHeadBytes() {
+      java.lang.Object ref = head_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        head_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       id_ = 0L;
       name_ = "";
@@ -3063,6 +3150,7 @@ public final class PlayerMsgProto {
       vip_ = 0;
       idValidating_ = 0;
       coValidating_ = 0;
+      head_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3204,6 +3292,9 @@ public final class PlayerMsgProto {
       }
       if (((bitField1_ & 0x00000400) == 0x00000400)) {
         output.writeInt32(43, coValidating_);
+      }
+      if (((bitField1_ & 0x00000800) == 0x00000800)) {
+        output.writeBytes(44, getHeadBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3385,6 +3476,10 @@ public final class PlayerMsgProto {
       if (((bitField1_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(43, coValidating_);
+      }
+      if (((bitField1_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(44, getHeadBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3623,6 +3718,8 @@ public final class PlayerMsgProto {
         bitField1_ = (bitField1_ & ~0x00000200);
         coValidating_ = 0;
         bitField1_ = (bitField1_ & ~0x00000400);
+        head_ = "";
+        bitField1_ = (bitField1_ & ~0x00000800);
         return this;
       }
 
@@ -3853,6 +3950,10 @@ public final class PlayerMsgProto {
           to_bitField1_ |= 0x00000400;
         }
         result.coValidating_ = coValidating_;
+        if (((from_bitField1_ & 0x00000800) == 0x00000800)) {
+          to_bitField1_ |= 0x00000800;
+        }
+        result.head_ = head_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -4036,6 +4137,11 @@ public final class PlayerMsgProto {
         }
         if (other.hasCoValidating()) {
           setCoValidating(other.getCoValidating());
+        }
+        if (other.hasHead()) {
+          bitField1_ |= 0x00000800;
+          head_ = other.head_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7783,6 +7889,104 @@ public final class PlayerMsgProto {
         return this;
       }
 
+      // optional string head = 44;
+      private java.lang.Object head_ = "";
+      /**
+       * <code>optional string head = 44;</code>
+       *
+       * <pre>
+       * 头像
+       * </pre>
+       */
+      public boolean hasHead() {
+        return ((bitField1_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional string head = 44;</code>
+       *
+       * <pre>
+       * 头像
+       * </pre>
+       */
+      public java.lang.String getHead() {
+        java.lang.Object ref = head_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          head_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string head = 44;</code>
+       *
+       * <pre>
+       * 头像
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getHeadBytes() {
+        java.lang.Object ref = head_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          head_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string head = 44;</code>
+       *
+       * <pre>
+       * 头像
+       * </pre>
+       */
+      public Builder setHead(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000800;
+        head_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string head = 44;</code>
+       *
+       * <pre>
+       * 头像
+       * </pre>
+       */
+      public Builder clearHead() {
+        bitField1_ = (bitField1_ & ~0x00000800);
+        head_ = getDefaultInstance().getHead();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string head = 44;</code>
+       *
+       * <pre>
+       * 头像
+       * </pre>
+       */
+      public Builder setHeadBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00000800;
+        head_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.PlayerMsg)
     }
 
@@ -7811,7 +8015,7 @@ public final class PlayerMsgProto {
       "\n5main/resources/com/zc/messages/player/" +
       "PlayerMsg.proto\022\031com.zc.web.message.play" +
       "er\0323main/resources/com/zc/messages/commo" +
-      "n/FileMsg.proto\"\316\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
+      "n/FileMsg.proto\"\334\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
       "\003\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\t \001(\t\022\016\n\006mobile" +
       "\030\n \001(\t\022\n\n\002qq\030% \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\021" +
       "\n\tloginTime\030\004 \001(\005\022\025\n\rlastLoginTime\030\005 \001(\005" +
@@ -7839,7 +8043,7 @@ public final class PlayerMsgProto {
       "zc.web.message.common.FileMsg\022\016\n\006frozen\030" +
       "# \001(\005\022\020\n\010descript\030( \001(\t\022\013\n\003vip\030) \001(\005\022\024\n\014",
       "idValidating\030* \001(\005\022\024\n\014coValidating\030+ \001(\005" +
-      "B\020B\016PlayerMsgProto"
+      "\022\014\n\004head\030, \001(\tB\020B\016PlayerMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -7851,7 +8055,7 @@ public final class PlayerMsgProto {
           internal_static_com_zc_web_message_player_PlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_PlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "IdValidating", "CoValidating", });
+              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "IdValidating", "CoValidating", "Head", });
           return null;
         }
       };
