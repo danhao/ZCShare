@@ -112,6 +112,8 @@ public class Player extends BaseModel{
 			builder.setCreditFile(getFileMsg(this.fileCredit));
 		if(this.fileNoneCrime != null)
 			builder.setNoneCrimeFile(getFileMsg(this.fileNoneCrime));
+		if(this.head != null && !this.head.isEmpty())
+			builder.setHead(FileUtil.genDownloadUrl(this.head));
 		builder.setPasswd("");
 		int money = 0;
 		for(Entry<Long, Integer> entry : frozenMoney.entrySet()){
