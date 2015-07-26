@@ -1014,6 +1014,24 @@ public final class PlayerMsgProto {
      */
     com.google.protobuf.ByteString
         getHeadBytes();
+
+    // optional int32 fiveInOne = 45;
+    /**
+     * <code>optional int32 fiveInOne = 45;</code>
+     *
+     * <pre>
+     * 五证合一：1是；0否
+     * </pre>
+     */
+    boolean hasFiveInOne();
+    /**
+     * <code>optional int32 fiveInOne = 45;</code>
+     *
+     * <pre>
+     * 五证合一：1是；0否
+     * </pre>
+     */
+    int getFiveInOne();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.PlayerMsg}
@@ -1341,6 +1359,11 @@ public final class PlayerMsgProto {
             case 354: {
               bitField1_ |= 0x00000800;
               head_ = input.readBytes();
+              break;
+            }
+            case 360: {
+              bitField1_ |= 0x00001000;
+              fiveInOne_ = input.readInt32();
               break;
             }
           }
@@ -3106,6 +3129,30 @@ public final class PlayerMsgProto {
       }
     }
 
+    // optional int32 fiveInOne = 45;
+    public static final int FIVEINONE_FIELD_NUMBER = 45;
+    private int fiveInOne_;
+    /**
+     * <code>optional int32 fiveInOne = 45;</code>
+     *
+     * <pre>
+     * 五证合一：1是；0否
+     * </pre>
+     */
+    public boolean hasFiveInOne() {
+      return ((bitField1_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional int32 fiveInOne = 45;</code>
+     *
+     * <pre>
+     * 五证合一：1是；0否
+     * </pre>
+     */
+    public int getFiveInOne() {
+      return fiveInOne_;
+    }
+
     private void initFields() {
       id_ = 0L;
       name_ = "";
@@ -3151,6 +3198,7 @@ public final class PlayerMsgProto {
       idValidating_ = 0;
       coValidating_ = 0;
       head_ = "";
+      fiveInOne_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3295,6 +3343,9 @@ public final class PlayerMsgProto {
       }
       if (((bitField1_ & 0x00000800) == 0x00000800)) {
         output.writeBytes(44, getHeadBytes());
+      }
+      if (((bitField1_ & 0x00001000) == 0x00001000)) {
+        output.writeInt32(45, fiveInOne_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3480,6 +3531,10 @@ public final class PlayerMsgProto {
       if (((bitField1_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(44, getHeadBytes());
+      }
+      if (((bitField1_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(45, fiveInOne_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3720,6 +3775,8 @@ public final class PlayerMsgProto {
         bitField1_ = (bitField1_ & ~0x00000400);
         head_ = "";
         bitField1_ = (bitField1_ & ~0x00000800);
+        fiveInOne_ = 0;
+        bitField1_ = (bitField1_ & ~0x00001000);
         return this;
       }
 
@@ -3954,6 +4011,10 @@ public final class PlayerMsgProto {
           to_bitField1_ |= 0x00000800;
         }
         result.head_ = head_;
+        if (((from_bitField1_ & 0x00001000) == 0x00001000)) {
+          to_bitField1_ |= 0x00001000;
+        }
+        result.fiveInOne_ = fiveInOne_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -4142,6 +4203,9 @@ public final class PlayerMsgProto {
           bitField1_ |= 0x00000800;
           head_ = other.head_;
           onChanged();
+        }
+        if (other.hasFiveInOne()) {
+          setFiveInOne(other.getFiveInOne());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7987,6 +8051,55 @@ public final class PlayerMsgProto {
         return this;
       }
 
+      // optional int32 fiveInOne = 45;
+      private int fiveInOne_ ;
+      /**
+       * <code>optional int32 fiveInOne = 45;</code>
+       *
+       * <pre>
+       * 五证合一：1是；0否
+       * </pre>
+       */
+      public boolean hasFiveInOne() {
+        return ((bitField1_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional int32 fiveInOne = 45;</code>
+       *
+       * <pre>
+       * 五证合一：1是；0否
+       * </pre>
+       */
+      public int getFiveInOne() {
+        return fiveInOne_;
+      }
+      /**
+       * <code>optional int32 fiveInOne = 45;</code>
+       *
+       * <pre>
+       * 五证合一：1是；0否
+       * </pre>
+       */
+      public Builder setFiveInOne(int value) {
+        bitField1_ |= 0x00001000;
+        fiveInOne_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 fiveInOne = 45;</code>
+       *
+       * <pre>
+       * 五证合一：1是；0否
+       * </pre>
+       */
+      public Builder clearFiveInOne() {
+        bitField1_ = (bitField1_ & ~0x00001000);
+        fiveInOne_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.PlayerMsg)
     }
 
@@ -8015,7 +8128,7 @@ public final class PlayerMsgProto {
       "\n5main/resources/com/zc/messages/player/" +
       "PlayerMsg.proto\022\031com.zc.web.message.play" +
       "er\0323main/resources/com/zc/messages/commo" +
-      "n/FileMsg.proto\"\334\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
+      "n/FileMsg.proto\"\357\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
       "\003\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\t \001(\t\022\016\n\006mobile" +
       "\030\n \001(\t\022\n\n\002qq\030% \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\021" +
       "\n\tloginTime\030\004 \001(\005\022\025\n\rlastLoginTime\030\005 \001(\005" +
@@ -8043,7 +8156,8 @@ public final class PlayerMsgProto {
       "zc.web.message.common.FileMsg\022\016\n\006frozen\030" +
       "# \001(\005\022\020\n\010descript\030( \001(\t\022\013\n\003vip\030) \001(\005\022\024\n\014",
       "idValidating\030* \001(\005\022\024\n\014coValidating\030+ \001(\005" +
-      "\022\014\n\004head\030, \001(\tB\020B\016PlayerMsgProto"
+      "\022\014\n\004head\030, \001(\t\022\021\n\tfiveInOne\030- \001(\005B\020B\016Pla" +
+      "yerMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -8055,7 +8169,7 @@ public final class PlayerMsgProto {
           internal_static_com_zc_web_message_player_PlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_PlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "IdValidating", "CoValidating", "Head", });
+              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "IdValidating", "CoValidating", "Head", "FiveInOne", });
           return null;
         }
       };

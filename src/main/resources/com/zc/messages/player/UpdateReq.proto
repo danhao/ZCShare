@@ -35,4 +35,5 @@ message UpdateReq{
 	optional int32 coValidating = 35; // 1:申请验证公司
 	optional string descript = 41; // 描述
 	optional string head = 42;	// 头像
+	optional int32 fiveInOne = 43;	// 五证合一：1是；0否
 }

@@ -68,6 +68,7 @@ public class Player extends BaseModel{
 	private String businessAddress;	// 经营地址
 	private int validateTime;	// 验证时间
 	private String companyPhone;	// 公司联系电话
+	private int fiveInOne;	// 五证合一：1是；0否
 	
 	private int createTime; //账号创建时间
 	private int loginTime; //当前登录时间

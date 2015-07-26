@@ -759,6 +759,24 @@ public final class UpdateReqProto {
      */
     com.google.protobuf.ByteString
         getHeadBytes();
+
+    // optional int32 fiveInOne = 43;
+    /**
+     * <code>optional int32 fiveInOne = 43;</code>
+     *
+     * <pre>
+     * 五证合一：1是；0否
+     * </pre>
+     */
+    boolean hasFiveInOne();
+    /**
+     * <code>optional int32 fiveInOne = 43;</code>
+     *
+     * <pre>
+     * 五证合一：1是；0否
+     * </pre>
+     */
+    int getFiveInOne();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.UpdateReq}
@@ -1015,6 +1033,11 @@ public final class UpdateReqProto {
             case 338: {
               bitField0_ |= 0x20000000;
               head_ = input.readBytes();
+              break;
+            }
+            case 344: {
+              bitField0_ |= 0x40000000;
+              fiveInOne_ = input.readInt32();
               break;
             }
           }
@@ -2374,6 +2397,30 @@ public final class UpdateReqProto {
       }
     }
 
+    // optional int32 fiveInOne = 43;
+    public static final int FIVEINONE_FIELD_NUMBER = 43;
+    private int fiveInOne_;
+    /**
+     * <code>optional int32 fiveInOne = 43;</code>
+     *
+     * <pre>
+     * 五证合一：1是；0否
+     * </pre>
+     */
+    public boolean hasFiveInOne() {
+      return ((bitField0_ & 0x40000000) == 0x40000000);
+    }
+    /**
+     * <code>optional int32 fiveInOne = 43;</code>
+     *
+     * <pre>
+     * 五证合一：1是；0否
+     * </pre>
+     */
+    public int getFiveInOne() {
+      return fiveInOne_;
+    }
+
     private void initFields() {
       oldPasswd_ = "";
       newPasswd_ = "";
@@ -2405,6 +2452,7 @@ public final class UpdateReqProto {
       coValidating_ = 0;
       descript_ = "";
       head_ = "";
+      fiveInOne_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2507,6 +2555,9 @@ public final class UpdateReqProto {
       }
       if (((bitField0_ & 0x20000000) == 0x20000000)) {
         output.writeBytes(42, getHeadBytes());
+      }
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        output.writeInt32(43, fiveInOne_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2636,6 +2687,10 @@ public final class UpdateReqProto {
       if (((bitField0_ & 0x20000000) == 0x20000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(42, getHeadBytes());
+      }
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(43, fiveInOne_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2848,6 +2903,8 @@ public final class UpdateReqProto {
         bitField0_ = (bitField0_ & ~0x10000000);
         head_ = "";
         bitField0_ = (bitField0_ & ~0x20000000);
+        fiveInOne_ = 0;
+        bitField0_ = (bitField0_ & ~0x40000000);
         return this;
       }
 
@@ -3024,6 +3081,10 @@ public final class UpdateReqProto {
           to_bitField0_ |= 0x20000000;
         }
         result.head_ = head_;
+        if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
+          to_bitField0_ |= 0x40000000;
+        }
+        result.fiveInOne_ = fiveInOne_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3163,6 +3224,9 @@ public final class UpdateReqProto {
           bitField0_ |= 0x20000000;
           head_ = other.head_;
           onChanged();
+        }
+        if (other.hasFiveInOne()) {
+          setFiveInOne(other.getFiveInOne());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6222,6 +6286,55 @@ public final class UpdateReqProto {
         return this;
       }
 
+      // optional int32 fiveInOne = 43;
+      private int fiveInOne_ ;
+      /**
+       * <code>optional int32 fiveInOne = 43;</code>
+       *
+       * <pre>
+       * 五证合一：1是；0否
+       * </pre>
+       */
+      public boolean hasFiveInOne() {
+        return ((bitField0_ & 0x40000000) == 0x40000000);
+      }
+      /**
+       * <code>optional int32 fiveInOne = 43;</code>
+       *
+       * <pre>
+       * 五证合一：1是；0否
+       * </pre>
+       */
+      public int getFiveInOne() {
+        return fiveInOne_;
+      }
+      /**
+       * <code>optional int32 fiveInOne = 43;</code>
+       *
+       * <pre>
+       * 五证合一：1是；0否
+       * </pre>
+       */
+      public Builder setFiveInOne(int value) {
+        bitField0_ |= 0x40000000;
+        fiveInOne_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 fiveInOne = 43;</code>
+       *
+       * <pre>
+       * 五证合一：1是；0否
+       * </pre>
+       */
+      public Builder clearFiveInOne() {
+        bitField0_ = (bitField0_ & ~0x40000000);
+        fiveInOne_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.UpdateReq)
     }
 
@@ -6250,7 +6363,7 @@ public final class UpdateReqProto {
       "\n5main/resources/com/zc/messages/player/" +
       "UpdateReq.proto\022\031com.zc.web.message.play" +
       "er\0323main/resources/com/zc/messages/commo" +
-      "n/FileMsg.proto\"\203\007\n\tUpdateReq\022\021\n\toldPass" +
+      "n/FileMsg.proto\"\226\007\n\tUpdateReq\022\021\n\toldPass" +
       "wd\030\001 \001(\t\022\021\n\tnewPasswd\030\002 \001(\t\022\016\n\006gender\030\003 " +
       "\001(\005\022\016\n\006userId\030\017 \001(\t\022\020\n\010userName\030\020 \001(\t\022\023\n" +
       "\013companyName\030\' \001(\t\022\030\n\020artificialPerson\030\021" +
@@ -6272,8 +6385,8 @@ public final class UpdateReqProto {
       "(\005\022\025\n\rbusinessScope\030\036 \001(\t\022\027\n\017businessAdd" +
       "ress\030\037 \001(\t\022\r\n\005email\030  \001(\t\022\016\n\006mobile\030! \001(" +
       "\t\022\024\n\014idValidating\030\" \001(\005\022\024\n\014coValidating\030" +
-      "# \001(\005\022\020\n\010descript\030) \001(\t\022\014\n\004head\030* \001(\tB\020B" +
-      "\016UpdateReqProto"
+      "# \001(\005\022\020\n\010descript\030) \001(\t\022\014\n\004head\030* \001(\t\022\021\n" +
+      "\tfiveInOne\030+ \001(\005B\020B\016UpdateReqProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -6285,7 +6398,7 @@ public final class UpdateReqProto {
           internal_static_com_zc_web_message_player_UpdateReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_UpdateReq_descriptor,
-              new java.lang.String[] { "OldPasswd", "NewPasswd", "Gender", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "NoneCrimeFile", "CreditFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "Email", "Mobile", "IdValidating", "CoValidating", "Descript", "Head", });
+              new java.lang.String[] { "OldPasswd", "NewPasswd", "Gender", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "NoneCrimeFile", "CreditFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "Email", "Mobile", "IdValidating", "CoValidating", "Descript", "Head", "FiveInOne", });
           return null;
         }
       };
