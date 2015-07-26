@@ -9,7 +9,7 @@ message ListSituationRsp{
 
 	message SituationMsg{
 		optional int64 id = 1; 					// id
-		optional int32 type = 2;				// 1：发布债务（type、debtid、duration）；2：结单返款（debtid、money）；3：退还保证金（debtid、money）
+		optional int32 type = 2;				// 1：发布债务（type、debtid、duration）；2：结单返款（debtid、佣金, 平台服务费）；3：退还保证金（debtid、money）
 		optional int32 time = 3;	 			// 操作时间
 		repeated string data = 4;				// 内容
 	}

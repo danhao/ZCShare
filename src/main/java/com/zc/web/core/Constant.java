@@ -27,6 +27,9 @@ public class Constant {
 	public static final int RATING_NONECRIME = 5;
 	public static final int RATING_CLOSE_DEAL = 1;
 	
+	// 平台服务费，百分比，佣金中扣除
+	public static final int SERVICE_FEE = 5;
+	
 	static{
 		SIGNATURE = Base64.encodeBase64String(HMACSHA1.getSignature(POLICY, OSSAccessKeySecret));
 	}
