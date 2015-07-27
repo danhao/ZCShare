@@ -27,7 +27,7 @@ enum ClientAction{
 	ACTION_CREATE_DEBT = 100; 		// 创建债务(debt.DebtMsg---->debt.DebtMsg)
 	ACTION_LIST_DEBTS = 101; 		// 债务列表(debt.ListDebtsReq---->debt.ListDebtsRsp)
 	ACTION_VIEW_DEBT = 102; 		// 债务详情(common.SingleMsg---->debt.DebtMsg)
-	ACTION_LIST_VIEW_DEBTS = 103; 	// 首页债务列表(null---->debt.ListDebtsRsp)
+	ACTION_LIST_VIEW_DEBTS = 103; 	// 首页债务列表(debt.ListDebtsReq---->debt.ListDebtsRsp)
 	ACTION_BID = 104; 				// 投标(debt.BidReq---->null)
 	ACTION_BID_WIN = 105;			// 中标(debt.BidWinReq---->debt.DebtMsg)
 	ACTION_ADD_MESSAGE = 106;		// 增加动态(debt.MessageMsg---->null)

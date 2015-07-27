@@ -185,7 +185,7 @@ public final class ClientActionProto {
      * <code>ACTION_LIST_VIEW_DEBTS = 103;</code>
      *
      * <pre>
-     * 首页债务列表(null----&gt;debt.ListDebtsRsp)
+     * 首页债务列表(debt.ListDebtsReq----&gt;debt.ListDebtsRsp)
      * </pre>
      */
     ACTION_LIST_VIEW_DEBTS(21, 103),
@@ -411,7 +411,7 @@ public final class ClientActionProto {
      * <code>ACTION_LIST_VIEW_DEBTS = 103;</code>
      *
      * <pre>
-     * 首页债务列表(null----&gt;debt.ListDebtsRsp)
+     * 首页债务列表(debt.ListDebtsReq----&gt;debt.ListDebtsRsp)
      * </pre>
      */
     public static final int ACTION_LIST_VIEW_DEBTS_VALUE = 103;
