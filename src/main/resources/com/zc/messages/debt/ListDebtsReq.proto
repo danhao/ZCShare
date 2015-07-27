@@ -19,4 +19,5 @@ message ListDebtsReq{
 	optional int32 createTimeTo = 13;	// 创建时间（止）
 	optional string id = 14;			// id
 	optional string keyword = 15;		// 关键字
+	optional int32 queryType = 16;		// 查询：2我的投标；3我的中标
 }

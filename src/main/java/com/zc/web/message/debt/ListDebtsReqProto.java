@@ -325,6 +325,24 @@ public final class ListDebtsReqProto {
      */
     com.google.protobuf.ByteString
         getKeywordBytes();
+
+    // optional int32 queryType = 16;
+    /**
+     * <code>optional int32 queryType = 16;</code>
+     *
+     * <pre>
+     * 查询：2我的投标；3我的中标
+     * </pre>
+     */
+    boolean hasQueryType();
+    /**
+     * <code>optional int32 queryType = 16;</code>
+     *
+     * <pre>
+     * 查询：2我的投标；3我的中标
+     * </pre>
+     */
+    int getQueryType();
   }
   /**
    * Protobuf type {@code com.zc.web.message.debt.ListDebtsReq}
@@ -450,6 +468,11 @@ public final class ListDebtsReqProto {
             case 122: {
               bitField0_ |= 0x00004000;
               keyword_ = input.readBytes();
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00008000;
+              queryType_ = input.readInt32();
               break;
             }
           }
@@ -1007,6 +1030,30 @@ public final class ListDebtsReqProto {
       }
     }
 
+    // optional int32 queryType = 16;
+    public static final int QUERYTYPE_FIELD_NUMBER = 16;
+    private int queryType_;
+    /**
+     * <code>optional int32 queryType = 16;</code>
+     *
+     * <pre>
+     * 查询：2我的投标；3我的中标
+     * </pre>
+     */
+    public boolean hasQueryType() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional int32 queryType = 16;</code>
+     *
+     * <pre>
+     * 查询：2我的投标；3我的中标
+     * </pre>
+     */
+    public int getQueryType() {
+      return queryType_;
+    }
+
     private void initFields() {
       page_ = 0;
       type_ = 0;
@@ -1023,6 +1070,7 @@ public final class ListDebtsReqProto {
       createTimeTo_ = 0;
       id_ = "";
       keyword_ = "";
+      queryType_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1080,6 +1128,9 @@ public final class ListDebtsReqProto {
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeBytes(15, getKeywordBytes());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeInt32(16, queryType_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1149,6 +1200,10 @@ public final class ListDebtsReqProto {
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(15, getKeywordBytes());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(16, queryType_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1296,6 +1351,8 @@ public final class ListDebtsReqProto {
         bitField0_ = (bitField0_ & ~0x00002000);
         keyword_ = "";
         bitField0_ = (bitField0_ & ~0x00004000);
+        queryType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00008000);
         return this;
       }
 
@@ -1384,6 +1441,10 @@ public final class ListDebtsReqProto {
           to_bitField0_ |= 0x00004000;
         }
         result.keyword_ = keyword_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.queryType_ = queryType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1454,6 +1515,9 @@ public final class ListDebtsReqProto {
           bitField0_ |= 0x00004000;
           keyword_ = other.keyword_;
           onChanged();
+        }
+        if (other.hasQueryType()) {
+          setQueryType(other.getQueryType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2462,6 +2526,55 @@ public final class ListDebtsReqProto {
         return this;
       }
 
+      // optional int32 queryType = 16;
+      private int queryType_ ;
+      /**
+       * <code>optional int32 queryType = 16;</code>
+       *
+       * <pre>
+       * 查询：2我的投标；3我的中标
+       * </pre>
+       */
+      public boolean hasQueryType() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional int32 queryType = 16;</code>
+       *
+       * <pre>
+       * 查询：2我的投标；3我的中标
+       * </pre>
+       */
+      public int getQueryType() {
+        return queryType_;
+      }
+      /**
+       * <code>optional int32 queryType = 16;</code>
+       *
+       * <pre>
+       * 查询：2我的投标；3我的中标
+       * </pre>
+       */
+      public Builder setQueryType(int value) {
+        bitField0_ |= 0x00008000;
+        queryType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 queryType = 16;</code>
+       *
+       * <pre>
+       * 查询：2我的投标；3我的中标
+       * </pre>
+       */
+      public Builder clearQueryType() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        queryType_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.ListDebtsReq)
     }
 
@@ -2489,14 +2602,15 @@ public final class ListDebtsReqProto {
     java.lang.String[] descriptorData = {
       "\n6main/resources/com/zc/messages/debt/Li" +
       "stDebtsReq.proto\022\027com.zc.web.message.deb" +
-      "t\"\226\002\n\014ListDebtsReq\022\014\n\004page\030\001 \001(\005\022\014\n\004type" +
+      "t\"\251\002\n\014ListDebtsReq\022\014\n\004page\030\001 \001(\005\022\014\n\004type" +
       "\030\002 \001(\005\022\r\n\005state\030\003 \001(\005\022\020\n\010location\030\004 \001(\t\022" +
       "\023\n\013publishDays\030\005 \001(\005\022\020\n\010moneyLow\030\006 \001(\005\022\017" +
       "\n\007moneyUp\030\007 \001(\005\022\021\n\texpireLow\030\010 \001(\005\022\020\n\010ex" +
       "pireUp\030\t \001(\005\022\017\n\007ownerId\030\n \001(\t\022\020\n\010deputyI" +
       "d\030\013 \001(\t\022\026\n\016createTimeFrom\030\014 \001(\005\022\024\n\014creat" +
       "eTimeTo\030\r \001(\005\022\n\n\002id\030\016 \001(\t\022\017\n\007keyword\030\017 \001" +
-      "(\tB\023B\021ListDebtsReqProto"
+      "(\t\022\021\n\tqueryType\030\020 \001(\005B\023B\021ListDebtsReqPro",
+      "to"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -2508,7 +2622,7 @@ public final class ListDebtsReqProto {
           internal_static_com_zc_web_message_debt_ListDebtsReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_ListDebtsReq_descriptor,
-              new java.lang.String[] { "Page", "Type", "State", "Location", "PublishDays", "MoneyLow", "MoneyUp", "ExpireLow", "ExpireUp", "OwnerId", "DeputyId", "CreateTimeFrom", "CreateTimeTo", "Id", "Keyword", });
+              new java.lang.String[] { "Page", "Type", "State", "Location", "PublishDays", "MoneyLow", "MoneyUp", "ExpireLow", "ExpireUp", "OwnerId", "DeputyId", "CreateTimeFrom", "CreateTimeTo", "Id", "Keyword", "QueryType", });
           return null;
         }
       };
