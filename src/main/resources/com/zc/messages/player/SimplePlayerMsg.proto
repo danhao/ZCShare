@@ -15,4 +15,5 @@ message SimplePlayerMsg{
 	optional string descript = 9; // 描述
 	optional string address = 10;		// 地址
 	optional string head = 11;	// 头像
+	optional string companyName = 12; // 公司名称
 }
