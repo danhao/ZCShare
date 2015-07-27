@@ -271,6 +271,33 @@ public final class SimplePlayerMsgProto {
      */
     com.google.protobuf.ByteString
         getCompanyNameBytes();
+
+    // optional string userName = 13;
+    /**
+     * <code>optional string userName = 13;</code>
+     *
+     * <pre>
+     * 用户真实姓名
+     * </pre>
+     */
+    boolean hasUserName();
+    /**
+     * <code>optional string userName = 13;</code>
+     *
+     * <pre>
+     * 用户真实姓名
+     * </pre>
+     */
+    java.lang.String getUserName();
+    /**
+     * <code>optional string userName = 13;</code>
+     *
+     * <pre>
+     * 用户真实姓名
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUserNameBytes();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.SimplePlayerMsg}
@@ -381,6 +408,11 @@ public final class SimplePlayerMsgProto {
             case 98: {
               bitField0_ |= 0x00000800;
               companyName_ = input.readBytes();
+              break;
+            }
+            case 106: {
+              bitField0_ |= 0x00001000;
+              userName_ = input.readBytes();
               break;
             }
           }
@@ -866,6 +898,61 @@ public final class SimplePlayerMsgProto {
       }
     }
 
+    // optional string userName = 13;
+    public static final int USERNAME_FIELD_NUMBER = 13;
+    private java.lang.Object userName_;
+    /**
+     * <code>optional string userName = 13;</code>
+     *
+     * <pre>
+     * 用户真实姓名
+     * </pre>
+     */
+    public boolean hasUserName() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional string userName = 13;</code>
+     *
+     * <pre>
+     * 用户真实姓名
+     * </pre>
+     */
+    public java.lang.String getUserName() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          userName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string userName = 13;</code>
+     *
+     * <pre>
+     * 用户真实姓名
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUserNameBytes() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       id_ = 0L;
       name_ = "";
@@ -879,6 +966,7 @@ public final class SimplePlayerMsgProto {
       address_ = "";
       head_ = "";
       companyName_ = "";
+      userName_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -927,6 +1015,9 @@ public final class SimplePlayerMsgProto {
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeBytes(12, getCompanyNameBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeBytes(13, getUserNameBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -984,6 +1075,10 @@ public final class SimplePlayerMsgProto {
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(12, getCompanyNameBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, getUserNameBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1125,6 +1220,8 @@ public final class SimplePlayerMsgProto {
         bitField0_ = (bitField0_ & ~0x00000400);
         companyName_ = "";
         bitField0_ = (bitField0_ & ~0x00000800);
+        userName_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -1201,6 +1298,10 @@ public final class SimplePlayerMsgProto {
           to_bitField0_ |= 0x00000800;
         }
         result.companyName_ = companyName_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.userName_ = userName_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1261,6 +1362,11 @@ public final class SimplePlayerMsgProto {
         if (other.hasCompanyName()) {
           bitField0_ |= 0x00000800;
           companyName_ = other.companyName_;
+          onChanged();
+        }
+        if (other.hasUserName()) {
+          bitField0_ |= 0x00001000;
+          userName_ = other.userName_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2123,6 +2229,104 @@ public final class SimplePlayerMsgProto {
         return this;
       }
 
+      // optional string userName = 13;
+      private java.lang.Object userName_ = "";
+      /**
+       * <code>optional string userName = 13;</code>
+       *
+       * <pre>
+       * 用户真实姓名
+       * </pre>
+       */
+      public boolean hasUserName() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional string userName = 13;</code>
+       *
+       * <pre>
+       * 用户真实姓名
+       * </pre>
+       */
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          userName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string userName = 13;</code>
+       *
+       * <pre>
+       * 用户真实姓名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string userName = 13;</code>
+       *
+       * <pre>
+       * 用户真实姓名
+       * </pre>
+       */
+      public Builder setUserName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userName = 13;</code>
+       *
+       * <pre>
+       * 用户真实姓名
+       * </pre>
+       */
+      public Builder clearUserName() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        userName_ = getDefaultInstance().getUserName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userName = 13;</code>
+       *
+       * <pre>
+       * 用户真实姓名
+       * </pre>
+       */
+      public Builder setUserNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.SimplePlayerMsg)
     }
 
@@ -2150,13 +2354,13 @@ public final class SimplePlayerMsgProto {
     java.lang.String[] descriptorData = {
       "\n;main/resources/com/zc/messages/player/" +
       "SimplePlayerMsg.proto\022\031com.zc.web.messag" +
-      "e.player\"\321\001\n\017SimplePlayerMsg\022\n\n\002id\030\001 \001(\003" +
+      "e.player\"\343\001\n\017SimplePlayerMsg\022\n\n\002id\030\001 \001(\003" +
       "\022\014\n\004name\030\002 \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\014\n\004ty" +
       "pe\030\004 \001(\005\022\014\n\004role\030\005 \001(\005\022\016\n\006status\030\006 \001(\005\022\016" +
       "\n\006gender\030\007 \001(\005\022\016\n\006rating\030\010 \001(\005\022\020\n\010descri" +
       "pt\030\t \001(\t\022\017\n\007address\030\n \001(\t\022\014\n\004head\030\013 \001(\t\022" +
-      "\023\n\013companyName\030\014 \001(\tB\026B\024SimplePlayerMsgP" +
-      "roto"
+      "\023\n\013companyName\030\014 \001(\t\022\020\n\010userName\030\r \001(\tB\026" +
+      "B\024SimplePlayerMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -2168,7 +2372,7 @@ public final class SimplePlayerMsgProto {
           internal_static_com_zc_web_message_player_SimplePlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_SimplePlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "CreateTime", "Type", "Role", "Status", "Gender", "Rating", "Descript", "Address", "Head", "CompanyName", });
+              new java.lang.String[] { "Id", "Name", "CreateTime", "Type", "Role", "Status", "Gender", "Rating", "Descript", "Address", "Head", "CompanyName", "UserName", });
           return null;
         }
       };
