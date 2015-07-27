@@ -11,27 +11,45 @@ public final class AlertMsgProto {
   public interface AlertMsgOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // optional int32 money = 1;
+    // optional int32 moneyLow = 1;
     /**
-     * <code>optional int32 money = 1;</code>
+     * <code>optional int32 moneyLow = 1;</code>
      *
      * <pre>
-     * 金额
+     * 金额（低）
      * </pre>
      */
-    boolean hasMoney();
+    boolean hasMoneyLow();
     /**
-     * <code>optional int32 money = 1;</code>
+     * <code>optional int32 moneyLow = 1;</code>
      *
      * <pre>
-     * 金额
+     * 金额（低）
      * </pre>
      */
-    int getMoney();
+    int getMoneyLow();
 
-    // optional string location = 2;
+    // optional int32 moneyUp = 2;
     /**
-     * <code>optional string location = 2;</code>
+     * <code>optional int32 moneyUp = 2;</code>
+     *
+     * <pre>
+     * 金额（高）
+     * </pre>
+     */
+    boolean hasMoneyUp();
+    /**
+     * <code>optional int32 moneyUp = 2;</code>
+     *
+     * <pre>
+     * 金额（高）
+     * </pre>
+     */
+    int getMoneyUp();
+
+    // optional string location = 3;
+    /**
+     * <code>optional string location = 3;</code>
      *
      * <pre>
      * 地点
@@ -39,7 +57,7 @@ public final class AlertMsgProto {
      */
     boolean hasLocation();
     /**
-     * <code>optional string location = 2;</code>
+     * <code>optional string location = 3;</code>
      *
      * <pre>
      * 地点
@@ -47,7 +65,7 @@ public final class AlertMsgProto {
      */
     java.lang.String getLocation();
     /**
-     * <code>optional string location = 2;</code>
+     * <code>optional string location = 3;</code>
      *
      * <pre>
      * 地点
@@ -56,27 +74,99 @@ public final class AlertMsgProto {
     com.google.protobuf.ByteString
         getLocationBytes();
 
-    // optional int32 rate = 3;
+    // optional int32 rateLow = 4;
     /**
-     * <code>optional int32 rate = 3;</code>
+     * <code>optional int32 rateLow = 4;</code>
      *
      * <pre>
-     * 费率
+     * 费率（低）
      * </pre>
      */
-    boolean hasRate();
+    boolean hasRateLow();
     /**
-     * <code>optional int32 rate = 3;</code>
+     * <code>optional int32 rateLow = 4;</code>
      *
      * <pre>
-     * 费率
+     * 费率（低）
      * </pre>
      */
-    int getRate();
+    int getRateLow();
 
-    // optional int32 on = 4;
+    // optional int32 rateUp = 5;
     /**
-     * <code>optional int32 on = 4;</code>
+     * <code>optional int32 rateUp = 5;</code>
+     *
+     * <pre>
+     * 费率（高）
+     * </pre>
+     */
+    boolean hasRateUp();
+    /**
+     * <code>optional int32 rateUp = 5;</code>
+     *
+     * <pre>
+     * 费率（高）
+     * </pre>
+     */
+    int getRateUp();
+
+    // optional int32 durationLow = 6;
+    /**
+     * <code>optional int32 durationLow = 6;</code>
+     *
+     * <pre>
+     * 代理期限（低）
+     * </pre>
+     */
+    boolean hasDurationLow();
+    /**
+     * <code>optional int32 durationLow = 6;</code>
+     *
+     * <pre>
+     * 代理期限（低）
+     * </pre>
+     */
+    int getDurationLow();
+
+    // optional int32 durationUp = 7;
+    /**
+     * <code>optional int32 durationUp = 7;</code>
+     *
+     * <pre>
+     * 代理期限（高）
+     * </pre>
+     */
+    boolean hasDurationUp();
+    /**
+     * <code>optional int32 durationUp = 7;</code>
+     *
+     * <pre>
+     * 代理期限（高）
+     * </pre>
+     */
+    int getDurationUp();
+
+    // optional int32 type = 8;
+    /**
+     * <code>optional int32 type = 8;</code>
+     *
+     * <pre>
+     * 类型
+     * </pre>
+     */
+    boolean hasType();
+    /**
+     * <code>optional int32 type = 8;</code>
+     *
+     * <pre>
+     * 类型
+     * </pre>
+     */
+    int getType();
+
+    // optional int32 on = 9;
+    /**
+     * <code>optional int32 on = 9;</code>
      *
      * <pre>
      * 1开启；0关闭
@@ -84,7 +174,7 @@ public final class AlertMsgProto {
      */
     boolean hasOn();
     /**
-     * <code>optional int32 on = 4;</code>
+     * <code>optional int32 on = 9;</code>
      *
      * <pre>
      * 1开启；0关闭
@@ -145,21 +235,46 @@ public final class AlertMsgProto {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              money_ = input.readInt32();
+              moneyLow_ = input.readInt32();
               break;
             }
-            case 18: {
+            case 16: {
               bitField0_ |= 0x00000002;
-              location_ = input.readBytes();
+              moneyUp_ = input.readInt32();
               break;
             }
-            case 24: {
+            case 26: {
               bitField0_ |= 0x00000004;
-              rate_ = input.readInt32();
+              location_ = input.readBytes();
               break;
             }
             case 32: {
               bitField0_ |= 0x00000008;
+              rateLow_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              rateUp_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              durationLow_ = input.readInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              durationUp_ = input.readInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              type_ = input.readInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
               on_ = input.readInt32();
               break;
             }
@@ -203,45 +318,69 @@ public final class AlertMsgProto {
     }
 
     private int bitField0_;
-    // optional int32 money = 1;
-    public static final int MONEY_FIELD_NUMBER = 1;
-    private int money_;
+    // optional int32 moneyLow = 1;
+    public static final int MONEYLOW_FIELD_NUMBER = 1;
+    private int moneyLow_;
     /**
-     * <code>optional int32 money = 1;</code>
+     * <code>optional int32 moneyLow = 1;</code>
      *
      * <pre>
-     * 金额
+     * 金额（低）
      * </pre>
      */
-    public boolean hasMoney() {
+    public boolean hasMoneyLow() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional int32 money = 1;</code>
+     * <code>optional int32 moneyLow = 1;</code>
      *
      * <pre>
-     * 金额
+     * 金额（低）
      * </pre>
      */
-    public int getMoney() {
-      return money_;
+    public int getMoneyLow() {
+      return moneyLow_;
     }
 
-    // optional string location = 2;
-    public static final int LOCATION_FIELD_NUMBER = 2;
+    // optional int32 moneyUp = 2;
+    public static final int MONEYUP_FIELD_NUMBER = 2;
+    private int moneyUp_;
+    /**
+     * <code>optional int32 moneyUp = 2;</code>
+     *
+     * <pre>
+     * 金额（高）
+     * </pre>
+     */
+    public boolean hasMoneyUp() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 moneyUp = 2;</code>
+     *
+     * <pre>
+     * 金额（高）
+     * </pre>
+     */
+    public int getMoneyUp() {
+      return moneyUp_;
+    }
+
+    // optional string location = 3;
+    public static final int LOCATION_FIELD_NUMBER = 3;
     private java.lang.Object location_;
     /**
-     * <code>optional string location = 2;</code>
+     * <code>optional string location = 3;</code>
      *
      * <pre>
      * 地点
      * </pre>
      */
     public boolean hasLocation() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional string location = 2;</code>
+     * <code>optional string location = 3;</code>
      *
      * <pre>
      * 地点
@@ -262,7 +401,7 @@ public final class AlertMsgProto {
       }
     }
     /**
-     * <code>optional string location = 2;</code>
+     * <code>optional string location = 3;</code>
      *
      * <pre>
      * 地点
@@ -282,45 +421,141 @@ public final class AlertMsgProto {
       }
     }
 
-    // optional int32 rate = 3;
-    public static final int RATE_FIELD_NUMBER = 3;
-    private int rate_;
+    // optional int32 rateLow = 4;
+    public static final int RATELOW_FIELD_NUMBER = 4;
+    private int rateLow_;
     /**
-     * <code>optional int32 rate = 3;</code>
+     * <code>optional int32 rateLow = 4;</code>
      *
      * <pre>
-     * 费率
+     * 费率（低）
      * </pre>
      */
-    public boolean hasRate() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+    public boolean hasRateLow() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional int32 rate = 3;</code>
+     * <code>optional int32 rateLow = 4;</code>
      *
      * <pre>
-     * 费率
+     * 费率（低）
      * </pre>
      */
-    public int getRate() {
-      return rate_;
+    public int getRateLow() {
+      return rateLow_;
     }
 
-    // optional int32 on = 4;
-    public static final int ON_FIELD_NUMBER = 4;
+    // optional int32 rateUp = 5;
+    public static final int RATEUP_FIELD_NUMBER = 5;
+    private int rateUp_;
+    /**
+     * <code>optional int32 rateUp = 5;</code>
+     *
+     * <pre>
+     * 费率（高）
+     * </pre>
+     */
+    public boolean hasRateUp() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 rateUp = 5;</code>
+     *
+     * <pre>
+     * 费率（高）
+     * </pre>
+     */
+    public int getRateUp() {
+      return rateUp_;
+    }
+
+    // optional int32 durationLow = 6;
+    public static final int DURATIONLOW_FIELD_NUMBER = 6;
+    private int durationLow_;
+    /**
+     * <code>optional int32 durationLow = 6;</code>
+     *
+     * <pre>
+     * 代理期限（低）
+     * </pre>
+     */
+    public boolean hasDurationLow() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int32 durationLow = 6;</code>
+     *
+     * <pre>
+     * 代理期限（低）
+     * </pre>
+     */
+    public int getDurationLow() {
+      return durationLow_;
+    }
+
+    // optional int32 durationUp = 7;
+    public static final int DURATIONUP_FIELD_NUMBER = 7;
+    private int durationUp_;
+    /**
+     * <code>optional int32 durationUp = 7;</code>
+     *
+     * <pre>
+     * 代理期限（高）
+     * </pre>
+     */
+    public boolean hasDurationUp() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional int32 durationUp = 7;</code>
+     *
+     * <pre>
+     * 代理期限（高）
+     * </pre>
+     */
+    public int getDurationUp() {
+      return durationUp_;
+    }
+
+    // optional int32 type = 8;
+    public static final int TYPE_FIELD_NUMBER = 8;
+    private int type_;
+    /**
+     * <code>optional int32 type = 8;</code>
+     *
+     * <pre>
+     * 类型
+     * </pre>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional int32 type = 8;</code>
+     *
+     * <pre>
+     * 类型
+     * </pre>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    // optional int32 on = 9;
+    public static final int ON_FIELD_NUMBER = 9;
     private int on_;
     /**
-     * <code>optional int32 on = 4;</code>
+     * <code>optional int32 on = 9;</code>
      *
      * <pre>
      * 1开启；0关闭
      * </pre>
      */
     public boolean hasOn() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
-     * <code>optional int32 on = 4;</code>
+     * <code>optional int32 on = 9;</code>
      *
      * <pre>
      * 1开启；0关闭
@@ -331,9 +566,14 @@ public final class AlertMsgProto {
     }
 
     private void initFields() {
-      money_ = 0;
+      moneyLow_ = 0;
+      moneyUp_ = 0;
       location_ = "";
-      rate_ = 0;
+      rateLow_ = 0;
+      rateUp_ = 0;
+      durationLow_ = 0;
+      durationUp_ = 0;
+      type_ = 0;
       on_ = 0;
     }
     private byte memoizedIsInitialized = -1;
@@ -349,16 +589,31 @@ public final class AlertMsgProto {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, money_);
+        output.writeInt32(1, moneyLow_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getLocationBytes());
+        output.writeInt32(2, moneyUp_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, rate_);
+        output.writeBytes(3, getLocationBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(4, on_);
+        output.writeInt32(4, rateLow_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, rateUp_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(6, durationLow_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt32(7, durationUp_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeInt32(8, type_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeInt32(9, on_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -371,19 +626,39 @@ public final class AlertMsgProto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, money_);
+          .computeInt32Size(1, moneyLow_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getLocationBytes());
+          .computeInt32Size(2, moneyUp_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, rate_);
+          .computeBytesSize(3, getLocationBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, on_);
+          .computeInt32Size(4, rateLow_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, rateUp_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, durationLow_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, durationUp_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, type_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, on_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -501,14 +776,24 @@ public final class AlertMsgProto {
 
       public Builder clear() {
         super.clear();
-        money_ = 0;
+        moneyLow_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        location_ = "";
+        moneyUp_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        rate_ = 0;
+        location_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        on_ = 0;
+        rateLow_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
+        rateUp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        durationLow_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        durationUp_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        on_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -540,17 +825,37 @@ public final class AlertMsgProto {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.money_ = money_;
+        result.moneyLow_ = moneyLow_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.location_ = location_;
+        result.moneyUp_ = moneyUp_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.rate_ = rate_;
+        result.location_ = location_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
+        }
+        result.rateLow_ = rateLow_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.rateUp_ = rateUp_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.durationLow_ = durationLow_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.durationUp_ = durationUp_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
         }
         result.on_ = on_;
         result.bitField0_ = to_bitField0_;
@@ -569,16 +874,31 @@ public final class AlertMsgProto {
 
       public Builder mergeFrom(com.zc.web.message.player.AlertMsgProto.AlertMsg other) {
         if (other == com.zc.web.message.player.AlertMsgProto.AlertMsg.getDefaultInstance()) return this;
-        if (other.hasMoney()) {
-          setMoney(other.getMoney());
+        if (other.hasMoneyLow()) {
+          setMoneyLow(other.getMoneyLow());
+        }
+        if (other.hasMoneyUp()) {
+          setMoneyUp(other.getMoneyUp());
         }
         if (other.hasLocation()) {
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           location_ = other.location_;
           onChanged();
         }
-        if (other.hasRate()) {
-          setRate(other.getRate());
+        if (other.hasRateLow()) {
+          setRateLow(other.getRateLow());
+        }
+        if (other.hasRateUp()) {
+          setRateUp(other.getRateUp());
+        }
+        if (other.hasDurationLow()) {
+          setDurationLow(other.getDurationLow());
+        }
+        if (other.hasDurationUp()) {
+          setDurationUp(other.getDurationUp());
+        }
+        if (other.hasType()) {
+          setType(other.getType());
         }
         if (other.hasOn()) {
           setOn(other.getOn());
@@ -610,69 +930,118 @@ public final class AlertMsgProto {
       }
       private int bitField0_;
 
-      // optional int32 money = 1;
-      private int money_ ;
+      // optional int32 moneyLow = 1;
+      private int moneyLow_ ;
       /**
-       * <code>optional int32 money = 1;</code>
+       * <code>optional int32 moneyLow = 1;</code>
        *
        * <pre>
-       * 金额
+       * 金额（低）
        * </pre>
        */
-      public boolean hasMoney() {
+      public boolean hasMoneyLow() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional int32 money = 1;</code>
+       * <code>optional int32 moneyLow = 1;</code>
        *
        * <pre>
-       * 金额
+       * 金额（低）
        * </pre>
        */
-      public int getMoney() {
-        return money_;
+      public int getMoneyLow() {
+        return moneyLow_;
       }
       /**
-       * <code>optional int32 money = 1;</code>
+       * <code>optional int32 moneyLow = 1;</code>
        *
        * <pre>
-       * 金额
+       * 金额（低）
        * </pre>
        */
-      public Builder setMoney(int value) {
+      public Builder setMoneyLow(int value) {
         bitField0_ |= 0x00000001;
-        money_ = value;
+        moneyLow_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 money = 1;</code>
+       * <code>optional int32 moneyLow = 1;</code>
        *
        * <pre>
-       * 金额
+       * 金额（低）
        * </pre>
        */
-      public Builder clearMoney() {
+      public Builder clearMoneyLow() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        money_ = 0;
+        moneyLow_ = 0;
         onChanged();
         return this;
       }
 
-      // optional string location = 2;
+      // optional int32 moneyUp = 2;
+      private int moneyUp_ ;
+      /**
+       * <code>optional int32 moneyUp = 2;</code>
+       *
+       * <pre>
+       * 金额（高）
+       * </pre>
+       */
+      public boolean hasMoneyUp() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 moneyUp = 2;</code>
+       *
+       * <pre>
+       * 金额（高）
+       * </pre>
+       */
+      public int getMoneyUp() {
+        return moneyUp_;
+      }
+      /**
+       * <code>optional int32 moneyUp = 2;</code>
+       *
+       * <pre>
+       * 金额（高）
+       * </pre>
+       */
+      public Builder setMoneyUp(int value) {
+        bitField0_ |= 0x00000002;
+        moneyUp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 moneyUp = 2;</code>
+       *
+       * <pre>
+       * 金额（高）
+       * </pre>
+       */
+      public Builder clearMoneyUp() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        moneyUp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional string location = 3;
       private java.lang.Object location_ = "";
       /**
-       * <code>optional string location = 2;</code>
+       * <code>optional string location = 3;</code>
        *
        * <pre>
        * 地点
        * </pre>
        */
       public boolean hasLocation() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional string location = 2;</code>
+       * <code>optional string location = 3;</code>
        *
        * <pre>
        * 地点
@@ -690,7 +1059,7 @@ public final class AlertMsgProto {
         }
       }
       /**
-       * <code>optional string location = 2;</code>
+       * <code>optional string location = 3;</code>
        *
        * <pre>
        * 地点
@@ -710,7 +1079,7 @@ public final class AlertMsgProto {
         }
       }
       /**
-       * <code>optional string location = 2;</code>
+       * <code>optional string location = 3;</code>
        *
        * <pre>
        * 地点
@@ -721,26 +1090,26 @@ public final class AlertMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
         location_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string location = 2;</code>
+       * <code>optional string location = 3;</code>
        *
        * <pre>
        * 地点
        * </pre>
        */
       public Builder clearLocation() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         location_ = getDefaultInstance().getLocation();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string location = 2;</code>
+       * <code>optional string location = 3;</code>
        *
        * <pre>
        * 地点
@@ -751,75 +1120,271 @@ public final class AlertMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
         location_ = value;
         onChanged();
         return this;
       }
 
-      // optional int32 rate = 3;
-      private int rate_ ;
+      // optional int32 rateLow = 4;
+      private int rateLow_ ;
       /**
-       * <code>optional int32 rate = 3;</code>
+       * <code>optional int32 rateLow = 4;</code>
        *
        * <pre>
-       * 费率
+       * 费率（低）
        * </pre>
        */
-      public boolean hasRate() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+      public boolean hasRateLow() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional int32 rate = 3;</code>
+       * <code>optional int32 rateLow = 4;</code>
        *
        * <pre>
-       * 费率
+       * 费率（低）
        * </pre>
        */
-      public int getRate() {
-        return rate_;
+      public int getRateLow() {
+        return rateLow_;
       }
       /**
-       * <code>optional int32 rate = 3;</code>
+       * <code>optional int32 rateLow = 4;</code>
        *
        * <pre>
-       * 费率
+       * 费率（低）
        * </pre>
        */
-      public Builder setRate(int value) {
-        bitField0_ |= 0x00000004;
-        rate_ = value;
+      public Builder setRateLow(int value) {
+        bitField0_ |= 0x00000008;
+        rateLow_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 rate = 3;</code>
+       * <code>optional int32 rateLow = 4;</code>
        *
        * <pre>
-       * 费率
+       * 费率（低）
        * </pre>
        */
-      public Builder clearRate() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        rate_ = 0;
+      public Builder clearRateLow() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        rateLow_ = 0;
         onChanged();
         return this;
       }
 
-      // optional int32 on = 4;
+      // optional int32 rateUp = 5;
+      private int rateUp_ ;
+      /**
+       * <code>optional int32 rateUp = 5;</code>
+       *
+       * <pre>
+       * 费率（高）
+       * </pre>
+       */
+      public boolean hasRateUp() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 rateUp = 5;</code>
+       *
+       * <pre>
+       * 费率（高）
+       * </pre>
+       */
+      public int getRateUp() {
+        return rateUp_;
+      }
+      /**
+       * <code>optional int32 rateUp = 5;</code>
+       *
+       * <pre>
+       * 费率（高）
+       * </pre>
+       */
+      public Builder setRateUp(int value) {
+        bitField0_ |= 0x00000010;
+        rateUp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 rateUp = 5;</code>
+       *
+       * <pre>
+       * 费率（高）
+       * </pre>
+       */
+      public Builder clearRateUp() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        rateUp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 durationLow = 6;
+      private int durationLow_ ;
+      /**
+       * <code>optional int32 durationLow = 6;</code>
+       *
+       * <pre>
+       * 代理期限（低）
+       * </pre>
+       */
+      public boolean hasDurationLow() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 durationLow = 6;</code>
+       *
+       * <pre>
+       * 代理期限（低）
+       * </pre>
+       */
+      public int getDurationLow() {
+        return durationLow_;
+      }
+      /**
+       * <code>optional int32 durationLow = 6;</code>
+       *
+       * <pre>
+       * 代理期限（低）
+       * </pre>
+       */
+      public Builder setDurationLow(int value) {
+        bitField0_ |= 0x00000020;
+        durationLow_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 durationLow = 6;</code>
+       *
+       * <pre>
+       * 代理期限（低）
+       * </pre>
+       */
+      public Builder clearDurationLow() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        durationLow_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 durationUp = 7;
+      private int durationUp_ ;
+      /**
+       * <code>optional int32 durationUp = 7;</code>
+       *
+       * <pre>
+       * 代理期限（高）
+       * </pre>
+       */
+      public boolean hasDurationUp() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional int32 durationUp = 7;</code>
+       *
+       * <pre>
+       * 代理期限（高）
+       * </pre>
+       */
+      public int getDurationUp() {
+        return durationUp_;
+      }
+      /**
+       * <code>optional int32 durationUp = 7;</code>
+       *
+       * <pre>
+       * 代理期限（高）
+       * </pre>
+       */
+      public Builder setDurationUp(int value) {
+        bitField0_ |= 0x00000040;
+        durationUp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 durationUp = 7;</code>
+       *
+       * <pre>
+       * 代理期限（高）
+       * </pre>
+       */
+      public Builder clearDurationUp() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        durationUp_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 type = 8;
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 8;</code>
+       *
+       * <pre>
+       * 类型
+       * </pre>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 type = 8;</code>
+       *
+       * <pre>
+       * 类型
+       * </pre>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 8;</code>
+       *
+       * <pre>
+       * 类型
+       * </pre>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000080;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 8;</code>
+       *
+       * <pre>
+       * 类型
+       * </pre>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 on = 9;
       private int on_ ;
       /**
-       * <code>optional int32 on = 4;</code>
+       * <code>optional int32 on = 9;</code>
        *
        * <pre>
        * 1开启；0关闭
        * </pre>
        */
       public boolean hasOn() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
-       * <code>optional int32 on = 4;</code>
+       * <code>optional int32 on = 9;</code>
        *
        * <pre>
        * 1开启；0关闭
@@ -829,27 +1394,27 @@ public final class AlertMsgProto {
         return on_;
       }
       /**
-       * <code>optional int32 on = 4;</code>
+       * <code>optional int32 on = 9;</code>
        *
        * <pre>
        * 1开启；0关闭
        * </pre>
        */
       public Builder setOn(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000100;
         on_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 on = 4;</code>
+       * <code>optional int32 on = 9;</code>
        *
        * <pre>
        * 1开启；0关闭
        * </pre>
        */
       public Builder clearOn() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000100);
         on_ = 0;
         onChanged();
         return this;
@@ -882,9 +1447,11 @@ public final class AlertMsgProto {
     java.lang.String[] descriptorData = {
       "\n4main/resources/com/zc/messages/player/" +
       "AlertMsg.proto\022\031com.zc.web.message.playe" +
-      "r\"E\n\010AlertMsg\022\r\n\005money\030\001 \001(\005\022\020\n\010location" +
-      "\030\002 \001(\t\022\014\n\004rate\030\003 \001(\005\022\n\n\002on\030\004 \001(\005B\017B\rAler" +
-      "tMsgProto"
+      "r\"\243\001\n\010AlertMsg\022\020\n\010moneyLow\030\001 \001(\005\022\017\n\007mone" +
+      "yUp\030\002 \001(\005\022\020\n\010location\030\003 \001(\t\022\017\n\007rateLow\030\004" +
+      " \001(\005\022\016\n\006rateUp\030\005 \001(\005\022\023\n\013durationLow\030\006 \001(" +
+      "\005\022\022\n\ndurationUp\030\007 \001(\005\022\014\n\004type\030\010 \001(\005\022\n\n\002o" +
+      "n\030\t \001(\005B\017B\rAlertMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -896,7 +1463,7 @@ public final class AlertMsgProto {
           internal_static_com_zc_web_message_player_AlertMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_AlertMsg_descriptor,
-              new java.lang.String[] { "Money", "Location", "Rate", "On", });
+              new java.lang.String[] { "MoneyLow", "MoneyUp", "Location", "RateLow", "RateUp", "DurationLow", "DurationUp", "Type", "On", });
           return null;
         }
       };

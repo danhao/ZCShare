@@ -4,8 +4,13 @@ option java_outer_classname = "AlertMsgProto";
 package com.zc.web.message.player;
 
 message AlertMsg{
-	optional int32 money = 1;		// 金额
-	optional string location = 2;	// 地点
-	optional int32 rate = 3;		// 费率
-	optional int32 on = 4;			// 1开启；0关闭
+	optional int32 moneyLow = 1;		// 金额（低）
+	optional int32 moneyUp = 2;			// 金额（高）
+	optional string location = 3;		// 地点
+	optional int32 rateLow = 4;			// 费率（低）
+	optional int32 rateUp = 5;			// 费率（高）
+	optional int32 durationLow = 6;		// 代理期限（低）
+	optional int32 durationUp = 7;		// 代理期限（高）
+	optional int32 type = 8;			// 类型
+	optional int32 on = 9;				// 1开启；0关闭
 }

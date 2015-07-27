@@ -148,9 +148,14 @@ public class Player extends BaseModel{
 	@Entity(noClassnameStored = true)
 	@Data
 	public static class Alert {
-		private int money;				// 金额
+		private int moneyLow;			// 金额（低）
+		private int moneyUp;			// 金额（高）
 		private String location;		// 地点
-		private int rate;				// 费率
+		private int rateLow;			// 费率（低）
+		private int rateUp;				// 费率（高）
+		private int durationLow;		// 代理期限（低）
+		private int durationUp;			// 代理期限（高）
+		private int type;				// 类型
 		private int on;					// 1开启；0关闭
 	}
 	
