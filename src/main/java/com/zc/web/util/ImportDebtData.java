@@ -83,6 +83,7 @@ public class ImportDebtData {
 		}
 
 		reader.close();
+		System.out.println(ret);
 		return ret;
 	}
 	
@@ -141,7 +142,6 @@ public class ImportDebtData {
 	    	
 	    	for(String d : data){
 	    		String createDebt = "{'code':100,'pid':" + pid + ",'sid':'" + sid + "','req':" + d + "}";
-	    		System.out.println(createDebt);
 	    		
 	    		post(createDebt);
 	    	}
