@@ -33,9 +33,7 @@ public class ImportDebtData {
 	 * @throws SQLException 
 	 */
 	public static void main(String[] args) throws Exception {
-		String filePath = "E:\\dev\\1stzc\\mockups\\debt.xlsx";
-		
-		importExcel(filePath);
+		importExcel(args[0], args[1], args[2]);
 	}
 	
 	private static String post(String req) throws IOException {
@@ -88,7 +86,7 @@ public class ImportDebtData {
 		return ret;
 	}
 	
-	private static void importExcel(String excelPath) throws Exception{
+	private static void importExcel(String excelPath, String pid, String sid) throws Exception{
 		
 		// 创建Excel的工作书册 Workbook,对应到一个excel文档
 		InputStream inputStream = new FileInputStream(excelPath);
@@ -142,8 +140,7 @@ public class ImportDebtData {
 	    	}
 	    	
 	    	for(String d : data){
-//	    		String createDebt = "{'code':100,'pid':624419524266954752,'sid':'283c7c49-d8c9-4fd3-924b-7d6810a0a182','req':" + d + "}";
-	    		String createDebt = "{'code':100,'pid':606342446812499968,'sid':'8c9e6ff5-dd09-4883-9499-40ad14d353c5','req':" + d + "}";
+	    		String createDebt = "{'code':100,'pid':" + pid + ",'sid':'" + sid + "','req':" + d + "}";
 	    		System.out.println(createDebt);
 	    		
 	    		post(createDebt);
