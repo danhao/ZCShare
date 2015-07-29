@@ -952,6 +952,24 @@ public final class PlayerMsgProto {
      */
     int getVip();
 
+    // optional int32 vipCo = 46;
+    /**
+     * <code>optional int32 vipCo = 46;</code>
+     *
+     * <pre>
+     *0非VIP（企业）
+     * </pre>
+     */
+    boolean hasVipCo();
+    /**
+     * <code>optional int32 vipCo = 46;</code>
+     *
+     * <pre>
+     *0非VIP（企业）
+     * </pre>
+     */
+    int getVipCo();
+
     // optional int32 idValidating = 42;
     /**
      * <code>optional int32 idValidating = 42;</code>
@@ -1347,23 +1365,28 @@ public final class PlayerMsgProto {
               break;
             }
             case 336: {
-              bitField1_ |= 0x00000200;
+              bitField1_ |= 0x00000400;
               idValidating_ = input.readInt32();
               break;
             }
             case 344: {
-              bitField1_ |= 0x00000400;
+              bitField1_ |= 0x00000800;
               coValidating_ = input.readInt32();
               break;
             }
             case 354: {
-              bitField1_ |= 0x00000800;
+              bitField1_ |= 0x00001000;
               head_ = input.readBytes();
               break;
             }
             case 360: {
-              bitField1_ |= 0x00001000;
+              bitField1_ |= 0x00002000;
               fiveInOne_ = input.readInt32();
+              break;
+            }
+            case 368: {
+              bitField1_ |= 0x00000200;
+              vipCo_ = input.readInt32();
               break;
             }
           }
@@ -3026,6 +3049,30 @@ public final class PlayerMsgProto {
       return vip_;
     }
 
+    // optional int32 vipCo = 46;
+    public static final int VIPCO_FIELD_NUMBER = 46;
+    private int vipCo_;
+    /**
+     * <code>optional int32 vipCo = 46;</code>
+     *
+     * <pre>
+     *0非VIP（企业）
+     * </pre>
+     */
+    public boolean hasVipCo() {
+      return ((bitField1_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional int32 vipCo = 46;</code>
+     *
+     * <pre>
+     *0非VIP（企业）
+     * </pre>
+     */
+    public int getVipCo() {
+      return vipCo_;
+    }
+
     // optional int32 idValidating = 42;
     public static final int IDVALIDATING_FIELD_NUMBER = 42;
     private int idValidating_;
@@ -3037,7 +3084,7 @@ public final class PlayerMsgProto {
      * </pre>
      */
     public boolean hasIdValidating() {
-      return ((bitField1_ & 0x00000200) == 0x00000200);
+      return ((bitField1_ & 0x00000400) == 0x00000400);
     }
     /**
      * <code>optional int32 idValidating = 42;</code>
@@ -3061,7 +3108,7 @@ public final class PlayerMsgProto {
      * </pre>
      */
     public boolean hasCoValidating() {
-      return ((bitField1_ & 0x00000400) == 0x00000400);
+      return ((bitField1_ & 0x00000800) == 0x00000800);
     }
     /**
      * <code>optional int32 coValidating = 43;</code>
@@ -3085,7 +3132,7 @@ public final class PlayerMsgProto {
      * </pre>
      */
     public boolean hasHead() {
-      return ((bitField1_ & 0x00000800) == 0x00000800);
+      return ((bitField1_ & 0x00001000) == 0x00001000);
     }
     /**
      * <code>optional string head = 44;</code>
@@ -3140,7 +3187,7 @@ public final class PlayerMsgProto {
      * </pre>
      */
     public boolean hasFiveInOne() {
-      return ((bitField1_ & 0x00001000) == 0x00001000);
+      return ((bitField1_ & 0x00002000) == 0x00002000);
     }
     /**
      * <code>optional int32 fiveInOne = 45;</code>
@@ -3195,6 +3242,7 @@ public final class PlayerMsgProto {
       frozen_ = 0;
       descript_ = "";
       vip_ = 0;
+      vipCo_ = 0;
       idValidating_ = 0;
       coValidating_ = 0;
       head_ = "";
@@ -3335,17 +3383,20 @@ public final class PlayerMsgProto {
       if (((bitField1_ & 0x00000100) == 0x00000100)) {
         output.writeInt32(41, vip_);
       }
-      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+      if (((bitField1_ & 0x00000400) == 0x00000400)) {
         output.writeInt32(42, idValidating_);
       }
-      if (((bitField1_ & 0x00000400) == 0x00000400)) {
+      if (((bitField1_ & 0x00000800) == 0x00000800)) {
         output.writeInt32(43, coValidating_);
       }
-      if (((bitField1_ & 0x00000800) == 0x00000800)) {
+      if (((bitField1_ & 0x00001000) == 0x00001000)) {
         output.writeBytes(44, getHeadBytes());
       }
-      if (((bitField1_ & 0x00001000) == 0x00001000)) {
+      if (((bitField1_ & 0x00002000) == 0x00002000)) {
         output.writeInt32(45, fiveInOne_);
+      }
+      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        output.writeInt32(46, vipCo_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3520,21 +3571,25 @@ public final class PlayerMsgProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(41, vip_);
       }
-      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+      if (((bitField1_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(42, idValidating_);
       }
-      if (((bitField1_ & 0x00000400) == 0x00000400)) {
+      if (((bitField1_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(43, coValidating_);
       }
-      if (((bitField1_ & 0x00000800) == 0x00000800)) {
+      if (((bitField1_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(44, getHeadBytes());
       }
-      if (((bitField1_ & 0x00001000) == 0x00001000)) {
+      if (((bitField1_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(45, fiveInOne_);
+      }
+      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(46, vipCo_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3769,14 +3824,16 @@ public final class PlayerMsgProto {
         bitField1_ = (bitField1_ & ~0x00000080);
         vip_ = 0;
         bitField1_ = (bitField1_ & ~0x00000100);
-        idValidating_ = 0;
+        vipCo_ = 0;
         bitField1_ = (bitField1_ & ~0x00000200);
-        coValidating_ = 0;
+        idValidating_ = 0;
         bitField1_ = (bitField1_ & ~0x00000400);
-        head_ = "";
+        coValidating_ = 0;
         bitField1_ = (bitField1_ & ~0x00000800);
-        fiveInOne_ = 0;
+        head_ = "";
         bitField1_ = (bitField1_ & ~0x00001000);
+        fiveInOne_ = 0;
+        bitField1_ = (bitField1_ & ~0x00002000);
         return this;
       }
 
@@ -4002,17 +4059,21 @@ public final class PlayerMsgProto {
         if (((from_bitField1_ & 0x00000200) == 0x00000200)) {
           to_bitField1_ |= 0x00000200;
         }
-        result.idValidating_ = idValidating_;
+        result.vipCo_ = vipCo_;
         if (((from_bitField1_ & 0x00000400) == 0x00000400)) {
           to_bitField1_ |= 0x00000400;
         }
-        result.coValidating_ = coValidating_;
+        result.idValidating_ = idValidating_;
         if (((from_bitField1_ & 0x00000800) == 0x00000800)) {
           to_bitField1_ |= 0x00000800;
         }
-        result.head_ = head_;
+        result.coValidating_ = coValidating_;
         if (((from_bitField1_ & 0x00001000) == 0x00001000)) {
           to_bitField1_ |= 0x00001000;
+        }
+        result.head_ = head_;
+        if (((from_bitField1_ & 0x00002000) == 0x00002000)) {
+          to_bitField1_ |= 0x00002000;
         }
         result.fiveInOne_ = fiveInOne_;
         result.bitField0_ = to_bitField0_;
@@ -4193,6 +4254,9 @@ public final class PlayerMsgProto {
         if (other.hasVip()) {
           setVip(other.getVip());
         }
+        if (other.hasVipCo()) {
+          setVipCo(other.getVipCo());
+        }
         if (other.hasIdValidating()) {
           setIdValidating(other.getIdValidating());
         }
@@ -4200,7 +4264,7 @@ public final class PlayerMsgProto {
           setCoValidating(other.getCoValidating());
         }
         if (other.hasHead()) {
-          bitField1_ |= 0x00000800;
+          bitField1_ |= 0x00001000;
           head_ = other.head_;
           onChanged();
         }
@@ -7855,6 +7919,55 @@ public final class PlayerMsgProto {
         return this;
       }
 
+      // optional int32 vipCo = 46;
+      private int vipCo_ ;
+      /**
+       * <code>optional int32 vipCo = 46;</code>
+       *
+       * <pre>
+       *0非VIP（企业）
+       * </pre>
+       */
+      public boolean hasVipCo() {
+        return ((bitField1_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional int32 vipCo = 46;</code>
+       *
+       * <pre>
+       *0非VIP（企业）
+       * </pre>
+       */
+      public int getVipCo() {
+        return vipCo_;
+      }
+      /**
+       * <code>optional int32 vipCo = 46;</code>
+       *
+       * <pre>
+       *0非VIP（企业）
+       * </pre>
+       */
+      public Builder setVipCo(int value) {
+        bitField1_ |= 0x00000200;
+        vipCo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 vipCo = 46;</code>
+       *
+       * <pre>
+       *0非VIP（企业）
+       * </pre>
+       */
+      public Builder clearVipCo() {
+        bitField1_ = (bitField1_ & ~0x00000200);
+        vipCo_ = 0;
+        onChanged();
+        return this;
+      }
+
       // optional int32 idValidating = 42;
       private int idValidating_ ;
       /**
@@ -7865,7 +7978,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public boolean hasIdValidating() {
-        return ((bitField1_ & 0x00000200) == 0x00000200);
+        return ((bitField1_ & 0x00000400) == 0x00000400);
       }
       /**
        * <code>optional int32 idValidating = 42;</code>
@@ -7885,7 +7998,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public Builder setIdValidating(int value) {
-        bitField1_ |= 0x00000200;
+        bitField1_ |= 0x00000400;
         idValidating_ = value;
         onChanged();
         return this;
@@ -7898,7 +8011,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public Builder clearIdValidating() {
-        bitField1_ = (bitField1_ & ~0x00000200);
+        bitField1_ = (bitField1_ & ~0x00000400);
         idValidating_ = 0;
         onChanged();
         return this;
@@ -7914,7 +8027,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public boolean hasCoValidating() {
-        return ((bitField1_ & 0x00000400) == 0x00000400);
+        return ((bitField1_ & 0x00000800) == 0x00000800);
       }
       /**
        * <code>optional int32 coValidating = 43;</code>
@@ -7934,7 +8047,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public Builder setCoValidating(int value) {
-        bitField1_ |= 0x00000400;
+        bitField1_ |= 0x00000800;
         coValidating_ = value;
         onChanged();
         return this;
@@ -7947,7 +8060,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public Builder clearCoValidating() {
-        bitField1_ = (bitField1_ & ~0x00000400);
+        bitField1_ = (bitField1_ & ~0x00000800);
         coValidating_ = 0;
         onChanged();
         return this;
@@ -7963,7 +8076,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public boolean hasHead() {
-        return ((bitField1_ & 0x00000800) == 0x00000800);
+        return ((bitField1_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>optional string head = 44;</code>
@@ -8015,7 +8128,7 @@ public final class PlayerMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField1_ |= 0x00000800;
+  bitField1_ |= 0x00001000;
         head_ = value;
         onChanged();
         return this;
@@ -8028,7 +8141,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public Builder clearHead() {
-        bitField1_ = (bitField1_ & ~0x00000800);
+        bitField1_ = (bitField1_ & ~0x00001000);
         head_ = getDefaultInstance().getHead();
         onChanged();
         return this;
@@ -8045,7 +8158,7 @@ public final class PlayerMsgProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField1_ |= 0x00000800;
+  bitField1_ |= 0x00001000;
         head_ = value;
         onChanged();
         return this;
@@ -8061,7 +8174,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public boolean hasFiveInOne() {
-        return ((bitField1_ & 0x00001000) == 0x00001000);
+        return ((bitField1_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>optional int32 fiveInOne = 45;</code>
@@ -8081,7 +8194,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public Builder setFiveInOne(int value) {
-        bitField1_ |= 0x00001000;
+        bitField1_ |= 0x00002000;
         fiveInOne_ = value;
         onChanged();
         return this;
@@ -8094,7 +8207,7 @@ public final class PlayerMsgProto {
        * </pre>
        */
       public Builder clearFiveInOne() {
-        bitField1_ = (bitField1_ & ~0x00001000);
+        bitField1_ = (bitField1_ & ~0x00002000);
         fiveInOne_ = 0;
         onChanged();
         return this;
@@ -8128,7 +8241,7 @@ public final class PlayerMsgProto {
       "\n5main/resources/com/zc/messages/player/" +
       "PlayerMsg.proto\022\031com.zc.web.message.play" +
       "er\0323main/resources/com/zc/messages/commo" +
-      "n/FileMsg.proto\"\357\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
+      "n/FileMsg.proto\"\376\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
       "\003\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\t \001(\t\022\016\n\006mobile" +
       "\030\n \001(\t\022\n\n\002qq\030% \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\021" +
       "\n\tloginTime\030\004 \001(\005\022\025\n\rlastLoginTime\030\005 \001(\005" +
@@ -8154,10 +8267,10 @@ public final class PlayerMsgProto {
       "neCrimeFile\030! \001(\0132\".com.zc.web.message.c" +
       "ommon.FileMsg\0226\n\ncreditFile\030\" \001(\0132\".com." +
       "zc.web.message.common.FileMsg\022\016\n\006frozen\030" +
-      "# \001(\005\022\020\n\010descript\030( \001(\t\022\013\n\003vip\030) \001(\005\022\024\n\014",
-      "idValidating\030* \001(\005\022\024\n\014coValidating\030+ \001(\005" +
-      "\022\014\n\004head\030, \001(\t\022\021\n\tfiveInOne\030- \001(\005B\020B\016Pla" +
-      "yerMsgProto"
+      "# \001(\005\022\020\n\010descript\030( \001(\t\022\013\n\003vip\030) \001(\005\022\r\n\005",
+      "vipCo\030. \001(\005\022\024\n\014idValidating\030* \001(\005\022\024\n\014coV" +
+      "alidating\030+ \001(\005\022\014\n\004head\030, \001(\t\022\021\n\tfiveInO" +
+      "ne\030- \001(\005B\020B\016PlayerMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -8169,7 +8282,7 @@ public final class PlayerMsgProto {
           internal_static_com_zc_web_message_player_PlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_PlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "IdValidating", "CoValidating", "Head", "FiveInOne", });
+              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "VipCo", "IdValidating", "CoValidating", "Head", "FiveInOne", });
           return null;
         }
       };

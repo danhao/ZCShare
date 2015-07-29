@@ -20,7 +20,7 @@ enum ClientAction{
 	ACTION_LIST_SITUAION = 14; 		// 查看动态(null---->player.ListSituationRsp)
 	ACTION_LIST_CO_PLAYERS = 15;	// 最新企业用户(null---->player.ListCoPlayersRsp)
 	ACTION_SET_ALERT = 16;			// 提醒设置(player.AlertMsg---->null)
-	ACTION_BUY_VIP = 17;			// 购买VIP(common.SingleMsg(VIP等级)---->null)
+	ACTION_BUY_VIP = 17;			// 购买VIP(common.SingleMsg(0：个人；1：企业)---->null)
 
 	ACTION_UPLOAD_PREPARE = 51;		// 准备上传文件(null---->common.UploadMsg)
 

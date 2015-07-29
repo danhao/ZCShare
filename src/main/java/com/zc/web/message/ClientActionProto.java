@@ -145,7 +145,7 @@ public final class ClientActionProto {
      * <code>ACTION_BUY_VIP = 17;</code>
      *
      * <pre>
-     * 购买VIP(common.SingleMsg(VIP等级)----&gt;null)
+     * 购买VIP(common.SingleMsg(0：个人；1：企业)----&gt;null)
      * </pre>
      */
     ACTION_BUY_VIP(16, 17),
@@ -371,7 +371,7 @@ public final class ClientActionProto {
      * <code>ACTION_BUY_VIP = 17;</code>
      *
      * <pre>
-     * 购买VIP(common.SingleMsg(VIP等级)----&gt;null)
+     * 购买VIP(common.SingleMsg(0：个人；1：企业)----&gt;null)
      * </pre>
      */
     public static final int ACTION_BUY_VIP_VALUE = 17;
