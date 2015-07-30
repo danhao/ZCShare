@@ -38,6 +38,7 @@ public class Debt extends BaseModel {
 
 	private long winnerId; // 获单人
 	private String winnerName;
+	private String winnerHead;
 
 	private String creditorName;
 	private File creditorFileId;
@@ -91,6 +92,8 @@ public class Debt extends BaseModel {
 			PropUtil.copyProperties(bb, bidder,
 					com.zc.web.message.debt.DebtMsgProto.DebtMsg.Bidder
 							.getDescriptor());
+			if(bidder.getHead() != null && !bidder.getHead().isEmpty())
+				bb.setHead(FileUtil.genDownloadUrl(bidder.getHead()));
 			builder.addBidders(0, bb);
 		}
 
@@ -125,6 +128,9 @@ public class Debt extends BaseModel {
 			builder.setContract(fb);
 		}
 
+		if(winnerHead != null && !winnerHead.isEmpty())
+			builder.setWinnerHead(FileUtil.genDownloadUrl(winnerHead));
+		
 		if (hide) {
 			builder.setDebtorPhone(StringUtil.hide(this.debtorPhone, 4));
 			builder.setDebtorId(StringUtil.hide(this.debtorId, 4));
@@ -140,6 +146,7 @@ public class Debt extends BaseModel {
 		private int money; // 投标价格
 		private int rate; // 代理费率
 		private int createTime;
+		private String head;
 	}
 
 	@Entity(noClassnameStored = true)
