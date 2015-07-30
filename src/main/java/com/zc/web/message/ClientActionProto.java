@@ -217,7 +217,7 @@ public final class ClientActionProto {
      * <code>ACTION_LIST_SELF_DEBTS = 107;</code>
      *
      * <pre>
-     * 我相关的债务(common.SingleMsg(1:我发布的 2:我投标的 3:我中标的)----&gt;debt.ListDebtsRsp)
+     * 我相关的债务(debt.ListDebtsReq(queryType 2:我投标的 3:我中标的)----&gt;debt.ListDebtsRsp)
      * </pre>
      */
     ACTION_LIST_SELF_DEBTS(25, 107),
@@ -443,7 +443,7 @@ public final class ClientActionProto {
      * <code>ACTION_LIST_SELF_DEBTS = 107;</code>
      *
      * <pre>
-     * 我相关的债务(common.SingleMsg(1:我发布的 2:我投标的 3:我中标的)----&gt;debt.ListDebtsRsp)
+     * 我相关的债务(debt.ListDebtsReq(queryType 2:我投标的 3:我中标的)----&gt;debt.ListDebtsRsp)
      * </pre>
      */
     public static final int ACTION_LIST_SELF_DEBTS_VALUE = 107;
