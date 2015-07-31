@@ -77,6 +77,9 @@ public class Debt extends BaseModel {
 	@Embedded
 	private List<Message> messages = new ArrayList<Message>(); // 催收状态
 
+	@Embedded
+	private List<Repayment> repayments = new ArrayList<Repayment>(); // 还款记录
+
 	public DebtMsg build() throws SmallException {
 		return this.build(false);
 	}
@@ -147,6 +150,14 @@ public class Debt extends BaseModel {
 	public static class Message {
 		private int time; // 时间
 		private int type; // 类型
+		private String memo; // 说明
+	}
+	
+	@Entity(noClassnameStored = true)
+	@Data
+	public static class Repayment {
+		private int time; // 时间
+		private int money; // 金额
 		private String memo; // 说明
 	}
 
