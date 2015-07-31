@@ -150,6 +150,7 @@ public class Debt extends BaseModel {
 		private int rate; // 代理费率
 		private int createTime;
 		private String head;
+		private int rating;	// 信用
 	}
 
 	@Entity(noClassnameStored = true)

@@ -79,4 +79,5 @@ public class Constant {
 	// 用户角色：0有债务；1催债
 	public static final int USER_ROLE_CREDITOR = 0;
 	public static final int USER_ROLE_DEPUTOR = 1;
+	
 }

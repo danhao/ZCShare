@@ -63,6 +63,7 @@ message DebtMsg{
 		optional int32 rate = 5;			// 代理费率
 		optional int32 createTime = 4;		// 投标时间
 		optional string head = 6;			// 头像
+		optional int32 rating = 7;			// 信用
 	}
 
 	message Message {

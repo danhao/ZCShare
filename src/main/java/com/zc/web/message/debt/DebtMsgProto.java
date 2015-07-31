@@ -1531,6 +1531,24 @@ public final class DebtMsgProto {
        */
       com.google.protobuf.ByteString
           getHeadBytes();
+
+      // optional int32 rating = 7;
+      /**
+       * <code>optional int32 rating = 7;</code>
+       *
+       * <pre>
+       * 信用
+       * </pre>
+       */
+      boolean hasRating();
+      /**
+       * <code>optional int32 rating = 7;</code>
+       *
+       * <pre>
+       * 信用
+       * </pre>
+       */
+      int getRating();
     }
     /**
      * Protobuf type {@code com.zc.web.message.debt.DebtMsg.Bidder}
@@ -1611,6 +1629,11 @@ public final class DebtMsgProto {
               case 50: {
                 bitField0_ |= 0x00000020;
                 head_ = input.readBytes();
+                break;
+              }
+              case 56: {
+                bitField0_ |= 0x00000040;
+                rating_ = input.readInt32();
                 break;
               }
             }
@@ -1859,6 +1882,30 @@ public final class DebtMsgProto {
         }
       }
 
+      // optional int32 rating = 7;
+      public static final int RATING_FIELD_NUMBER = 7;
+      private int rating_;
+      /**
+       * <code>optional int32 rating = 7;</code>
+       *
+       * <pre>
+       * 信用
+       * </pre>
+       */
+      public boolean hasRating() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional int32 rating = 7;</code>
+       *
+       * <pre>
+       * 信用
+       * </pre>
+       */
+      public int getRating() {
+        return rating_;
+      }
+
       private void initFields() {
         id_ = 0L;
         name_ = "";
@@ -1866,6 +1913,7 @@ public final class DebtMsgProto {
         rate_ = 0;
         createTime_ = 0;
         head_ = "";
+        rating_ = 0;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -1896,6 +1944,9 @@ public final class DebtMsgProto {
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
           output.writeBytes(6, getHeadBytes());
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          output.writeInt32(7, rating_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -1929,6 +1980,10 @@ public final class DebtMsgProto {
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBytesSize(6, getHeadBytes());
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(7, rating_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -2058,6 +2113,8 @@ public final class DebtMsgProto {
           bitField0_ = (bitField0_ & ~0x00000010);
           head_ = "";
           bitField0_ = (bitField0_ & ~0x00000020);
+          rating_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000040);
           return this;
         }
 
@@ -2110,6 +2167,10 @@ public final class DebtMsgProto {
             to_bitField0_ |= 0x00000020;
           }
           result.head_ = head_;
+          if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+            to_bitField0_ |= 0x00000040;
+          }
+          result.rating_ = rating_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -2147,6 +2208,9 @@ public final class DebtMsgProto {
             bitField0_ |= 0x00000020;
             head_ = other.head_;
             onChanged();
+          }
+          if (other.hasRating()) {
+            setRating(other.getRating());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           return this;
@@ -2563,6 +2627,55 @@ public final class DebtMsgProto {
   }
   bitField0_ |= 0x00000020;
           head_ = value;
+          onChanged();
+          return this;
+        }
+
+        // optional int32 rating = 7;
+        private int rating_ ;
+        /**
+         * <code>optional int32 rating = 7;</code>
+         *
+         * <pre>
+         * 信用
+         * </pre>
+         */
+        public boolean hasRating() {
+          return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+        /**
+         * <code>optional int32 rating = 7;</code>
+         *
+         * <pre>
+         * 信用
+         * </pre>
+         */
+        public int getRating() {
+          return rating_;
+        }
+        /**
+         * <code>optional int32 rating = 7;</code>
+         *
+         * <pre>
+         * 信用
+         * </pre>
+         */
+        public Builder setRating(int value) {
+          bitField0_ |= 0x00000040;
+          rating_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 rating = 7;</code>
+         *
+         * <pre>
+         * 信用
+         * </pre>
+         */
+        public Builder clearRating() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          rating_ = 0;
           onChanged();
           return this;
         }
@@ -11223,7 +11336,7 @@ public final class DebtMsgProto {
       "\n1main/resources/com/zc/messages/debt/De" +
       "btMsg.proto\022\027com.zc.web.message.debt\0323ma" +
       "in/resources/com/zc/messages/common/File" +
-      "Msg.proto\"\372\t\n\007DebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005mon" +
+      "Msg.proto\"\212\n\n\007DebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005mon" +
       "ey\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\r\n\005price\030\004 \001(\005\022\014\n" +
       "\004rate\030\005 \001(\005\022\020\n\010duration\030\024 \001(\005\022\022\n\nexpireD" +
       "ays\030\025 \001(\005\022\023\n\013bidIncrease\030\027 \001(\005\022\016\n\006isCorp" +
@@ -11249,13 +11362,13 @@ public final class DebtMsgProto {
       "zc.web.message.debt.DebtMsg.Bidder\022:\n\010me" +
       "ssages\030\035 \003(\0132(.com.zc.web.message.debt.D" +
       "ebtMsg.Message\022>\n\nrepayments\030+ \003(\0132*.com" +
-      ".zc.web.message.debt.DebtMsg.Repayment\032a",
+      ".zc.web.message.debt.DebtMsg.Repayment\032q",
       "\n\006Bidder\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\r\n\005mo" +
       "ney\030\003 \001(\005\022\014\n\004rate\030\005 \001(\005\022\022\n\ncreateTime\030\004 " +
-      "\001(\005\022\014\n\004head\030\006 \001(\t\0323\n\007Message\022\014\n\004time\030\001 \001" +
-      "(\005\022\014\n\004type\030\002 \001(\005\022\014\n\004memo\030\003 \001(\t\0326\n\tRepaym" +
-      "ent\022\014\n\004time\030\001 \001(\005\022\r\n\005money\030\002 \001(\005\022\014\n\004memo" +
-      "\030\003 \001(\tB\016B\014DebtMsgProto"
+      "\001(\005\022\014\n\004head\030\006 \001(\t\022\016\n\006rating\030\007 \001(\005\0323\n\007Mes" +
+      "sage\022\014\n\004time\030\001 \001(\005\022\014\n\004type\030\002 \001(\005\022\014\n\004memo" +
+      "\030\003 \001(\t\0326\n\tRepayment\022\014\n\004time\030\001 \001(\005\022\r\n\005mon" +
+      "ey\030\002 \001(\005\022\014\n\004memo\030\003 \001(\tB\016B\014DebtMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -11273,7 +11386,7 @@ public final class DebtMsgProto {
           internal_static_com_zc_web_message_debt_DebtMsg_Bidder_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_DebtMsg_Bidder_descriptor,
-              new java.lang.String[] { "Id", "Name", "Money", "Rate", "CreateTime", "Head", });
+              new java.lang.String[] { "Id", "Name", "Money", "Rate", "CreateTime", "Head", "Rating", });
           internal_static_com_zc_web_message_debt_DebtMsg_Message_descriptor =
             internal_static_com_zc_web_message_debt_DebtMsg_descriptor.getNestedTypes().get(1);
           internal_static_com_zc_web_message_debt_DebtMsg_Message_fieldAccessorTable = new
