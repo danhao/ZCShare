@@ -173,6 +173,7 @@ public class Player extends BaseModel{
 		builder.setName(file.getName());
 		builder.setUrl(FileUtil.genDownloadUrl(file.getId()));
 		builder.setState(file.getState());
+		builder.setCreateTime(file.getCreateTime());
 		
 		return builder;
 	}
