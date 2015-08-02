@@ -15,3 +15,6 @@ http://localhost:31001/?cmd=1000007|0|债务id_state_1
 
 设置VIP等级
 http://localhost:31001/?cmd=1000015|pid|vip等级
+
+还款记录
+http://localhost:31001/?cmd=1000019|pid|债务id_金额_描述

@@ -32,6 +32,7 @@ public class Debt extends BaseModel {
 	private int state; // 0未审核；1已通过；2未通过；3已成交；4已完成；
 	private int bidIncrease; // 加价幅度
 	private int isCorp;	// 是否企业单
+	private int property;	// 债务性质
 
 	private long ownerId; // 发布人
 	private String ownerName;

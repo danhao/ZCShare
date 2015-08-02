@@ -131,7 +131,7 @@ public class ImportDebtData {
 	    		
 	    		json.put("type", Constant.TYPE_DEPUTY);
 	    		json.put("duration", 120);
-	    		json.put("expireDays", 120);
+	    		json.put("expireDays", 1);
 	    		json.put("isCorp", 1);
 	    		
 	    		data.add(json.toJSONString());
