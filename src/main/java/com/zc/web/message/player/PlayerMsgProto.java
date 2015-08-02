@@ -1050,6 +1050,51 @@ public final class PlayerMsgProto {
      * </pre>
      */
     int getFiveInOne();
+
+    // repeated .com.zc.web.message.common.FileMsg files = 47;
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> 
+        getFilesList();
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index);
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    int getFilesCount();
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
+        getFilesOrBuilderList();
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.PlayerMsg}
@@ -1389,6 +1434,14 @@ public final class PlayerMsgProto {
               vipCo_ = input.readInt32();
               break;
             }
+            case 378: {
+              if (!((mutable_bitField1_ & 0x00004000) == 0x00004000)) {
+                files_ = new java.util.ArrayList<com.zc.web.message.common.FileMsgProto.FileMsg>();
+                mutable_bitField1_ |= 0x00004000;
+              }
+              files_.add(input.readMessage(com.zc.web.message.common.FileMsgProto.FileMsg.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1397,6 +1450,9 @@ public final class PlayerMsgProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField1_ & 0x00004000) == 0x00004000)) {
+          files_ = java.util.Collections.unmodifiableList(files_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3200,6 +3256,62 @@ public final class PlayerMsgProto {
       return fiveInOne_;
     }
 
+    // repeated .com.zc.web.message.common.FileMsg files = 47;
+    public static final int FILES_FIELD_NUMBER = 47;
+    private java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> files_;
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> getFilesList() {
+      return files_;
+    }
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    public java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
+        getFilesOrBuilderList() {
+      return files_;
+    }
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    public int getFilesCount() {
+      return files_.size();
+    }
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    public com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index) {
+      return files_.get(index);
+    }
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+     *
+     * <pre>
+     * 无犯罪证明
+     * </pre>
+     */
+    public com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
+        int index) {
+      return files_.get(index);
+    }
+
     private void initFields() {
       id_ = 0L;
       name_ = "";
@@ -3247,6 +3359,7 @@ public final class PlayerMsgProto {
       coValidating_ = 0;
       head_ = "";
       fiveInOne_ = 0;
+      files_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3397,6 +3510,9 @@ public final class PlayerMsgProto {
       }
       if (((bitField1_ & 0x00000200) == 0x00000200)) {
         output.writeInt32(46, vipCo_);
+      }
+      for (int i = 0; i < files_.size(); i++) {
+        output.writeMessage(47, files_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -3591,6 +3707,10 @@ public final class PlayerMsgProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(46, vipCo_);
       }
+      for (int i = 0; i < files_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(47, files_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -3706,6 +3826,7 @@ public final class PlayerMsgProto {
           getAccountPermitFileFieldBuilder();
           getNoneCrimeFileFieldBuilder();
           getCreditFileFieldBuilder();
+          getFilesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -3834,6 +3955,12 @@ public final class PlayerMsgProto {
         bitField1_ = (bitField1_ & ~0x00001000);
         fiveInOne_ = 0;
         bitField1_ = (bitField1_ & ~0x00002000);
+        if (filesBuilder_ == null) {
+          files_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00004000);
+        } else {
+          filesBuilder_.clear();
+        }
         return this;
       }
 
@@ -4076,6 +4203,15 @@ public final class PlayerMsgProto {
           to_bitField1_ |= 0x00002000;
         }
         result.fiveInOne_ = fiveInOne_;
+        if (filesBuilder_ == null) {
+          if (((bitField1_ & 0x00004000) == 0x00004000)) {
+            files_ = java.util.Collections.unmodifiableList(files_);
+            bitField1_ = (bitField1_ & ~0x00004000);
+          }
+          result.files_ = files_;
+        } else {
+          result.files_ = filesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -4270,6 +4406,32 @@ public final class PlayerMsgProto {
         }
         if (other.hasFiveInOne()) {
           setFiveInOne(other.getFiveInOne());
+        }
+        if (filesBuilder_ == null) {
+          if (!other.files_.isEmpty()) {
+            if (files_.isEmpty()) {
+              files_ = other.files_;
+              bitField1_ = (bitField1_ & ~0x00004000);
+            } else {
+              ensureFilesIsMutable();
+              files_.addAll(other.files_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.files_.isEmpty()) {
+            if (filesBuilder_.isEmpty()) {
+              filesBuilder_.dispose();
+              filesBuilder_ = null;
+              files_ = other.files_;
+              bitField1_ = (bitField1_ & ~0x00004000);
+              filesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getFilesFieldBuilder() : null;
+            } else {
+              filesBuilder_.addAllMessages(other.files_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -8213,6 +8375,318 @@ public final class PlayerMsgProto {
         return this;
       }
 
+      // repeated .com.zc.web.message.common.FileMsg files = 47;
+      private java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> files_ =
+        java.util.Collections.emptyList();
+      private void ensureFilesIsMutable() {
+        if (!((bitField1_ & 0x00004000) == 0x00004000)) {
+          files_ = new java.util.ArrayList<com.zc.web.message.common.FileMsgProto.FileMsg>(files_);
+          bitField1_ |= 0x00004000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zc.web.message.common.FileMsgProto.FileMsg, com.zc.web.message.common.FileMsgProto.FileMsg.Builder, com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> filesBuilder_;
+
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> getFilesList() {
+        if (filesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(files_);
+        } else {
+          return filesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public int getFilesCount() {
+        if (filesBuilder_ == null) {
+          return files_.size();
+        } else {
+          return filesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index) {
+        if (filesBuilder_ == null) {
+          return files_.get(index);
+        } else {
+          return filesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder setFiles(
+          int index, com.zc.web.message.common.FileMsgProto.FileMsg value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.set(index, value);
+          onChanged();
+        } else {
+          filesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder setFiles(
+          int index, com.zc.web.message.common.FileMsgProto.FileMsg.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder addFiles(com.zc.web.message.common.FileMsgProto.FileMsg value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.add(value);
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder addFiles(
+          int index, com.zc.web.message.common.FileMsgProto.FileMsg value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.add(index, value);
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder addFiles(
+          com.zc.web.message.common.FileMsgProto.FileMsg.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.add(builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder addFiles(
+          int index, com.zc.web.message.common.FileMsgProto.FileMsg.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder addAllFiles(
+          java.lang.Iterable<? extends com.zc.web.message.common.FileMsgProto.FileMsg> values) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          super.addAll(values, files_);
+          onChanged();
+        } else {
+          filesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder clearFiles() {
+        if (filesBuilder_ == null) {
+          files_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00004000);
+          onChanged();
+        } else {
+          filesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public Builder removeFiles(int index) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.remove(index);
+          onChanged();
+        } else {
+          filesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsg.Builder getFilesBuilder(
+          int index) {
+        return getFilesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
+          int index) {
+        if (filesBuilder_ == null) {
+          return files_.get(index);  } else {
+          return filesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
+           getFilesOrBuilderList() {
+        if (filesBuilder_ != null) {
+          return filesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(files_);
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsg.Builder addFilesBuilder() {
+        return getFilesFieldBuilder().addBuilder(
+            com.zc.web.message.common.FileMsgProto.FileMsg.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsg.Builder addFilesBuilder(
+          int index) {
+        return getFilesFieldBuilder().addBuilder(
+            index, com.zc.web.message.common.FileMsgProto.FileMsg.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
+       *
+       * <pre>
+       * 无犯罪证明
+       * </pre>
+       */
+      public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg.Builder> 
+           getFilesBuilderList() {
+        return getFilesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zc.web.message.common.FileMsgProto.FileMsg, com.zc.web.message.common.FileMsgProto.FileMsg.Builder, com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
+          getFilesFieldBuilder() {
+        if (filesBuilder_ == null) {
+          filesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.zc.web.message.common.FileMsgProto.FileMsg, com.zc.web.message.common.FileMsgProto.FileMsg.Builder, com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder>(
+                  files_,
+                  ((bitField1_ & 0x00004000) == 0x00004000),
+                  getParentForChildren(),
+                  isClean());
+          files_ = null;
+        }
+        return filesBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.PlayerMsg)
     }
 
@@ -8241,7 +8715,7 @@ public final class PlayerMsgProto {
       "\n5main/resources/com/zc/messages/player/" +
       "PlayerMsg.proto\022\031com.zc.web.message.play" +
       "er\0323main/resources/com/zc/messages/commo" +
-      "n/FileMsg.proto\"\376\010\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
+      "n/FileMsg.proto\"\261\t\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
       "\003\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\t \001(\t\022\016\n\006mobile" +
       "\030\n \001(\t\022\n\n\002qq\030% \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\021" +
       "\n\tloginTime\030\004 \001(\005\022\025\n\rlastLoginTime\030\005 \001(\005" +
@@ -8270,7 +8744,8 @@ public final class PlayerMsgProto {
       "# \001(\005\022\020\n\010descript\030( \001(\t\022\013\n\003vip\030) \001(\005\022\r\n\005",
       "vipCo\030. \001(\005\022\024\n\014idValidating\030* \001(\005\022\024\n\014coV" +
       "alidating\030+ \001(\005\022\014\n\004head\030, \001(\t\022\021\n\tfiveInO" +
-      "ne\030- \001(\005B\020B\016PlayerMsgProto"
+      "ne\030- \001(\005\0221\n\005files\030/ \003(\0132\".com.zc.web.mes" +
+      "sage.common.FileMsgB\020B\016PlayerMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -8282,7 +8757,7 @@ public final class PlayerMsgProto {
           internal_static_com_zc_web_message_player_PlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_PlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "VipCo", "IdValidating", "CoValidating", "Head", "FiveInOne", });
+              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "VipCo", "IdValidating", "CoValidating", "Head", "FiveInOne", "Files", });
           return null;
         }
       };

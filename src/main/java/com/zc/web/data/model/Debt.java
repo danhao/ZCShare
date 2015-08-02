@@ -16,6 +16,7 @@ import com.zc.web.message.debt.DebtMsgProto.DebtMsg;
 import com.zc.web.util.FileUtil;
 import com.zc.web.util.PropUtil;
 import com.zc.web.util.StringUtil;
+import com.zc.web.util.TimeUtil;
 
 @Entity(noClassnameStored = true)
 @EqualsAndHashCode(callSuper = false)
@@ -83,10 +84,10 @@ public class Debt extends BaseModel {
 	private List<Repayment> repayments = new ArrayList<Repayment>(); // 还款记录
 
 	public DebtMsg build() throws SmallException {
-		return this.build(false);
+		return this.build(false, false);
 	}
 
-	public DebtMsg build(boolean hide) throws SmallException {
+	public DebtMsg build(boolean hide, boolean checkCanReturn) throws SmallException {
 		DebtMsg.Builder builder = DebtMsg.newBuilder();
 		PropUtil.copyProperties(builder, this, DebtMsg.Builder.getDescriptor());
 
@@ -139,6 +140,14 @@ public class Debt extends BaseModel {
 			builder.setDebtorPhone(StringUtil.hide(this.debtorPhone, 4));
 			builder.setDebtorId(StringUtil.hide(this.debtorId, 4));
 		}
+		
+		if(checkCanReturn){
+			if(this.repayments.size() == 0){
+				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY > 30)
+					builder.setCanReturn(1);
+			}
+		}
+		
 		return builder.build();
 	}
 

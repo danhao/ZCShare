@@ -92,6 +92,9 @@ public class Player extends BaseModel{
 	@Embedded
 	private List<Situation> situations = new ArrayList<Situation>();
 
+	@Embedded
+	private List<File> files = new ArrayList<File>();	// 上传的文件
+	
 	@Transient
 	private int accessTime = 0;
 	
@@ -115,6 +118,11 @@ public class Player extends BaseModel{
 			builder.setNoneCrimeFile(getFileMsg(this.fileNoneCrime));
 		if(this.head != null && !this.head.isEmpty())
 			builder.setHead(FileUtil.genDownloadUrl(this.head));
+		if(this.files.size() > 0){
+			for(File file : this.files){
+				builder.addFiles(getFileMsg(file));
+			}
+		}
 		builder.setPasswd("");
 		int money = 0;
 		for(Entry<Long, Integer> entry : frozenMoney.entrySet()){
@@ -164,6 +172,7 @@ public class Player extends BaseModel{
 		FileMsg.Builder builder = FileMsg.newBuilder();
 		builder.setName(file.getName());
 		builder.setUrl(FileUtil.genDownloadUrl(file.getId()));
+		builder.setState(file.getState());
 		
 		return builder;
 	}

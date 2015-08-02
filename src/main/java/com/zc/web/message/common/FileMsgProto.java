@@ -67,6 +67,24 @@ public final class FileMsgProto {
      */
     com.google.protobuf.ByteString
         getUrlBytes();
+
+    // optional int32 state = 4;
+    /**
+     * <code>optional int32 state = 4;</code>
+     *
+     * <pre>
+     * 0：处理中；1：已处理
+     * </pre>
+     */
+    boolean hasState();
+    /**
+     * <code>optional int32 state = 4;</code>
+     *
+     * <pre>
+     * 0：处理中；1：已处理
+     * </pre>
+     */
+    int getState();
   }
   /**
    * Protobuf type {@code com.zc.web.message.common.FileMsg}
@@ -132,6 +150,11 @@ public final class FileMsgProto {
             case 26: {
               bitField0_ |= 0x00000004;
               url_ = input.readBytes();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              state_ = input.readInt32();
               break;
             }
           }
@@ -315,10 +338,35 @@ public final class FileMsgProto {
       }
     }
 
+    // optional int32 state = 4;
+    public static final int STATE_FIELD_NUMBER = 4;
+    private int state_;
+    /**
+     * <code>optional int32 state = 4;</code>
+     *
+     * <pre>
+     * 0：处理中；1：已处理
+     * </pre>
+     */
+    public boolean hasState() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 state = 4;</code>
+     *
+     * <pre>
+     * 0：处理中；1：已处理
+     * </pre>
+     */
+    public int getState() {
+      return state_;
+    }
+
     private void initFields() {
       id_ = "";
       name_ = "";
       url_ = "";
+      state_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -341,6 +389,9 @@ public final class FileMsgProto {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getUrlBytes());
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, state_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -361,6 +412,10 @@ public final class FileMsgProto {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getUrlBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, state_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -484,6 +539,8 @@ public final class FileMsgProto {
         bitField0_ = (bitField0_ & ~0x00000002);
         url_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+        state_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -524,6 +581,10 @@ public final class FileMsgProto {
           to_bitField0_ |= 0x00000004;
         }
         result.url_ = url_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.state_ = state_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -554,6 +615,9 @@ public final class FileMsgProto {
           bitField0_ |= 0x00000004;
           url_ = other.url_;
           onChanged();
+        }
+        if (other.hasState()) {
+          setState(other.getState());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -828,6 +892,55 @@ public final class FileMsgProto {
         return this;
       }
 
+      // optional int32 state = 4;
+      private int state_ ;
+      /**
+       * <code>optional int32 state = 4;</code>
+       *
+       * <pre>
+       * 0：处理中；1：已处理
+       * </pre>
+       */
+      public boolean hasState() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 state = 4;</code>
+       *
+       * <pre>
+       * 0：处理中；1：已处理
+       * </pre>
+       */
+      public int getState() {
+        return state_;
+      }
+      /**
+       * <code>optional int32 state = 4;</code>
+       *
+       * <pre>
+       * 0：处理中；1：已处理
+       * </pre>
+       */
+      public Builder setState(int value) {
+        bitField0_ |= 0x00000008;
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 state = 4;</code>
+       *
+       * <pre>
+       * 0：处理中；1：已处理
+       * </pre>
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.common.FileMsg)
     }
 
@@ -855,8 +968,9 @@ public final class FileMsgProto {
     java.lang.String[] descriptorData = {
       "\n3main/resources/com/zc/messages/common/" +
       "FileMsg.proto\022\031com.zc.web.message.common" +
-      "\"0\n\007FileMsg\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n" +
-      "\003url\030\003 \001(\tB\016B\014FileMsgProto"
+      "\"?\n\007FileMsg\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n" +
+      "\003url\030\003 \001(\t\022\r\n\005state\030\004 \001(\005B\016B\014FileMsgProt" +
+      "o"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -868,7 +982,7 @@ public final class FileMsgProto {
           internal_static_com_zc_web_message_common_FileMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_common_FileMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Url", });
+              new java.lang.String[] { "Id", "Name", "Url", "State", });
           return null;
         }
       };

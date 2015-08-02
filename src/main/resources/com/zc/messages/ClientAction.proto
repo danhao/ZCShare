@@ -21,6 +21,7 @@ enum ClientAction{
 	ACTION_LIST_CO_PLAYERS = 15;	// 最新企业用户(null---->player.ListCoPlayersRsp)
 	ACTION_SET_ALERT = 16;			// 提醒设置(player.AlertMsg---->null)
 	ACTION_BUY_VIP = 17;			// 购买VIP(common.SingleMsg(0：个人；1：企业)---->null)
+	ACTION_UPLOAD = 18;				// 上传文件(common.FileMsg---->null)
 
 	ACTION_UPLOAD_PREPARE = 51;		// 准备上传文件(null---->common.UploadMsg)
 
@@ -32,6 +33,8 @@ enum ClientAction{
 	ACTION_BID_WIN = 105;			// 中标(debt.BidWinReq---->debt.DebtMsg)
 	ACTION_ADD_MESSAGE = 106;		// 增加动态(debt.MessageMsg---->null)
 	ACTION_LIST_SELF_DEBTS = 107; 	// 我相关的债务(debt.ListDebtsReq(queryType 2:我投标的 3:我中标的)---->debt.ListDebtsRsp)
+	ACTION_BATCH_BID = 108; 		// 批量投标(debt.BatchBidReq---->null)
+	ACTION_RETURN_DEBT = 109; 		// 退单(common.SingleMsg---->null)
 
 	ACTION_CREATE_ORDER = 200; 		// 创建订单(pay.CreateOrderReq---->pay.CreateOrderRsp)
 	ACTION_DRAW_CASH = 201; 		// 提现申请(pay.PlayerCashMsg---->null)

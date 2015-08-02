@@ -30,6 +30,9 @@ public class Constant {
 	// 平台服务费，百分比，佣金中扣除
 	public static final int SERVICE_FEE = 5;
 	
+	// 最多动态数量
+	public static final int MAX_MESSAGE = 20;
+	
 	static{
 		SIGNATURE = Base64.encodeBase64String(HMACSHA1.getSignature(POLICY, OSSAccessKeySecret));
 	}
@@ -83,5 +86,8 @@ public class Constant {
 	
 	// 退单
 	public static final int MESSAGE_TYPE_RETURN = 2;
+	
+	// 文件状态
+	public static final int FILE_STATE_DONE = 1;
 	
 }

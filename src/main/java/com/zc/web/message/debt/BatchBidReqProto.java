@@ -3,58 +3,67 @@
 
 package com.zc.web.message.debt;
 
-public final class BidReqProto {
-  private BidReqProto() {}
+public final class BatchBidReqProto {
+  private BatchBidReqProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface BidReqOrBuilder
+  public interface BatchBidReqOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // optional string id = 1;
+    // repeated string id = 1;
     /**
-     * <code>optional string id = 1;</code>
+     * <code>repeated string id = 1;</code>
      *
      * <pre>
      * id
      * </pre>
      */
-    boolean hasId();
+    java.util.List<java.lang.String>
+    getIdList();
     /**
-     * <code>optional string id = 1;</code>
+     * <code>repeated string id = 1;</code>
      *
      * <pre>
      * id
      * </pre>
      */
-    java.lang.String getId();
+    int getIdCount();
     /**
-     * <code>optional string id = 1;</code>
+     * <code>repeated string id = 1;</code>
+     *
+     * <pre>
+     * id
+     * </pre>
+     */
+    java.lang.String getId(int index);
+    /**
+     * <code>repeated string id = 1;</code>
      *
      * <pre>
      * id
      * </pre>
      */
     com.google.protobuf.ByteString
-        getIdBytes();
+        getIdBytes(int index);
 
-    // optional int32 money = 2;
+    // optional int32 bond = 2;
     /**
-     * <code>optional int32 money = 2;</code>
+     * <code>optional int32 bond = 2;</code>
      *
      * <pre>
-     * 投标价格
+     * 保证金总额
      * </pre>
      */
-    boolean hasMoney();
+    boolean hasBond();
     /**
-     * <code>optional int32 money = 2;</code>
+     * <code>optional int32 bond = 2;</code>
      *
      * <pre>
-     * 投标价格
+     * 保证金总额
      * </pre>
      */
-    int getMoney();
+    int getBond();
 
     // optional int32 rate = 3;
     /**
@@ -75,24 +84,24 @@ public final class BidReqProto {
     int getRate();
   }
   /**
-   * Protobuf type {@code com.zc.web.message.debt.BidReq}
+   * Protobuf type {@code com.zc.web.message.debt.BatchBidReq}
    */
-  public static final class BidReq extends
+  public static final class BatchBidReq extends
       com.google.protobuf.GeneratedMessage
-      implements BidReqOrBuilder {
-    // Use BidReq.newBuilder() to construct.
-    private BidReq(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements BatchBidReqOrBuilder {
+    // Use BatchBidReq.newBuilder() to construct.
+    private BatchBidReq(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private BidReq(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private BatchBidReq(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final BidReq defaultInstance;
-    public static BidReq getDefaultInstance() {
+    private static final BatchBidReq defaultInstance;
+    public static BatchBidReq getDefaultInstance() {
       return defaultInstance;
     }
 
-    public BidReq getDefaultInstanceForType() {
+    public BatchBidReq getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -102,7 +111,7 @@ public final class BidReqProto {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private BidReq(
+    private BatchBidReq(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -126,17 +135,20 @@ public final class BidReqProto {
               break;
             }
             case 10: {
-              bitField0_ |= 0x00000001;
-              id_ = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                id_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              id_.add(input.readBytes());
               break;
             }
             case 16: {
-              bitField0_ |= 0x00000002;
-              money_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              bond_ = input.readInt32();
               break;
             }
             case 24: {
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               rate_ = input.readInt32();
               break;
             }
@@ -148,115 +160,109 @@ public final class BidReqProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          id_ = new com.google.protobuf.UnmodifiableLazyStringList(id_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zc.web.message.debt.BidReqProto.internal_static_com_zc_web_message_debt_BidReq_descriptor;
+      return com.zc.web.message.debt.BatchBidReqProto.internal_static_com_zc_web_message_debt_BatchBidReq_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zc.web.message.debt.BidReqProto.internal_static_com_zc_web_message_debt_BidReq_fieldAccessorTable
+      return com.zc.web.message.debt.BatchBidReqProto.internal_static_com_zc_web_message_debt_BatchBidReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.zc.web.message.debt.BidReqProto.BidReq.class, com.zc.web.message.debt.BidReqProto.BidReq.Builder.class);
+              com.zc.web.message.debt.BatchBidReqProto.BatchBidReq.class, com.zc.web.message.debt.BatchBidReqProto.BatchBidReq.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<BidReq> PARSER =
-        new com.google.protobuf.AbstractParser<BidReq>() {
-      public BidReq parsePartialFrom(
+    public static com.google.protobuf.Parser<BatchBidReq> PARSER =
+        new com.google.protobuf.AbstractParser<BatchBidReq>() {
+      public BatchBidReq parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BidReq(input, extensionRegistry);
+        return new BatchBidReq(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<BidReq> getParserForType() {
+    public com.google.protobuf.Parser<BatchBidReq> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
-    // optional string id = 1;
+    // repeated string id = 1;
     public static final int ID_FIELD_NUMBER = 1;
-    private java.lang.Object id_;
+    private com.google.protobuf.LazyStringList id_;
     /**
-     * <code>optional string id = 1;</code>
+     * <code>repeated string id = 1;</code>
      *
      * <pre>
      * id
      * </pre>
      */
-    public boolean hasId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
+    public java.util.List<java.lang.String>
+        getIdList() {
+      return id_;
     }
     /**
-     * <code>optional string id = 1;</code>
+     * <code>repeated string id = 1;</code>
      *
      * <pre>
      * id
      * </pre>
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          id_ = s;
-        }
-        return s;
-      }
+    public int getIdCount() {
+      return id_.size();
     }
     /**
-     * <code>optional string id = 1;</code>
+     * <code>repeated string id = 1;</code>
+     *
+     * <pre>
+     * id
+     * </pre>
+     */
+    public java.lang.String getId(int index) {
+      return id_.get(index);
+    }
+    /**
+     * <code>repeated string id = 1;</code>
      *
      * <pre>
      * id
      * </pre>
      */
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getIdBytes(int index) {
+      return id_.getByteString(index);
     }
 
-    // optional int32 money = 2;
-    public static final int MONEY_FIELD_NUMBER = 2;
-    private int money_;
+    // optional int32 bond = 2;
+    public static final int BOND_FIELD_NUMBER = 2;
+    private int bond_;
     /**
-     * <code>optional int32 money = 2;</code>
+     * <code>optional int32 bond = 2;</code>
      *
      * <pre>
-     * 投标价格
+     * 保证金总额
      * </pre>
      */
-    public boolean hasMoney() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+    public boolean hasBond() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional int32 money = 2;</code>
+     * <code>optional int32 bond = 2;</code>
      *
      * <pre>
-     * 投标价格
+     * 保证金总额
      * </pre>
      */
-    public int getMoney() {
-      return money_;
+    public int getBond() {
+      return bond_;
     }
 
     // optional int32 rate = 3;
@@ -270,7 +276,7 @@ public final class BidReqProto {
      * </pre>
      */
     public boolean hasRate() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>optional int32 rate = 3;</code>
@@ -284,8 +290,8 @@ public final class BidReqProto {
     }
 
     private void initFields() {
-      id_ = "";
-      money_ = 0;
+      id_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bond_ = 0;
       rate_ = 0;
     }
     private byte memoizedIsInitialized = -1;
@@ -300,13 +306,13 @@ public final class BidReqProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      for (int i = 0; i < id_.size(); i++) {
+        output.writeBytes(1, id_.getByteString(i));
+      }
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getIdBytes());
+        output.writeInt32(2, bond_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, money_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeInt32(3, rate_);
       }
       getUnknownFields().writeTo(output);
@@ -318,15 +324,20 @@ public final class BidReqProto {
       if (size != -1) return size;
 
       size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < id_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(id_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getIdList().size();
+      }
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getIdBytes());
+          .computeInt32Size(2, bond_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, money_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, rate_);
       }
@@ -342,53 +353,53 @@ public final class BidReqProto {
       return super.writeReplace();
     }
 
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseFrom(
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseFrom(
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseFrom(byte[] data)
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseFrom(
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseFrom(java.io.InputStream input)
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseFrom(
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseDelimitedFrom(java.io.InputStream input)
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseDelimitedFrom(
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseFrom(
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.zc.web.message.debt.BidReqProto.BidReq parseFrom(
+    public static com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -397,7 +408,7 @@ public final class BidReqProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zc.web.message.debt.BidReqProto.BidReq prototype) {
+    public static Builder newBuilder(com.zc.web.message.debt.BatchBidReqProto.BatchBidReq prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -409,24 +420,24 @@ public final class BidReqProto {
       return builder;
     }
     /**
-     * Protobuf type {@code com.zc.web.message.debt.BidReq}
+     * Protobuf type {@code com.zc.web.message.debt.BatchBidReq}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.zc.web.message.debt.BidReqProto.BidReqOrBuilder {
+       implements com.zc.web.message.debt.BatchBidReqProto.BatchBidReqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.zc.web.message.debt.BidReqProto.internal_static_com_zc_web_message_debt_BidReq_descriptor;
+        return com.zc.web.message.debt.BatchBidReqProto.internal_static_com_zc_web_message_debt_BatchBidReq_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.zc.web.message.debt.BidReqProto.internal_static_com_zc_web_message_debt_BidReq_fieldAccessorTable
+        return com.zc.web.message.debt.BatchBidReqProto.internal_static_com_zc_web_message_debt_BatchBidReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.zc.web.message.debt.BidReqProto.BidReq.class, com.zc.web.message.debt.BidReqProto.BidReq.Builder.class);
+                com.zc.web.message.debt.BatchBidReqProto.BatchBidReq.class, com.zc.web.message.debt.BatchBidReqProto.BatchBidReq.Builder.class);
       }
 
-      // Construct using com.zc.web.message.debt.BidReqProto.BidReq.newBuilder()
+      // Construct using com.zc.web.message.debt.BatchBidReqProto.BatchBidReq.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -446,9 +457,9 @@ public final class BidReqProto {
 
       public Builder clear() {
         super.clear();
-        id_ = "";
+        id_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
-        money_ = 0;
+        bond_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
         rate_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -461,35 +472,37 @@ public final class BidReqProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.zc.web.message.debt.BidReqProto.internal_static_com_zc_web_message_debt_BidReq_descriptor;
+        return com.zc.web.message.debt.BatchBidReqProto.internal_static_com_zc_web_message_debt_BatchBidReq_descriptor;
       }
 
-      public com.zc.web.message.debt.BidReqProto.BidReq getDefaultInstanceForType() {
-        return com.zc.web.message.debt.BidReqProto.BidReq.getDefaultInstance();
+      public com.zc.web.message.debt.BatchBidReqProto.BatchBidReq getDefaultInstanceForType() {
+        return com.zc.web.message.debt.BatchBidReqProto.BatchBidReq.getDefaultInstance();
       }
 
-      public com.zc.web.message.debt.BidReqProto.BidReq build() {
-        com.zc.web.message.debt.BidReqProto.BidReq result = buildPartial();
+      public com.zc.web.message.debt.BatchBidReqProto.BatchBidReq build() {
+        com.zc.web.message.debt.BatchBidReqProto.BatchBidReq result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.zc.web.message.debt.BidReqProto.BidReq buildPartial() {
-        com.zc.web.message.debt.BidReqProto.BidReq result = new com.zc.web.message.debt.BidReqProto.BidReq(this);
+      public com.zc.web.message.debt.BatchBidReqProto.BatchBidReq buildPartial() {
+        com.zc.web.message.debt.BatchBidReqProto.BatchBidReq result = new com.zc.web.message.debt.BatchBidReqProto.BatchBidReq(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          id_ = new com.google.protobuf.UnmodifiableLazyStringList(
+              id_);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.id_ = id_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
+          to_bitField0_ |= 0x00000001;
         }
-        result.money_ = money_;
+        result.bond_ = bond_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
+          to_bitField0_ |= 0x00000002;
         }
         result.rate_ = rate_;
         result.bitField0_ = to_bitField0_;
@@ -498,23 +511,28 @@ public final class BidReqProto {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zc.web.message.debt.BidReqProto.BidReq) {
-          return mergeFrom((com.zc.web.message.debt.BidReqProto.BidReq)other);
+        if (other instanceof com.zc.web.message.debt.BatchBidReqProto.BatchBidReq) {
+          return mergeFrom((com.zc.web.message.debt.BatchBidReqProto.BatchBidReq)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.zc.web.message.debt.BidReqProto.BidReq other) {
-        if (other == com.zc.web.message.debt.BidReqProto.BidReq.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          bitField0_ |= 0x00000001;
-          id_ = other.id_;
+      public Builder mergeFrom(com.zc.web.message.debt.BatchBidReqProto.BatchBidReq other) {
+        if (other == com.zc.web.message.debt.BatchBidReqProto.BatchBidReq.getDefaultInstance()) return this;
+        if (!other.id_.isEmpty()) {
+          if (id_.isEmpty()) {
+            id_ = other.id_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureIdIsMutable();
+            id_.addAll(other.id_);
+          }
           onChanged();
         }
-        if (other.hasMoney()) {
-          setMoney(other.getMoney());
+        if (other.hasBond()) {
+          setBond(other.getBond());
         }
         if (other.hasRate()) {
           setRate(other.getRate());
@@ -531,11 +549,11 @@ public final class BidReqProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.zc.web.message.debt.BidReqProto.BidReq parsedMessage = null;
+        com.zc.web.message.debt.BatchBidReqProto.BatchBidReq parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zc.web.message.debt.BidReqProto.BidReq) e.getUnfinishedMessage();
+          parsedMessage = (com.zc.web.message.debt.BatchBidReqProto.BatchBidReq) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -546,149 +564,180 @@ public final class BidReqProto {
       }
       private int bitField0_;
 
-      // optional string id = 1;
-      private java.lang.Object id_ = "";
+      // repeated string id = 1;
+      private com.google.protobuf.LazyStringList id_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureIdIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          id_ = new com.google.protobuf.LazyStringArrayList(id_);
+          bitField0_ |= 0x00000001;
+         }
+      }
       /**
-       * <code>optional string id = 1;</code>
+       * <code>repeated string id = 1;</code>
        *
        * <pre>
        * id
        * </pre>
        */
-      public boolean hasId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
+      public java.util.List<java.lang.String>
+          getIdList() {
+        return java.util.Collections.unmodifiableList(id_);
       }
       /**
-       * <code>optional string id = 1;</code>
+       * <code>repeated string id = 1;</code>
        *
        * <pre>
        * id
        * </pre>
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public int getIdCount() {
+        return id_.size();
       }
       /**
-       * <code>optional string id = 1;</code>
+       * <code>repeated string id = 1;</code>
+       *
+       * <pre>
+       * id
+       * </pre>
+       */
+      public java.lang.String getId(int index) {
+        return id_.get(index);
+      }
+      /**
+       * <code>repeated string id = 1;</code>
        *
        * <pre>
        * id
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+          getIdBytes(int index) {
+        return id_.getByteString(index);
       }
       /**
-       * <code>optional string id = 1;</code>
+       * <code>repeated string id = 1;</code>
        *
        * <pre>
        * id
        * </pre>
        */
       public Builder setId(
-          java.lang.String value) {
+          int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
-        id_ = value;
+  ensureIdIsMutable();
+        id_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>optional string id = 1;</code>
+       * <code>repeated string id = 1;</code>
+       *
+       * <pre>
+       * id
+       * </pre>
+       */
+      public Builder addId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIdIsMutable();
+        id_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string id = 1;</code>
+       *
+       * <pre>
+       * id
+       * </pre>
+       */
+      public Builder addAllId(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureIdIsMutable();
+        super.addAll(values, id_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string id = 1;</code>
        *
        * <pre>
        * id
        * </pre>
        */
       public Builder clearId() {
+        id_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string id = 1;</code>
+       * <code>repeated string id = 1;</code>
        *
        * <pre>
        * id
        * </pre>
        */
-      public Builder setIdBytes(
+      public Builder addIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
-        id_ = value;
+  ensureIdIsMutable();
+        id_.add(value);
         onChanged();
         return this;
       }
 
-      // optional int32 money = 2;
-      private int money_ ;
+      // optional int32 bond = 2;
+      private int bond_ ;
       /**
-       * <code>optional int32 money = 2;</code>
+       * <code>optional int32 bond = 2;</code>
        *
        * <pre>
-       * 投标价格
+       * 保证金总额
        * </pre>
        */
-      public boolean hasMoney() {
+      public boolean hasBond() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional int32 money = 2;</code>
+       * <code>optional int32 bond = 2;</code>
        *
        * <pre>
-       * 投标价格
+       * 保证金总额
        * </pre>
        */
-      public int getMoney() {
-        return money_;
+      public int getBond() {
+        return bond_;
       }
       /**
-       * <code>optional int32 money = 2;</code>
+       * <code>optional int32 bond = 2;</code>
        *
        * <pre>
-       * 投标价格
+       * 保证金总额
        * </pre>
        */
-      public Builder setMoney(int value) {
+      public Builder setBond(int value) {
         bitField0_ |= 0x00000002;
-        money_ = value;
+        bond_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 money = 2;</code>
+       * <code>optional int32 bond = 2;</code>
        *
        * <pre>
-       * 投标价格
+       * 保证金总额
        * </pre>
        */
-      public Builder clearMoney() {
+      public Builder clearBond() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        money_ = 0;
+        bond_ = 0;
         onChanged();
         return this;
       }
@@ -742,22 +791,22 @@ public final class BidReqProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.BidReq)
+      // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.BatchBidReq)
     }
 
     static {
-      defaultInstance = new BidReq(true);
+      defaultInstance = new BatchBidReq(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.zc.web.message.debt.BidReq)
+    // @@protoc_insertion_point(class_scope:com.zc.web.message.debt.BatchBidReq)
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_zc_web_message_debt_BidReq_descriptor;
+    internal_static_com_zc_web_message_debt_BatchBidReq_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_zc_web_message_debt_BidReq_fieldAccessorTable;
+      internal_static_com_zc_web_message_debt_BatchBidReq_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -769,20 +818,20 @@ public final class BidReqProto {
     java.lang.String[] descriptorData = {
       "\n5main/resources/com/zc/messages/debt/Ba" +
       "tchBidReq.proto\022\027com.zc.web.message.debt" +
-      "\"1\n\006BidReq\022\n\n\002id\030\001 \001(\t\022\r\n\005money\030\002 \001(\005\022\014\n" +
-      "\004rate\030\003 \001(\005B\rB\013BidReqProto"
+      "\"5\n\013BatchBidReq\022\n\n\002id\030\001 \003(\t\022\014\n\004bond\030\002 \001(" +
+      "\005\022\014\n\004rate\030\003 \001(\005B\022B\020BatchBidReqProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_com_zc_web_message_debt_BidReq_descriptor =
+          internal_static_com_zc_web_message_debt_BatchBidReq_descriptor =
             getDescriptor().getMessageTypes().get(0);
-          internal_static_com_zc_web_message_debt_BidReq_fieldAccessorTable = new
+          internal_static_com_zc_web_message_debt_BatchBidReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_zc_web_message_debt_BidReq_descriptor,
-              new java.lang.String[] { "Id", "Money", "Rate", });
+              internal_static_com_zc_web_message_debt_BatchBidReq_descriptor,
+              new java.lang.String[] { "Id", "Bond", "Rate", });
           return null;
         }
       };

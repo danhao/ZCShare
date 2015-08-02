@@ -57,6 +57,8 @@ message DebtMsg{
 	repeated Message messages = 29;			// 催收动态
 	repeated Repayment repayments = 43;		// 还款记录
 
+	optional int32 canReturn = 45;			// 是否可以退单，0不能退，1可以退
+
 	message Bidder{
 		optional int64 id = 1;				// 竞标人ID
 		optional string name = 2;			// 竞标人名称
