@@ -158,13 +158,21 @@ public final class ClientActionProto {
      */
     ACTION_UPLOAD(17, 18),
     /**
+     * <code>ACTION_DEBT_COUNT = 19;</code>
+     *
+     * <pre>
+     * 还能接单的数量(null----&gt;common.SingleMsg)
+     * </pre>
+     */
+    ACTION_DEBT_COUNT(18, 19),
+    /**
      * <code>ACTION_UPLOAD_PREPARE = 51;</code>
      *
      * <pre>
      * 准备上传文件(null----&gt;common.UploadMsg)
      * </pre>
      */
-    ACTION_UPLOAD_PREPARE(18, 51),
+    ACTION_UPLOAD_PREPARE(19, 51),
     /**
      * <code>ACTION_CREATE_DEBT = 100;</code>
      *
@@ -172,7 +180,7 @@ public final class ClientActionProto {
      * 创建债务(debt.DebtMsg----&gt;debt.DebtMsg)
      * </pre>
      */
-    ACTION_CREATE_DEBT(19, 100),
+    ACTION_CREATE_DEBT(20, 100),
     /**
      * <code>ACTION_LIST_DEBTS = 101;</code>
      *
@@ -180,7 +188,7 @@ public final class ClientActionProto {
      * 债务列表(debt.ListDebtsReq----&gt;debt.ListDebtsRsp)
      * </pre>
      */
-    ACTION_LIST_DEBTS(20, 101),
+    ACTION_LIST_DEBTS(21, 101),
     /**
      * <code>ACTION_VIEW_DEBT = 102;</code>
      *
@@ -188,7 +196,7 @@ public final class ClientActionProto {
      * 债务详情(common.SingleMsg----&gt;debt.DebtMsg)
      * </pre>
      */
-    ACTION_VIEW_DEBT(21, 102),
+    ACTION_VIEW_DEBT(22, 102),
     /**
      * <code>ACTION_LIST_VIEW_DEBTS = 103;</code>
      *
@@ -196,7 +204,7 @@ public final class ClientActionProto {
      * 首页债务列表(debt.ListDebtsReq----&gt;debt.ListDebtsRsp)
      * </pre>
      */
-    ACTION_LIST_VIEW_DEBTS(22, 103),
+    ACTION_LIST_VIEW_DEBTS(23, 103),
     /**
      * <code>ACTION_BID = 104;</code>
      *
@@ -204,7 +212,7 @@ public final class ClientActionProto {
      * 投标(debt.BidReq----&gt;null)
      * </pre>
      */
-    ACTION_BID(23, 104),
+    ACTION_BID(24, 104),
     /**
      * <code>ACTION_BID_WIN = 105;</code>
      *
@@ -212,7 +220,7 @@ public final class ClientActionProto {
      * 中标(debt.BidWinReq----&gt;debt.DebtMsg)
      * </pre>
      */
-    ACTION_BID_WIN(24, 105),
+    ACTION_BID_WIN(25, 105),
     /**
      * <code>ACTION_ADD_MESSAGE = 106;</code>
      *
@@ -220,7 +228,7 @@ public final class ClientActionProto {
      * 增加动态(debt.MessageMsg----&gt;null)
      * </pre>
      */
-    ACTION_ADD_MESSAGE(25, 106),
+    ACTION_ADD_MESSAGE(26, 106),
     /**
      * <code>ACTION_LIST_SELF_DEBTS = 107;</code>
      *
@@ -228,7 +236,7 @@ public final class ClientActionProto {
      * 我相关的债务(debt.ListDebtsReq(queryType 2:我投标的 3:我中标的)----&gt;debt.ListDebtsRsp)
      * </pre>
      */
-    ACTION_LIST_SELF_DEBTS(26, 107),
+    ACTION_LIST_SELF_DEBTS(27, 107),
     /**
      * <code>ACTION_BATCH_BID = 108;</code>
      *
@@ -236,7 +244,7 @@ public final class ClientActionProto {
      * 批量投标(debt.BatchBidReq----&gt;null)
      * </pre>
      */
-    ACTION_BATCH_BID(27, 108),
+    ACTION_BATCH_BID(28, 108),
     /**
      * <code>ACTION_RETURN_DEBT = 109;</code>
      *
@@ -244,15 +252,7 @@ public final class ClientActionProto {
      * 退单(common.SingleMsg----&gt;null)
      * </pre>
      */
-    ACTION_RETURN_DEBT(28, 109),
-    /**
-     * <code>ACTION_DEBT_COUNT = 110;</code>
-     *
-     * <pre>
-     * 还能接单的数量(null----&gt;common.SingleMsg)
-     * </pre>
-     */
-    ACTION_DEBT_COUNT(29, 110),
+    ACTION_RETURN_DEBT(29, 109),
     /**
      * <code>ACTION_CREATE_ORDER = 200;</code>
      *
@@ -416,6 +416,14 @@ public final class ClientActionProto {
      */
     public static final int ACTION_UPLOAD_VALUE = 18;
     /**
+     * <code>ACTION_DEBT_COUNT = 19;</code>
+     *
+     * <pre>
+     * 还能接单的数量(null----&gt;common.SingleMsg)
+     * </pre>
+     */
+    public static final int ACTION_DEBT_COUNT_VALUE = 19;
+    /**
      * <code>ACTION_UPLOAD_PREPARE = 51;</code>
      *
      * <pre>
@@ -504,14 +512,6 @@ public final class ClientActionProto {
      */
     public static final int ACTION_RETURN_DEBT_VALUE = 109;
     /**
-     * <code>ACTION_DEBT_COUNT = 110;</code>
-     *
-     * <pre>
-     * 还能接单的数量(null----&gt;common.SingleMsg)
-     * </pre>
-     */
-    public static final int ACTION_DEBT_COUNT_VALUE = 110;
-    /**
      * <code>ACTION_CREATE_ORDER = 200;</code>
      *
      * <pre>
@@ -551,6 +551,7 @@ public final class ClientActionProto {
         case 16: return ACTION_SET_ALERT;
         case 17: return ACTION_BUY_VIP;
         case 18: return ACTION_UPLOAD;
+        case 19: return ACTION_DEBT_COUNT;
         case 51: return ACTION_UPLOAD_PREPARE;
         case 100: return ACTION_CREATE_DEBT;
         case 101: return ACTION_LIST_DEBTS;
@@ -562,7 +563,6 @@ public final class ClientActionProto {
         case 107: return ACTION_LIST_SELF_DEBTS;
         case 108: return ACTION_BATCH_BID;
         case 109: return ACTION_RETURN_DEBT;
-        case 110: return ACTION_DEBT_COUNT;
         case 200: return ACTION_CREATE_ORDER;
         case 201: return ACTION_DRAW_CASH;
         default: return null;
@@ -638,14 +638,14 @@ public final class ClientActionProto {
       "_MONEY_HISTORY\020\r\022\030\n\024ACTION_LIST_SITUAION" +
       "\020\016\022\032\n\026ACTION_LIST_CO_PLAYERS\020\017\022\024\n\020ACTION" +
       "_SET_ALERT\020\020\022\022\n\016ACTION_BUY_VIP\020\021\022\021\n\rACTI" +
-      "ON_UPLOAD\020\022\022\031\n\025ACTION_UPLOAD_PREPARE\0203\022\026" +
-      "\n\022ACTION_CREATE_DEBT\020d\022\025\n\021ACTION_LIST_DE" +
-      "BTS\020e\022\024\n\020ACTION_VIEW_DEBT\020f\022\032\n\026ACTION_LI" +
-      "ST_VIEW_DEBTS\020g\022\016\n\nACTION_BID\020h\022\022\n\016ACTIO" +
-      "N_BID_WIN\020i\022\026\n\022ACTION_ADD_MESSAGE\020j\022\032\n\026A" +
-      "CTION_LIST_SELF_DEBTS\020k\022\024\n\020ACTION_BATCH_" +
-      "BID\020l\022\026\n\022ACTION_RETURN_DEBT\020m\022\025\n\021ACTION_",
-      "DEBT_COUNT\020n\022\030\n\023ACTION_CREATE_ORDER\020\310\001\022\025" +
+      "ON_UPLOAD\020\022\022\025\n\021ACTION_DEBT_COUNT\020\023\022\031\n\025AC" +
+      "TION_UPLOAD_PREPARE\0203\022\026\n\022ACTION_CREATE_D" +
+      "EBT\020d\022\025\n\021ACTION_LIST_DEBTS\020e\022\024\n\020ACTION_V" +
+      "IEW_DEBT\020f\022\032\n\026ACTION_LIST_VIEW_DEBTS\020g\022\016" +
+      "\n\nACTION_BID\020h\022\022\n\016ACTION_BID_WIN\020i\022\026\n\022AC" +
+      "TION_ADD_MESSAGE\020j\022\032\n\026ACTION_LIST_SELF_D" +
+      "EBTS\020k\022\024\n\020ACTION_BATCH_BID\020l\022\026\n\022ACTION_R",
+      "ETURN_DEBT\020m\022\030\n\023ACTION_CREATE_ORDER\020\310\001\022\025" +
       "\n\020ACTION_DRAW_CASH\020\311\001B\023B\021ClientActionPro" +
       "to"
     };
