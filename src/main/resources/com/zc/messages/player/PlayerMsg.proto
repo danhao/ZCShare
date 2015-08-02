@@ -52,5 +52,5 @@ message PlayerMsg{
 	optional int32 coValidating = 43; // 1:申请验证公司
 	optional string head = 44;	// 头像
 	optional int32 fiveInOne = 45;	// 五证合一：1是；0否
-	repeated common.FileMsg files = 47;	// 无犯罪证明
+	repeated common.FileMsg files = 47;	// 上传文件
 }
