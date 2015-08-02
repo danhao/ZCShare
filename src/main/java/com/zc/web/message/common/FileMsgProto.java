@@ -85,6 +85,24 @@ public final class FileMsgProto {
      * </pre>
      */
     int getState();
+
+    // optional int32 createTime = 5;
+    /**
+     * <code>optional int32 createTime = 5;</code>
+     *
+     * <pre>
+     * 上传时间
+     * </pre>
+     */
+    boolean hasCreateTime();
+    /**
+     * <code>optional int32 createTime = 5;</code>
+     *
+     * <pre>
+     * 上传时间
+     * </pre>
+     */
+    int getCreateTime();
   }
   /**
    * Protobuf type {@code com.zc.web.message.common.FileMsg}
@@ -155,6 +173,11 @@ public final class FileMsgProto {
             case 32: {
               bitField0_ |= 0x00000008;
               state_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              createTime_ = input.readInt32();
               break;
             }
           }
@@ -362,11 +385,36 @@ public final class FileMsgProto {
       return state_;
     }
 
+    // optional int32 createTime = 5;
+    public static final int CREATETIME_FIELD_NUMBER = 5;
+    private int createTime_;
+    /**
+     * <code>optional int32 createTime = 5;</code>
+     *
+     * <pre>
+     * 上传时间
+     * </pre>
+     */
+    public boolean hasCreateTime() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 createTime = 5;</code>
+     *
+     * <pre>
+     * 上传时间
+     * </pre>
+     */
+    public int getCreateTime() {
+      return createTime_;
+    }
+
     private void initFields() {
       id_ = "";
       name_ = "";
       url_ = "";
       state_ = 0;
+      createTime_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -392,6 +440,9 @@ public final class FileMsgProto {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeInt32(4, state_);
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, createTime_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -416,6 +467,10 @@ public final class FileMsgProto {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, state_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, createTime_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -541,6 +596,8 @@ public final class FileMsgProto {
         bitField0_ = (bitField0_ & ~0x00000004);
         state_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
+        createTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -585,6 +642,10 @@ public final class FileMsgProto {
           to_bitField0_ |= 0x00000008;
         }
         result.state_ = state_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.createTime_ = createTime_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -618,6 +679,9 @@ public final class FileMsgProto {
         }
         if (other.hasState()) {
           setState(other.getState());
+        }
+        if (other.hasCreateTime()) {
+          setCreateTime(other.getCreateTime());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -941,6 +1005,55 @@ public final class FileMsgProto {
         return this;
       }
 
+      // optional int32 createTime = 5;
+      private int createTime_ ;
+      /**
+       * <code>optional int32 createTime = 5;</code>
+       *
+       * <pre>
+       * 上传时间
+       * </pre>
+       */
+      public boolean hasCreateTime() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 createTime = 5;</code>
+       *
+       * <pre>
+       * 上传时间
+       * </pre>
+       */
+      public int getCreateTime() {
+        return createTime_;
+      }
+      /**
+       * <code>optional int32 createTime = 5;</code>
+       *
+       * <pre>
+       * 上传时间
+       * </pre>
+       */
+      public Builder setCreateTime(int value) {
+        bitField0_ |= 0x00000010;
+        createTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 createTime = 5;</code>
+       *
+       * <pre>
+       * 上传时间
+       * </pre>
+       */
+      public Builder clearCreateTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        createTime_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.common.FileMsg)
     }
 
@@ -968,9 +1081,9 @@ public final class FileMsgProto {
     java.lang.String[] descriptorData = {
       "\n3main/resources/com/zc/messages/common/" +
       "FileMsg.proto\022\031com.zc.web.message.common" +
-      "\"?\n\007FileMsg\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n" +
-      "\003url\030\003 \001(\t\022\r\n\005state\030\004 \001(\005B\016B\014FileMsgProt" +
-      "o"
+      "\"S\n\007FileMsg\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n" +
+      "\003url\030\003 \001(\t\022\r\n\005state\030\004 \001(\005\022\022\n\ncreateTime\030" +
+      "\005 \001(\005B\016B\014FileMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -982,7 +1095,7 @@ public final class FileMsgProto {
           internal_static_com_zc_web_message_common_FileMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_common_FileMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Url", "State", });
+              new java.lang.String[] { "Id", "Name", "Url", "State", "CreateTime", });
           return null;
         }
       };
