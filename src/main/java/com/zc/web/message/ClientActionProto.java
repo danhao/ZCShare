@@ -153,7 +153,7 @@ public final class ClientActionProto {
      * <code>ACTION_UPLOAD = 18;</code>
      *
      * <pre>
-     * 上传文件(common.FileMsg----&gt;null)
+     * 上传文件(common.FileMsg----&gt;player.PlayerMsg)
      * </pre>
      */
     ACTION_UPLOAD(17, 18),
@@ -403,7 +403,7 @@ public final class ClientActionProto {
      * <code>ACTION_UPLOAD = 18;</code>
      *
      * <pre>
-     * 上传文件(common.FileMsg----&gt;null)
+     * 上传文件(common.FileMsg----&gt;player.PlayerMsg)
      * </pre>
      */
     public static final int ACTION_UPLOAD_VALUE = 18;

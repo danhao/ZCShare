@@ -1056,7 +1056,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> 
@@ -1065,7 +1065,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index);
@@ -1073,7 +1073,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     int getFilesCount();
@@ -1081,7 +1081,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
@@ -1090,7 +1090,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
@@ -3263,7 +3263,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> getFilesList() {
@@ -3273,7 +3273,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     public java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
@@ -3284,7 +3284,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     public int getFilesCount() {
@@ -3294,7 +3294,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     public com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index) {
@@ -3304,7 +3304,7 @@ public final class PlayerMsgProto {
      * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
      *
      * <pre>
-     * 无犯罪证明
+     * 上传文件
      * </pre>
      */
     public com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
@@ -8392,7 +8392,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> getFilesList() {
@@ -8406,7 +8406,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public int getFilesCount() {
@@ -8420,7 +8420,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index) {
@@ -8434,7 +8434,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder setFiles(
@@ -8455,7 +8455,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder setFiles(
@@ -8473,7 +8473,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder addFiles(com.zc.web.message.common.FileMsgProto.FileMsg value) {
@@ -8493,7 +8493,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder addFiles(
@@ -8514,7 +8514,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder addFiles(
@@ -8532,7 +8532,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder addFiles(
@@ -8550,7 +8550,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder addAllFiles(
@@ -8568,7 +8568,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder clearFiles() {
@@ -8585,7 +8585,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public Builder removeFiles(int index) {
@@ -8602,7 +8602,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public com.zc.web.message.common.FileMsgProto.FileMsg.Builder getFilesBuilder(
@@ -8613,7 +8613,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
@@ -8627,7 +8627,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
@@ -8642,7 +8642,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public com.zc.web.message.common.FileMsgProto.FileMsg.Builder addFilesBuilder() {
@@ -8653,7 +8653,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public com.zc.web.message.common.FileMsgProto.FileMsg.Builder addFilesBuilder(
@@ -8665,7 +8665,7 @@ public final class PlayerMsgProto {
        * <code>repeated .com.zc.web.message.common.FileMsg files = 47;</code>
        *
        * <pre>
-       * 无犯罪证明
+       * 上传文件
        * </pre>
        */
       public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg.Builder> 

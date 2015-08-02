@@ -21,7 +21,7 @@ enum ClientAction{
 	ACTION_LIST_CO_PLAYERS = 15;	// 最新企业用户(null---->player.ListCoPlayersRsp)
 	ACTION_SET_ALERT = 16;			// 提醒设置(player.AlertMsg---->null)
 	ACTION_BUY_VIP = 17;			// 购买VIP(common.SingleMsg(0：个人；1：企业)---->null)
-	ACTION_UPLOAD = 18;				// 上传文件(common.FileMsg---->null)
+	ACTION_UPLOAD = 18;				// 上传文件(common.FileMsg---->player.PlayerMsg)
 
 	ACTION_UPLOAD_PREPARE = 51;		// 准备上传文件(null---->common.UploadMsg)
 
