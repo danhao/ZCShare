@@ -106,14 +106,13 @@ public class Debt extends BaseModel {
 		for (Message message : messages) {
 			MessageMsg.Builder bb = MessageMsg.newBuilder();
 			PropUtil.copyProperties(bb, message, MessageMsg.getDescriptor());
-			builder.addMessages(0, bb);
-			
 			for(File file : message.getFiles()){
 				FileMsg.Builder fb = FileMsg.newBuilder();
 				fb.setName(file.getName());
 				fb.setUrl(FileUtil.genDownloadUrl(file.getId()));
 				bb.addFiles(fb);
 			}
+			builder.addMessages(0, bb);
 		}
 
 		for (File file : files) {
