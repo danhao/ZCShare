@@ -990,26 +990,26 @@ public final class DebtMsgProto {
     com.zc.web.message.debt.DebtMsgProto.DebtMsg.BidderOrBuilder getBiddersOrBuilder(
         int index);
 
-    // repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;
+    // repeated .com.zc.web.message.debt.MessageMsg messages = 29;
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
      * </pre>
      */
-    java.util.List<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message> 
+    java.util.List<com.zc.web.message.debt.MessageMsgProto.MessageMsg> 
         getMessagesList();
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
      * </pre>
      */
-    com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message getMessages(int index);
+    com.zc.web.message.debt.MessageMsgProto.MessageMsg getMessages(int index);
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
@@ -1017,22 +1017,22 @@ public final class DebtMsgProto {
      */
     int getMessagesCount();
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
      * </pre>
      */
-    java.util.List<? extends com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder> 
+    java.util.List<? extends com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder> 
         getMessagesOrBuilderList();
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
      * </pre>
      */
-    com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder getMessagesOrBuilder(
+    com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder getMessagesOrBuilder(
         int index);
 
     // repeated .com.zc.web.message.debt.DebtMsg.Repayment repayments = 43;
@@ -1293,10 +1293,10 @@ public final class DebtMsgProto {
             }
             case 234: {
               if (!((mutable_bitField1_ & 0x00000200) == 0x00000200)) {
-                messages_ = new java.util.ArrayList<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message>();
+                messages_ = new java.util.ArrayList<com.zc.web.message.debt.MessageMsgProto.MessageMsg>();
                 mutable_bitField1_ |= 0x00000200;
               }
-              messages_.add(input.readMessage(com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.PARSER, extensionRegistry));
+              messages_.add(input.readMessage(com.zc.web.message.debt.MessageMsgProto.MessageMsg.PARSER, extensionRegistry));
               break;
             }
             case 242: {
@@ -2735,751 +2735,6 @@ public final class DebtMsgProto {
       }
 
       // @@protoc_insertion_point(class_scope:com.zc.web.message.debt.DebtMsg.Bidder)
-    }
-
-    public interface MessageOrBuilder
-        extends com.google.protobuf.MessageOrBuilder {
-
-      // optional int32 time = 1;
-      /**
-       * <code>optional int32 time = 1;</code>
-       *
-       * <pre>
-       * 时间
-       * </pre>
-       */
-      boolean hasTime();
-      /**
-       * <code>optional int32 time = 1;</code>
-       *
-       * <pre>
-       * 时间
-       * </pre>
-       */
-      int getTime();
-
-      // optional int32 type = 2;
-      /**
-       * <code>optional int32 type = 2;</code>
-       *
-       * <pre>
-       * 类型
-       * </pre>
-       */
-      boolean hasType();
-      /**
-       * <code>optional int32 type = 2;</code>
-       *
-       * <pre>
-       * 类型
-       * </pre>
-       */
-      int getType();
-
-      // optional string memo = 3;
-      /**
-       * <code>optional string memo = 3;</code>
-       *
-       * <pre>
-       * 说明
-       * </pre>
-       */
-      boolean hasMemo();
-      /**
-       * <code>optional string memo = 3;</code>
-       *
-       * <pre>
-       * 说明
-       * </pre>
-       */
-      java.lang.String getMemo();
-      /**
-       * <code>optional string memo = 3;</code>
-       *
-       * <pre>
-       * 说明
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getMemoBytes();
-    }
-    /**
-     * Protobuf type {@code com.zc.web.message.debt.DebtMsg.Message}
-     */
-    public static final class Message extends
-        com.google.protobuf.GeneratedMessage
-        implements MessageOrBuilder {
-      // Use Message.newBuilder() to construct.
-      private Message(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-        this.unknownFields = builder.getUnknownFields();
-      }
-      private Message(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-      private static final Message defaultInstance;
-      public static Message getDefaultInstance() {
-        return defaultInstance;
-      }
-
-      public Message getDefaultInstanceForType() {
-        return defaultInstance;
-      }
-
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-          getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Message(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        initFields();
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(input, unknownFields,
-                                       extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 8: {
-                bitField0_ |= 0x00000001;
-                time_ = input.readInt32();
-                break;
-              }
-              case 16: {
-                bitField0_ |= 0x00000002;
-                type_ = input.readInt32();
-                break;
-              }
-              case 26: {
-                bitField0_ |= 0x00000004;
-                memo_ = input.readBytes();
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e.getMessage()).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zc.web.message.debt.DebtMsgProto.internal_static_com_zc_web_message_debt_DebtMsg_Message_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zc.web.message.debt.DebtMsgProto.internal_static_com_zc_web_message_debt_DebtMsg_Message_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.class, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder.class);
-      }
-
-      public static com.google.protobuf.Parser<Message> PARSER =
-          new com.google.protobuf.AbstractParser<Message>() {
-        public Message parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Message(input, extensionRegistry);
-        }
-      };
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Message> getParserForType() {
-        return PARSER;
-      }
-
-      private int bitField0_;
-      // optional int32 time = 1;
-      public static final int TIME_FIELD_NUMBER = 1;
-      private int time_;
-      /**
-       * <code>optional int32 time = 1;</code>
-       *
-       * <pre>
-       * 时间
-       * </pre>
-       */
-      public boolean hasTime() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional int32 time = 1;</code>
-       *
-       * <pre>
-       * 时间
-       * </pre>
-       */
-      public int getTime() {
-        return time_;
-      }
-
-      // optional int32 type = 2;
-      public static final int TYPE_FIELD_NUMBER = 2;
-      private int type_;
-      /**
-       * <code>optional int32 type = 2;</code>
-       *
-       * <pre>
-       * 类型
-       * </pre>
-       */
-      public boolean hasType() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional int32 type = 2;</code>
-       *
-       * <pre>
-       * 类型
-       * </pre>
-       */
-      public int getType() {
-        return type_;
-      }
-
-      // optional string memo = 3;
-      public static final int MEMO_FIELD_NUMBER = 3;
-      private java.lang.Object memo_;
-      /**
-       * <code>optional string memo = 3;</code>
-       *
-       * <pre>
-       * 说明
-       * </pre>
-       */
-      public boolean hasMemo() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string memo = 3;</code>
-       *
-       * <pre>
-       * 说明
-       * </pre>
-       */
-      public java.lang.String getMemo() {
-        java.lang.Object ref = memo_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            memo_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>optional string memo = 3;</code>
-       *
-       * <pre>
-       * 说明
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getMemoBytes() {
-        java.lang.Object ref = memo_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          memo_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private void initFields() {
-        time_ = 0;
-        type_ = 0;
-        memo_ = "";
-      }
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized != -1) return isInitialized == 1;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeInt32(1, time_);
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          output.writeInt32(2, type_);
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeBytes(3, getMemoBytes());
-        }
-        getUnknownFields().writeTo(output);
-      }
-
-      private int memoizedSerializedSize = -1;
-      public int getSerializedSize() {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(1, time_);
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(2, type_);
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(3, getMemoBytes());
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSerializedSize = size;
-        return size;
-      }
-
-      private static final long serialVersionUID = 0L;
-      @java.lang.Override
-      protected java.lang.Object writeReplace()
-          throws java.io.ObjectStreamException {
-        return super.writeReplace();
-      }
-
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-
-      public static Builder newBuilder() { return Builder.create(); }
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder(com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message prototype) {
-        return newBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() { return newBuilder(this); }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code com.zc.web.message.debt.DebtMsg.Message}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder>
-         implements com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.zc.web.message.debt.DebtMsgProto.internal_static_com_zc_web_message_debt_DebtMsg_Message_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.zc.web.message.debt.DebtMsgProto.internal_static_com_zc_web_message_debt_DebtMsg_Message_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.class, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder.class);
-        }
-
-        // Construct using com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          }
-        }
-        private static Builder create() {
-          return new Builder();
-        }
-
-        public Builder clear() {
-          super.clear();
-          time_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          type_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000002);
-          memo_ = "";
-          bitField0_ = (bitField0_ & ~0x00000004);
-          return this;
-        }
-
-        public Builder clone() {
-          return create().mergeFrom(buildPartial());
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.zc.web.message.debt.DebtMsgProto.internal_static_com_zc_web_message_debt_DebtMsg_Message_descriptor;
-        }
-
-        public com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message getDefaultInstanceForType() {
-          return com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.getDefaultInstance();
-        }
-
-        public com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message build() {
-          com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message buildPartial() {
-          com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message result = new com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.time_ = time_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.type_ = type_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.memo_ = memo_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message) {
-            return mergeFrom((com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message other) {
-          if (other == com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.getDefaultInstance()) return this;
-          if (other.hasTime()) {
-            setTime(other.getTime());
-          }
-          if (other.hasType()) {
-            setType(other.getType());
-          }
-          if (other.hasMemo()) {
-            bitField0_ |= 0x00000004;
-            memo_ = other.memo_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message) e.getUnfinishedMessage();
-            throw e;
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        // optional int32 time = 1;
-        private int time_ ;
-        /**
-         * <code>optional int32 time = 1;</code>
-         *
-         * <pre>
-         * 时间
-         * </pre>
-         */
-        public boolean hasTime() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>optional int32 time = 1;</code>
-         *
-         * <pre>
-         * 时间
-         * </pre>
-         */
-        public int getTime() {
-          return time_;
-        }
-        /**
-         * <code>optional int32 time = 1;</code>
-         *
-         * <pre>
-         * 时间
-         * </pre>
-         */
-        public Builder setTime(int value) {
-          bitField0_ |= 0x00000001;
-          time_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional int32 time = 1;</code>
-         *
-         * <pre>
-         * 时间
-         * </pre>
-         */
-        public Builder clearTime() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          time_ = 0;
-          onChanged();
-          return this;
-        }
-
-        // optional int32 type = 2;
-        private int type_ ;
-        /**
-         * <code>optional int32 type = 2;</code>
-         *
-         * <pre>
-         * 类型
-         * </pre>
-         */
-        public boolean hasType() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>optional int32 type = 2;</code>
-         *
-         * <pre>
-         * 类型
-         * </pre>
-         */
-        public int getType() {
-          return type_;
-        }
-        /**
-         * <code>optional int32 type = 2;</code>
-         *
-         * <pre>
-         * 类型
-         * </pre>
-         */
-        public Builder setType(int value) {
-          bitField0_ |= 0x00000002;
-          type_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional int32 type = 2;</code>
-         *
-         * <pre>
-         * 类型
-         * </pre>
-         */
-        public Builder clearType() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          type_ = 0;
-          onChanged();
-          return this;
-        }
-
-        // optional string memo = 3;
-        private java.lang.Object memo_ = "";
-        /**
-         * <code>optional string memo = 3;</code>
-         *
-         * <pre>
-         * 说明
-         * </pre>
-         */
-        public boolean hasMemo() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>optional string memo = 3;</code>
-         *
-         * <pre>
-         * 说明
-         * </pre>
-         */
-        public java.lang.String getMemo() {
-          java.lang.Object ref = memo_;
-          if (!(ref instanceof java.lang.String)) {
-            java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                .toStringUtf8();
-            memo_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string memo = 3;</code>
-         *
-         * <pre>
-         * 说明
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getMemoBytes() {
-          java.lang.Object ref = memo_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            memo_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string memo = 3;</code>
-         *
-         * <pre>
-         * 说明
-         * </pre>
-         */
-        public Builder setMemo(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          memo_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string memo = 3;</code>
-         *
-         * <pre>
-         * 说明
-         * </pre>
-         */
-        public Builder clearMemo() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          memo_ = getDefaultInstance().getMemo();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string memo = 3;</code>
-         *
-         * <pre>
-         * 说明
-         * </pre>
-         */
-        public Builder setMemoBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          memo_ = value;
-          onChanged();
-          return this;
-        }
-
-        // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.DebtMsg.Message)
-      }
-
-      static {
-        defaultInstance = new Message(true);
-        defaultInstance.initFields();
-      }
-
-      // @@protoc_insertion_point(class_scope:com.zc.web.message.debt.DebtMsg.Message)
     }
 
     public interface RepaymentOrBuilder
@@ -5886,32 +5141,32 @@ public final class DebtMsgProto {
       return bidders_.get(index);
     }
 
-    // repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;
+    // repeated .com.zc.web.message.debt.MessageMsg messages = 29;
     public static final int MESSAGES_FIELD_NUMBER = 29;
-    private java.util.List<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message> messages_;
+    private java.util.List<com.zc.web.message.debt.MessageMsgProto.MessageMsg> messages_;
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
      * </pre>
      */
-    public java.util.List<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message> getMessagesList() {
+    public java.util.List<com.zc.web.message.debt.MessageMsgProto.MessageMsg> getMessagesList() {
       return messages_;
     }
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
      * </pre>
      */
-    public java.util.List<? extends com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder> 
+    public java.util.List<? extends com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder> 
         getMessagesOrBuilderList() {
       return messages_;
     }
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
@@ -5921,23 +5176,23 @@ public final class DebtMsgProto {
       return messages_.size();
     }
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
      * </pre>
      */
-    public com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message getMessages(int index) {
+    public com.zc.web.message.debt.MessageMsgProto.MessageMsg getMessages(int index) {
       return messages_.get(index);
     }
     /**
-     * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+     * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
      *
      * <pre>
      * 催收动态
      * </pre>
      */
-    public com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder getMessagesOrBuilder(
+    public com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder getMessagesOrBuilder(
         int index) {
       return messages_.get(index);
     }
@@ -10846,27 +10101,27 @@ public final class DebtMsgProto {
         return biddersBuilder_;
       }
 
-      // repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;
-      private java.util.List<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message> messages_ =
+      // repeated .com.zc.web.message.debt.MessageMsg messages = 29;
+      private java.util.List<com.zc.web.message.debt.MessageMsgProto.MessageMsg> messages_ =
         java.util.Collections.emptyList();
       private void ensureMessagesIsMutable() {
         if (!((bitField1_ & 0x00000200) == 0x00000200)) {
-          messages_ = new java.util.ArrayList<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message>(messages_);
+          messages_ = new java.util.ArrayList<com.zc.web.message.debt.MessageMsgProto.MessageMsg>(messages_);
           bitField1_ |= 0x00000200;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder, com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder> messagesBuilder_;
+          com.zc.web.message.debt.MessageMsgProto.MessageMsg, com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder, com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder> messagesBuilder_;
 
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public java.util.List<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message> getMessagesList() {
+      public java.util.List<com.zc.web.message.debt.MessageMsgProto.MessageMsg> getMessagesList() {
         if (messagesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(messages_);
         } else {
@@ -10874,7 +10129,7 @@ public final class DebtMsgProto {
         }
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
@@ -10888,13 +10143,13 @@ public final class DebtMsgProto {
         }
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message getMessages(int index) {
+      public com.zc.web.message.debt.MessageMsgProto.MessageMsg getMessages(int index) {
         if (messagesBuilder_ == null) {
           return messages_.get(index);
         } else {
@@ -10902,14 +10157,14 @@ public final class DebtMsgProto {
         }
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
       public Builder setMessages(
-          int index, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message value) {
+          int index, com.zc.web.message.debt.MessageMsgProto.MessageMsg value) {
         if (messagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10923,14 +10178,14 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
       public Builder setMessages(
-          int index, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder builderForValue) {
+          int index, com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder builderForValue) {
         if (messagesBuilder_ == null) {
           ensureMessagesIsMutable();
           messages_.set(index, builderForValue.build());
@@ -10941,13 +10196,13 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public Builder addMessages(com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message value) {
+      public Builder addMessages(com.zc.web.message.debt.MessageMsgProto.MessageMsg value) {
         if (messagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10961,14 +10216,14 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
       public Builder addMessages(
-          int index, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message value) {
+          int index, com.zc.web.message.debt.MessageMsgProto.MessageMsg value) {
         if (messagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10982,14 +10237,14 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
       public Builder addMessages(
-          com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder builderForValue) {
+          com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder builderForValue) {
         if (messagesBuilder_ == null) {
           ensureMessagesIsMutable();
           messages_.add(builderForValue.build());
@@ -11000,14 +10255,14 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
       public Builder addMessages(
-          int index, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder builderForValue) {
+          int index, com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder builderForValue) {
         if (messagesBuilder_ == null) {
           ensureMessagesIsMutable();
           messages_.add(index, builderForValue.build());
@@ -11018,14 +10273,14 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
       public Builder addAllMessages(
-          java.lang.Iterable<? extends com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message> values) {
+          java.lang.Iterable<? extends com.zc.web.message.debt.MessageMsgProto.MessageMsg> values) {
         if (messagesBuilder_ == null) {
           ensureMessagesIsMutable();
           super.addAll(values, messages_);
@@ -11036,7 +10291,7 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
@@ -11053,7 +10308,7 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
@@ -11070,24 +10325,24 @@ public final class DebtMsgProto {
         return this;
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder getMessagesBuilder(
+      public com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder getMessagesBuilder(
           int index) {
         return getMessagesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder getMessagesOrBuilder(
+      public com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder getMessagesOrBuilder(
           int index) {
         if (messagesBuilder_ == null) {
           return messages_.get(index);  } else {
@@ -11095,13 +10350,13 @@ public final class DebtMsgProto {
         }
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public java.util.List<? extends com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder> 
+      public java.util.List<? extends com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder> 
            getMessagesOrBuilderList() {
         if (messagesBuilder_ != null) {
           return messagesBuilder_.getMessageOrBuilderList();
@@ -11110,45 +10365,45 @@ public final class DebtMsgProto {
         }
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder addMessagesBuilder() {
+      public com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder addMessagesBuilder() {
         return getMessagesFieldBuilder().addBuilder(
-            com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.getDefaultInstance());
+            com.zc.web.message.debt.MessageMsgProto.MessageMsg.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder addMessagesBuilder(
+      public com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder addMessagesBuilder(
           int index) {
         return getMessagesFieldBuilder().addBuilder(
-            index, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.getDefaultInstance());
+            index, com.zc.web.message.debt.MessageMsgProto.MessageMsg.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.zc.web.message.debt.DebtMsg.Message messages = 29;</code>
+       * <code>repeated .com.zc.web.message.debt.MessageMsg messages = 29;</code>
        *
        * <pre>
        * 催收动态
        * </pre>
        */
-      public java.util.List<com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder> 
+      public java.util.List<com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder> 
            getMessagesBuilderList() {
         return getMessagesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder, com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder> 
+          com.zc.web.message.debt.MessageMsgProto.MessageMsg, com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder, com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder> 
           getMessagesFieldBuilder() {
         if (messagesBuilder_ == null) {
           messagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message, com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder, com.zc.web.message.debt.DebtMsgProto.DebtMsg.MessageOrBuilder>(
+              com.zc.web.message.debt.MessageMsgProto.MessageMsg, com.zc.web.message.debt.MessageMsgProto.MessageMsg.Builder, com.zc.web.message.debt.MessageMsgProto.MessageMsgOrBuilder>(
                   messages_,
                   ((bitField1_ & 0x00000200) == 0x00000200),
                   getParentForChildren(),
@@ -11541,11 +10796,6 @@ public final class DebtMsgProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_zc_web_message_debt_DebtMsg_Bidder_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_zc_web_message_debt_DebtMsg_Message_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_zc_web_message_debt_DebtMsg_Message_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_zc_web_message_debt_DebtMsg_Repayment_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -11562,40 +10812,40 @@ public final class DebtMsgProto {
       "\n1main/resources/com/zc/messages/debt/De" +
       "btMsg.proto\022\027com.zc.web.message.debt\0323ma" +
       "in/resources/com/zc/messages/common/File" +
-      "Msg.proto\"\257\n\n\007DebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005mon" +
-      "ey\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\r\n\005price\030\004 \001(\005\022\014\n" +
-      "\004rate\030\005 \001(\005\022\020\n\010duration\030\024 \001(\005\022\022\n\nexpireD" +
-      "ays\030\025 \001(\005\022\023\n\013bidIncrease\030\027 \001(\005\022\016\n\006isCorp" +
-      "\030) \001(\005\022\020\n\010property\030, \001(\005\022\017\n\007ownerId\030\030 \001(" +
-      "\003\022\021\n\townerName\030\031 \001(\t\022\020\n\010winnerId\030\032 \001(\003\022\022" +
-      "\n\nwinnerName\030\033 \001(\t\022\022\n\nwinnerHead\030* \001(\t\022\024",
-      "\n\014creditorName\030\036 \001(\t\022:\n\016creditorIdFile\030\037" +
-      " \001(\0132\".com.zc.web.message.common.FileMsg" +
-      "\022\022\n\ndebtorName\030\t \001(\t\022\023\n\013debtorPhone\030\n \001(" +
-      "\t\022\020\n\010debtorId\030\013 \001(\t\022\026\n\016debtorLocation\030\r " +
-      "\001(\t\022\022\n\ndebtorAddr\030\014 \001(\t\022\026\n\016debtExpireTim" +
-      "e\030\016 \001(\005\022\031\n\021debtorContactAddr\030( \001(\t\022\026\n\016de" +
-      "btorPostcode\030\" \001(\t\022\027\n\017debtorHomePhone\030# " +
-      "\001(\t\022\027\n\017debtorHukouAddr\030$ \001(\t\022\026\n\016debtorCo" +
-      "rpAddr\030% \001(\t\022\026\n\016debtorCorpName\030& \001(\t\022\027\n\017" +
-      "debtorCorpPhone\030\' \001(\t\022\020\n\010mortgage\030\017 \001(\t\022",
-      "\025\n\rjudgementTime\030\020 \001(\005\022\016\n\006reason\030\021 \001(\t\022\020" +
-      "\n\010descript\030\022 \001(\t\0221\n\005files\030\023 \003(\0132\".com.zc" +
-      ".web.message.common.FileMsg\022\023\n\013publishTi" +
-      "me\030\006 \001(\005\022\017\n\007endTime\030\007 \001(\005\022\022\n\ncreateTime\030" +
-      "  \001(\005\0224\n\010contract\030! \001(\0132\".com.zc.web.mes" +
-      "sage.common.FileMsg\022\r\n\005state\030\026 \001(\005\0228\n\007bi" +
-      "dders\030\034 \003(\0132\'.com.zc.web.message.debt.De" +
-      "btMsg.Bidder\022:\n\010messages\030\035 \003(\0132(.com.zc." +
-      "web.message.debt.DebtMsg.Message\022>\n\nrepa" +
-      "yments\030+ \003(\0132*.com.zc.web.message.debt.D",
-      "ebtMsg.Repayment\022\021\n\tcanReturn\030- \001(\005\032q\n\006B" +
-      "idder\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\r\n\005money" +
-      "\030\003 \001(\005\022\014\n\004rate\030\005 \001(\005\022\022\n\ncreateTime\030\004 \001(\005" +
-      "\022\014\n\004head\030\006 \001(\t\022\016\n\006rating\030\007 \001(\005\0323\n\007Messag" +
-      "e\022\014\n\004time\030\001 \001(\005\022\014\n\004type\030\002 \001(\005\022\014\n\004memo\030\003 " +
-      "\001(\t\0326\n\tRepayment\022\014\n\004time\030\001 \001(\005\022\r\n\005money\030" +
-      "\002 \001(\005\022\014\n\004memo\030\003 \001(\tB\016B\014DebtMsgProto"
+      "Msg.proto\0324main/resources/com/zc/message" +
+      "s/debt/MessageMsg.proto\"\365\t\n\007DebtMsg\022\n\n\002i" +
+      "d\030\001 \001(\003\022\r\n\005money\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\r\n\005" +
+      "price\030\004 \001(\005\022\014\n\004rate\030\005 \001(\005\022\020\n\010duration\030\024 " +
+      "\001(\005\022\022\n\nexpireDays\030\025 \001(\005\022\023\n\013bidIncrease\030\027" +
+      " \001(\005\022\016\n\006isCorp\030) \001(\005\022\020\n\010property\030, \001(\005\022\017" +
+      "\n\007ownerId\030\030 \001(\003\022\021\n\townerName\030\031 \001(\t\022\020\n\010wi",
+      "nnerId\030\032 \001(\003\022\022\n\nwinnerName\030\033 \001(\t\022\022\n\nwinn" +
+      "erHead\030* \001(\t\022\024\n\014creditorName\030\036 \001(\t\022:\n\016cr" +
+      "editorIdFile\030\037 \001(\0132\".com.zc.web.message." +
+      "common.FileMsg\022\022\n\ndebtorName\030\t \001(\t\022\023\n\013de" +
+      "btorPhone\030\n \001(\t\022\020\n\010debtorId\030\013 \001(\t\022\026\n\016deb" +
+      "torLocation\030\r \001(\t\022\022\n\ndebtorAddr\030\014 \001(\t\022\026\n" +
+      "\016debtExpireTime\030\016 \001(\005\022\031\n\021debtorContactAd" +
+      "dr\030( \001(\t\022\026\n\016debtorPostcode\030\" \001(\t\022\027\n\017debt" +
+      "orHomePhone\030# \001(\t\022\027\n\017debtorHukouAddr\030$ \001" +
+      "(\t\022\026\n\016debtorCorpAddr\030% \001(\t\022\026\n\016debtorCorp",
+      "Name\030& \001(\t\022\027\n\017debtorCorpPhone\030\' \001(\t\022\020\n\010m" +
+      "ortgage\030\017 \001(\t\022\025\n\rjudgementTime\030\020 \001(\005\022\016\n\006" +
+      "reason\030\021 \001(\t\022\020\n\010descript\030\022 \001(\t\0221\n\005files\030" +
+      "\023 \003(\0132\".com.zc.web.message.common.FileMs" +
+      "g\022\023\n\013publishTime\030\006 \001(\005\022\017\n\007endTime\030\007 \001(\005\022" +
+      "\022\n\ncreateTime\030  \001(\005\0224\n\010contract\030! \001(\0132\"." +
+      "com.zc.web.message.common.FileMsg\022\r\n\005sta" +
+      "te\030\026 \001(\005\0228\n\007bidders\030\034 \003(\0132\'.com.zc.web.m" +
+      "essage.debt.DebtMsg.Bidder\0225\n\010messages\030\035" +
+      " \003(\0132#.com.zc.web.message.debt.MessageMs",
+      "g\022>\n\nrepayments\030+ \003(\0132*.com.zc.web.messa" +
+      "ge.debt.DebtMsg.Repayment\022\021\n\tcanReturn\030-" +
+      " \001(\005\032q\n\006Bidder\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t" +
+      "\022\r\n\005money\030\003 \001(\005\022\014\n\004rate\030\005 \001(\005\022\022\n\ncreateT" +
+      "ime\030\004 \001(\005\022\014\n\004head\030\006 \001(\t\022\016\n\006rating\030\007 \001(\005\032" +
+      "6\n\tRepayment\022\014\n\004time\030\001 \001(\005\022\r\n\005money\030\002 \001(" +
+      "\005\022\014\n\004memo\030\003 \001(\tB\016B\014DebtMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -11614,14 +10864,8 @@ public final class DebtMsgProto {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_DebtMsg_Bidder_descriptor,
               new java.lang.String[] { "Id", "Name", "Money", "Rate", "CreateTime", "Head", "Rating", });
-          internal_static_com_zc_web_message_debt_DebtMsg_Message_descriptor =
-            internal_static_com_zc_web_message_debt_DebtMsg_descriptor.getNestedTypes().get(1);
-          internal_static_com_zc_web_message_debt_DebtMsg_Message_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_zc_web_message_debt_DebtMsg_Message_descriptor,
-              new java.lang.String[] { "Time", "Type", "Memo", });
           internal_static_com_zc_web_message_debt_DebtMsg_Repayment_descriptor =
-            internal_static_com_zc_web_message_debt_DebtMsg_descriptor.getNestedTypes().get(2);
+            internal_static_com_zc_web_message_debt_DebtMsg_descriptor.getNestedTypes().get(1);
           internal_static_com_zc_web_message_debt_DebtMsg_Repayment_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_DebtMsg_Repayment_descriptor,
@@ -11633,6 +10877,7 @@ public final class DebtMsgProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.zc.web.message.common.FileMsgProto.getDescriptor(),
+          com.zc.web.message.debt.MessageMsgProto.getDescriptor(),
         }, assigner);
   }
 

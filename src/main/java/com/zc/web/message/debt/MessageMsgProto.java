@@ -100,6 +100,51 @@ public final class MessageMsgProto {
      */
     com.google.protobuf.ByteString
         getMemoBytes();
+
+    // repeated .com.zc.web.message.common.FileMsg files = 5;
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> 
+        getFilesList();
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index);
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    int getFilesCount();
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
+        getFilesOrBuilderList();
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code com.zc.web.message.debt.MessageMsg}
@@ -172,6 +217,14 @@ public final class MessageMsgProto {
               memo_ = input.readBytes();
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                files_ = new java.util.ArrayList<com.zc.web.message.common.FileMsgProto.FileMsg>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              files_.add(input.readMessage(com.zc.web.message.common.FileMsgProto.FileMsg.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -180,6 +233,9 @@ public final class MessageMsgProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          files_ = java.util.Collections.unmodifiableList(files_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -370,11 +426,68 @@ public final class MessageMsgProto {
       }
     }
 
+    // repeated .com.zc.web.message.common.FileMsg files = 5;
+    public static final int FILES_FIELD_NUMBER = 5;
+    private java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> files_;
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> getFilesList() {
+      return files_;
+    }
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    public java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
+        getFilesOrBuilderList() {
+      return files_;
+    }
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    public int getFilesCount() {
+      return files_.size();
+    }
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    public com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index) {
+      return files_.get(index);
+    }
+    /**
+     * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+     *
+     * <pre>
+     * 上传文件
+     * </pre>
+     */
+    public com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
+        int index) {
+      return files_.get(index);
+    }
+
     private void initFields() {
       id_ = "";
       time_ = 0;
       type_ = 0;
       memo_ = "";
+      files_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -400,6 +513,9 @@ public final class MessageMsgProto {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(4, getMemoBytes());
       }
+      for (int i = 0; i < files_.size(); i++) {
+        output.writeMessage(5, files_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -424,6 +540,10 @@ public final class MessageMsgProto {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, getMemoBytes());
+      }
+      for (int i = 0; i < files_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, files_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -533,6 +653,7 @@ public final class MessageMsgProto {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getFilesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -549,6 +670,12 @@ public final class MessageMsgProto {
         bitField0_ = (bitField0_ & ~0x00000004);
         memo_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
+        if (filesBuilder_ == null) {
+          files_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          filesBuilder_.clear();
+        }
         return this;
       }
 
@@ -593,6 +720,15 @@ public final class MessageMsgProto {
           to_bitField0_ |= 0x00000008;
         }
         result.memo_ = memo_;
+        if (filesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            files_ = java.util.Collections.unmodifiableList(files_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.files_ = files_;
+        } else {
+          result.files_ = filesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -624,6 +760,32 @@ public final class MessageMsgProto {
           bitField0_ |= 0x00000008;
           memo_ = other.memo_;
           onChanged();
+        }
+        if (filesBuilder_ == null) {
+          if (!other.files_.isEmpty()) {
+            if (files_.isEmpty()) {
+              files_ = other.files_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureFilesIsMutable();
+              files_.addAll(other.files_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.files_.isEmpty()) {
+            if (filesBuilder_.isEmpty()) {
+              filesBuilder_.dispose();
+              filesBuilder_ = null;
+              files_ = other.files_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              filesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getFilesFieldBuilder() : null;
+            } else {
+              filesBuilder_.addAllMessages(other.files_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -946,6 +1108,318 @@ public final class MessageMsgProto {
         return this;
       }
 
+      // repeated .com.zc.web.message.common.FileMsg files = 5;
+      private java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> files_ =
+        java.util.Collections.emptyList();
+      private void ensureFilesIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          files_ = new java.util.ArrayList<com.zc.web.message.common.FileMsgProto.FileMsg>(files_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zc.web.message.common.FileMsgProto.FileMsg, com.zc.web.message.common.FileMsgProto.FileMsg.Builder, com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> filesBuilder_;
+
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg> getFilesList() {
+        if (filesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(files_);
+        } else {
+          return filesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public int getFilesCount() {
+        if (filesBuilder_ == null) {
+          return files_.size();
+        } else {
+          return filesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsg getFiles(int index) {
+        if (filesBuilder_ == null) {
+          return files_.get(index);
+        } else {
+          return filesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder setFiles(
+          int index, com.zc.web.message.common.FileMsgProto.FileMsg value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.set(index, value);
+          onChanged();
+        } else {
+          filesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder setFiles(
+          int index, com.zc.web.message.common.FileMsgProto.FileMsg.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder addFiles(com.zc.web.message.common.FileMsgProto.FileMsg value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.add(value);
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder addFiles(
+          int index, com.zc.web.message.common.FileMsgProto.FileMsg value) {
+        if (filesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesIsMutable();
+          files_.add(index, value);
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder addFiles(
+          com.zc.web.message.common.FileMsgProto.FileMsg.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.add(builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder addFiles(
+          int index, com.zc.web.message.common.FileMsgProto.FileMsg.Builder builderForValue) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder addAllFiles(
+          java.lang.Iterable<? extends com.zc.web.message.common.FileMsgProto.FileMsg> values) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          super.addAll(values, files_);
+          onChanged();
+        } else {
+          filesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder clearFiles() {
+        if (filesBuilder_ == null) {
+          files_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          filesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public Builder removeFiles(int index) {
+        if (filesBuilder_ == null) {
+          ensureFilesIsMutable();
+          files_.remove(index);
+          onChanged();
+        } else {
+          filesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsg.Builder getFilesBuilder(
+          int index) {
+        return getFilesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
+          int index) {
+        if (filesBuilder_ == null) {
+          return files_.get(index);  } else {
+          return filesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public java.util.List<? extends com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
+           getFilesOrBuilderList() {
+        if (filesBuilder_ != null) {
+          return filesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(files_);
+        }
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsg.Builder addFilesBuilder() {
+        return getFilesFieldBuilder().addBuilder(
+            com.zc.web.message.common.FileMsgProto.FileMsg.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public com.zc.web.message.common.FileMsgProto.FileMsg.Builder addFilesBuilder(
+          int index) {
+        return getFilesFieldBuilder().addBuilder(
+            index, com.zc.web.message.common.FileMsgProto.FileMsg.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.zc.web.message.common.FileMsg files = 5;</code>
+       *
+       * <pre>
+       * 上传文件
+       * </pre>
+       */
+      public java.util.List<com.zc.web.message.common.FileMsgProto.FileMsg.Builder> 
+           getFilesBuilderList() {
+        return getFilesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.zc.web.message.common.FileMsgProto.FileMsg, com.zc.web.message.common.FileMsgProto.FileMsg.Builder, com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder> 
+          getFilesFieldBuilder() {
+        if (filesBuilder_ == null) {
+          filesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.zc.web.message.common.FileMsgProto.FileMsg, com.zc.web.message.common.FileMsgProto.FileMsg.Builder, com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder>(
+                  files_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          files_ = null;
+        }
+        return filesBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.MessageMsg)
     }
 
@@ -972,10 +1446,12 @@ public final class MessageMsgProto {
   static {
     java.lang.String[] descriptorData = {
       "\n4main/resources/com/zc/messages/debt/Me" +
-      "ssageMsg.proto\022\027com.zc.web.message.debt\"" +
-      "B\n\nMessageMsg\022\n\n\002id\030\001 \001(\t\022\014\n\004time\030\002 \001(\005\022" +
-      "\014\n\004type\030\003 \001(\005\022\014\n\004memo\030\004 \001(\tB\021B\017MessageMs" +
-      "gProto"
+      "ssageMsg.proto\022\027com.zc.web.message.debt\032" +
+      "3main/resources/com/zc/messages/common/F" +
+      "ileMsg.proto\"u\n\nMessageMsg\022\n\n\002id\030\001 \001(\t\022\014" +
+      "\n\004time\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\014\n\004memo\030\004 \001(\t" +
+      "\0221\n\005files\030\005 \003(\0132\".com.zc.web.message.com" +
+      "mon.FileMsgB\021B\017MessageMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -987,13 +1463,14 @@ public final class MessageMsgProto {
           internal_static_com_zc_web_message_debt_MessageMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_MessageMsg_descriptor,
-              new java.lang.String[] { "Id", "Time", "Type", "Memo", });
+              new java.lang.String[] { "Id", "Time", "Type", "Memo", "Files", });
           return null;
         }
       };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.zc.web.message.common.FileMsgProto.getDescriptor(),
         }, assigner);
   }
 

@@ -3,9 +3,12 @@ option java_outer_classname = "MessageMsgProto";
 
 package com.zc.web.message.debt;
 
+import "main/resources/com/zc/messages/common/FileMsg.proto";
+
 message MessageMsg{
 	optional string id = 1;				// 债务ID
 	optional int32 time = 2;	 		// 时间
 	optional int32 type = 3;			// 类型
 	optional string memo = 4;			// 说明
+	repeated common.FileMsg files = 5;	// 上传文件
 }

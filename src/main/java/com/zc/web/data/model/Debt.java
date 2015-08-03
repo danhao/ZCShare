@@ -13,6 +13,7 @@ import com.zc.web.core.Constant;
 import com.zc.web.exception.SmallException;
 import com.zc.web.message.common.FileMsgProto.FileMsg;
 import com.zc.web.message.debt.DebtMsgProto.DebtMsg;
+import com.zc.web.message.debt.MessageMsgProto.MessageMsg;
 import com.zc.web.util.FileUtil;
 import com.zc.web.util.PropUtil;
 import com.zc.web.util.StringUtil;
@@ -103,12 +104,16 @@ public class Debt extends BaseModel {
 		}
 
 		for (Message message : messages) {
-			com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message.Builder bb = com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message
-					.newBuilder();
-			PropUtil.copyProperties(bb, message,
-					com.zc.web.message.debt.DebtMsgProto.DebtMsg.Message
-							.getDescriptor());
+			MessageMsg.Builder bb = MessageMsg.newBuilder();
+			PropUtil.copyProperties(bb, message, MessageMsg.getDescriptor());
 			builder.addMessages(0, bb);
+			
+			for(File file : message.getFiles()){
+				FileMsg.Builder fb = FileMsg.newBuilder();
+				fb.setName(file.getName());
+				fb.setUrl(FileUtil.genDownloadUrl(file.getId()));
+				bb.addFiles(fb);
+			}
 		}
 
 		for (File file : files) {
@@ -169,6 +174,7 @@ public class Debt extends BaseModel {
 		private int time; // 时间
 		private int type; // 类型
 		private String memo; // 说明
+		private List<File> files = new ArrayList<File>();	// 上传文件
 	}
 	
 	@Entity(noClassnameStored = true)

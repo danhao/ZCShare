@@ -4,6 +4,7 @@ option java_outer_classname = "DebtMsgProto";
 package com.zc.web.message.debt;
 
 import "main/resources/com/zc/messages/common/FileMsg.proto";
+import "main/resources/com/zc/messages/debt/MessageMsg.proto";
 
 message DebtMsg{
 	optional int64 id = 1; 					// id
@@ -54,7 +55,7 @@ message DebtMsg{
 	optional int32 state = 22;				// -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
 
 	repeated Bidder bidders = 28;			// 投标人
-	repeated Message messages = 29;			// 催收动态
+	repeated MessageMsg messages = 29;			// 催收动态
 	repeated Repayment repayments = 43;		// 还款记录
 
 	optional int32 canReturn = 45;			// 是否可以退单，0不能退，1可以退
@@ -67,12 +68,6 @@ message DebtMsg{
 		optional int32 createTime = 4;		// 投标时间
 		optional string head = 6;			// 头像
 		optional int32 rating = 7;			// 信用
-	}
-
-	message Message {
-		optional int32 time = 1;	// 时间
-		optional int32 type = 2;	// 类型
-		optional string memo = 3;	// 说明
 	}
 
 	message Repayment {
