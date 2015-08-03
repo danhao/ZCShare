@@ -173,6 +173,8 @@ public class Debt extends BaseModel {
 		private int time; // 时间
 		private int type; // 类型
 		private String memo; // 说明
+		
+		@Embedded
 		private List<File> files = new ArrayList<File>();	// 上传文件
 	}
 	
