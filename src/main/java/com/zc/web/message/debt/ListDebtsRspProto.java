@@ -346,6 +346,42 @@ public final class ListDebtsRspProto {
        * </pre>
        */
       int getCreateTime();
+
+      // optional int64 ownerId = 12;
+      /**
+       * <code>optional int64 ownerId = 12;</code>
+       *
+       * <pre>
+       * 创建者
+       * </pre>
+       */
+      boolean hasOwnerId();
+      /**
+       * <code>optional int64 ownerId = 12;</code>
+       *
+       * <pre>
+       * 创建者
+       * </pre>
+       */
+      long getOwnerId();
+
+      // optional int32 hasBid = 13;
+      /**
+       * <code>optional int32 hasBid = 13;</code>
+       *
+       * <pre>
+       * 是否已经投标过
+       * </pre>
+       */
+      boolean hasHasBid();
+      /**
+       * <code>optional int32 hasBid = 13;</code>
+       *
+       * <pre>
+       * 是否已经投标过
+       * </pre>
+       */
+      int getHasBid();
     }
     /**
      * Protobuf type {@code com.zc.web.message.debt.ListDebtsRsp.SimpleDebtMsg}
@@ -451,6 +487,16 @@ public final class ListDebtsRspProto {
               case 88: {
                 bitField0_ |= 0x00000400;
                 createTime_ = input.readInt32();
+                break;
+              }
+              case 96: {
+                bitField0_ |= 0x00000800;
+                ownerId_ = input.readInt64();
+                break;
+              }
+              case 104: {
+                bitField0_ |= 0x00001000;
+                hasBid_ = input.readInt32();
                 break;
               }
             }
@@ -788,6 +834,54 @@ public final class ListDebtsRspProto {
         return createTime_;
       }
 
+      // optional int64 ownerId = 12;
+      public static final int OWNERID_FIELD_NUMBER = 12;
+      private long ownerId_;
+      /**
+       * <code>optional int64 ownerId = 12;</code>
+       *
+       * <pre>
+       * 创建者
+       * </pre>
+       */
+      public boolean hasOwnerId() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional int64 ownerId = 12;</code>
+       *
+       * <pre>
+       * 创建者
+       * </pre>
+       */
+      public long getOwnerId() {
+        return ownerId_;
+      }
+
+      // optional int32 hasBid = 13;
+      public static final int HASBID_FIELD_NUMBER = 13;
+      private int hasBid_;
+      /**
+       * <code>optional int32 hasBid = 13;</code>
+       *
+       * <pre>
+       * 是否已经投标过
+       * </pre>
+       */
+      public boolean hasHasBid() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional int32 hasBid = 13;</code>
+       *
+       * <pre>
+       * 是否已经投标过
+       * </pre>
+       */
+      public int getHasBid() {
+        return hasBid_;
+      }
+
       private void initFields() {
         id_ = 0L;
         money_ = 0;
@@ -800,6 +894,8 @@ public final class ListDebtsRspProto {
         debtExpireTime_ = 0;
         state_ = 0;
         createTime_ = 0;
+        ownerId_ = 0L;
+        hasBid_ = 0;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -845,6 +941,12 @@ public final class ListDebtsRspProto {
         }
         if (((bitField0_ & 0x00000400) == 0x00000400)) {
           output.writeInt32(11, createTime_);
+        }
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          output.writeInt64(12, ownerId_);
+        }
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          output.writeInt32(13, hasBid_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -898,6 +1000,14 @@ public final class ListDebtsRspProto {
         if (((bitField0_ & 0x00000400) == 0x00000400)) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(11, createTime_);
+        }
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(12, ownerId_);
+        }
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(13, hasBid_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -1037,6 +1147,10 @@ public final class ListDebtsRspProto {
           bitField0_ = (bitField0_ & ~0x00000200);
           createTime_ = 0;
           bitField0_ = (bitField0_ & ~0x00000400);
+          ownerId_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000800);
+          hasBid_ = 0;
+          bitField0_ = (bitField0_ & ~0x00001000);
           return this;
         }
 
@@ -1109,6 +1223,14 @@ public final class ListDebtsRspProto {
             to_bitField0_ |= 0x00000400;
           }
           result.createTime_ = createTime_;
+          if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+            to_bitField0_ |= 0x00000800;
+          }
+          result.ownerId_ = ownerId_;
+          if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+            to_bitField0_ |= 0x00001000;
+          }
+          result.hasBid_ = hasBid_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -1159,6 +1281,12 @@ public final class ListDebtsRspProto {
           }
           if (other.hasCreateTime()) {
             setCreateTime(other.getCreateTime());
+          }
+          if (other.hasOwnerId()) {
+            setOwnerId(other.getOwnerId());
+          }
+          if (other.hasHasBid()) {
+            setHasBid(other.getHasBid());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           return this;
@@ -1775,6 +1903,104 @@ public final class ListDebtsRspProto {
           return this;
         }
 
+        // optional int64 ownerId = 12;
+        private long ownerId_ ;
+        /**
+         * <code>optional int64 ownerId = 12;</code>
+         *
+         * <pre>
+         * 创建者
+         * </pre>
+         */
+        public boolean hasOwnerId() {
+          return ((bitField0_ & 0x00000800) == 0x00000800);
+        }
+        /**
+         * <code>optional int64 ownerId = 12;</code>
+         *
+         * <pre>
+         * 创建者
+         * </pre>
+         */
+        public long getOwnerId() {
+          return ownerId_;
+        }
+        /**
+         * <code>optional int64 ownerId = 12;</code>
+         *
+         * <pre>
+         * 创建者
+         * </pre>
+         */
+        public Builder setOwnerId(long value) {
+          bitField0_ |= 0x00000800;
+          ownerId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int64 ownerId = 12;</code>
+         *
+         * <pre>
+         * 创建者
+         * </pre>
+         */
+        public Builder clearOwnerId() {
+          bitField0_ = (bitField0_ & ~0x00000800);
+          ownerId_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        // optional int32 hasBid = 13;
+        private int hasBid_ ;
+        /**
+         * <code>optional int32 hasBid = 13;</code>
+         *
+         * <pre>
+         * 是否已经投标过
+         * </pre>
+         */
+        public boolean hasHasBid() {
+          return ((bitField0_ & 0x00001000) == 0x00001000);
+        }
+        /**
+         * <code>optional int32 hasBid = 13;</code>
+         *
+         * <pre>
+         * 是否已经投标过
+         * </pre>
+         */
+        public int getHasBid() {
+          return hasBid_;
+        }
+        /**
+         * <code>optional int32 hasBid = 13;</code>
+         *
+         * <pre>
+         * 是否已经投标过
+         * </pre>
+         */
+        public Builder setHasBid(int value) {
+          bitField0_ |= 0x00001000;
+          hasBid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 hasBid = 13;</code>
+         *
+         * <pre>
+         * 是否已经投标过
+         * </pre>
+         */
+        public Builder clearHasBid() {
+          bitField0_ = (bitField0_ & ~0x00001000);
+          hasBid_ = 0;
+          onChanged();
+          return this;
+        }
+
         // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.ListDebtsRsp.SimpleDebtMsg)
       }
 
@@ -2352,14 +2578,15 @@ public final class ListDebtsRspProto {
     java.lang.String[] descriptorData = {
       "\n6main/resources/com/zc/messages/debt/Li" +
       "stDebtsRsp.proto\022\027com.zc.web.message.deb" +
-      "t\"\243\002\n\014ListDebtsRsp\022A\n\004debt\030\001 \003(\01323.com.z" +
+      "t\"\304\002\n\014ListDebtsRsp\022A\n\004debt\030\001 \003(\01323.com.z" +
       "c.web.message.debt.ListDebtsRsp.SimpleDe" +
-      "btMsg\032\317\001\n\rSimpleDebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005m" +
+      "btMsg\032\360\001\n\rSimpleDebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005m" +
       "oney\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\r\n\005price\030\007 \001(\005\022" +
       "\014\n\004rate\030\010 \001(\005\022\020\n\010duration\030\004 \001(\005\022\026\n\016debto" +
       "rLocation\030\005 \001(\t\022\023\n\013publishTime\030\006 \001(\005\022\026\n\016" +
       "debtExpireTime\030\t \001(\005\022\r\n\005state\030\n \001(\005\022\022\n\nc" +
-      "reateTime\030\013 \001(\005B\023B\021ListDebtsRspProto"
+      "reateTime\030\013 \001(\005\022\017\n\007ownerId\030\014 \001(\003\022\016\n\006hasB",
+      "id\030\r \001(\005B\023B\021ListDebtsRspProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -2377,7 +2604,7 @@ public final class ListDebtsRspProto {
           internal_static_com_zc_web_message_debt_ListDebtsRsp_SimpleDebtMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_ListDebtsRsp_SimpleDebtMsg_descriptor,
-              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "DebtorLocation", "PublishTime", "DebtExpireTime", "State", "CreateTime", });
+              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "DebtorLocation", "PublishTime", "DebtExpireTime", "State", "CreateTime", "OwnerId", "HasBid", });
           return null;
         }
       };

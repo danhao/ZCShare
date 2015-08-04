@@ -18,5 +18,7 @@ message ListDebtsRsp{
 		optional int32 debtExpireTime = 9; 		// 应归还时间
 		optional int32 state = 10;				// -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
 		optional int32 createTime = 11; 		// 创建时间
+		optional int64 ownerId = 12;			// 创建者
+		optional int32 hasBid = 13;				// 是否已经投标过
 	}
 }

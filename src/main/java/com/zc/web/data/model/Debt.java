@@ -121,6 +121,14 @@ public class Debt extends BaseModel {
 			fb.setUrl(FileUtil.genDownloadUrl(file.getId()));
 			builder.addFiles(fb);
 		}
+		
+		for (Repayment pay : repayments) {
+			com.zc.web.message.debt.DebtMsgProto.DebtMsg.Repayment.Builder fb = com.zc.web.message.debt.DebtMsgProto.DebtMsg.Repayment.newBuilder();
+			PropUtil.copyProperties(fb, pay,
+					com.zc.web.message.debt.DebtMsgProto.DebtMsg.Repayment
+							.getDescriptor());
+			builder.addRepayments(fb);
+		}
 
 		if (this.creditorFileId != null) {
 			FileMsg.Builder fb = FileMsg.newBuilder();
