@@ -57,7 +57,7 @@ public class Constant {
 	public static final int USER_ID_VALIDATED = 4;
 	public static final int USER_CO_VALIDATED = 8;
 	
-	// 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP
+	// 0：系统；1：充值；2：结单；3：保证金返回；4：提现申请；5：支付保证金；6：购买VIP
 	public static final int MONEY_TYPE_ADMIN = 0;
 	public static final int MONEY_TYPE_CHARGE = 1;
 	public static final int MONEY_TYPE_CLOSE = 2;

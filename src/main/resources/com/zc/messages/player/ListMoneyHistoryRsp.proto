@@ -14,6 +14,7 @@ message ListMoneyHistoryRsp{
 		optional int32 time = 5;	 			// 操作时间
 		optional int32 state = 6;				// 0：失败；1：成功
 		optional int32 balance = 8;				// 余额
+		optional string debtId = 9;				// 债务单号
 		optional string descript = 7;			// 备注
 	}
 }

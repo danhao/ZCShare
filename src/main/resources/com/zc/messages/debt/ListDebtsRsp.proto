@@ -20,5 +20,6 @@ message ListDebtsRsp{
 		optional int32 createTime = 11; 		// 创建时间
 		optional int64 ownerId = 12;			// 创建者
 		optional int32 hasBid = 13;				// 是否已经投标过
+		optional int32 bidCount = 14;			// 投标人数
 	}
 }

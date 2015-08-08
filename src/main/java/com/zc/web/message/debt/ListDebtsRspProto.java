@@ -382,6 +382,24 @@ public final class ListDebtsRspProto {
        * </pre>
        */
       int getHasBid();
+
+      // optional int32 bidCount = 14;
+      /**
+       * <code>optional int32 bidCount = 14;</code>
+       *
+       * <pre>
+       * 投标人数
+       * </pre>
+       */
+      boolean hasBidCount();
+      /**
+       * <code>optional int32 bidCount = 14;</code>
+       *
+       * <pre>
+       * 投标人数
+       * </pre>
+       */
+      int getBidCount();
     }
     /**
      * Protobuf type {@code com.zc.web.message.debt.ListDebtsRsp.SimpleDebtMsg}
@@ -497,6 +515,11 @@ public final class ListDebtsRspProto {
               case 104: {
                 bitField0_ |= 0x00001000;
                 hasBid_ = input.readInt32();
+                break;
+              }
+              case 112: {
+                bitField0_ |= 0x00002000;
+                bidCount_ = input.readInt32();
                 break;
               }
             }
@@ -882,6 +905,30 @@ public final class ListDebtsRspProto {
         return hasBid_;
       }
 
+      // optional int32 bidCount = 14;
+      public static final int BIDCOUNT_FIELD_NUMBER = 14;
+      private int bidCount_;
+      /**
+       * <code>optional int32 bidCount = 14;</code>
+       *
+       * <pre>
+       * 投标人数
+       * </pre>
+       */
+      public boolean hasBidCount() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional int32 bidCount = 14;</code>
+       *
+       * <pre>
+       * 投标人数
+       * </pre>
+       */
+      public int getBidCount() {
+        return bidCount_;
+      }
+
       private void initFields() {
         id_ = 0L;
         money_ = 0;
@@ -896,6 +943,7 @@ public final class ListDebtsRspProto {
         createTime_ = 0;
         ownerId_ = 0L;
         hasBid_ = 0;
+        bidCount_ = 0;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -947,6 +995,9 @@ public final class ListDebtsRspProto {
         }
         if (((bitField0_ & 0x00001000) == 0x00001000)) {
           output.writeInt32(13, hasBid_);
+        }
+        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          output.writeInt32(14, bidCount_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -1008,6 +1059,10 @@ public final class ListDebtsRspProto {
         if (((bitField0_ & 0x00001000) == 0x00001000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(13, hasBid_);
+        }
+        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(14, bidCount_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -1151,6 +1206,8 @@ public final class ListDebtsRspProto {
           bitField0_ = (bitField0_ & ~0x00000800);
           hasBid_ = 0;
           bitField0_ = (bitField0_ & ~0x00001000);
+          bidCount_ = 0;
+          bitField0_ = (bitField0_ & ~0x00002000);
           return this;
         }
 
@@ -1231,6 +1288,10 @@ public final class ListDebtsRspProto {
             to_bitField0_ |= 0x00001000;
           }
           result.hasBid_ = hasBid_;
+          if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+            to_bitField0_ |= 0x00002000;
+          }
+          result.bidCount_ = bidCount_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -1287,6 +1348,9 @@ public final class ListDebtsRspProto {
           }
           if (other.hasHasBid()) {
             setHasBid(other.getHasBid());
+          }
+          if (other.hasBidCount()) {
+            setBidCount(other.getBidCount());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           return this;
@@ -2001,6 +2065,55 @@ public final class ListDebtsRspProto {
           return this;
         }
 
+        // optional int32 bidCount = 14;
+        private int bidCount_ ;
+        /**
+         * <code>optional int32 bidCount = 14;</code>
+         *
+         * <pre>
+         * 投标人数
+         * </pre>
+         */
+        public boolean hasBidCount() {
+          return ((bitField0_ & 0x00002000) == 0x00002000);
+        }
+        /**
+         * <code>optional int32 bidCount = 14;</code>
+         *
+         * <pre>
+         * 投标人数
+         * </pre>
+         */
+        public int getBidCount() {
+          return bidCount_;
+        }
+        /**
+         * <code>optional int32 bidCount = 14;</code>
+         *
+         * <pre>
+         * 投标人数
+         * </pre>
+         */
+        public Builder setBidCount(int value) {
+          bitField0_ |= 0x00002000;
+          bidCount_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 bidCount = 14;</code>
+         *
+         * <pre>
+         * 投标人数
+         * </pre>
+         */
+        public Builder clearBidCount() {
+          bitField0_ = (bitField0_ & ~0x00002000);
+          bidCount_ = 0;
+          onChanged();
+          return this;
+        }
+
         // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.ListDebtsRsp.SimpleDebtMsg)
       }
 
@@ -2578,15 +2691,16 @@ public final class ListDebtsRspProto {
     java.lang.String[] descriptorData = {
       "\n6main/resources/com/zc/messages/debt/Li" +
       "stDebtsRsp.proto\022\027com.zc.web.message.deb" +
-      "t\"\304\002\n\014ListDebtsRsp\022A\n\004debt\030\001 \003(\01323.com.z" +
+      "t\"\326\002\n\014ListDebtsRsp\022A\n\004debt\030\001 \003(\01323.com.z" +
       "c.web.message.debt.ListDebtsRsp.SimpleDe" +
-      "btMsg\032\360\001\n\rSimpleDebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005m" +
+      "btMsg\032\202\002\n\rSimpleDebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005m" +
       "oney\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\r\n\005price\030\007 \001(\005\022" +
       "\014\n\004rate\030\010 \001(\005\022\020\n\010duration\030\004 \001(\005\022\026\n\016debto" +
       "rLocation\030\005 \001(\t\022\023\n\013publishTime\030\006 \001(\005\022\026\n\016" +
       "debtExpireTime\030\t \001(\005\022\r\n\005state\030\n \001(\005\022\022\n\nc" +
       "reateTime\030\013 \001(\005\022\017\n\007ownerId\030\014 \001(\003\022\016\n\006hasB",
-      "id\030\r \001(\005B\023B\021ListDebtsRspProto"
+      "id\030\r \001(\005\022\020\n\010bidCount\030\016 \001(\005B\023B\021ListDebtsR" +
+      "spProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -2604,7 +2718,7 @@ public final class ListDebtsRspProto {
           internal_static_com_zc_web_message_debt_ListDebtsRsp_SimpleDebtMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_ListDebtsRsp_SimpleDebtMsg_descriptor,
-              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "DebtorLocation", "PublishTime", "DebtExpireTime", "State", "CreateTime", "OwnerId", "HasBid", });
+              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "DebtorLocation", "PublishTime", "DebtExpireTime", "State", "CreateTime", "OwnerId", "HasBid", "BidCount", });
           return null;
         }
       };

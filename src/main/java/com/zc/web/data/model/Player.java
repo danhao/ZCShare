@@ -142,6 +142,7 @@ public class Player extends BaseModel{
 		private int time; 				// 操作时间
 		private int state;				// 0：失败；1：成功
 		private int balance;			// 余额
+		private String debtId;			// 债务单号
 		private String descript;		// 备注
 	}
 	
