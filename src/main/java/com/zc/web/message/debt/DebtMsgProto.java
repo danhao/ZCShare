@@ -1097,6 +1097,24 @@ public final class DebtMsgProto {
      * </pre>
      */
     int getCanReturn();
+
+    // optional int32 canEnd = 46;
+    /**
+     * <code>optional int32 canEnd = 46;</code>
+     *
+     * <pre>
+     * 是否可以结单，0不能结，1可以结
+     * </pre>
+     */
+    boolean hasCanEnd();
+    /**
+     * <code>optional int32 canEnd = 46;</code>
+     *
+     * <pre>
+     * 是否可以结单，0不能结，1可以结
+     * </pre>
+     */
+    int getCanEnd();
   }
   /**
    * Protobuf type {@code com.zc.web.message.debt.DebtMsg}
@@ -1396,6 +1414,11 @@ public final class DebtMsgProto {
             case 360: {
               bitField1_ |= 0x00000080;
               canReturn_ = input.readInt32();
+              break;
+            }
+            case 368: {
+              bitField1_ |= 0x00000100;
+              canEnd_ = input.readInt32();
               break;
             }
           }
@@ -5277,6 +5300,30 @@ public final class DebtMsgProto {
       return canReturn_;
     }
 
+    // optional int32 canEnd = 46;
+    public static final int CANEND_FIELD_NUMBER = 46;
+    private int canEnd_;
+    /**
+     * <code>optional int32 canEnd = 46;</code>
+     *
+     * <pre>
+     * 是否可以结单，0不能结，1可以结
+     * </pre>
+     */
+    public boolean hasCanEnd() {
+      return ((bitField1_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional int32 canEnd = 46;</code>
+     *
+     * <pre>
+     * 是否可以结单，0不能结，1可以结
+     * </pre>
+     */
+    public int getCanEnd() {
+      return canEnd_;
+    }
+
     private void initFields() {
       id_ = 0L;
       money_ = 0;
@@ -5322,6 +5369,7 @@ public final class DebtMsgProto {
       messages_ = java.util.Collections.emptyList();
       repayments_ = java.util.Collections.emptyList();
       canReturn_ = 0;
+      canEnd_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5466,6 +5514,9 @@ public final class DebtMsgProto {
       }
       if (((bitField1_ & 0x00000080) == 0x00000080)) {
         output.writeInt32(45, canReturn_);
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        output.writeInt32(46, canEnd_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5651,6 +5702,10 @@ public final class DebtMsgProto {
       if (((bitField1_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(45, canReturn_);
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(46, canEnd_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5886,6 +5941,8 @@ public final class DebtMsgProto {
         }
         canReturn_ = 0;
         bitField1_ = (bitField1_ & ~0x00000800);
+        canEnd_ = 0;
+        bitField1_ = (bitField1_ & ~0x00001000);
         return this;
       }
 
@@ -6120,6 +6177,10 @@ public final class DebtMsgProto {
           to_bitField1_ |= 0x00000080;
         }
         result.canReturn_ = canReturn_;
+        if (((from_bitField1_ & 0x00001000) == 0x00001000)) {
+          to_bitField1_ |= 0x00000100;
+        }
+        result.canEnd_ = canEnd_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -6398,6 +6459,9 @@ public final class DebtMsgProto {
         }
         if (other.hasCanReturn()) {
           setCanReturn(other.getCanReturn());
+        }
+        if (other.hasCanEnd()) {
+          setCanEnd(other.getCanEnd());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -10774,6 +10838,55 @@ public final class DebtMsgProto {
         return this;
       }
 
+      // optional int32 canEnd = 46;
+      private int canEnd_ ;
+      /**
+       * <code>optional int32 canEnd = 46;</code>
+       *
+       * <pre>
+       * 是否可以结单，0不能结，1可以结
+       * </pre>
+       */
+      public boolean hasCanEnd() {
+        return ((bitField1_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional int32 canEnd = 46;</code>
+       *
+       * <pre>
+       * 是否可以结单，0不能结，1可以结
+       * </pre>
+       */
+      public int getCanEnd() {
+        return canEnd_;
+      }
+      /**
+       * <code>optional int32 canEnd = 46;</code>
+       *
+       * <pre>
+       * 是否可以结单，0不能结，1可以结
+       * </pre>
+       */
+      public Builder setCanEnd(int value) {
+        bitField1_ |= 0x00001000;
+        canEnd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 canEnd = 46;</code>
+       *
+       * <pre>
+       * 是否可以结单，0不能结，1可以结
+       * </pre>
+       */
+      public Builder clearCanEnd() {
+        bitField1_ = (bitField1_ & ~0x00001000);
+        canEnd_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.DebtMsg)
     }
 
@@ -10813,7 +10926,7 @@ public final class DebtMsgProto {
       "btMsg.proto\022\027com.zc.web.message.debt\0323ma" +
       "in/resources/com/zc/messages/common/File" +
       "Msg.proto\0324main/resources/com/zc/message" +
-      "s/debt/MessageMsg.proto\"\365\t\n\007DebtMsg\022\n\n\002i" +
+      "s/debt/MessageMsg.proto\"\205\n\n\007DebtMsg\022\n\n\002i" +
       "d\030\001 \001(\003\022\r\n\005money\030\002 \001(\005\022\014\n\004type\030\003 \001(\005\022\r\n\005" +
       "price\030\004 \001(\005\022\014\n\004rate\030\005 \001(\005\022\020\n\010duration\030\024 " +
       "\001(\005\022\022\n\nexpireDays\030\025 \001(\005\022\023\n\013bidIncrease\030\027" +
@@ -10841,11 +10954,12 @@ public final class DebtMsgProto {
       " \003(\0132#.com.zc.web.message.debt.MessageMs",
       "g\022>\n\nrepayments\030+ \003(\0132*.com.zc.web.messa" +
       "ge.debt.DebtMsg.Repayment\022\021\n\tcanReturn\030-" +
-      " \001(\005\032q\n\006Bidder\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t" +
-      "\022\r\n\005money\030\003 \001(\005\022\014\n\004rate\030\005 \001(\005\022\022\n\ncreateT" +
-      "ime\030\004 \001(\005\022\014\n\004head\030\006 \001(\t\022\016\n\006rating\030\007 \001(\005\032" +
-      "6\n\tRepayment\022\014\n\004time\030\001 \001(\005\022\r\n\005money\030\002 \001(" +
-      "\005\022\014\n\004memo\030\003 \001(\tB\016B\014DebtMsgProto"
+      " \001(\005\022\016\n\006canEnd\030. \001(\005\032q\n\006Bidder\022\n\n\002id\030\001 \001" +
+      "(\003\022\014\n\004name\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\014\n\004rate\030" +
+      "\005 \001(\005\022\022\n\ncreateTime\030\004 \001(\005\022\014\n\004head\030\006 \001(\t\022" +
+      "\016\n\006rating\030\007 \001(\005\0326\n\tRepayment\022\014\n\004time\030\001 \001" +
+      "(\005\022\r\n\005money\030\002 \001(\005\022\014\n\004memo\030\003 \001(\tB\016B\014DebtM" +
+      "sgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -10857,7 +10971,7 @@ public final class DebtMsgProto {
           internal_static_com_zc_web_message_debt_DebtMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_DebtMsg_descriptor,
-              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "ExpireDays", "BidIncrease", "IsCorp", "Property", "OwnerId", "OwnerName", "WinnerId", "WinnerName", "WinnerHead", "CreditorName", "CreditorIdFile", "DebtorName", "DebtorPhone", "DebtorId", "DebtorLocation", "DebtorAddr", "DebtExpireTime", "DebtorContactAddr", "DebtorPostcode", "DebtorHomePhone", "DebtorHukouAddr", "DebtorCorpAddr", "DebtorCorpName", "DebtorCorpPhone", "Mortgage", "JudgementTime", "Reason", "Descript", "Files", "PublishTime", "EndTime", "CreateTime", "Contract", "State", "Bidders", "Messages", "Repayments", "CanReturn", });
+              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "ExpireDays", "BidIncrease", "IsCorp", "Property", "OwnerId", "OwnerName", "WinnerId", "WinnerName", "WinnerHead", "CreditorName", "CreditorIdFile", "DebtorName", "DebtorPhone", "DebtorId", "DebtorLocation", "DebtorAddr", "DebtExpireTime", "DebtorContactAddr", "DebtorPostcode", "DebtorHomePhone", "DebtorHukouAddr", "DebtorCorpAddr", "DebtorCorpName", "DebtorCorpPhone", "Mortgage", "JudgementTime", "Reason", "Descript", "Files", "PublishTime", "EndTime", "CreateTime", "Contract", "State", "Bidders", "Messages", "Repayments", "CanReturn", "CanEnd", });
           internal_static_com_zc_web_message_debt_DebtMsg_Bidder_descriptor =
             internal_static_com_zc_web_message_debt_DebtMsg_descriptor.getNestedTypes().get(0);
           internal_static_com_zc_web_message_debt_DebtMsg_Bidder_fieldAccessorTable = new

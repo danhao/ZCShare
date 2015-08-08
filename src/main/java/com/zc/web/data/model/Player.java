@@ -79,9 +79,10 @@ public class Player extends BaseModel{
 	private String sid; //请求的session标示
 	
 	private Alert alert;	// 提醒设置
-	
+
 	@Embedded
 	private Map<Long, Boolean> bidDebts = new HashMap<Long, Boolean>();	// 我参与的债务(id, 是否结束)
+	@Embedded
 	private List<Long> winDebts = new ArrayList<Long>();	// 我获得的债务
 	@Embedded
 	private Map<Long, Integer> frozenMoney = new HashMap<Long, Integer>();	// 冻结资金
@@ -94,6 +95,9 @@ public class Player extends BaseModel{
 
 	@Embedded
 	private List<File> files = new ArrayList<File>();	// 上传的文件
+	
+	@Embedded
+	private List<Long> applyEndDebts = new ArrayList<Long>();	// 申请结单
 	
 	@Transient
 	private int accessTime = 0;

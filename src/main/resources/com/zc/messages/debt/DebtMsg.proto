@@ -59,6 +59,7 @@ message DebtMsg{
 	repeated Repayment repayments = 43;		// 还款记录
 
 	optional int32 canReturn = 45;			// 是否可以退单，0不能退，1可以退
+	optional int32 canEnd = 46;				// 是否可以结单，0不能结，1可以结
 
 	message Bidder{
 		optional int64 id = 1;				// 竞标人ID

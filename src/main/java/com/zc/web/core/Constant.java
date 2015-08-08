@@ -90,4 +90,7 @@ public class Constant {
 	// 文件状态
 	public static final int FILE_STATE_DONE = 1;
 	
+	// 退单时间限制（天）
+	public static final int DEBT_RETURN_LIMIT = 30;
+	
 }

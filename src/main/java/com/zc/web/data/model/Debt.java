@@ -158,8 +158,10 @@ public class Debt extends BaseModel {
 		Log.info("test:" + checkCanReturn + "|" + this.repayments.size());
 		if(checkCanReturn){
 			if(this.repayments.size() == 0){
-//				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= 30)
+				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= Constant.DEBT_RETURN_LIMIT)
 					builder.setCanReturn(1);
+			}else{
+				builder.setCanEnd(1);
 			}
 		}
 		
