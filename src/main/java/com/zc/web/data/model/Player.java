@@ -96,9 +96,6 @@ public class Player extends BaseModel{
 	@Embedded
 	private List<File> files = new ArrayList<File>();	// 上传的文件
 	
-	@Embedded
-	private List<Long> applyEndDebts = new ArrayList<Long>();	// 申请结单
-	
 	@Transient
 	private int accessTime = 0;
 	
