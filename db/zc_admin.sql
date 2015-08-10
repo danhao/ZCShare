@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50146
 File Encoding         : 65001
 
-Date: 2015-06-30 16:41:37
+Date: 2015-08-10 17:21:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -51,7 +51,7 @@ CREATE TABLE `menu` (
   `menu_order` int(11) DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_code` (`code`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of menu
@@ -67,6 +67,7 @@ INSERT INTO `menu` VALUES ('9', '用户信息 ', '8901', '/WEB-INF/pages/zc/mana
 INSERT INTO `menu` VALUES ('10', '债务信息', '8902', '/WEB-INF/pages/zc/manage/debtList.zul', 'menu_zc_manage_debt', 'page.png', '0');
 INSERT INTO `menu` VALUES ('11', '用户审批', '8903', '/WEB-INF/pages/zc/manage/validateList.zul', 'menu_zc_manage_users', 'page.png', '0');
 INSERT INTO `menu` VALUES ('12', '提现申请', '8904', '/WEB-INF/pages/zc/manage/cashList.zul', 'menu_zc_manage_cash', 'page.png', '0');
+INSERT INTO `menu` VALUES ('13', '结单申请', '8905', '/WEB-INF/pages/zc/manage/applyDebtEndList.zul', 'menu_zc_manage_debt_end', 'page.png', '0');
 
 -- ----------------------------
 -- Table structure for `opt_log`
@@ -99,7 +100,7 @@ CREATE TABLE `sec_right` (
   `name` varchar(50) NOT NULL COMMENT '权限资源名',
   `descn` varchar(100) DEFAULT NULL COMMENT '菜单名',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sec_right
@@ -126,6 +127,7 @@ INSERT INTO `sec_right` VALUES ('20', '0', 'sec', 'menu_zc_manage_player', '用�
 INSERT INTO `sec_right` VALUES ('21', '0', 'sec', 'menu_zc_manage_debt', '后台管理-债务管理');
 INSERT INTO `sec_right` VALUES ('22', '0', 'sec', 'menu_zc_manage_users', '后台管理-用户审批');
 INSERT INTO `sec_right` VALUES ('23', '0', 'sec', 'menu_zc_manage_cash', '后台管理-提现申请');
+INSERT INTO `sec_right` VALUES ('24', '0', 'sec', 'menu_zc_manage_debt_end', '后台管理-结单申请');
 
 -- ----------------------------
 -- Table structure for `sec_role`
@@ -178,6 +180,7 @@ INSERT INTO `sec_role_right` VALUES ('1', '20');
 INSERT INTO `sec_role_right` VALUES ('1', '21');
 INSERT INTO `sec_role_right` VALUES ('1', '22');
 INSERT INTO `sec_role_right` VALUES ('1', '23');
+INSERT INTO `sec_role_right` VALUES ('1', '24');
 
 -- ----------------------------
 -- Table structure for `sec_user`
