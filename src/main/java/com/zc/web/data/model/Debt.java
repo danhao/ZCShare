@@ -151,11 +151,12 @@ public class Debt extends BaseModel {
 			builder.setWinnerHead(FileUtil.genDownloadUrl(winnerHead));
 		
 		if (hide) {
-			builder.setDebtorPhone(StringUtil.hide(this.debtorPhone, 4));
-			builder.setDebtorId(StringUtil.hide(this.debtorId, 4));
+			builder.setDebtorName(StringUtil.show(this.debtorName, 1));
+			builder.setDebtorAddr(StringUtil.show(this.debtorAddr, 6));
+			builder.setDebtorPhone(StringUtil.hide(this.debtorPhone, 8));
+			builder.setDebtorId(StringUtil.hide(this.debtorId, 8));
 		}
 		
-		Log.info("test:" + checkCanReturn + "|" + this.repayments.size());
 		if(checkCanReturn){
 			if(this.repayments.size() == 0){
 				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= Constant.DEBT_RETURN_LIMIT)

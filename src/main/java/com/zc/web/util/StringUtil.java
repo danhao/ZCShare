@@ -7,11 +7,21 @@ public class StringUtil {
 
 	public static String hide(String s, int len) {
 		if (s == null || s.length() <= len)
-			return "****";
+			return buildStars(len);
 
-		return s.substring(0, s.length() - len) + "****";
+		return s.substring(0, s.length() - len) + buildStars(len);
 	}
+	
+	public static String show(String s, int len) {
+		if (s == null)
+			return buildStars(len);
+		
+		if(s.length() <= len)
+			return s;
 
+		return s.substring(0, len) + buildStars(s.length() - len);
+	}
+	
 	/**
 	 * 数字金额大写转换，思想先写个完整的然后将如零拾替换成零 要用到正则表达式
 	 */
@@ -54,5 +64,17 @@ public class StringUtil {
 			return false;
 		}
 		return true;
+	}
+	
+	private static String buildStars(int len){
+		StringBuffer sb = new StringBuffer();
+		for(int i = 0; i < len; i ++)
+			sb.append("*");
+			
+		return sb.toString();	
+	}
+	
+	public static void main(String[] args){
+		System.out.println(show("aaa", 2));
 	}
 }
