@@ -5,6 +5,7 @@ package com.zc.web.message.debt;
 
 import "main/resources/com/zc/messages/common/FileMsg.proto";
 import "main/resources/com/zc/messages/debt/MessageMsg.proto";
+import "main/resources/com/zc/messages/common/ContactMsg.proto";
 
 message DebtMsg{
 	optional int64 id = 1; 					// id
@@ -17,6 +18,7 @@ message DebtMsg{
 	optional int32 bidIncrease = 23;		// 加价幅度
 	optional int32 isCorp = 41;				// 0普通单；1企业单
 	optional int32 property = 44;			// 债务性质
+	optional string caseId = 47;			// 案件ID（关联第三方数据）
 
 	optional int64 ownerId = 24;			// 发布人
 	optional string ownerName = 25;			// 发布人昵称
@@ -28,23 +30,24 @@ message DebtMsg{
 	optional common.FileMsg creditorIdFile = 31; // 债权人身份证文件
 
 	optional string debtorName = 9;			// 债务人名称
-	optional string debtorPhone = 10;		// 债务人电话
+//	optional string debtorPhone = 10;		// 债务人电话
 	optional string debtorId = 11;			// 债务人身份证号
 	optional string debtorLocation = 13;	// 地区/城市/区
 	optional string debtorAddr = 12;		// 详细地址
 	optional int32 debtExpireTime = 14; 	// 应归还时间
 	optional string debtorContactAddr = 40;	// 债务人通讯地址
 	optional string debtorPostcode = 34;	// 债务人邮编
-	optional string debtorHomePhone = 35;	// 债务人家庭电话
+//	optional string debtorHomePhone = 35;	// 债务人家庭电话
 	optional string debtorHukouAddr = 36;	// 债务人户口所在地
 	optional string debtorCorpAddr = 37;	// 债务人单位地址
 	optional string debtorCorpName = 38;	// 债务人单位名称
-	optional string debtorCorpPhone = 39;	// 债务人单位电话
+//	optional string debtorCorpPhone = 39;	// 债务人单位电话
 	optional string mortgage = 15;			// 抵押
 	optional int32 judgementTime = 16;		// 判决时间
 	optional string reason = 17;			// 债务成因
 	optional string descript = 18;			// 其他
 	repeated common.FileMsg files = 19;		// 文件名称，唯一
+	repeated common.ContactMsg contacts = 48; // 联系人信息
 
 	optional int32 publishTime = 6; 		// 审核通过正式发布时间
 	optional int32 endTime = 7; 			// 结束时间
@@ -55,7 +58,7 @@ message DebtMsg{
 	optional int32 state = 22;				// -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
 
 	repeated Bidder bidders = 28;			// 投标人
-	repeated MessageMsg messages = 29;			// 催收动态
+	repeated MessageMsg messages = 29;		// 催收动态
 	repeated Repayment repayments = 43;		// 还款记录
 
 	optional int32 canReturn = 45;			// 是否可以退单，0不能退，1可以退

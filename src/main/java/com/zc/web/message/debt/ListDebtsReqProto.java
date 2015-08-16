@@ -343,6 +343,96 @@ public final class ListDebtsReqProto {
      * </pre>
      */
     int getQueryType();
+
+    // optional string debtorName = 17;
+    /**
+     * <code>optional string debtorName = 17;</code>
+     *
+     * <pre>
+     * 债务人姓名
+     * </pre>
+     */
+    boolean hasDebtorName();
+    /**
+     * <code>optional string debtorName = 17;</code>
+     *
+     * <pre>
+     * 债务人姓名
+     * </pre>
+     */
+    java.lang.String getDebtorName();
+    /**
+     * <code>optional string debtorName = 17;</code>
+     *
+     * <pre>
+     * 债务人姓名
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorNameBytes();
+
+    // optional string debtorId = 18;
+    /**
+     * <code>optional string debtorId = 18;</code>
+     *
+     * <pre>
+     * 债务人身份证
+     * </pre>
+     */
+    boolean hasDebtorId();
+    /**
+     * <code>optional string debtorId = 18;</code>
+     *
+     * <pre>
+     * 债务人身份证
+     * </pre>
+     */
+    java.lang.String getDebtorId();
+    /**
+     * <code>optional string debtorId = 18;</code>
+     *
+     * <pre>
+     * 债务人身份证
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorIdBytes();
+
+    // optional int32 property = 19;
+    /**
+     * <code>optional int32 property = 19;</code>
+     *
+     * <pre>
+     * 债务性质
+     * </pre>
+     */
+    boolean hasProperty();
+    /**
+     * <code>optional int32 property = 19;</code>
+     *
+     * <pre>
+     * 债务性质
+     * </pre>
+     */
+    int getProperty();
+
+    // optional int32 hand = 20;
+    /**
+     * <code>optional int32 hand = 20;</code>
+     *
+     * <pre>
+     * 手别（天）
+     * </pre>
+     */
+    boolean hasHand();
+    /**
+     * <code>optional int32 hand = 20;</code>
+     *
+     * <pre>
+     * 手别（天）
+     * </pre>
+     */
+    int getHand();
   }
   /**
    * Protobuf type {@code com.zc.web.message.debt.ListDebtsReq}
@@ -473,6 +563,26 @@ public final class ListDebtsReqProto {
             case 128: {
               bitField0_ |= 0x00008000;
               queryType_ = input.readInt32();
+              break;
+            }
+            case 138: {
+              bitField0_ |= 0x00010000;
+              debtorName_ = input.readBytes();
+              break;
+            }
+            case 146: {
+              bitField0_ |= 0x00020000;
+              debtorId_ = input.readBytes();
+              break;
+            }
+            case 152: {
+              bitField0_ |= 0x00040000;
+              property_ = input.readInt32();
+              break;
+            }
+            case 160: {
+              bitField0_ |= 0x00080000;
+              hand_ = input.readInt32();
               break;
             }
           }
@@ -1054,6 +1164,164 @@ public final class ListDebtsReqProto {
       return queryType_;
     }
 
+    // optional string debtorName = 17;
+    public static final int DEBTORNAME_FIELD_NUMBER = 17;
+    private java.lang.Object debtorName_;
+    /**
+     * <code>optional string debtorName = 17;</code>
+     *
+     * <pre>
+     * 债务人姓名
+     * </pre>
+     */
+    public boolean hasDebtorName() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional string debtorName = 17;</code>
+     *
+     * <pre>
+     * 债务人姓名
+     * </pre>
+     */
+    public java.lang.String getDebtorName() {
+      java.lang.Object ref = debtorName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorName = 17;</code>
+     *
+     * <pre>
+     * 债务人姓名
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorNameBytes() {
+      java.lang.Object ref = debtorName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string debtorId = 18;
+    public static final int DEBTORID_FIELD_NUMBER = 18;
+    private java.lang.Object debtorId_;
+    /**
+     * <code>optional string debtorId = 18;</code>
+     *
+     * <pre>
+     * 债务人身份证
+     * </pre>
+     */
+    public boolean hasDebtorId() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional string debtorId = 18;</code>
+     *
+     * <pre>
+     * 债务人身份证
+     * </pre>
+     */
+    public java.lang.String getDebtorId() {
+      java.lang.Object ref = debtorId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorId = 18;</code>
+     *
+     * <pre>
+     * 债务人身份证
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorIdBytes() {
+      java.lang.Object ref = debtorId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional int32 property = 19;
+    public static final int PROPERTY_FIELD_NUMBER = 19;
+    private int property_;
+    /**
+     * <code>optional int32 property = 19;</code>
+     *
+     * <pre>
+     * 债务性质
+     * </pre>
+     */
+    public boolean hasProperty() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional int32 property = 19;</code>
+     *
+     * <pre>
+     * 债务性质
+     * </pre>
+     */
+    public int getProperty() {
+      return property_;
+    }
+
+    // optional int32 hand = 20;
+    public static final int HAND_FIELD_NUMBER = 20;
+    private int hand_;
+    /**
+     * <code>optional int32 hand = 20;</code>
+     *
+     * <pre>
+     * 手别（天）
+     * </pre>
+     */
+    public boolean hasHand() {
+      return ((bitField0_ & 0x00080000) == 0x00080000);
+    }
+    /**
+     * <code>optional int32 hand = 20;</code>
+     *
+     * <pre>
+     * 手别（天）
+     * </pre>
+     */
+    public int getHand() {
+      return hand_;
+    }
+
     private void initFields() {
       page_ = 0;
       type_ = 0;
@@ -1071,6 +1339,10 @@ public final class ListDebtsReqProto {
       id_ = "";
       keyword_ = "";
       queryType_ = 0;
+      debtorName_ = "";
+      debtorId_ = "";
+      property_ = 0;
+      hand_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1131,6 +1403,18 @@ public final class ListDebtsReqProto {
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeInt32(16, queryType_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeBytes(17, getDebtorNameBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeBytes(18, getDebtorIdBytes());
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeInt32(19, property_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        output.writeInt32(20, hand_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1204,6 +1488,22 @@ public final class ListDebtsReqProto {
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(16, queryType_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(17, getDebtorNameBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(18, getDebtorIdBytes());
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(19, property_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(20, hand_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1353,6 +1653,14 @@ public final class ListDebtsReqProto {
         bitField0_ = (bitField0_ & ~0x00004000);
         queryType_ = 0;
         bitField0_ = (bitField0_ & ~0x00008000);
+        debtorName_ = "";
+        bitField0_ = (bitField0_ & ~0x00010000);
+        debtorId_ = "";
+        bitField0_ = (bitField0_ & ~0x00020000);
+        property_ = 0;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        hand_ = 0;
+        bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
 
@@ -1445,6 +1753,22 @@ public final class ListDebtsReqProto {
           to_bitField0_ |= 0x00008000;
         }
         result.queryType_ = queryType_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.debtorName_ = debtorName_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.debtorId_ = debtorId_;
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.property_ = property_;
+        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+          to_bitField0_ |= 0x00080000;
+        }
+        result.hand_ = hand_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1518,6 +1842,22 @@ public final class ListDebtsReqProto {
         }
         if (other.hasQueryType()) {
           setQueryType(other.getQueryType());
+        }
+        if (other.hasDebtorName()) {
+          bitField0_ |= 0x00010000;
+          debtorName_ = other.debtorName_;
+          onChanged();
+        }
+        if (other.hasDebtorId()) {
+          bitField0_ |= 0x00020000;
+          debtorId_ = other.debtorId_;
+          onChanged();
+        }
+        if (other.hasProperty()) {
+          setProperty(other.getProperty());
+        }
+        if (other.hasHand()) {
+          setHand(other.getHand());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2575,6 +2915,300 @@ public final class ListDebtsReqProto {
         return this;
       }
 
+      // optional string debtorName = 17;
+      private java.lang.Object debtorName_ = "";
+      /**
+       * <code>optional string debtorName = 17;</code>
+       *
+       * <pre>
+       * 债务人姓名
+       * </pre>
+       */
+      public boolean hasDebtorName() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional string debtorName = 17;</code>
+       *
+       * <pre>
+       * 债务人姓名
+       * </pre>
+       */
+      public java.lang.String getDebtorName() {
+        java.lang.Object ref = debtorName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorName = 17;</code>
+       *
+       * <pre>
+       * 债务人姓名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorNameBytes() {
+        java.lang.Object ref = debtorName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorName = 17;</code>
+       *
+       * <pre>
+       * 债务人姓名
+       * </pre>
+       */
+      public Builder setDebtorName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        debtorName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorName = 17;</code>
+       *
+       * <pre>
+       * 债务人姓名
+       * </pre>
+       */
+      public Builder clearDebtorName() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        debtorName_ = getDefaultInstance().getDebtorName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorName = 17;</code>
+       *
+       * <pre>
+       * 债务人姓名
+       * </pre>
+       */
+      public Builder setDebtorNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        debtorName_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string debtorId = 18;
+      private java.lang.Object debtorId_ = "";
+      /**
+       * <code>optional string debtorId = 18;</code>
+       *
+       * <pre>
+       * 债务人身份证
+       * </pre>
+       */
+      public boolean hasDebtorId() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional string debtorId = 18;</code>
+       *
+       * <pre>
+       * 债务人身份证
+       * </pre>
+       */
+      public java.lang.String getDebtorId() {
+        java.lang.Object ref = debtorId_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorId = 18;</code>
+       *
+       * <pre>
+       * 债务人身份证
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorIdBytes() {
+        java.lang.Object ref = debtorId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorId = 18;</code>
+       *
+       * <pre>
+       * 债务人身份证
+       * </pre>
+       */
+      public Builder setDebtorId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+        debtorId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorId = 18;</code>
+       *
+       * <pre>
+       * 债务人身份证
+       * </pre>
+       */
+      public Builder clearDebtorId() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        debtorId_ = getDefaultInstance().getDebtorId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorId = 18;</code>
+       *
+       * <pre>
+       * 债务人身份证
+       * </pre>
+       */
+      public Builder setDebtorIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+        debtorId_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 property = 19;
+      private int property_ ;
+      /**
+       * <code>optional int32 property = 19;</code>
+       *
+       * <pre>
+       * 债务性质
+       * </pre>
+       */
+      public boolean hasProperty() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional int32 property = 19;</code>
+       *
+       * <pre>
+       * 债务性质
+       * </pre>
+       */
+      public int getProperty() {
+        return property_;
+      }
+      /**
+       * <code>optional int32 property = 19;</code>
+       *
+       * <pre>
+       * 债务性质
+       * </pre>
+       */
+      public Builder setProperty(int value) {
+        bitField0_ |= 0x00040000;
+        property_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 property = 19;</code>
+       *
+       * <pre>
+       * 债务性质
+       * </pre>
+       */
+      public Builder clearProperty() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        property_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 hand = 20;
+      private int hand_ ;
+      /**
+       * <code>optional int32 hand = 20;</code>
+       *
+       * <pre>
+       * 手别（天）
+       * </pre>
+       */
+      public boolean hasHand() {
+        return ((bitField0_ & 0x00080000) == 0x00080000);
+      }
+      /**
+       * <code>optional int32 hand = 20;</code>
+       *
+       * <pre>
+       * 手别（天）
+       * </pre>
+       */
+      public int getHand() {
+        return hand_;
+      }
+      /**
+       * <code>optional int32 hand = 20;</code>
+       *
+       * <pre>
+       * 手别（天）
+       * </pre>
+       */
+      public Builder setHand(int value) {
+        bitField0_ |= 0x00080000;
+        hand_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 hand = 20;</code>
+       *
+       * <pre>
+       * 手别（天）
+       * </pre>
+       */
+      public Builder clearHand() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        hand_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.ListDebtsReq)
     }
 
@@ -2602,15 +3236,16 @@ public final class ListDebtsReqProto {
     java.lang.String[] descriptorData = {
       "\n6main/resources/com/zc/messages/debt/Li" +
       "stDebtsReq.proto\022\027com.zc.web.message.deb" +
-      "t\"\251\002\n\014ListDebtsReq\022\014\n\004page\030\001 \001(\005\022\014\n\004type" +
+      "t\"\357\002\n\014ListDebtsReq\022\014\n\004page\030\001 \001(\005\022\014\n\004type" +
       "\030\002 \001(\005\022\r\n\005state\030\003 \001(\005\022\020\n\010location\030\004 \001(\t\022" +
       "\023\n\013publishDays\030\005 \001(\005\022\020\n\010moneyLow\030\006 \001(\005\022\017" +
       "\n\007moneyUp\030\007 \001(\005\022\021\n\texpireLow\030\010 \001(\005\022\020\n\010ex" +
       "pireUp\030\t \001(\005\022\017\n\007ownerId\030\n \001(\t\022\020\n\010deputyI" +
       "d\030\013 \001(\t\022\026\n\016createTimeFrom\030\014 \001(\005\022\024\n\014creat" +
       "eTimeTo\030\r \001(\005\022\n\n\002id\030\016 \001(\t\022\017\n\007keyword\030\017 \001" +
-      "(\t\022\021\n\tqueryType\030\020 \001(\005B\023B\021ListDebtsReqPro",
-      "to"
+      "(\t\022\021\n\tqueryType\030\020 \001(\005\022\022\n\ndebtorName\030\021 \001(",
+      "\t\022\020\n\010debtorId\030\022 \001(\t\022\020\n\010property\030\023 \001(\005\022\014\n" +
+      "\004hand\030\024 \001(\005B\023B\021ListDebtsReqProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -2622,7 +3257,7 @@ public final class ListDebtsReqProto {
           internal_static_com_zc_web_message_debt_ListDebtsReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_ListDebtsReq_descriptor,
-              new java.lang.String[] { "Page", "Type", "State", "Location", "PublishDays", "MoneyLow", "MoneyUp", "ExpireLow", "ExpireUp", "OwnerId", "DeputyId", "CreateTimeFrom", "CreateTimeTo", "Id", "Keyword", "QueryType", });
+              new java.lang.String[] { "Page", "Type", "State", "Location", "PublishDays", "MoneyLow", "MoneyUp", "ExpireLow", "ExpireUp", "OwnerId", "DeputyId", "CreateTimeFrom", "CreateTimeTo", "Id", "Keyword", "QueryType", "DebtorName", "DebtorId", "Property", "Hand", });
           return null;
         }
       };

@@ -20,4 +20,8 @@ message ListDebtsReq{
 	optional string id = 14;			// id
 	optional string keyword = 15;		// 关键字
 	optional int32 queryType = 16;		// 查询：2我的投标；3我的中标
+	optional string debtorName = 17;	// 债务人姓名
+	optional string debtorId = 18;		// 债务人身份证
+	optional int32 property = 19;		// 债务性质
+	optional int32 hand = 20;			// 手别（天）
 }

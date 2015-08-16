@@ -3,8 +3,6 @@ package com.zc.web.data.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jfree.util.Log;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,6 +11,7 @@ import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Id;
 import com.zc.web.core.Constant;
 import com.zc.web.exception.SmallException;
+import com.zc.web.message.common.ContactMsgProto.ContactMsg;
 import com.zc.web.message.common.FileMsgProto.FileMsg;
 import com.zc.web.message.debt.DebtMsgProto.DebtMsg;
 import com.zc.web.message.debt.MessageMsgProto.MessageMsg;
@@ -66,7 +65,10 @@ public class Debt extends BaseModel {
 	private int judgementTime;
 	private String reason;
 	private String descript;
+	@Embedded
 	private List<File> files = new ArrayList<File>();
+	@Embedded
+	private List<Contact> contacts = new ArrayList<Contact>();
 
 	private int createTime; // 创建时间
 	private int publishTime;// 审核时间
@@ -123,7 +125,15 @@ public class Debt extends BaseModel {
 			fb.setUrl(FileUtil.genDownloadUrl(file.getId()));
 			builder.addFiles(fb);
 		}
-		
+
+		if(!hide){
+			for (Contact contact : contacts) {
+				ContactMsg.Builder cb = ContactMsg.newBuilder();
+				PropUtil.copyProperties(cb, contact, ContactMsg.getDescriptor());
+				builder.addContacts(cb);
+			}
+		}
+
 		for (Repayment pay : repayments) {
 			com.zc.web.message.debt.DebtMsgProto.DebtMsg.Repayment.Builder fb = com.zc.web.message.debt.DebtMsgProto.DebtMsg.Repayment.newBuilder();
 			PropUtil.copyProperties(fb, pay,
@@ -153,11 +163,10 @@ public class Debt extends BaseModel {
 		if (hide) {
 			builder.setDebtorName(StringUtil.show(this.debtorName, 1));
 			builder.setDebtorAddr(StringUtil.show(this.debtorAddr, 6));
-			builder.setDebtorPhone(StringUtil.hide(this.debtorPhone, 8));
 			builder.setDebtorId(StringUtil.hide(this.debtorId, 8));
 		}
 		
-		if(checkCanReturn){
+		if(checkCanReturn && this.state == Constant.STATE_DEALED){
 			if(this.repayments.size() == 0){
 				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= Constant.DEBT_RETURN_LIMIT)
 					builder.setCanReturn(1);
@@ -200,4 +209,12 @@ public class Debt extends BaseModel {
 		private String memo; // 说明
 	}
 
+	@Entity(noClassnameStored = true)
+	@Data
+	public static class Contact {
+		private String phone;	// 电话
+		private String name;	// 姓名
+		private int type;		// 类型
+		private String memo; 	// 说明
+	}
 }
