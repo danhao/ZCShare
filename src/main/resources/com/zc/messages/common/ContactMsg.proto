@@ -1,0 +1,12 @@
+// 联系人
+option java_outer_classname = "ContactMsgProto";
+
+package com.zc.web.message.common;
+
+message ContactMsg{
+	optional string id = 1;			// 债务id
+	optional string phone = 2;		// 电话
+	optional string name = 3;		// 姓名
+	optional int32 type = 4;		// 类型
+	optional string memo = 5;		// 备注
+}
