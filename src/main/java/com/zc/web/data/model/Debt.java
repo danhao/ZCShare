@@ -70,6 +70,8 @@ public class Debt extends BaseModel {
 	@Embedded
 	private List<Contact> contacts = new ArrayList<Contact>();
 
+	private int newestMessage;	// 最新的催收动态
+	
 	private int createTime; // 创建时间
 	private int publishTime;// 审核时间
 	private int endTime; // 结束时间

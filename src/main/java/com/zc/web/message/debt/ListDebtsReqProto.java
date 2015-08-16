@@ -433,6 +433,24 @@ public final class ListDebtsReqProto {
      * </pre>
      */
     int getHand();
+
+    // optional int32 newestMessage = 21;
+    /**
+     * <code>optional int32 newestMessage = 21;</code>
+     *
+     * <pre>
+     * 最新的催收动态
+     * </pre>
+     */
+    boolean hasNewestMessage();
+    /**
+     * <code>optional int32 newestMessage = 21;</code>
+     *
+     * <pre>
+     * 最新的催收动态
+     * </pre>
+     */
+    int getNewestMessage();
   }
   /**
    * Protobuf type {@code com.zc.web.message.debt.ListDebtsReq}
@@ -583,6 +601,11 @@ public final class ListDebtsReqProto {
             case 160: {
               bitField0_ |= 0x00080000;
               hand_ = input.readInt32();
+              break;
+            }
+            case 168: {
+              bitField0_ |= 0x00100000;
+              newestMessage_ = input.readInt32();
               break;
             }
           }
@@ -1322,6 +1345,30 @@ public final class ListDebtsReqProto {
       return hand_;
     }
 
+    // optional int32 newestMessage = 21;
+    public static final int NEWESTMESSAGE_FIELD_NUMBER = 21;
+    private int newestMessage_;
+    /**
+     * <code>optional int32 newestMessage = 21;</code>
+     *
+     * <pre>
+     * 最新的催收动态
+     * </pre>
+     */
+    public boolean hasNewestMessage() {
+      return ((bitField0_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional int32 newestMessage = 21;</code>
+     *
+     * <pre>
+     * 最新的催收动态
+     * </pre>
+     */
+    public int getNewestMessage() {
+      return newestMessage_;
+    }
+
     private void initFields() {
       page_ = 0;
       type_ = 0;
@@ -1343,6 +1390,7 @@ public final class ListDebtsReqProto {
       debtorId_ = "";
       property_ = 0;
       hand_ = 0;
+      newestMessage_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1415,6 +1463,9 @@ public final class ListDebtsReqProto {
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeInt32(20, hand_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        output.writeInt32(21, newestMessage_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1504,6 +1555,10 @@ public final class ListDebtsReqProto {
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(20, hand_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(21, newestMessage_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1661,6 +1716,8 @@ public final class ListDebtsReqProto {
         bitField0_ = (bitField0_ & ~0x00040000);
         hand_ = 0;
         bitField0_ = (bitField0_ & ~0x00080000);
+        newestMessage_ = 0;
+        bitField0_ = (bitField0_ & ~0x00100000);
         return this;
       }
 
@@ -1769,6 +1826,10 @@ public final class ListDebtsReqProto {
           to_bitField0_ |= 0x00080000;
         }
         result.hand_ = hand_;
+        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
+          to_bitField0_ |= 0x00100000;
+        }
+        result.newestMessage_ = newestMessage_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1858,6 +1919,9 @@ public final class ListDebtsReqProto {
         }
         if (other.hasHand()) {
           setHand(other.getHand());
+        }
+        if (other.hasNewestMessage()) {
+          setNewestMessage(other.getNewestMessage());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -3209,6 +3273,55 @@ public final class ListDebtsReqProto {
         return this;
       }
 
+      // optional int32 newestMessage = 21;
+      private int newestMessage_ ;
+      /**
+       * <code>optional int32 newestMessage = 21;</code>
+       *
+       * <pre>
+       * 最新的催收动态
+       * </pre>
+       */
+      public boolean hasNewestMessage() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>optional int32 newestMessage = 21;</code>
+       *
+       * <pre>
+       * 最新的催收动态
+       * </pre>
+       */
+      public int getNewestMessage() {
+        return newestMessage_;
+      }
+      /**
+       * <code>optional int32 newestMessage = 21;</code>
+       *
+       * <pre>
+       * 最新的催收动态
+       * </pre>
+       */
+      public Builder setNewestMessage(int value) {
+        bitField0_ |= 0x00100000;
+        newestMessage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 newestMessage = 21;</code>
+       *
+       * <pre>
+       * 最新的催收动态
+       * </pre>
+       */
+      public Builder clearNewestMessage() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        newestMessage_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.ListDebtsReq)
     }
 
@@ -3236,7 +3349,7 @@ public final class ListDebtsReqProto {
     java.lang.String[] descriptorData = {
       "\n6main/resources/com/zc/messages/debt/Li" +
       "stDebtsReq.proto\022\027com.zc.web.message.deb" +
-      "t\"\357\002\n\014ListDebtsReq\022\014\n\004page\030\001 \001(\005\022\014\n\004type" +
+      "t\"\206\003\n\014ListDebtsReq\022\014\n\004page\030\001 \001(\005\022\014\n\004type" +
       "\030\002 \001(\005\022\r\n\005state\030\003 \001(\005\022\020\n\010location\030\004 \001(\t\022" +
       "\023\n\013publishDays\030\005 \001(\005\022\020\n\010moneyLow\030\006 \001(\005\022\017" +
       "\n\007moneyUp\030\007 \001(\005\022\021\n\texpireLow\030\010 \001(\005\022\020\n\010ex" +
@@ -3245,7 +3358,8 @@ public final class ListDebtsReqProto {
       "eTimeTo\030\r \001(\005\022\n\n\002id\030\016 \001(\t\022\017\n\007keyword\030\017 \001" +
       "(\t\022\021\n\tqueryType\030\020 \001(\005\022\022\n\ndebtorName\030\021 \001(",
       "\t\022\020\n\010debtorId\030\022 \001(\t\022\020\n\010property\030\023 \001(\005\022\014\n" +
-      "\004hand\030\024 \001(\005B\023B\021ListDebtsReqProto"
+      "\004hand\030\024 \001(\005\022\025\n\rnewestMessage\030\025 \001(\005B\023B\021Li" +
+      "stDebtsReqProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -3257,7 +3371,7 @@ public final class ListDebtsReqProto {
           internal_static_com_zc_web_message_debt_ListDebtsReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_ListDebtsReq_descriptor,
-              new java.lang.String[] { "Page", "Type", "State", "Location", "PublishDays", "MoneyLow", "MoneyUp", "ExpireLow", "ExpireUp", "OwnerId", "DeputyId", "CreateTimeFrom", "CreateTimeTo", "Id", "Keyword", "QueryType", "DebtorName", "DebtorId", "Property", "Hand", });
+              new java.lang.String[] { "Page", "Type", "State", "Location", "PublishDays", "MoneyLow", "MoneyUp", "ExpireLow", "ExpireUp", "OwnerId", "DeputyId", "CreateTimeFrom", "CreateTimeTo", "Id", "Keyword", "QueryType", "DebtorName", "DebtorId", "Property", "Hand", "NewestMessage", });
           return null;
         }
       };
