@@ -99,6 +99,9 @@ public class Player extends BaseModel{
 	@Transient
 	private int accessTime = 0;
 	
+	@Transient
+	private Map<String, Stat> statMap = new HashMap<String, Stat>();	// 统计查询
+	
 	public PlayerMsg build() throws SmallException{
 		PlayerMsg.Builder builder = PlayerMsg.newBuilder();
 		PropUtil.copyProperties(builder, this, PlayerMsg.Builder.getDescriptor());

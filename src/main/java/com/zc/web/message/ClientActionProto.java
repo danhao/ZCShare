@@ -270,13 +270,21 @@ public final class ClientActionProto {
      */
     ACTION_ADD_CONTACT(31, 111),
     /**
+     * <code>ACTION_STAT = 112;</code>
+     *
+     * <pre>
+     * 统计(debt.StatReq----&gt;debt.StatRsp)
+     * </pre>
+     */
+    ACTION_STAT(32, 112),
+    /**
      * <code>ACTION_CREATE_ORDER = 200;</code>
      *
      * <pre>
      * 创建订单(pay.CreateOrderReq----&gt;pay.CreateOrderRsp)
      * </pre>
      */
-    ACTION_CREATE_ORDER(32, 200),
+    ACTION_CREATE_ORDER(33, 200),
     /**
      * <code>ACTION_DRAW_CASH = 201;</code>
      *
@@ -284,7 +292,7 @@ public final class ClientActionProto {
      * 提现申请(pay.PlayerCashMsg----&gt;null)
      * </pre>
      */
-    ACTION_DRAW_CASH(33, 201),
+    ACTION_DRAW_CASH(34, 201),
     ;
 
     /**
@@ -544,6 +552,14 @@ public final class ClientActionProto {
      */
     public static final int ACTION_ADD_CONTACT_VALUE = 111;
     /**
+     * <code>ACTION_STAT = 112;</code>
+     *
+     * <pre>
+     * 统计(debt.StatReq----&gt;debt.StatRsp)
+     * </pre>
+     */
+    public static final int ACTION_STAT_VALUE = 112;
+    /**
      * <code>ACTION_CREATE_ORDER = 200;</code>
      *
      * <pre>
@@ -597,6 +613,7 @@ public final class ClientActionProto {
         case 109: return ACTION_RETURN_DEBT;
         case 110: return ACTION_APPLY_END_DEBT;
         case 111: return ACTION_ADD_CONTACT;
+        case 112: return ACTION_STAT;
         case 200: return ACTION_CREATE_ORDER;
         case 201: return ACTION_DRAW_CASH;
         default: return null;
@@ -660,7 +677,7 @@ public final class ClientActionProto {
   static {
     java.lang.String[] descriptorData = {
       "\n1main/resources/com/zc/messages/ClientA" +
-      "ction.proto\022\022com.zc.web.message*\306\006\n\014Clie" +
+      "ction.proto\022\022com.zc.web.message*\327\006\n\014Clie" +
       "ntAction\022\020\n\014ACTION_LOGIN\020\001\022\026\n\022ACTION_CRE" +
       "ATE_USER\020\002\022\023\n\017ACTION_GET_USER\020\003\022\023\n\017ACTIO" +
       "N_VALIDATE\020\004\022\031\n\025ACTION_VALIDATE_EMAIL\020\005\022" +
@@ -680,9 +697,9 @@ public final class ClientActionProto {
       "TION_ADD_MESSAGE\020j\022\032\n\026ACTION_LIST_SELF_D" +
       "EBTS\020k\022\024\n\020ACTION_BATCH_BID\020l\022\026\n\022ACTION_R",
       "ETURN_DEBT\020m\022\031\n\025ACTION_APPLY_END_DEBT\020n\022" +
-      "\026\n\022ACTION_ADD_CONTACT\020o\022\030\n\023ACTION_CREATE" +
-      "_ORDER\020\310\001\022\025\n\020ACTION_DRAW_CASH\020\311\001B\023B\021Clie" +
-      "ntActionProto"
+      "\026\n\022ACTION_ADD_CONTACT\020o\022\017\n\013ACTION_STAT\020p" +
+      "\022\030\n\023ACTION_CREATE_ORDER\020\310\001\022\025\n\020ACTION_DRA" +
+      "W_CASH\020\311\001B\023B\021ClientActionProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

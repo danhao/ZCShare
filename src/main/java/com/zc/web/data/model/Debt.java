@@ -75,6 +75,7 @@ public class Debt extends BaseModel {
 	private int createTime; // 创建时间
 	private int publishTime;// 审核时间
 	private int endTime; // 结束时间
+	private int receiveTime; // 接单时间
 
 	private List<Long> bondBidders = new ArrayList<Long>(); // 已交保证金ID
 
