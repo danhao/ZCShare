@@ -23,6 +23,7 @@ message ListDebtsReq{
 	optional string debtorName = 17;	// 债务人姓名
 	optional string debtorId = 18;		// 债务人身份证
 	optional int32 property = 19;		// 债务性质
-	optional int32 hand = 20;			// 手别（天）
+	optional int32 handFrom = 20;		// 手别起（天）
+	optional int32 handTo = 22;			// 手别止（天）
 	optional int32 newestMessage = 21;	// 最新的催收动态
 }
