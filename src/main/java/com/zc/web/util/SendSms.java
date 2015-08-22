@@ -23,8 +23,6 @@ public class SendSms {
 		method.setRequestHeader("ContentType",
 				"application/x-www-form-urlencoded;charset=UTF-8");
 
-//		String content = new String("您的验证码是：" + mobile_code + "。请不要把验证码泄露给其他人。");
-
 		NameValuePair[] data = {// 提交短信
 				new NameValuePair("account", "cf_ddz"),
 				new NameValuePair("password", "zaq12wsx"), // 密码可以使用明文密码或使用32位MD5加密

@@ -92,10 +92,10 @@ public class Debt extends BaseModel {
 	private List<Repayment> repayments = new ArrayList<Repayment>(); // 还款记录
 
 	public DebtMsg build() throws SmallException {
-		return this.build(false, false);
+		return this.build(false, false, 0);
 	}
 
-	public DebtMsg build(boolean hide, boolean checkCanReturn) throws SmallException {
+	public DebtMsg build(boolean hide, boolean checkCanReturn, int canEnd) throws SmallException {
 		DebtMsg.Builder builder = DebtMsg.newBuilder();
 		PropUtil.copyProperties(builder, this, DebtMsg.Builder.getDescriptor());
 
@@ -167,9 +167,9 @@ public class Debt extends BaseModel {
 			builder.setDebtorName(StringUtil.show(this.debtorName, 1));
 			builder.setDebtorAddr(StringUtil.show(this.debtorAddr, 6));
 			builder.setDebtorId(StringUtil.hide(this.debtorId, 8));
-			builder.setDebtorCorpName(StringUtil.hide(this.debtorCorpName, 6));
-			builder.setDebtorCorpAddr(StringUtil.hide(this.debtorCorpAddr, 6));
-			builder.setDebtorHukouAddr(StringUtil.hide(this.debtorHukouAddr, 6));
+			builder.setDebtorCorpName(StringUtil.show(this.debtorCorpName, 6));
+			builder.setDebtorCorpAddr(StringUtil.show(this.debtorCorpAddr, 6));
+			builder.setDebtorHukouAddr(StringUtil.show(this.debtorHukouAddr, 6));
 		}
 		
 		if(checkCanReturn && this.state == Constant.STATE_DEALED){
@@ -177,7 +177,7 @@ public class Debt extends BaseModel {
 				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= Constant.DEBT_RETURN_LIMIT)
 					builder.setCanReturn(1);
 			}else{
-				builder.setCanEnd(1);
+				builder.setCanEnd(canEnd);
 			}
 		}
 		
