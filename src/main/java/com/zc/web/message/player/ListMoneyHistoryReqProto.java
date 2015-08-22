@@ -64,6 +64,24 @@ public final class ListMoneyHistoryReqProto {
      * </pre>
      */
     int getType();
+
+    // optional int32 page = 4;
+    /**
+     * <code>optional int32 page = 4;</code>
+     *
+     * <pre>
+     * 页码
+     * </pre>
+     */
+    boolean hasPage();
+    /**
+     * <code>optional int32 page = 4;</code>
+     *
+     * <pre>
+     * 页码
+     * </pre>
+     */
+    int getPage();
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.ListMoneyHistoryReq}
@@ -129,6 +147,11 @@ public final class ListMoneyHistoryReqProto {
             case 24: {
               bitField0_ |= 0x00000004;
               type_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              page_ = input.readInt32();
               break;
             }
           }
@@ -243,10 +266,35 @@ public final class ListMoneyHistoryReqProto {
       return type_;
     }
 
+    // optional int32 page = 4;
+    public static final int PAGE_FIELD_NUMBER = 4;
+    private int page_;
+    /**
+     * <code>optional int32 page = 4;</code>
+     *
+     * <pre>
+     * 页码
+     * </pre>
+     */
+    public boolean hasPage() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 page = 4;</code>
+     *
+     * <pre>
+     * 页码
+     * </pre>
+     */
+    public int getPage() {
+      return page_;
+    }
+
     private void initFields() {
       timeFrom_ = 0;
       timeTo_ = 0;
       type_ = 0;
+      page_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -269,6 +317,9 @@ public final class ListMoneyHistoryReqProto {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeInt32(3, type_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, page_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -289,6 +340,10 @@ public final class ListMoneyHistoryReqProto {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, type_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, page_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -412,6 +467,8 @@ public final class ListMoneyHistoryReqProto {
         bitField0_ = (bitField0_ & ~0x00000002);
         type_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
+        page_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -452,6 +509,10 @@ public final class ListMoneyHistoryReqProto {
           to_bitField0_ |= 0x00000004;
         }
         result.type_ = type_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.page_ = page_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -476,6 +537,9 @@ public final class ListMoneyHistoryReqProto {
         }
         if (other.hasType()) {
           setType(other.getType());
+        }
+        if (other.hasPage()) {
+          setPage(other.getPage());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -651,6 +715,55 @@ public final class ListMoneyHistoryReqProto {
         return this;
       }
 
+      // optional int32 page = 4;
+      private int page_ ;
+      /**
+       * <code>optional int32 page = 4;</code>
+       *
+       * <pre>
+       * 页码
+       * </pre>
+       */
+      public boolean hasPage() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 page = 4;</code>
+       *
+       * <pre>
+       * 页码
+       * </pre>
+       */
+      public int getPage() {
+        return page_;
+      }
+      /**
+       * <code>optional int32 page = 4;</code>
+       *
+       * <pre>
+       * 页码
+       * </pre>
+       */
+      public Builder setPage(int value) {
+        bitField0_ |= 0x00000008;
+        page_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 page = 4;</code>
+       *
+       * <pre>
+       * 页码
+       * </pre>
+       */
+      public Builder clearPage() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        page_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.ListMoneyHistoryReq)
     }
 
@@ -678,9 +791,10 @@ public final class ListMoneyHistoryReqProto {
     java.lang.String[] descriptorData = {
       "\n?main/resources/com/zc/messages/player/" +
       "ListMoneyHistoryReq.proto\022\031com.zc.web.me" +
-      "ssage.player\"E\n\023ListMoneyHistoryReq\022\020\n\010t" +
+      "ssage.player\"S\n\023ListMoneyHistoryReq\022\020\n\010t" +
       "imeFrom\030\001 \001(\005\022\016\n\006timeTo\030\002 \001(\005\022\014\n\004type\030\003 " +
-      "\001(\005B\032B\030ListMoneyHistoryReqProto"
+      "\001(\005\022\014\n\004page\030\004 \001(\005B\032B\030ListMoneyHistoryReq" +
+      "Proto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -692,7 +806,7 @@ public final class ListMoneyHistoryReqProto {
           internal_static_com_zc_web_message_player_ListMoneyHistoryReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_ListMoneyHistoryReq_descriptor,
-              new java.lang.String[] { "TimeFrom", "TimeTo", "Type", });
+              new java.lang.String[] { "TimeFrom", "TimeTo", "Type", "Page", });
           return null;
         }
       };

@@ -88,9 +88,6 @@ public class Player extends BaseModel{
 	private Map<Long, Integer> frozenMoney = new HashMap<Long, Integer>();	// 冻结资金
 	
 	@Embedded
-	private List<MoneyHistory> histories = new ArrayList<MoneyHistory>();
-
-	@Embedded
 	private List<Situation> situations = new ArrayList<Situation>();
 
 	@Embedded
@@ -134,20 +131,6 @@ public class Player extends BaseModel{
 		}
 		builder.setFrozen(money);
 		return builder.build();
-	}
-	
-	@Entity(noClassnameStored = true)
-	@Data
-	public static class MoneyHistory {
-		private long id; 				// id
-		private int money;				// 金额
-		private int type;				// 1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
-		private int platform;			// 1：银联
-		private int time; 				// 操作时间
-		private int state;				// 0：失败；1：成功
-		private int balance;			// 余额
-		private String debtId;			// 债务单号
-		private String descript;		// 备注
 	}
 	
 	@Entity(noClassnameStored = true)
