@@ -21,6 +21,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zc.web.core.Constant;
 
@@ -134,6 +135,33 @@ public class ImportDebtData {
 	    		json.put("expireDays", 1);
 	    		json.put("isCorp", 1);
 	    		
+	    		JSONArray contacts = new JSONArray();
+	    		
+	    		// 1手机；2家庭；3工作单位；4其他
+	    		if(json.containsKey("debtorPhone")){
+		    		JSONObject contact = new JSONObject();
+		    		contact.put("name", json.getString("debtorName"));
+		    		contact.put("phone", json.getString("debtorPhone"));
+		    		contact.put("type", 1);
+		    		contacts.add(contact);
+	    		}
+	    		if(json.containsKey("debtorHomePhone")){
+		    		JSONObject contact = new JSONObject();
+		    		contact.put("name", json.getString("debtorName"));
+		    		contact.put("phone", json.getString("debtorHomePhone"));
+		    		contact.put("type", 2);
+		    		contacts.add(contact);
+	    		}
+	    		if(json.containsKey("debtorCorpPhone")){
+		    		JSONObject contact = new JSONObject();
+		    		contact.put("name", json.getString("debtorName"));
+		    		contact.put("phone", json.getString("debtorCorpPhone"));
+		    		contact.put("type", 3);
+		    		contacts.add(contact);
+	    		}
+	    		
+	    		json.put("contacts", contacts);
+	    			
 	    		data.add(json.toJSONString());
 	    		
 	    		dataRowIndex ++;

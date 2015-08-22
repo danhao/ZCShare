@@ -48,18 +48,18 @@ public class Debt extends BaseModel {
 	private File creditorFileId;
 
 	private String debtorName;
-	private String debtorPhone;
+//	private String debtorPhone;
 	private String debtorId;
 	private String debtorLocation;
 	private String debtorAddr;
 	private String debtorEmail;
 	private String debtorContactAddr;
 	private String debtorPostcode;
-	private String debtorHomePhone;
+//	private String debtorHomePhone;
 	private String debtorHukouAddr;
 	private String debtorCorpAddr;
 	private String debtorCorpName;
-	private String debtorCorpPhone;
+//	private String debtorCorpPhone;
 	private int debtExpireTime;
 	private String mortgage;
 	private int judgementTime;

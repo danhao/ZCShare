@@ -97,7 +97,7 @@ public final class ContactMsgProto {
      * <code>optional int32 type = 4;</code>
      *
      * <pre>
-     * 类型
+     * 类型，1手机；2家庭；3工作单位；4其他
      * </pre>
      */
     boolean hasType();
@@ -105,7 +105,7 @@ public final class ContactMsgProto {
      * <code>optional int32 type = 4;</code>
      *
      * <pre>
-     * 类型
+     * 类型，1手机；2家庭；3工作单位；4其他
      * </pre>
      */
     int getType();
@@ -425,7 +425,7 @@ public final class ContactMsgProto {
      * <code>optional int32 type = 4;</code>
      *
      * <pre>
-     * 类型
+     * 类型，1手机；2家庭；3工作单位；4其他
      * </pre>
      */
     public boolean hasType() {
@@ -435,7 +435,7 @@ public final class ContactMsgProto {
      * <code>optional int32 type = 4;</code>
      *
      * <pre>
-     * 类型
+     * 类型，1手机；2家庭；3工作单位；4其他
      * </pre>
      */
     public int getType() {
@@ -1100,7 +1100,7 @@ public final class ContactMsgProto {
        * <code>optional int32 type = 4;</code>
        *
        * <pre>
-       * 类型
+       * 类型，1手机；2家庭；3工作单位；4其他
        * </pre>
        */
       public boolean hasType() {
@@ -1110,7 +1110,7 @@ public final class ContactMsgProto {
        * <code>optional int32 type = 4;</code>
        *
        * <pre>
-       * 类型
+       * 类型，1手机；2家庭；3工作单位；4其他
        * </pre>
        */
       public int getType() {
@@ -1120,7 +1120,7 @@ public final class ContactMsgProto {
        * <code>optional int32 type = 4;</code>
        *
        * <pre>
-       * 类型
+       * 类型，1手机；2家庭；3工作单位；4其他
        * </pre>
        */
       public Builder setType(int value) {
@@ -1133,7 +1133,7 @@ public final class ContactMsgProto {
        * <code>optional int32 type = 4;</code>
        *
        * <pre>
-       * 类型
+       * 类型，1手机；2家庭；3工作单位；4其他
        * </pre>
        */
       public Builder clearType() {
