@@ -167,9 +167,9 @@ public class Debt extends BaseModel {
 			builder.setDebtorName(StringUtil.show(this.debtorName, 1));
 			builder.setDebtorAddr(StringUtil.show(this.debtorAddr, 6));
 			builder.setDebtorId(StringUtil.hide(this.debtorId, 8));
-			builder.setDebtorId(StringUtil.hide(this.debtorCorpName, 6));
-			builder.setDebtorId(StringUtil.hide(this.debtorCorpAddr, 6));
-			builder.setDebtorId(StringUtil.hide(this.debtorHukouAddr, 6));
+			builder.setDebtorCorpName(StringUtil.hide(this.debtorCorpName, 6));
+			builder.setDebtorCorpAddr(StringUtil.hide(this.debtorCorpAddr, 6));
+			builder.setDebtorHukouAddr(StringUtil.hide(this.debtorHukouAddr, 6));
 		}
 		
 		if(checkCanReturn && this.state == Constant.STATE_DEALED){
