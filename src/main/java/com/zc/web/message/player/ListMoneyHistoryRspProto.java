@@ -181,7 +181,7 @@ public final class ListMoneyHistoryRspProto {
        * <code>optional int32 type = 3;</code>
        *
        * <pre>
-       * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+       * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
        * </pre>
        */
       boolean hasType();
@@ -189,7 +189,7 @@ public final class ListMoneyHistoryRspProto {
        * <code>optional int32 type = 3;</code>
        *
        * <pre>
-       * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+       * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
        * </pre>
        */
       int getType();
@@ -511,7 +511,7 @@ public final class ListMoneyHistoryRspProto {
        * <code>optional int32 type = 3;</code>
        *
        * <pre>
-       * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+       * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
        * </pre>
        */
       public boolean hasType() {
@@ -521,7 +521,7 @@ public final class ListMoneyHistoryRspProto {
        * <code>optional int32 type = 3;</code>
        *
        * <pre>
-       * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+       * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
        * </pre>
        */
       public int getType() {
@@ -1205,7 +1205,7 @@ public final class ListMoneyHistoryRspProto {
          * <code>optional int32 type = 3;</code>
          *
          * <pre>
-         * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+         * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
          * </pre>
          */
         public boolean hasType() {
@@ -1215,7 +1215,7 @@ public final class ListMoneyHistoryRspProto {
          * <code>optional int32 type = 3;</code>
          *
          * <pre>
-         * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+         * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
          * </pre>
          */
         public int getType() {
@@ -1225,7 +1225,7 @@ public final class ListMoneyHistoryRspProto {
          * <code>optional int32 type = 3;</code>
          *
          * <pre>
-         * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+         * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
          * </pre>
          */
         public Builder setType(int value) {
@@ -1238,7 +1238,7 @@ public final class ListMoneyHistoryRspProto {
          * <code>optional int32 type = 3;</code>
          *
          * <pre>
-         * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+         * 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
          * </pre>
          */
         public Builder clearType() {

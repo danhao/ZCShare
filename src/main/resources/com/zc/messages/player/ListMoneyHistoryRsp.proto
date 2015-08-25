@@ -9,7 +9,7 @@ message ListMoneyHistoryRsp{
 	message MoneyHistoryMsg{
 		optional int64 id = 1; 					// id
 		optional int32 money = 2;				// 金额
-		optional int32 type = 3;				// 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金
+		optional int32 type = 3;				// 0：系统；1：充值；2：结单；3：保证金返回；4：提现；5：支付保证金；6：购买VIP；7：中标扣款
 		optional int32 platform = 4;			// 0：默认；1：银联
 		optional int32 time = 5;	 			// 操作时间
 		optional int32 state = 6;				// 0：失败；1：成功
