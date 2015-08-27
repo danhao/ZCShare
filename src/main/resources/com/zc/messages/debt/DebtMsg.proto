@@ -8,7 +8,7 @@ import "main/resources/com/zc/messages/debt/MessageMsg.proto";
 import "main/resources/com/zc/messages/common/ContactMsg.proto";
 
 message DebtMsg{
-	optional int64 id = 1; 					// id
+	optional int64 id = 1;	 				// id
 	optional int32 money = 2;				// 标的价格
 	optional int32 type = 3;				// 2：拍卖；1：代理
 	optional int32 price = 4;				// 起拍价格
@@ -64,6 +64,8 @@ message DebtMsg{
 
 	optional int32 canReturn = 45;			// 是否可以退单，0不能退，1可以退
 	optional int32 canEnd = 46;				// 是否可以结单，0不能结，1可以结
+
+	optional string updateId = 50;			// 更新债务是传被更新的债务ID
 
 	message Bidder{
 		optional int64 id = 1;				// 竞标人ID

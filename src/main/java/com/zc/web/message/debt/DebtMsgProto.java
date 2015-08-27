@@ -1124,6 +1124,33 @@ public final class DebtMsgProto {
      * </pre>
      */
     int getCanEnd();
+
+    // optional string updateId = 50;
+    /**
+     * <code>optional string updateId = 50;</code>
+     *
+     * <pre>
+     * 更新债务是传被更新的债务ID
+     * </pre>
+     */
+    boolean hasUpdateId();
+    /**
+     * <code>optional string updateId = 50;</code>
+     *
+     * <pre>
+     * 更新债务是传被更新的债务ID
+     * </pre>
+     */
+    java.lang.String getUpdateId();
+    /**
+     * <code>optional string updateId = 50;</code>
+     *
+     * <pre>
+     * 更新债务是传被更新的债务ID
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUpdateIdBytes();
   }
   /**
    * Protobuf type {@code com.zc.web.message.debt.DebtMsg}
@@ -1431,6 +1458,11 @@ public final class DebtMsgProto {
             case 392: {
               bitField0_ |= 0x00000800;
               bidMoney_ = input.readInt32();
+              break;
+            }
+            case 402: {
+              bitField1_ |= 0x00000100;
+              updateId_ = input.readBytes();
               break;
             }
           }
@@ -5309,6 +5341,61 @@ public final class DebtMsgProto {
       return canEnd_;
     }
 
+    // optional string updateId = 50;
+    public static final int UPDATEID_FIELD_NUMBER = 50;
+    private java.lang.Object updateId_;
+    /**
+     * <code>optional string updateId = 50;</code>
+     *
+     * <pre>
+     * 更新债务是传被更新的债务ID
+     * </pre>
+     */
+    public boolean hasUpdateId() {
+      return ((bitField1_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional string updateId = 50;</code>
+     *
+     * <pre>
+     * 更新债务是传被更新的债务ID
+     * </pre>
+     */
+    public java.lang.String getUpdateId() {
+      java.lang.Object ref = updateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          updateId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string updateId = 50;</code>
+     *
+     * <pre>
+     * 更新债务是传被更新的债务ID
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUpdateIdBytes() {
+      java.lang.Object ref = updateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        updateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       id_ = 0L;
       money_ = 0;
@@ -5355,6 +5442,7 @@ public final class DebtMsgProto {
       repayments_ = java.util.Collections.emptyList();
       canReturn_ = 0;
       canEnd_ = 0;
+      updateId_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5502,6 +5590,9 @@ public final class DebtMsgProto {
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeInt32(49, bidMoney_);
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        output.writeBytes(50, getUpdateIdBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -5691,6 +5782,10 @@ public final class DebtMsgProto {
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(49, bidMoney_);
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(50, getUpdateIdBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5933,6 +6028,8 @@ public final class DebtMsgProto {
         bitField1_ = (bitField1_ & ~0x00000800);
         canEnd_ = 0;
         bitField1_ = (bitField1_ & ~0x00001000);
+        updateId_ = "";
+        bitField1_ = (bitField1_ & ~0x00002000);
         return this;
       }
 
@@ -6176,6 +6273,10 @@ public final class DebtMsgProto {
           to_bitField1_ |= 0x00000080;
         }
         result.canEnd_ = canEnd_;
+        if (((from_bitField1_ & 0x00002000) == 0x00002000)) {
+          to_bitField1_ |= 0x00000100;
+        }
+        result.updateId_ = updateId_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -6476,6 +6577,11 @@ public final class DebtMsgProto {
         }
         if (other.hasCanEnd()) {
           setCanEnd(other.getCanEnd());
+        }
+        if (other.hasUpdateId()) {
+          bitField1_ |= 0x00002000;
+          updateId_ = other.updateId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -11066,6 +11172,104 @@ public final class DebtMsgProto {
         return this;
       }
 
+      // optional string updateId = 50;
+      private java.lang.Object updateId_ = "";
+      /**
+       * <code>optional string updateId = 50;</code>
+       *
+       * <pre>
+       * 更新债务是传被更新的债务ID
+       * </pre>
+       */
+      public boolean hasUpdateId() {
+        return ((bitField1_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional string updateId = 50;</code>
+       *
+       * <pre>
+       * 更新债务是传被更新的债务ID
+       * </pre>
+       */
+      public java.lang.String getUpdateId() {
+        java.lang.Object ref = updateId_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          updateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string updateId = 50;</code>
+       *
+       * <pre>
+       * 更新债务是传被更新的债务ID
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUpdateIdBytes() {
+        java.lang.Object ref = updateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          updateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string updateId = 50;</code>
+       *
+       * <pre>
+       * 更新债务是传被更新的债务ID
+       * </pre>
+       */
+      public Builder setUpdateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00002000;
+        updateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string updateId = 50;</code>
+       *
+       * <pre>
+       * 更新债务是传被更新的债务ID
+       * </pre>
+       */
+      public Builder clearUpdateId() {
+        bitField1_ = (bitField1_ & ~0x00002000);
+        updateId_ = getDefaultInstance().getUpdateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string updateId = 50;</code>
+       *
+       * <pre>
+       * 更新债务是传被更新的债务ID
+       * </pre>
+       */
+      public Builder setUpdateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField1_ |= 0x00002000;
+        updateId_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.DebtMsg)
     }
 
@@ -11107,7 +11311,7 @@ public final class DebtMsgProto {
       "Msg.proto\0324main/resources/com/zc/message" +
       "s/debt/MessageMsg.proto\0326main/resources/" +
       "com/zc/messages/common/ContactMsg.proto\"" +
-      "\231\n\n\007DebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005money\030\002 \001(\005\022\014" +
+      "\253\n\n\007DebtMsg\022\n\n\002id\030\001 \001(\003\022\r\n\005money\030\002 \001(\005\022\014" +
       "\n\004type\030\003 \001(\005\022\r\n\005price\030\004 \001(\005\022\014\n\004rate\030\005 \001(" +
       "\005\022\020\n\010duration\030\024 \001(\005\022\022\n\nexpireDays\030\025 \001(\005\022" +
       "\023\n\013bidIncrease\030\027 \001(\005\022\016\n\006isCorp\030) \001(\005\022\020\n\010",
@@ -11135,12 +11339,12 @@ public final class DebtMsgProto {
       "2#.com.zc.web.message.debt.MessageMsg\022>\n" +
       "\nrepayments\030+ \003(\0132*.com.zc.web.message.d" +
       "ebt.DebtMsg.Repayment\022\021\n\tcanReturn\030- \001(\005" +
-      "\022\016\n\006canEnd\030. \001(\005\032q\n\006Bidder\022\n\n\002id\030\001 \001(\003\022\014" +
-      "\n\004name\030\002 \001(\t\022\r\n\005money\030\003 \001(\005\022\014\n\004rate\030\005 \001(" +
-      "\005\022\022\n\ncreateTime\030\004 \001(\005\022\014\n\004head\030\006 \001(\t\022\016\n\006r" +
-      "ating\030\007 \001(\005\0326\n\tRepayment\022\014\n\004time\030\001 \001(\005\022\r" +
-      "\n\005money\030\002 \001(\005\022\014\n\004memo\030\003 \001(\tB\016B\014DebtMsgPr" +
-      "oto"
+      "\022\016\n\006canEnd\030. \001(\005\022\020\n\010updateId\0302 \001(\t\032q\n\006Bi" +
+      "dder\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\r\n\005money\030" +
+      "\003 \001(\005\022\014\n\004rate\030\005 \001(\005\022\022\n\ncreateTime\030\004 \001(\005\022" +
+      "\014\n\004head\030\006 \001(\t\022\016\n\006rating\030\007 \001(\005\0326\n\tRepayme" +
+      "nt\022\014\n\004time\030\001 \001(\005\022\r\n\005money\030\002 \001(\005\022\014\n\004memo\030" +
+      "\003 \001(\tB\016B\014DebtMsgProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -11152,7 +11356,7 @@ public final class DebtMsgProto {
           internal_static_com_zc_web_message_debt_DebtMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_DebtMsg_descriptor,
-              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "ExpireDays", "BidIncrease", "IsCorp", "Property", "CaseId", "BidMoney", "OwnerId", "OwnerName", "WinnerId", "WinnerName", "WinnerHead", "CreditorName", "CreditorIdFile", "DebtorName", "DebtorId", "DebtorLocation", "DebtorAddr", "DebtExpireTime", "DebtorContactAddr", "DebtorPostcode", "DebtorHukouAddr", "DebtorCorpAddr", "DebtorCorpName", "Mortgage", "JudgementTime", "Reason", "Descript", "Files", "Contacts", "PublishTime", "EndTime", "CreateTime", "Contract", "State", "Bidders", "Messages", "Repayments", "CanReturn", "CanEnd", });
+              new java.lang.String[] { "Id", "Money", "Type", "Price", "Rate", "Duration", "ExpireDays", "BidIncrease", "IsCorp", "Property", "CaseId", "BidMoney", "OwnerId", "OwnerName", "WinnerId", "WinnerName", "WinnerHead", "CreditorName", "CreditorIdFile", "DebtorName", "DebtorId", "DebtorLocation", "DebtorAddr", "DebtExpireTime", "DebtorContactAddr", "DebtorPostcode", "DebtorHukouAddr", "DebtorCorpAddr", "DebtorCorpName", "Mortgage", "JudgementTime", "Reason", "Descript", "Files", "Contacts", "PublishTime", "EndTime", "CreateTime", "Contract", "State", "Bidders", "Messages", "Repayments", "CanReturn", "CanEnd", "UpdateId", });
           internal_static_com_zc_web_message_debt_DebtMsg_Bidder_descriptor =
             internal_static_com_zc_web_message_debt_DebtMsg_descriptor.getNestedTypes().get(0);
           internal_static_com_zc_web_message_debt_DebtMsg_Bidder_fieldAccessorTable = new
