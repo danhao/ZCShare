@@ -174,13 +174,13 @@ public final class ClientActionProto {
      */
     ACTION_UPLOAD_PREPARE(19, 51),
     /**
-     * <code>ACTION_CREATE_DEBT = 100;</code>
+     * <code>ACTION_CREATE_UPDATE_DEBT = 100;</code>
      *
      * <pre>
-     * 创建债务(debt.DebtMsg----&gt;debt.DebtMsg)
+     * 创建编辑债务(debt.DebtMsg----&gt;debt.DebtMsg)
      * </pre>
      */
-    ACTION_CREATE_DEBT(20, 100),
+    ACTION_CREATE_UPDATE_DEBT(20, 100),
     /**
      * <code>ACTION_LIST_DEBTS = 101;</code>
      *
@@ -456,13 +456,13 @@ public final class ClientActionProto {
      */
     public static final int ACTION_UPLOAD_PREPARE_VALUE = 51;
     /**
-     * <code>ACTION_CREATE_DEBT = 100;</code>
+     * <code>ACTION_CREATE_UPDATE_DEBT = 100;</code>
      *
      * <pre>
-     * 创建债务(debt.DebtMsg----&gt;debt.DebtMsg)
+     * 创建编辑债务(debt.DebtMsg----&gt;debt.DebtMsg)
      * </pre>
      */
-    public static final int ACTION_CREATE_DEBT_VALUE = 100;
+    public static final int ACTION_CREATE_UPDATE_DEBT_VALUE = 100;
     /**
      * <code>ACTION_LIST_DEBTS = 101;</code>
      *
@@ -601,7 +601,7 @@ public final class ClientActionProto {
         case 18: return ACTION_UPLOAD;
         case 19: return ACTION_DEBT_COUNT;
         case 51: return ACTION_UPLOAD_PREPARE;
-        case 100: return ACTION_CREATE_DEBT;
+        case 100: return ACTION_CREATE_UPDATE_DEBT;
         case 101: return ACTION_LIST_DEBTS;
         case 102: return ACTION_VIEW_DEBT;
         case 103: return ACTION_LIST_VIEW_DEBTS;
@@ -677,7 +677,7 @@ public final class ClientActionProto {
   static {
     java.lang.String[] descriptorData = {
       "\n1main/resources/com/zc/messages/ClientA" +
-      "ction.proto\022\022com.zc.web.message*\327\006\n\014Clie" +
+      "ction.proto\022\022com.zc.web.message*\336\006\n\014Clie" +
       "ntAction\022\020\n\014ACTION_LOGIN\020\001\022\026\n\022ACTION_CRE" +
       "ATE_USER\020\002\022\023\n\017ACTION_GET_USER\020\003\022\023\n\017ACTIO" +
       "N_VALIDATE\020\004\022\031\n\025ACTION_VALIDATE_EMAIL\020\005\022" +
@@ -690,16 +690,16 @@ public final class ClientActionProto {
       "\020\016\022\032\n\026ACTION_LIST_CO_PLAYERS\020\017\022\024\n\020ACTION" +
       "_SET_ALERT\020\020\022\022\n\016ACTION_BUY_VIP\020\021\022\021\n\rACTI" +
       "ON_UPLOAD\020\022\022\025\n\021ACTION_DEBT_COUNT\020\023\022\031\n\025AC" +
-      "TION_UPLOAD_PREPARE\0203\022\026\n\022ACTION_CREATE_D" +
-      "EBT\020d\022\025\n\021ACTION_LIST_DEBTS\020e\022\024\n\020ACTION_V" +
-      "IEW_DEBT\020f\022\032\n\026ACTION_LIST_VIEW_DEBTS\020g\022\016" +
-      "\n\nACTION_BID\020h\022\022\n\016ACTION_BID_WIN\020i\022\026\n\022AC" +
-      "TION_ADD_MESSAGE\020j\022\032\n\026ACTION_LIST_SELF_D" +
-      "EBTS\020k\022\024\n\020ACTION_BATCH_BID\020l\022\026\n\022ACTION_R",
-      "ETURN_DEBT\020m\022\031\n\025ACTION_APPLY_END_DEBT\020n\022" +
-      "\026\n\022ACTION_ADD_CONTACT\020o\022\017\n\013ACTION_STAT\020p" +
-      "\022\030\n\023ACTION_CREATE_ORDER\020\310\001\022\025\n\020ACTION_DRA" +
-      "W_CASH\020\311\001B\023B\021ClientActionProto"
+      "TION_UPLOAD_PREPARE\0203\022\035\n\031ACTION_CREATE_U" +
+      "PDATE_DEBT\020d\022\025\n\021ACTION_LIST_DEBTS\020e\022\024\n\020A" +
+      "CTION_VIEW_DEBT\020f\022\032\n\026ACTION_LIST_VIEW_DE" +
+      "BTS\020g\022\016\n\nACTION_BID\020h\022\022\n\016ACTION_BID_WIN\020" +
+      "i\022\026\n\022ACTION_ADD_MESSAGE\020j\022\032\n\026ACTION_LIST" +
+      "_SELF_DEBTS\020k\022\024\n\020ACTION_BATCH_BID\020l\022\026\n\022A",
+      "CTION_RETURN_DEBT\020m\022\031\n\025ACTION_APPLY_END_" +
+      "DEBT\020n\022\026\n\022ACTION_ADD_CONTACT\020o\022\017\n\013ACTION" +
+      "_STAT\020p\022\030\n\023ACTION_CREATE_ORDER\020\310\001\022\025\n\020ACT" +
+      "ION_DRAW_CASH\020\311\001B\023B\021ClientActionProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

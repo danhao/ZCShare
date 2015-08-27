@@ -213,6 +213,14 @@ public final class ErrorCodeProto {
      * </pre>
      */
     ERR_DEBT_OVER_LIMIT(24, 204),
+    /**
+     * <code>ERR_DEBT_WRONG_STATE = 205;</code>
+     *
+     * <pre>
+     *非新建状态不能修改
+     * </pre>
+     */
+    ERR_DEBT_WRONG_STATE(25, 205),
     ;
 
     /**
@@ -415,6 +423,14 @@ public final class ErrorCodeProto {
      * </pre>
      */
     public static final int ERR_DEBT_OVER_LIMIT_VALUE = 204;
+    /**
+     * <code>ERR_DEBT_WRONG_STATE = 205;</code>
+     *
+     * <pre>
+     *非新建状态不能修改
+     * </pre>
+     */
+    public static final int ERR_DEBT_WRONG_STATE_VALUE = 205;
 
 
     public final int getNumber() { return value; }
@@ -446,6 +462,7 @@ public final class ErrorCodeProto {
         case 202: return ERR_DEBT_EXPIRED;
         case 203: return ERR_DEBT_NO_CORP;
         case 204: return ERR_DEBT_OVER_LIMIT;
+        case 205: return ERR_DEBT_WRONG_STATE;
         default: return null;
       }
     }
@@ -507,7 +524,7 @@ public final class ErrorCodeProto {
   static {
     java.lang.String[] descriptorData = {
       "\n.main/resources/com/zc/messages/ErrorCo" +
-      "de.proto\022\022com.zc.web.message*\254\004\n\tErrorCo" +
+      "de.proto\022\022com.zc.web.message*\307\004\n\tErrorCo" +
       "de\022\016\n\nERR_SYSTEM\020\001\022\017\n\013ERR_UNKNOWN\020\002\022\021\n\rE" +
       "RR_PARAMETER\020\003\022\023\n\017ERR_NET_TIMEOUT\020\004\022\030\n\024E" +
       "RR_PLATFORM_INVALID\020\005\022\027\n\023ERR_ILLEGAL_REQ" +
@@ -521,8 +538,8 @@ public final class ErrorCodeProto {
       "\020l\022\031\n\025ERR_AUTHORIZED_FAILED\020m\022\025\n\020ERR_DEB" +
       "T_INVALID\020\310\001\022\025\n\020ERR_DEBT_BID_LOW\020\311\001\022\025\n\020E" +
       "RR_DEBT_EXPIRED\020\312\001\022\025\n\020ERR_DEBT_NO_CORP\020\313" +
-      "\001\022\030\n\023ERR_DEBT_OVER_LIMIT\020\314\001B\020B\016ErrorCode" +
-      "Proto"
+      "\001\022\030\n\023ERR_DEBT_OVER_LIMIT\020\314\001\022\031\n\024ERR_DEBT_" +
+      "WRONG_STATE\020\315\001B\020B\016ErrorCodeProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

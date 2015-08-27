@@ -941,7 +941,7 @@ public final class DebtMsgProto {
      * <code>optional int32 state = 22;</code>
      *
      * <pre>
-     * -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+     * -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
      * </pre>
      */
     boolean hasState();
@@ -949,7 +949,7 @@ public final class DebtMsgProto {
      * <code>optional int32 state = 22;</code>
      *
      * <pre>
-     * -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+     * -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
      * </pre>
      */
     int getState();
@@ -5076,7 +5076,7 @@ public final class DebtMsgProto {
      * <code>optional int32 state = 22;</code>
      *
      * <pre>
-     * -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+     * -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
      * </pre>
      */
     public boolean hasState() {
@@ -5086,7 +5086,7 @@ public final class DebtMsgProto {
      * <code>optional int32 state = 22;</code>
      *
      * <pre>
-     * -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+     * -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
      * </pre>
      */
     public int getState() {
@@ -9989,7 +9989,7 @@ public final class DebtMsgProto {
        * <code>optional int32 state = 22;</code>
        *
        * <pre>
-       * -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+       * -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
        * </pre>
        */
       public boolean hasState() {
@@ -9999,7 +9999,7 @@ public final class DebtMsgProto {
        * <code>optional int32 state = 22;</code>
        *
        * <pre>
-       * -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+       * -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
        * </pre>
        */
       public int getState() {
@@ -10009,7 +10009,7 @@ public final class DebtMsgProto {
        * <code>optional int32 state = 22;</code>
        *
        * <pre>
-       * -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+       * -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
        * </pre>
        */
       public Builder setState(int value) {
@@ -10022,7 +10022,7 @@ public final class DebtMsgProto {
        * <code>optional int32 state = 22;</code>
        *
        * <pre>
-       * -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+       * -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
        * </pre>
        */
       public Builder clearState() {

@@ -26,7 +26,7 @@ enum ClientAction{
 
 	ACTION_UPLOAD_PREPARE = 51;		// 准备上传文件(null---->common.UploadMsg)
 
-	ACTION_CREATE_DEBT = 100; 		// 创建债务(debt.DebtMsg---->debt.DebtMsg)
+	ACTION_CREATE_UPDATE_DEBT = 100;// 创建编辑债务(debt.DebtMsg---->debt.DebtMsg)
 	ACTION_LIST_DEBTS = 101; 		// 债务列表(debt.ListDebtsReq---->debt.ListDebtsRsp)
 	ACTION_VIEW_DEBT = 102; 		// 债务详情(common.SingleMsg---->debt.DebtMsg)
 	ACTION_LIST_VIEW_DEBTS = 103; 	// 首页债务列表(debt.ListDebtsReq---->debt.ListDebtsRsp)

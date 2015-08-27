@@ -40,12 +40,13 @@ public class Constant {
 	public static final int BOND = 10;		// 保证金，百分比
 	public static final int MAX_BOND = 50000;	// 最高保证金（分）
 	
-	// 0未审核；1已通过；2未通过；3已成交；4已完成；
+	// 0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
 	public static final int STATE_NEW = 0;
-	public static final int STATE_PUBLISH = 1;
-	public static final int STATE_FAILED = 2;
-	public static final int STATE_DEALED = 3;
-	public static final int STATE_CLOSED = 4;
+	public static final int STATE_VALIDATING = 1;
+	public static final int STATE_PUBLISH = 2;
+	public static final int STATE_FAILED = 3;
+	public static final int STATE_DEALED = 4;
+	public static final int STATE_CLOSED = 5;
 	
 	// 债务类型
 	public static final int TYPE_DEPUTY = 1;
@@ -74,11 +75,12 @@ public class Constant {
 	public static final int MONEY_PLATFORM_DEFAULT = 0;
 	public static final int MONEY_PLATFORM_UNIONPAY = 1;
 	
-	// 1：发布债务 2:回款结单
+	// 1：发布债务 2:回款结单 3：退回保证金；4：结单；5：编辑债务
 	public static final int SITUATION_CREATE_DEBT = 1;
 	public static final int SITUATION_DEBT_END = 2;
 	public static final int SITUATION_BOND_RETURN = 3;
 	public static final int SITUATION_DEBT_CLOSE = 4;
+	public static final int SITUATION_UPDATE_DEBT = 5;
 	
 	// 用户角色：0有债务；1催债
 	public static final int USER_ROLE_CREDITOR = 0;

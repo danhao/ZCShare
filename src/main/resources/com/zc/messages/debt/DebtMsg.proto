@@ -56,7 +56,7 @@ message DebtMsg{
 
 	optional common.FileMsg contract = 33;	// 委托协议
 
-	optional int32 state = 22;				// -1全部；0未审核；1已通过；2未通过；3已成交；4已完成；
+	optional int32 state = 22;				// -1全部；0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
 
 	repeated Bidder bidders = 28;			// 投标人
 	repeated MessageMsg messages = 29;		// 催收动态

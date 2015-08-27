@@ -163,7 +163,7 @@ public final class ListSituationRspProto {
        * <code>optional int32 type = 2;</code>
        *
        * <pre>
-       * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）
+       * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）；5：债务修改（id）
        * </pre>
        */
       boolean hasType();
@@ -171,7 +171,7 @@ public final class ListSituationRspProto {
        * <code>optional int32 type = 2;</code>
        *
        * <pre>
-       * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）
+       * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）；5：债务修改（id）
        * </pre>
        */
       int getType();
@@ -378,7 +378,7 @@ public final class ListSituationRspProto {
        * <code>optional int32 type = 2;</code>
        *
        * <pre>
-       * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）
+       * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）；5：债务修改（id）
        * </pre>
        */
       public boolean hasType() {
@@ -388,7 +388,7 @@ public final class ListSituationRspProto {
        * <code>optional int32 type = 2;</code>
        *
        * <pre>
-       * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）
+       * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）；5：债务修改（id）
        * </pre>
        */
       public int getType() {
@@ -812,7 +812,7 @@ public final class ListSituationRspProto {
          * <code>optional int32 type = 2;</code>
          *
          * <pre>
-         * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）
+         * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）；5：债务修改（id）
          * </pre>
          */
         public boolean hasType() {
@@ -822,7 +822,7 @@ public final class ListSituationRspProto {
          * <code>optional int32 type = 2;</code>
          *
          * <pre>
-         * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）
+         * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）；5：债务修改（id）
          * </pre>
          */
         public int getType() {
@@ -832,7 +832,7 @@ public final class ListSituationRspProto {
          * <code>optional int32 type = 2;</code>
          *
          * <pre>
-         * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）
+         * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）；5：债务修改（id）
          * </pre>
          */
         public Builder setType(int value) {
@@ -845,7 +845,7 @@ public final class ListSituationRspProto {
          * <code>optional int32 type = 2;</code>
          *
          * <pre>
-         * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）
+         * 1：发布债务（type、id、duration、money）；2：结单返款（id、佣金, 平台服务费）；3：退还保证金（id、money）；4：债务关闭（id）；5：债务修改（id）
          * </pre>
          */
         public Builder clearType() {
