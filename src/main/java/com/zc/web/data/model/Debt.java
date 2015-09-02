@@ -124,6 +124,7 @@ public class Debt extends BaseModel {
 
 		for (File file : files) {
 			FileMsg.Builder fb = FileMsg.newBuilder();
+			fb.setId(file.getId());
 			fb.setName(file.getName());
 			fb.setUrl(FileUtil.genDownloadUrl(file.getId()));
 			builder.addFiles(fb);
@@ -147,6 +148,7 @@ public class Debt extends BaseModel {
 
 		if (this.creditorFileId != null) {
 			FileMsg.Builder fb = FileMsg.newBuilder();
+			fb.setId(this.creditorFileId.getId());
 			fb.setName(this.creditorFileId.getName());
 			fb.setUrl(FileUtil.genDownloadUrl(this.creditorFileId.getId()));
 			builder.setCreditorIdFile(fb);
