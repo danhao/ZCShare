@@ -158,6 +158,7 @@ public class Player extends BaseModel{
 	
 	private FileMsg.Builder getFileMsg(File file){
 		FileMsg.Builder builder = FileMsg.newBuilder();
+		builder.setId(file.getId());
 		builder.setName(file.getName());
 		builder.setUrl(FileUtil.genDownloadUrl(file.getId()));
 		builder.setState(file.getState());
