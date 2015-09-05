@@ -95,4 +95,8 @@ public class Constant {
 	// 退单时间限制（天）
 	public static final int DEBT_RETURN_LIMIT = 30;
 	
+	// 用户类型
+	public static final int USER_TYPE_PERSONAL = 0;
+	public static final int USER_TYPE_CORP = 1;
+	
 }
