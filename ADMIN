@@ -18,3 +18,9 @@ http://localhost:31001/?cmd=1000015|pid|vip等级
 
 还款记录
 http://localhost:31001/?cmd=1000019|pid|债务id_金额_描述
+
+债权转让到期
+http://localhost:31001/?1000024|0|单号_1
+
+债权转让结单
+http://localhost:31001/?1000025|0|单号
