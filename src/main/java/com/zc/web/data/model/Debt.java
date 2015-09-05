@@ -3,6 +3,8 @@ package com.zc.web.data.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jfree.util.Log;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -174,6 +176,7 @@ public class Debt extends BaseModel {
 			builder.setDebtorHukouAddr(StringUtil.show(this.debtorHukouAddr, 6));
 		}
 		
+		Log.info("xxx:" + checkCanReturn + ":" + canEnd);
 		if(checkCanReturn && this.state == Constant.STATE_DEALED){
 			if(this.repayments.size() == 0){
 				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= Constant.DEBT_RETURN_LIMIT)
