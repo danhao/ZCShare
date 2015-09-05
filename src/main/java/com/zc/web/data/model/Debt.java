@@ -178,10 +178,11 @@ public class Debt extends BaseModel {
 			builder.setDebtorHukouAddr(StringUtil.show(this.debtorHukouAddr, 6));
 		}
 		
-		logger.info("xxx:" + checkCanReturn + ":" + canEnd);
 		if(checkCanReturn && this.state == Constant.STATE_DEALED){
 			if(this.repayments.size() == 0){
-				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= Constant.DEBT_RETURN_LIMIT)
+				if(this.type == Constant.TYPE_BID)
+					builder.setCanEnd(canEnd);
+				else if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= Constant.DEBT_RETURN_LIMIT)
 					builder.setCanReturn(1);
 			}else{
 				builder.setCanEnd(canEnd);
