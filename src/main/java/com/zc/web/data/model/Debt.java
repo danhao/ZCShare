@@ -3,10 +3,10 @@ package com.zc.web.data.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jfree.util.Log;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import org.apache.log4j.Logger;
 
 import com.google.code.morphia.annotations.Embedded;
 import com.google.code.morphia.annotations.Entity;
@@ -26,6 +26,8 @@ import com.zc.web.util.TimeUtil;
 @EqualsAndHashCode(callSuper = false)
 @Data
 public class Debt extends BaseModel {
+	private static final Logger logger = Logger.getLogger(Debt.class);
+
 	@Id
 	private long id; // id
 	private int money;
@@ -176,7 +178,7 @@ public class Debt extends BaseModel {
 			builder.setDebtorHukouAddr(StringUtil.show(this.debtorHukouAddr, 6));
 		}
 		
-		Log.info("xxx:" + checkCanReturn + ":" + canEnd);
+		logger.info("xxx:" + checkCanReturn + ":" + canEnd);
 		if(checkCanReturn && this.state == Constant.STATE_DEALED){
 			if(this.repayments.size() == 0){
 				if((TimeUtil.now() - this.publishTime) / Constant.ONE_DAY >= Constant.DEBT_RETURN_LIMIT)
