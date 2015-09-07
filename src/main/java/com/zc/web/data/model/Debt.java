@@ -3,8 +3,10 @@ package com.zc.web.data.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Setter;
 
 import org.apache.log4j.Logger;
 
@@ -36,6 +38,7 @@ public class Debt extends BaseModel {
 	private int rate;
 	private int duration;
 	private int expireDays;
+	@Setter(AccessLevel.NONE)
 	private int state; // 0未审核；1已通过；2未通过；3已成交；4已完成；
 	private int bidIncrease; // 加价幅度
 	private int isCorp;	// 是否企业单
@@ -190,6 +193,10 @@ public class Debt extends BaseModel {
 		}
 		
 		return builder.build();
+	}
+	
+	public void setState(int state){
+		this.state = state;
 	}
 
 	@Entity(noClassnameStored = true)

@@ -93,6 +93,12 @@ public class Player extends BaseModel{
 	@Embedded
 	private List<File> files = new ArrayList<File>();	// 上传的文件
 	
+	@Embedded
+	private int[] pathCreditor = new int[6]; // 债权人记录：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+	
+	@Embedded
+	private int[] pathDeputy = new int[5];	// 催债人记录：0竞标中；1已中标；2未中标；3已完成；4已结束；
+	
 	@Transient
 	private int accessTime = 0;
 	
@@ -133,6 +139,17 @@ public class Player extends BaseModel{
 		return builder.build();
 	}
 	
+	private FileMsg.Builder getFileMsg(File file){
+		FileMsg.Builder builder = FileMsg.newBuilder();
+		builder.setId(file.getId());
+		builder.setName(file.getName());
+		builder.setUrl(FileUtil.genDownloadUrl(file.getId()));
+		builder.setState(file.getState());
+		builder.setCreateTime(file.getCreateTime());
+		
+		return builder;
+	}
+
 	@Entity(noClassnameStored = true)
 	@Data
 	public static class Situation {
@@ -154,16 +171,5 @@ public class Player extends BaseModel{
 		private int durationUp;			// 代理期限（高）
 		private int type;				// 类型
 		private int on;					// 1开启；0关闭
-	}
-	
-	private FileMsg.Builder getFileMsg(File file){
-		FileMsg.Builder builder = FileMsg.newBuilder();
-		builder.setId(file.getId());
-		builder.setName(file.getName());
-		builder.setUrl(FileUtil.genDownloadUrl(file.getId()));
-		builder.setState(file.getState());
-		builder.setCreateTime(file.getCreateTime());
-		
-		return builder;
 	}
 }
