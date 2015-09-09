@@ -1,0 +1,21 @@
+// 还款列表
+option java_outer_classname = "ListRepayRspProto";
+
+package com.zc.web.message.debt;
+
+message ListRepayRsp{
+	repeated RepayMsg repay = 1;
+
+	message RepayMsg{
+		optional int64 debtId = 1;	// debtId
+		optional int64 ownerId = 2;	// 发布人
+		optional int64 deputyId = 3;	// 中标人
+		optional int32 money = 4;	// 金额
+		optional int32 state = 5;	// 状态
+		optional int32 receiveTime = 6; // 接单时间
+		optional string creditorName = 7;	//债权人
+		optional int32 time = 8; // 还款时间
+		optional int32 repayMoney = 9; // 还款金额
+		optional string memo = 10; // 还款说明
+	}
+}

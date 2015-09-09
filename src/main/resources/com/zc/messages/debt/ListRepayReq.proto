@@ -1,0 +1,13 @@
+// 还款列表
+option java_outer_classname = "ListRepayReqProto";
+
+package com.zc.web.message.debt;
+
+message ListRepayReq{
+	optional int32 page = 1;			// 第n页
+	optional string debtId = 2;			// 债务id
+	optional string ownerId = 3;		// 发布人ID
+	optional string deputyId = 4;		// 代理人ID
+	optional int32 timeFrom = 5;		// 时间（起）
+	optional int32 timeTo = 6;			// 时间（止）
+}
