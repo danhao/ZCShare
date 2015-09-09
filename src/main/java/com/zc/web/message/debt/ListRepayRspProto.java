@@ -248,32 +248,32 @@ public final class ListRepayRspProto {
        */
       int getReceiveTime();
 
-      // optional string creditorName = 7;
+      // optional string debtorName = 7;
       /**
-       * <code>optional string creditorName = 7;</code>
+       * <code>optional string debtorName = 7;</code>
        *
        * <pre>
-       *债权人
+       *债务人
        * </pre>
        */
-      boolean hasCreditorName();
+      boolean hasDebtorName();
       /**
-       * <code>optional string creditorName = 7;</code>
+       * <code>optional string debtorName = 7;</code>
        *
        * <pre>
-       *债权人
+       *债务人
        * </pre>
        */
-      java.lang.String getCreditorName();
+      java.lang.String getDebtorName();
       /**
-       * <code>optional string creditorName = 7;</code>
+       * <code>optional string debtorName = 7;</code>
        *
        * <pre>
-       *债权人
+       *债务人
        * </pre>
        */
       com.google.protobuf.ByteString
-          getCreditorNameBytes();
+          getDebtorNameBytes();
 
       // optional int32 time = 8;
       /**
@@ -421,7 +421,7 @@ public final class ListRepayRspProto {
               }
               case 58: {
                 bitField0_ |= 0x00000040;
-                creditorName_ = input.readBytes();
+                debtorName_ = input.readBytes();
                 break;
               }
               case 64: {
@@ -623,28 +623,28 @@ public final class ListRepayRspProto {
         return receiveTime_;
       }
 
-      // optional string creditorName = 7;
-      public static final int CREDITORNAME_FIELD_NUMBER = 7;
-      private java.lang.Object creditorName_;
+      // optional string debtorName = 7;
+      public static final int DEBTORNAME_FIELD_NUMBER = 7;
+      private java.lang.Object debtorName_;
       /**
-       * <code>optional string creditorName = 7;</code>
+       * <code>optional string debtorName = 7;</code>
        *
        * <pre>
-       *债权人
+       *债务人
        * </pre>
        */
-      public boolean hasCreditorName() {
+      public boolean hasDebtorName() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>optional string creditorName = 7;</code>
+       * <code>optional string debtorName = 7;</code>
        *
        * <pre>
-       *债权人
+       *债务人
        * </pre>
        */
-      public java.lang.String getCreditorName() {
-        java.lang.Object ref = creditorName_;
+      public java.lang.String getDebtorName() {
+        java.lang.Object ref = debtorName_;
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
@@ -652,26 +652,26 @@ public final class ListRepayRspProto {
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            creditorName_ = s;
+            debtorName_ = s;
           }
           return s;
         }
       }
       /**
-       * <code>optional string creditorName = 7;</code>
+       * <code>optional string debtorName = 7;</code>
        *
        * <pre>
-       *债权人
+       *债务人
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getCreditorNameBytes() {
-        java.lang.Object ref = creditorName_;
+          getDebtorNameBytes() {
+        java.lang.Object ref = debtorName_;
         if (ref instanceof java.lang.String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          creditorName_ = b;
+          debtorName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -788,7 +788,7 @@ public final class ListRepayRspProto {
         money_ = 0;
         state_ = 0;
         receiveTime_ = 0;
-        creditorName_ = "";
+        debtorName_ = "";
         time_ = 0;
         repayMoney_ = 0;
         memo_ = "";
@@ -824,7 +824,7 @@ public final class ListRepayRspProto {
           output.writeInt32(6, receiveTime_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          output.writeBytes(7, getCreditorNameBytes());
+          output.writeBytes(7, getDebtorNameBytes());
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
           output.writeInt32(8, time_);
@@ -870,7 +870,7 @@ public final class ListRepayRspProto {
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(7, getCreditorNameBytes());
+            .computeBytesSize(7, getDebtorNameBytes());
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
           size += com.google.protobuf.CodedOutputStream
@@ -1012,7 +1012,7 @@ public final class ListRepayRspProto {
           bitField0_ = (bitField0_ & ~0x00000010);
           receiveTime_ = 0;
           bitField0_ = (bitField0_ & ~0x00000020);
-          creditorName_ = "";
+          debtorName_ = "";
           bitField0_ = (bitField0_ & ~0x00000040);
           time_ = 0;
           bitField0_ = (bitField0_ & ~0x00000080);
@@ -1075,7 +1075,7 @@ public final class ListRepayRspProto {
           if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
             to_bitField0_ |= 0x00000040;
           }
-          result.creditorName_ = creditorName_;
+          result.debtorName_ = debtorName_;
           if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
             to_bitField0_ |= 0x00000080;
           }
@@ -1122,9 +1122,9 @@ public final class ListRepayRspProto {
           if (other.hasReceiveTime()) {
             setReceiveTime(other.getReceiveTime());
           }
-          if (other.hasCreditorName()) {
+          if (other.hasDebtorName()) {
             bitField0_ |= 0x00000040;
-            creditorName_ = other.creditorName_;
+            debtorName_ = other.debtorName_;
             onChanged();
           }
           if (other.hasTime()) {
@@ -1459,100 +1459,100 @@ public final class ListRepayRspProto {
           return this;
         }
 
-        // optional string creditorName = 7;
-        private java.lang.Object creditorName_ = "";
+        // optional string debtorName = 7;
+        private java.lang.Object debtorName_ = "";
         /**
-         * <code>optional string creditorName = 7;</code>
+         * <code>optional string debtorName = 7;</code>
          *
          * <pre>
-         *债权人
+         *债务人
          * </pre>
          */
-        public boolean hasCreditorName() {
+        public boolean hasDebtorName() {
           return ((bitField0_ & 0x00000040) == 0x00000040);
         }
         /**
-         * <code>optional string creditorName = 7;</code>
+         * <code>optional string debtorName = 7;</code>
          *
          * <pre>
-         *债权人
+         *债务人
          * </pre>
          */
-        public java.lang.String getCreditorName() {
-          java.lang.Object ref = creditorName_;
+        public java.lang.String getDebtorName() {
+          java.lang.Object ref = debtorName_;
           if (!(ref instanceof java.lang.String)) {
             java.lang.String s = ((com.google.protobuf.ByteString) ref)
                 .toStringUtf8();
-            creditorName_ = s;
+            debtorName_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>optional string creditorName = 7;</code>
+         * <code>optional string debtorName = 7;</code>
          *
          * <pre>
-         *债权人
+         *债务人
          * </pre>
          */
         public com.google.protobuf.ByteString
-            getCreditorNameBytes() {
-          java.lang.Object ref = creditorName_;
+            getDebtorNameBytes() {
+          java.lang.Object ref = debtorName_;
           if (ref instanceof String) {
             com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
-            creditorName_ = b;
+            debtorName_ = b;
             return b;
           } else {
             return (com.google.protobuf.ByteString) ref;
           }
         }
         /**
-         * <code>optional string creditorName = 7;</code>
+         * <code>optional string debtorName = 7;</code>
          *
          * <pre>
-         *债权人
+         *债务人
          * </pre>
          */
-        public Builder setCreditorName(
+        public Builder setDebtorName(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000040;
-          creditorName_ = value;
+          debtorName_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string creditorName = 7;</code>
+         * <code>optional string debtorName = 7;</code>
          *
          * <pre>
-         *债权人
+         *债务人
          * </pre>
          */
-        public Builder clearCreditorName() {
+        public Builder clearDebtorName() {
           bitField0_ = (bitField0_ & ~0x00000040);
-          creditorName_ = getDefaultInstance().getCreditorName();
+          debtorName_ = getDefaultInstance().getDebtorName();
           onChanged();
           return this;
         }
         /**
-         * <code>optional string creditorName = 7;</code>
+         * <code>optional string debtorName = 7;</code>
          *
          * <pre>
-         *债权人
+         *债务人
          * </pre>
          */
-        public Builder setCreditorNameBytes(
+        public Builder setDebtorNameBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000040;
-          creditorName_ = value;
+          debtorName_ = value;
           onChanged();
           return this;
         }
@@ -2330,14 +2330,14 @@ public final class ListRepayRspProto {
     java.lang.String[] descriptorData = {
       "\n6main/resources/com/zc/messages/debt/Li" +
       "stRepayRsp.proto\022\027com.zc.web.message.deb" +
-      "t\"\206\002\n\014ListRepayRsp\022=\n\005repay\030\001 \003(\0132..com." +
+      "t\"\204\002\n\014ListRepayRsp\022=\n\005repay\030\001 \003(\0132..com." +
       "zc.web.message.debt.ListRepayRsp.RepayMs" +
-      "g\032\266\001\n\010RepayMsg\022\016\n\006debtId\030\001 \001(\003\022\017\n\007ownerI" +
+      "g\032\264\001\n\010RepayMsg\022\016\n\006debtId\030\001 \001(\003\022\017\n\007ownerI" +
       "d\030\002 \001(\003\022\020\n\010deputyId\030\003 \001(\003\022\r\n\005money\030\004 \001(\005" +
-      "\022\r\n\005state\030\005 \001(\005\022\023\n\013receiveTime\030\006 \001(\005\022\024\n\014" +
-      "creditorName\030\007 \001(\t\022\014\n\004time\030\010 \001(\005\022\022\n\nrepa" +
-      "yMoney\030\t \001(\005\022\014\n\004memo\030\n \001(\tB\023B\021ListRepayR" +
-      "spProto"
+      "\022\r\n\005state\030\005 \001(\005\022\023\n\013receiveTime\030\006 \001(\005\022\022\n\n" +
+      "debtorName\030\007 \001(\t\022\014\n\004time\030\010 \001(\005\022\022\n\nrepayM" +
+      "oney\030\t \001(\005\022\014\n\004memo\030\n \001(\tB\023B\021ListRepayRsp" +
+      "Proto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -2355,7 +2355,7 @@ public final class ListRepayRspProto {
           internal_static_com_zc_web_message_debt_ListRepayRsp_RepayMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_ListRepayRsp_RepayMsg_descriptor,
-              new java.lang.String[] { "DebtId", "OwnerId", "DeputyId", "Money", "State", "ReceiveTime", "CreditorName", "Time", "RepayMoney", "Memo", });
+              new java.lang.String[] { "DebtId", "OwnerId", "DeputyId", "Money", "State", "ReceiveTime", "DebtorName", "Time", "RepayMoney", "Memo", });
           return null;
         }
       };

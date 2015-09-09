@@ -19,7 +19,7 @@ public class DebtRepay extends BaseModel{
 	private int money;	// 金额
 	private int state;
 	private int receiveTime; // 接单时间
-	private String creditorName;
+	private String debtorName;
 	private int time; // 还款时间
 	private int repayMoney; // 还款金额
 	private String memo; // 还款说明

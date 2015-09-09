@@ -145,6 +145,33 @@ public final class ListRepayReqProto {
      * </pre>
      */
     int getTimeTo();
+
+    // optional string debtorName = 7;
+    /**
+     * <code>optional string debtorName = 7;</code>
+     *
+     * <pre>
+     * 债务人
+     * </pre>
+     */
+    boolean hasDebtorName();
+    /**
+     * <code>optional string debtorName = 7;</code>
+     *
+     * <pre>
+     * 债务人
+     * </pre>
+     */
+    java.lang.String getDebtorName();
+    /**
+     * <code>optional string debtorName = 7;</code>
+     *
+     * <pre>
+     * 债务人
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDebtorNameBytes();
   }
   /**
    * Protobuf type {@code com.zc.web.message.debt.ListRepayReq}
@@ -225,6 +252,11 @@ public final class ListRepayReqProto {
             case 48: {
               bitField0_ |= 0x00000020;
               timeTo_ = input.readInt32();
+              break;
+            }
+            case 58: {
+              bitField0_ |= 0x00000040;
+              debtorName_ = input.readBytes();
               break;
             }
           }
@@ -504,6 +536,61 @@ public final class ListRepayReqProto {
       return timeTo_;
     }
 
+    // optional string debtorName = 7;
+    public static final int DEBTORNAME_FIELD_NUMBER = 7;
+    private java.lang.Object debtorName_;
+    /**
+     * <code>optional string debtorName = 7;</code>
+     *
+     * <pre>
+     * 债务人
+     * </pre>
+     */
+    public boolean hasDebtorName() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string debtorName = 7;</code>
+     *
+     * <pre>
+     * 债务人
+     * </pre>
+     */
+    public java.lang.String getDebtorName() {
+      java.lang.Object ref = debtorName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          debtorName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string debtorName = 7;</code>
+     *
+     * <pre>
+     * 债务人
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDebtorNameBytes() {
+      java.lang.Object ref = debtorName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        debtorName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       page_ = 0;
       debtId_ = "";
@@ -511,6 +598,7 @@ public final class ListRepayReqProto {
       deputyId_ = "";
       timeFrom_ = 0;
       timeTo_ = 0;
+      debtorName_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -541,6 +629,9 @@ public final class ListRepayReqProto {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeInt32(6, timeTo_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(7, getDebtorNameBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -574,6 +665,10 @@ public final class ListRepayReqProto {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, timeTo_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, getDebtorNameBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -703,6 +798,8 @@ public final class ListRepayReqProto {
         bitField0_ = (bitField0_ & ~0x00000010);
         timeTo_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
+        debtorName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -755,6 +852,10 @@ public final class ListRepayReqProto {
           to_bitField0_ |= 0x00000020;
         }
         result.timeTo_ = timeTo_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.debtorName_ = debtorName_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -794,6 +895,11 @@ public final class ListRepayReqProto {
         }
         if (other.hasTimeTo()) {
           setTimeTo(other.getTimeTo());
+        }
+        if (other.hasDebtorName()) {
+          bitField0_ |= 0x00000040;
+          debtorName_ = other.debtorName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1263,6 +1369,104 @@ public final class ListRepayReqProto {
         return this;
       }
 
+      // optional string debtorName = 7;
+      private java.lang.Object debtorName_ = "";
+      /**
+       * <code>optional string debtorName = 7;</code>
+       *
+       * <pre>
+       * 债务人
+       * </pre>
+       */
+      public boolean hasDebtorName() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string debtorName = 7;</code>
+       *
+       * <pre>
+       * 债务人
+       * </pre>
+       */
+      public java.lang.String getDebtorName() {
+        java.lang.Object ref = debtorName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          debtorName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorName = 7;</code>
+       *
+       * <pre>
+       * 债务人
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDebtorNameBytes() {
+        java.lang.Object ref = debtorName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          debtorName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string debtorName = 7;</code>
+       *
+       * <pre>
+       * 债务人
+       * </pre>
+       */
+      public Builder setDebtorName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        debtorName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorName = 7;</code>
+       *
+       * <pre>
+       * 债务人
+       * </pre>
+       */
+      public Builder clearDebtorName() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        debtorName_ = getDefaultInstance().getDebtorName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string debtorName = 7;</code>
+       *
+       * <pre>
+       * 债务人
+       * </pre>
+       */
+      public Builder setDebtorNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        debtorName_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.ListRepayReq)
     }
 
@@ -1290,10 +1494,10 @@ public final class ListRepayReqProto {
     java.lang.String[] descriptorData = {
       "\n6main/resources/com/zc/messages/debt/Li" +
       "stRepayReq.proto\022\027com.zc.web.message.deb" +
-      "t\"q\n\014ListRepayReq\022\014\n\004page\030\001 \001(\005\022\016\n\006debtI" +
-      "d\030\002 \001(\t\022\017\n\007ownerId\030\003 \001(\t\022\020\n\010deputyId\030\004 \001" +
-      "(\t\022\020\n\010timeFrom\030\005 \001(\005\022\016\n\006timeTo\030\006 \001(\005B\023B\021" +
-      "ListRepayReqProto"
+      "t\"\205\001\n\014ListRepayReq\022\014\n\004page\030\001 \001(\005\022\016\n\006debt" +
+      "Id\030\002 \001(\t\022\017\n\007ownerId\030\003 \001(\t\022\020\n\010deputyId\030\004 " +
+      "\001(\t\022\020\n\010timeFrom\030\005 \001(\005\022\016\n\006timeTo\030\006 \001(\005\022\022\n" +
+      "\ndebtorName\030\007 \001(\tB\023B\021ListRepayReqProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1305,7 +1509,7 @@ public final class ListRepayReqProto {
           internal_static_com_zc_web_message_debt_ListRepayReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_ListRepayReq_descriptor,
-              new java.lang.String[] { "Page", "DebtId", "OwnerId", "DeputyId", "TimeFrom", "TimeTo", });
+              new java.lang.String[] { "Page", "DebtId", "OwnerId", "DeputyId", "TimeFrom", "TimeTo", "DebtorName", });
           return null;
         }
       };

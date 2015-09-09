@@ -13,7 +13,7 @@ message ListRepayRsp{
 		optional int32 money = 4;	// 金额
 		optional int32 state = 5;	// 状态
 		optional int32 receiveTime = 6; // 接单时间
-		optional string creditorName = 7;	//债权人
+		optional string debtorName = 7;	//债务人
 		optional int32 time = 8; // 还款时间
 		optional int32 repayMoney = 9; // 还款金额
 		optional string memo = 10; // 还款说明

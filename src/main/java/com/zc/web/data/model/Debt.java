@@ -38,7 +38,6 @@ public class Debt extends BaseModel {
 	private int rate;
 	private int duration;
 	private int expireDays;
-	@Setter(AccessLevel.NONE)
 	private int state; // 0未审核；1已通过；2未通过；3已成交；4已完成；
 	private int bidIncrease; // 加价幅度
 	private int isCorp;	// 是否企业单

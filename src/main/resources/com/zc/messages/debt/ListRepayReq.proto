@@ -10,4 +10,5 @@ message ListRepayReq{
 	optional string deputyId = 4;		// 代理人ID
 	optional int32 timeFrom = 5;		// 时间（起）
 	optional int32 timeTo = 6;			// 时间（止）
+	optional string debtorName = 7;		// 债务人
 }
