@@ -98,5 +98,11 @@ public class Constant {
 	// 用户类型
 	public static final int USER_TYPE_PERSONAL = 0;
 	public static final int USER_TYPE_CORP = 1;
-	
+
+	// 代理人状态 0竞标中；1已中标；2未中标；3已完成；4已结束；
+	public static final int DEPUTY_STATE_BID = 0;
+	public static final int DEPUTY_STATE_WIN = 1;
+	public static final int DEPUTY_STATE_LOSE = 2;
+	public static final int DEPUTY_STATE_DONE = 3;
+	public static final int DEPUTY_STATE_CLOSE = 4;
 }

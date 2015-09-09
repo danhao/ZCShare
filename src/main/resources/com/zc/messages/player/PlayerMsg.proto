@@ -53,4 +53,6 @@ message PlayerMsg{
 	optional string head = 44;	// 头像
 	optional int32 fiveInOne = 45;	// 五证合一：1是；0否
 	repeated common.FileMsg files = 47;	// 上传文件
+	repeated int32 creditorStats = 48;	// 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+	repeated int32 deputyStats = 49;	// 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
 }

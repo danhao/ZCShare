@@ -136,6 +136,15 @@ public class Player extends BaseModel{
 			money += entry.getValue();
 		}
 		builder.setFrozen(money);
+		
+		for(int i : this.pathCreditor){
+			builder.addCreditorStats(i);
+		}
+
+		for(int i : this.pathDeputy){
+			builder.addDeputyStats(i);
+		}
+
 		return builder.build();
 	}
 	

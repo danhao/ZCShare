@@ -1095,6 +1095,58 @@ public final class PlayerMsgProto {
      */
     com.zc.web.message.common.FileMsgProto.FileMsgOrBuilder getFilesOrBuilder(
         int index);
+
+    // repeated int32 creditorStats = 48;
+    /**
+     * <code>repeated int32 creditorStats = 48;</code>
+     *
+     * <pre>
+     * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+     * </pre>
+     */
+    java.util.List<java.lang.Integer> getCreditorStatsList();
+    /**
+     * <code>repeated int32 creditorStats = 48;</code>
+     *
+     * <pre>
+     * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+     * </pre>
+     */
+    int getCreditorStatsCount();
+    /**
+     * <code>repeated int32 creditorStats = 48;</code>
+     *
+     * <pre>
+     * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+     * </pre>
+     */
+    int getCreditorStats(int index);
+
+    // repeated int32 deputyStats = 49;
+    /**
+     * <code>repeated int32 deputyStats = 49;</code>
+     *
+     * <pre>
+     * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+     * </pre>
+     */
+    java.util.List<java.lang.Integer> getDeputyStatsList();
+    /**
+     * <code>repeated int32 deputyStats = 49;</code>
+     *
+     * <pre>
+     * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+     * </pre>
+     */
+    int getDeputyStatsCount();
+    /**
+     * <code>repeated int32 deputyStats = 49;</code>
+     *
+     * <pre>
+     * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+     * </pre>
+     */
+    int getDeputyStats(int index);
   }
   /**
    * Protobuf type {@code com.zc.web.message.player.PlayerMsg}
@@ -1442,6 +1494,48 @@ public final class PlayerMsgProto {
               files_.add(input.readMessage(com.zc.web.message.common.FileMsgProto.FileMsg.PARSER, extensionRegistry));
               break;
             }
+            case 384: {
+              if (!((mutable_bitField1_ & 0x00008000) == 0x00008000)) {
+                creditorStats_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x00008000;
+              }
+              creditorStats_.add(input.readInt32());
+              break;
+            }
+            case 386: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField1_ & 0x00008000) == 0x00008000) && input.getBytesUntilLimit() > 0) {
+                creditorStats_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x00008000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                creditorStats_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 392: {
+              if (!((mutable_bitField1_ & 0x00010000) == 0x00010000)) {
+                deputyStats_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x00010000;
+              }
+              deputyStats_.add(input.readInt32());
+              break;
+            }
+            case 394: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField1_ & 0x00010000) == 0x00010000) && input.getBytesUntilLimit() > 0) {
+                deputyStats_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x00010000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                deputyStats_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1452,6 +1546,12 @@ public final class PlayerMsgProto {
       } finally {
         if (((mutable_bitField1_ & 0x00004000) == 0x00004000)) {
           files_ = java.util.Collections.unmodifiableList(files_);
+        }
+        if (((mutable_bitField1_ & 0x00008000) == 0x00008000)) {
+          creditorStats_ = java.util.Collections.unmodifiableList(creditorStats_);
+        }
+        if (((mutable_bitField1_ & 0x00010000) == 0x00010000)) {
+          deputyStats_ = java.util.Collections.unmodifiableList(deputyStats_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3312,6 +3412,76 @@ public final class PlayerMsgProto {
       return files_.get(index);
     }
 
+    // repeated int32 creditorStats = 48;
+    public static final int CREDITORSTATS_FIELD_NUMBER = 48;
+    private java.util.List<java.lang.Integer> creditorStats_;
+    /**
+     * <code>repeated int32 creditorStats = 48;</code>
+     *
+     * <pre>
+     * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+     * </pre>
+     */
+    public java.util.List<java.lang.Integer>
+        getCreditorStatsList() {
+      return creditorStats_;
+    }
+    /**
+     * <code>repeated int32 creditorStats = 48;</code>
+     *
+     * <pre>
+     * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+     * </pre>
+     */
+    public int getCreditorStatsCount() {
+      return creditorStats_.size();
+    }
+    /**
+     * <code>repeated int32 creditorStats = 48;</code>
+     *
+     * <pre>
+     * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+     * </pre>
+     */
+    public int getCreditorStats(int index) {
+      return creditorStats_.get(index);
+    }
+
+    // repeated int32 deputyStats = 49;
+    public static final int DEPUTYSTATS_FIELD_NUMBER = 49;
+    private java.util.List<java.lang.Integer> deputyStats_;
+    /**
+     * <code>repeated int32 deputyStats = 49;</code>
+     *
+     * <pre>
+     * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+     * </pre>
+     */
+    public java.util.List<java.lang.Integer>
+        getDeputyStatsList() {
+      return deputyStats_;
+    }
+    /**
+     * <code>repeated int32 deputyStats = 49;</code>
+     *
+     * <pre>
+     * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+     * </pre>
+     */
+    public int getDeputyStatsCount() {
+      return deputyStats_.size();
+    }
+    /**
+     * <code>repeated int32 deputyStats = 49;</code>
+     *
+     * <pre>
+     * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+     * </pre>
+     */
+    public int getDeputyStats(int index) {
+      return deputyStats_.get(index);
+    }
+
     private void initFields() {
       id_ = 0L;
       name_ = "";
@@ -3360,6 +3530,8 @@ public final class PlayerMsgProto {
       head_ = "";
       fiveInOne_ = 0;
       files_ = java.util.Collections.emptyList();
+      creditorStats_ = java.util.Collections.emptyList();
+      deputyStats_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3513,6 +3685,12 @@ public final class PlayerMsgProto {
       }
       for (int i = 0; i < files_.size(); i++) {
         output.writeMessage(47, files_.get(i));
+      }
+      for (int i = 0; i < creditorStats_.size(); i++) {
+        output.writeInt32(48, creditorStats_.get(i));
+      }
+      for (int i = 0; i < deputyStats_.size(); i++) {
+        output.writeInt32(49, deputyStats_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -3710,6 +3888,24 @@ public final class PlayerMsgProto {
       for (int i = 0; i < files_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(47, files_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < creditorStats_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(creditorStats_.get(i));
+        }
+        size += dataSize;
+        size += 2 * getCreditorStatsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < deputyStats_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(deputyStats_.get(i));
+        }
+        size += dataSize;
+        size += 2 * getDeputyStatsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3961,6 +4157,10 @@ public final class PlayerMsgProto {
         } else {
           filesBuilder_.clear();
         }
+        creditorStats_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00008000);
+        deputyStats_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00010000);
         return this;
       }
 
@@ -4212,6 +4412,16 @@ public final class PlayerMsgProto {
         } else {
           result.files_ = filesBuilder_.build();
         }
+        if (((bitField1_ & 0x00008000) == 0x00008000)) {
+          creditorStats_ = java.util.Collections.unmodifiableList(creditorStats_);
+          bitField1_ = (bitField1_ & ~0x00008000);
+        }
+        result.creditorStats_ = creditorStats_;
+        if (((bitField1_ & 0x00010000) == 0x00010000)) {
+          deputyStats_ = java.util.Collections.unmodifiableList(deputyStats_);
+          bitField1_ = (bitField1_ & ~0x00010000);
+        }
+        result.deputyStats_ = deputyStats_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -4432,6 +4642,26 @@ public final class PlayerMsgProto {
               filesBuilder_.addAllMessages(other.files_);
             }
           }
+        }
+        if (!other.creditorStats_.isEmpty()) {
+          if (creditorStats_.isEmpty()) {
+            creditorStats_ = other.creditorStats_;
+            bitField1_ = (bitField1_ & ~0x00008000);
+          } else {
+            ensureCreditorStatsIsMutable();
+            creditorStats_.addAll(other.creditorStats_);
+          }
+          onChanged();
+        }
+        if (!other.deputyStats_.isEmpty()) {
+          if (deputyStats_.isEmpty()) {
+            deputyStats_ = other.deputyStats_;
+            bitField1_ = (bitField1_ & ~0x00010000);
+          } else {
+            ensureDeputyStatsIsMutable();
+            deputyStats_.addAll(other.deputyStats_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -8687,6 +8917,194 @@ public final class PlayerMsgProto {
         return filesBuilder_;
       }
 
+      // repeated int32 creditorStats = 48;
+      private java.util.List<java.lang.Integer> creditorStats_ = java.util.Collections.emptyList();
+      private void ensureCreditorStatsIsMutable() {
+        if (!((bitField1_ & 0x00008000) == 0x00008000)) {
+          creditorStats_ = new java.util.ArrayList<java.lang.Integer>(creditorStats_);
+          bitField1_ |= 0x00008000;
+         }
+      }
+      /**
+       * <code>repeated int32 creditorStats = 48;</code>
+       *
+       * <pre>
+       * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+       * </pre>
+       */
+      public java.util.List<java.lang.Integer>
+          getCreditorStatsList() {
+        return java.util.Collections.unmodifiableList(creditorStats_);
+      }
+      /**
+       * <code>repeated int32 creditorStats = 48;</code>
+       *
+       * <pre>
+       * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+       * </pre>
+       */
+      public int getCreditorStatsCount() {
+        return creditorStats_.size();
+      }
+      /**
+       * <code>repeated int32 creditorStats = 48;</code>
+       *
+       * <pre>
+       * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+       * </pre>
+       */
+      public int getCreditorStats(int index) {
+        return creditorStats_.get(index);
+      }
+      /**
+       * <code>repeated int32 creditorStats = 48;</code>
+       *
+       * <pre>
+       * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+       * </pre>
+       */
+      public Builder setCreditorStats(
+          int index, int value) {
+        ensureCreditorStatsIsMutable();
+        creditorStats_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 creditorStats = 48;</code>
+       *
+       * <pre>
+       * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+       * </pre>
+       */
+      public Builder addCreditorStats(int value) {
+        ensureCreditorStatsIsMutable();
+        creditorStats_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 creditorStats = 48;</code>
+       *
+       * <pre>
+       * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+       * </pre>
+       */
+      public Builder addAllCreditorStats(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureCreditorStatsIsMutable();
+        super.addAll(values, creditorStats_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 creditorStats = 48;</code>
+       *
+       * <pre>
+       * 债权人统计：0未审核；1审核中；2已通过；3未通过；4已成交；5已完成；
+       * </pre>
+       */
+      public Builder clearCreditorStats() {
+        creditorStats_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00008000);
+        onChanged();
+        return this;
+      }
+
+      // repeated int32 deputyStats = 49;
+      private java.util.List<java.lang.Integer> deputyStats_ = java.util.Collections.emptyList();
+      private void ensureDeputyStatsIsMutable() {
+        if (!((bitField1_ & 0x00010000) == 0x00010000)) {
+          deputyStats_ = new java.util.ArrayList<java.lang.Integer>(deputyStats_);
+          bitField1_ |= 0x00010000;
+         }
+      }
+      /**
+       * <code>repeated int32 deputyStats = 49;</code>
+       *
+       * <pre>
+       * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+       * </pre>
+       */
+      public java.util.List<java.lang.Integer>
+          getDeputyStatsList() {
+        return java.util.Collections.unmodifiableList(deputyStats_);
+      }
+      /**
+       * <code>repeated int32 deputyStats = 49;</code>
+       *
+       * <pre>
+       * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+       * </pre>
+       */
+      public int getDeputyStatsCount() {
+        return deputyStats_.size();
+      }
+      /**
+       * <code>repeated int32 deputyStats = 49;</code>
+       *
+       * <pre>
+       * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+       * </pre>
+       */
+      public int getDeputyStats(int index) {
+        return deputyStats_.get(index);
+      }
+      /**
+       * <code>repeated int32 deputyStats = 49;</code>
+       *
+       * <pre>
+       * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+       * </pre>
+       */
+      public Builder setDeputyStats(
+          int index, int value) {
+        ensureDeputyStatsIsMutable();
+        deputyStats_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 deputyStats = 49;</code>
+       *
+       * <pre>
+       * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+       * </pre>
+       */
+      public Builder addDeputyStats(int value) {
+        ensureDeputyStatsIsMutable();
+        deputyStats_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 deputyStats = 49;</code>
+       *
+       * <pre>
+       * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+       * </pre>
+       */
+      public Builder addAllDeputyStats(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureDeputyStatsIsMutable();
+        super.addAll(values, deputyStats_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 deputyStats = 49;</code>
+       *
+       * <pre>
+       * 追债人统计：0竞标中；1已中标；2未中标；3已完成；4已结束；
+       * </pre>
+       */
+      public Builder clearDeputyStats() {
+        deputyStats_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00010000);
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.player.PlayerMsg)
     }
 
@@ -8715,7 +9133,7 @@ public final class PlayerMsgProto {
       "\n5main/resources/com/zc/messages/player/" +
       "PlayerMsg.proto\022\031com.zc.web.message.play" +
       "er\0323main/resources/com/zc/messages/commo" +
-      "n/FileMsg.proto\"\261\t\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
+      "n/FileMsg.proto\"\335\t\n\tPlayerMsg\022\n\n\002id\030\001 \001(" +
       "\003\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\t \001(\t\022\016\n\006mobile" +
       "\030\n \001(\t\022\n\n\002qq\030% \001(\t\022\022\n\ncreateTime\030\003 \001(\005\022\021" +
       "\n\tloginTime\030\004 \001(\005\022\025\n\rlastLoginTime\030\005 \001(\005" +
@@ -8745,7 +9163,9 @@ public final class PlayerMsgProto {
       "vipCo\030. \001(\005\022\024\n\014idValidating\030* \001(\005\022\024\n\014coV" +
       "alidating\030+ \001(\005\022\014\n\004head\030, \001(\t\022\021\n\tfiveInO" +
       "ne\030- \001(\005\0221\n\005files\030/ \003(\0132\".com.zc.web.mes" +
-      "sage.common.FileMsgB\020B\016PlayerMsgProto"
+      "sage.common.FileMsg\022\025\n\rcreditorStats\0300 \003" +
+      "(\005\022\023\n\013deputyStats\0301 \003(\005B\020B\016PlayerMsgProt" +
+      "o"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -8757,7 +9177,7 @@ public final class PlayerMsgProto {
           internal_static_com_zc_web_message_player_PlayerMsg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_player_PlayerMsg_descriptor,
-              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "VipCo", "IdValidating", "CoValidating", "Head", "FiveInOne", "Files", });
+              new java.lang.String[] { "Id", "Name", "Email", "Mobile", "Qq", "CreateTime", "LoginTime", "LastLoginTime", "Money", "Sid", "Passwd", "Type", "Role", "Status", "Gender", "Rating", "UserId", "UserName", "CompanyName", "ArtificialPerson", "Address", "CompanyAddress", "IdFile", "OrganizationCodeFile", "BusinessLicence", "BusinessLicenceFile", "TaxNumber", "TaxNumberFile", "AccountPermit", "AccountPermitFile", "RegisteredCapital", "ReqisteredType", "FoundTime", "BusinessScope", "BusinessAddress", "CompanyPhone", "NoneCrimeFile", "CreditFile", "Frozen", "Descript", "Vip", "VipCo", "IdValidating", "CoValidating", "Head", "FiveInOne", "Files", "CreditorStats", "DeputyStats", });
           return null;
         }
       };

@@ -195,10 +195,10 @@ public class Debt extends BaseModel {
 		return builder.build();
 	}
 	
-	public void setState(int state){
+	public void updateState(int state){
 		this.state = state;
 	}
-
+	
 	@Entity(noClassnameStored = true)
 	@Data
 	public static class Bidder {
