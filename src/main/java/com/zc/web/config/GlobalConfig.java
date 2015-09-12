@@ -28,6 +28,7 @@ public class GlobalConfig {
 		public int httpPort; //HTTP服务端口
 		public int adminPort;//管理员端口
 		public int payPort;// 支付
+		public int callPort; // 外呼鉴权
 		
 		public int maxOnline = 2000;//最大在线人数
 		
@@ -110,6 +111,7 @@ public class GlobalConfig {
 			zone.httpPort = Integer.valueOf(zoneElement.attributeValue("httpPort"));
 			zone.adminPort = Integer.parseInt(zoneElement.attributeValue("adminPort"));
 			zone.payPort = Integer.parseInt(zoneElement.attributeValue("payPort"));
+			zone.callPort = Integer.parseInt(zoneElement.attributeValue("callPort"));
 
 			Element dbElement = zoneElement.element("db");
 			if (dbElement == null) {
