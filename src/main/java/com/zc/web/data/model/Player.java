@@ -71,6 +71,10 @@ public class Player extends BaseModel{
 	private String companyPhone;	// 公司联系电话
 	private int fiveInOne;	// 五证合一：1是；0否
 	
+	// 电话
+	private String voipId;
+	private String voipPwd;
+	
 	private int createTime; //账号创建时间
 	private int loginTime; //当前登录时间
 	private int lastLoginTime; //上次登录时间
