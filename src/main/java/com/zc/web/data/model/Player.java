@@ -74,6 +74,7 @@ public class Player extends BaseModel{
 	// 电话
 	private String voipId;
 	private String voipPwd;
+	private int talkDuration;	// 总的通话时长（秒）
 	
 	private int createTime; //账号创建时间
 	private int loginTime; //当前登录时间
