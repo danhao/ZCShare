@@ -7,4 +7,5 @@ message StatReq{
 	optional int32 state = 1;			// 3已成交；4已完成；
 	optional int32 receiveTimeFrom = 2;	// 获单时间（起）
 	optional int32 receiveTimeTo = 3;	// 获单时间（止）
+	optional int32 type = 4;			// 0追债人；1债权人；
 }

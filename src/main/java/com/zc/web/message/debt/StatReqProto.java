@@ -64,6 +64,24 @@ public final class StatReqProto {
      * </pre>
      */
     int getReceiveTimeTo();
+
+    // optional int32 type = 4;
+    /**
+     * <code>optional int32 type = 4;</code>
+     *
+     * <pre>
+     * 0追债人；1债权人；
+     * </pre>
+     */
+    boolean hasType();
+    /**
+     * <code>optional int32 type = 4;</code>
+     *
+     * <pre>
+     * 0追债人；1债权人；
+     * </pre>
+     */
+    int getType();
   }
   /**
    * Protobuf type {@code com.zc.web.message.debt.StatReq}
@@ -129,6 +147,11 @@ public final class StatReqProto {
             case 24: {
               bitField0_ |= 0x00000004;
               receiveTimeTo_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              type_ = input.readInt32();
               break;
             }
           }
@@ -243,10 +266,35 @@ public final class StatReqProto {
       return receiveTimeTo_;
     }
 
+    // optional int32 type = 4;
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private int type_;
+    /**
+     * <code>optional int32 type = 4;</code>
+     *
+     * <pre>
+     * 0追债人；1债权人；
+     * </pre>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 type = 4;</code>
+     *
+     * <pre>
+     * 0追债人；1债权人；
+     * </pre>
+     */
+    public int getType() {
+      return type_;
+    }
+
     private void initFields() {
       state_ = 0;
       receiveTimeFrom_ = 0;
       receiveTimeTo_ = 0;
+      type_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -269,6 +317,9 @@ public final class StatReqProto {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeInt32(3, receiveTimeTo_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, type_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -289,6 +340,10 @@ public final class StatReqProto {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, receiveTimeTo_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, type_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -412,6 +467,8 @@ public final class StatReqProto {
         bitField0_ = (bitField0_ & ~0x00000002);
         receiveTimeTo_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -452,6 +509,10 @@ public final class StatReqProto {
           to_bitField0_ |= 0x00000004;
         }
         result.receiveTimeTo_ = receiveTimeTo_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.type_ = type_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -476,6 +537,9 @@ public final class StatReqProto {
         }
         if (other.hasReceiveTimeTo()) {
           setReceiveTimeTo(other.getReceiveTimeTo());
+        }
+        if (other.hasType()) {
+          setType(other.getType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -651,6 +715,55 @@ public final class StatReqProto {
         return this;
       }
 
+      // optional int32 type = 4;
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 4;</code>
+       *
+       * <pre>
+       * 0追债人；1债权人；
+       * </pre>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 type = 4;</code>
+       *
+       * <pre>
+       * 0追债人；1债权人；
+       * </pre>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 4;</code>
+       *
+       * <pre>
+       * 0追债人；1债权人；
+       * </pre>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000008;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 4;</code>
+       *
+       * <pre>
+       * 0追债人；1债权人；
+       * </pre>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.debt.StatReq)
     }
 
@@ -677,10 +790,10 @@ public final class StatReqProto {
   static {
     java.lang.String[] descriptorData = {
       "\n1main/resources/com/zc/messages/debt/St" +
-      "atReq.proto\022\027com.zc.web.message.debt\"H\n\007" +
+      "atReq.proto\022\027com.zc.web.message.debt\"V\n\007" +
       "StatReq\022\r\n\005state\030\001 \001(\005\022\027\n\017receiveTimeFro" +
-      "m\030\002 \001(\005\022\025\n\rreceiveTimeTo\030\003 \001(\005B\016B\014StatRe" +
-      "qProto"
+      "m\030\002 \001(\005\022\025\n\rreceiveTimeTo\030\003 \001(\005\022\014\n\004type\030\004" +
+      " \001(\005B\016B\014StatReqProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -692,7 +805,7 @@ public final class StatReqProto {
           internal_static_com_zc_web_message_debt_StatReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_debt_StatReq_descriptor,
-              new java.lang.String[] { "State", "ReceiveTimeFrom", "ReceiveTimeTo", });
+              new java.lang.String[] { "State", "ReceiveTimeFrom", "ReceiveTimeTo", "Type", });
           return null;
         }
       };
