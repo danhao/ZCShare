@@ -11,50 +11,35 @@ public final class CreateOrderRspProto {
   public interface CreateOrderRspOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // optional string signMsg = 1;
+    // optional string signValue = 1;
     /**
-     * <code>optional string signMsg = 1;</code>
+     * <code>optional string signValue = 1;</code>
      */
-    boolean hasSignMsg();
+    boolean hasSignValue();
     /**
-     * <code>optional string signMsg = 1;</code>
+     * <code>optional string signValue = 1;</code>
      */
-    java.lang.String getSignMsg();
+    java.lang.String getSignValue();
     /**
-     * <code>optional string signMsg = 1;</code>
+     * <code>optional string signValue = 1;</code>
      */
     com.google.protobuf.ByteString
-        getSignMsgBytes();
+        getSignValueBytes();
 
-    // optional string orderNo = 2;
+    // optional string serverTime = 2;
     /**
-     * <code>optional string orderNo = 2;</code>
+     * <code>optional string serverTime = 2;</code>
      */
-    boolean hasOrderNo();
+    boolean hasServerTime();
     /**
-     * <code>optional string orderNo = 2;</code>
+     * <code>optional string serverTime = 2;</code>
      */
-    java.lang.String getOrderNo();
+    java.lang.String getServerTime();
     /**
-     * <code>optional string orderNo = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getOrderNoBytes();
-
-    // optional string orderDatetime = 3;
-    /**
-     * <code>optional string orderDatetime = 3;</code>
-     */
-    boolean hasOrderDatetime();
-    /**
-     * <code>optional string orderDatetime = 3;</code>
-     */
-    java.lang.String getOrderDatetime();
-    /**
-     * <code>optional string orderDatetime = 3;</code>
+     * <code>optional string serverTime = 2;</code>
      */
     com.google.protobuf.ByteString
-        getOrderDatetimeBytes();
+        getServerTimeBytes();
 
     // optional string merchantId = 4;
     /**
@@ -71,35 +56,50 @@ public final class CreateOrderRspProto {
     com.google.protobuf.ByteString
         getMerchantIdBytes();
 
-    // optional string receiveUrl = 5;
+    // optional string backgroundMerUrl = 5;
     /**
-     * <code>optional string receiveUrl = 5;</code>
+     * <code>optional string backgroundMerUrl = 5;</code>
      */
-    boolean hasReceiveUrl();
+    boolean hasBackgroundMerUrl();
     /**
-     * <code>optional string receiveUrl = 5;</code>
+     * <code>optional string backgroundMerUrl = 5;</code>
      */
-    java.lang.String getReceiveUrl();
+    java.lang.String getBackgroundMerUrl();
     /**
-     * <code>optional string receiveUrl = 5;</code>
+     * <code>optional string backgroundMerUrl = 5;</code>
      */
     com.google.protobuf.ByteString
-        getReceiveUrlBytes();
+        getBackgroundMerUrlBytes();
 
-    // optional string ext1 = 6;
+    // optional string merRemark1 = 6;
     /**
-     * <code>optional string ext1 = 6;</code>
+     * <code>optional string merRemark1 = 6;</code>
      */
-    boolean hasExt1();
+    boolean hasMerRemark1();
     /**
-     * <code>optional string ext1 = 6;</code>
+     * <code>optional string merRemark1 = 6;</code>
      */
-    java.lang.String getExt1();
+    java.lang.String getMerRemark1();
     /**
-     * <code>optional string ext1 = 6;</code>
+     * <code>optional string merRemark1 = 6;</code>
      */
     com.google.protobuf.ByteString
-        getExt1Bytes();
+        getMerRemark1Bytes();
+
+    // optional string merOrderNum = 7;
+    /**
+     * <code>optional string merOrderNum = 7;</code>
+     */
+    boolean hasMerOrderNum();
+    /**
+     * <code>optional string merOrderNum = 7;</code>
+     */
+    java.lang.String getMerOrderNum();
+    /**
+     * <code>optional string merOrderNum = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getMerOrderNumBytes();
   }
   /**
    * Protobuf type {@code com.zc.web.message.pay.CreateOrderRsp}
@@ -154,32 +154,32 @@ public final class CreateOrderRspProto {
             }
             case 10: {
               bitField0_ |= 0x00000001;
-              signMsg_ = input.readBytes();
+              signValue_ = input.readBytes();
               break;
             }
             case 18: {
               bitField0_ |= 0x00000002;
-              orderNo_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              orderDatetime_ = input.readBytes();
+              serverTime_ = input.readBytes();
               break;
             }
             case 34: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               merchantId_ = input.readBytes();
               break;
             }
             case 42: {
-              bitField0_ |= 0x00000010;
-              receiveUrl_ = input.readBytes();
+              bitField0_ |= 0x00000008;
+              backgroundMerUrl_ = input.readBytes();
               break;
             }
             case 50: {
+              bitField0_ |= 0x00000010;
+              merRemark1_ = input.readBytes();
+              break;
+            }
+            case 58: {
               bitField0_ |= 0x00000020;
-              ext1_ = input.readBytes();
+              merOrderNum_ = input.readBytes();
               break;
             }
           }
@@ -222,20 +222,20 @@ public final class CreateOrderRspProto {
     }
 
     private int bitField0_;
-    // optional string signMsg = 1;
-    public static final int SIGNMSG_FIELD_NUMBER = 1;
-    private java.lang.Object signMsg_;
+    // optional string signValue = 1;
+    public static final int SIGNVALUE_FIELD_NUMBER = 1;
+    private java.lang.Object signValue_;
     /**
-     * <code>optional string signMsg = 1;</code>
+     * <code>optional string signValue = 1;</code>
      */
-    public boolean hasSignMsg() {
+    public boolean hasSignValue() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional string signMsg = 1;</code>
+     * <code>optional string signValue = 1;</code>
      */
-    public java.lang.String getSignMsg() {
-      java.lang.Object ref = signMsg_;
+    public java.lang.String getSignValue() {
+      java.lang.Object ref = signValue_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -243,42 +243,42 @@ public final class CreateOrderRspProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          signMsg_ = s;
+          signValue_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string signMsg = 1;</code>
+     * <code>optional string signValue = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getSignMsgBytes() {
-      java.lang.Object ref = signMsg_;
+        getSignValueBytes() {
+      java.lang.Object ref = signValue_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        signMsg_ = b;
+        signValue_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    // optional string orderNo = 2;
-    public static final int ORDERNO_FIELD_NUMBER = 2;
-    private java.lang.Object orderNo_;
+    // optional string serverTime = 2;
+    public static final int SERVERTIME_FIELD_NUMBER = 2;
+    private java.lang.Object serverTime_;
     /**
-     * <code>optional string orderNo = 2;</code>
+     * <code>optional string serverTime = 2;</code>
      */
-    public boolean hasOrderNo() {
+    public boolean hasServerTime() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional string orderNo = 2;</code>
+     * <code>optional string serverTime = 2;</code>
      */
-    public java.lang.String getOrderNo() {
-      java.lang.Object ref = orderNo_;
+    public java.lang.String getServerTime() {
+      java.lang.Object ref = serverTime_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -286,65 +286,22 @@ public final class CreateOrderRspProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          orderNo_ = s;
+          serverTime_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string orderNo = 2;</code>
+     * <code>optional string serverTime = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getOrderNoBytes() {
-      java.lang.Object ref = orderNo_;
+        getServerTimeBytes() {
+      java.lang.Object ref = serverTime_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        orderNo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string orderDatetime = 3;
-    public static final int ORDERDATETIME_FIELD_NUMBER = 3;
-    private java.lang.Object orderDatetime_;
-    /**
-     * <code>optional string orderDatetime = 3;</code>
-     */
-    public boolean hasOrderDatetime() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string orderDatetime = 3;</code>
-     */
-    public java.lang.String getOrderDatetime() {
-      java.lang.Object ref = orderDatetime_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          orderDatetime_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string orderDatetime = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getOrderDatetimeBytes() {
-      java.lang.Object ref = orderDatetime_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orderDatetime_ = b;
+        serverTime_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -358,7 +315,7 @@ public final class CreateOrderRspProto {
      * <code>optional string merchantId = 4;</code>
      */
     public boolean hasMerchantId() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>optional string merchantId = 4;</code>
@@ -394,20 +351,20 @@ public final class CreateOrderRspProto {
       }
     }
 
-    // optional string receiveUrl = 5;
-    public static final int RECEIVEURL_FIELD_NUMBER = 5;
-    private java.lang.Object receiveUrl_;
+    // optional string backgroundMerUrl = 5;
+    public static final int BACKGROUNDMERURL_FIELD_NUMBER = 5;
+    private java.lang.Object backgroundMerUrl_;
     /**
-     * <code>optional string receiveUrl = 5;</code>
+     * <code>optional string backgroundMerUrl = 5;</code>
      */
-    public boolean hasReceiveUrl() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+    public boolean hasBackgroundMerUrl() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional string receiveUrl = 5;</code>
+     * <code>optional string backgroundMerUrl = 5;</code>
      */
-    public java.lang.String getReceiveUrl() {
-      java.lang.Object ref = receiveUrl_;
+    public java.lang.String getBackgroundMerUrl() {
+      java.lang.Object ref = backgroundMerUrl_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -415,42 +372,42 @@ public final class CreateOrderRspProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          receiveUrl_ = s;
+          backgroundMerUrl_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string receiveUrl = 5;</code>
+     * <code>optional string backgroundMerUrl = 5;</code>
      */
     public com.google.protobuf.ByteString
-        getReceiveUrlBytes() {
-      java.lang.Object ref = receiveUrl_;
+        getBackgroundMerUrlBytes() {
+      java.lang.Object ref = backgroundMerUrl_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        receiveUrl_ = b;
+        backgroundMerUrl_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    // optional string ext1 = 6;
-    public static final int EXT1_FIELD_NUMBER = 6;
-    private java.lang.Object ext1_;
+    // optional string merRemark1 = 6;
+    public static final int MERREMARK1_FIELD_NUMBER = 6;
+    private java.lang.Object merRemark1_;
     /**
-     * <code>optional string ext1 = 6;</code>
+     * <code>optional string merRemark1 = 6;</code>
      */
-    public boolean hasExt1() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+    public boolean hasMerRemark1() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional string ext1 = 6;</code>
+     * <code>optional string merRemark1 = 6;</code>
      */
-    public java.lang.String getExt1() {
-      java.lang.Object ref = ext1_;
+    public java.lang.String getMerRemark1() {
+      java.lang.Object ref = merRemark1_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -458,22 +415,65 @@ public final class CreateOrderRspProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          ext1_ = s;
+          merRemark1_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string ext1 = 6;</code>
+     * <code>optional string merRemark1 = 6;</code>
      */
     public com.google.protobuf.ByteString
-        getExt1Bytes() {
-      java.lang.Object ref = ext1_;
+        getMerRemark1Bytes() {
+      java.lang.Object ref = merRemark1_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        ext1_ = b;
+        merRemark1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string merOrderNum = 7;
+    public static final int MERORDERNUM_FIELD_NUMBER = 7;
+    private java.lang.Object merOrderNum_;
+    /**
+     * <code>optional string merOrderNum = 7;</code>
+     */
+    public boolean hasMerOrderNum() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string merOrderNum = 7;</code>
+     */
+    public java.lang.String getMerOrderNum() {
+      java.lang.Object ref = merOrderNum_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          merOrderNum_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string merOrderNum = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMerOrderNumBytes() {
+      java.lang.Object ref = merOrderNum_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        merOrderNum_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -481,12 +481,12 @@ public final class CreateOrderRspProto {
     }
 
     private void initFields() {
-      signMsg_ = "";
-      orderNo_ = "";
-      orderDatetime_ = "";
+      signValue_ = "";
+      serverTime_ = "";
       merchantId_ = "";
-      receiveUrl_ = "";
-      ext1_ = "";
+      backgroundMerUrl_ = "";
+      merRemark1_ = "";
+      merOrderNum_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -501,22 +501,22 @@ public final class CreateOrderRspProto {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getSignMsgBytes());
+        output.writeBytes(1, getSignValueBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getOrderNoBytes());
+        output.writeBytes(2, getServerTimeBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getOrderDatetimeBytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(4, getMerchantIdBytes());
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(5, getBackgroundMerUrlBytes());
+      }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBytes(5, getReceiveUrlBytes());
+        output.writeBytes(6, getMerRemark1Bytes());
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeBytes(6, getExt1Bytes());
+        output.writeBytes(7, getMerOrderNumBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -529,27 +529,27 @@ public final class CreateOrderRspProto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getSignMsgBytes());
+          .computeBytesSize(1, getSignValueBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getOrderNoBytes());
+          .computeBytesSize(2, getServerTimeBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getOrderDatetimeBytes());
+          .computeBytesSize(4, getMerchantIdBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getMerchantIdBytes());
+          .computeBytesSize(5, getBackgroundMerUrlBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getReceiveUrlBytes());
+          .computeBytesSize(6, getMerRemark1Bytes());
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(6, getExt1Bytes());
+          .computeBytesSize(7, getMerOrderNumBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -667,17 +667,17 @@ public final class CreateOrderRspProto {
 
       public Builder clear() {
         super.clear();
-        signMsg_ = "";
+        signValue_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        orderNo_ = "";
+        serverTime_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        orderDatetime_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
         merchantId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        backgroundMerUrl_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        receiveUrl_ = "";
+        merRemark1_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
-        ext1_ = "";
+        merOrderNum_ = "";
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
@@ -710,27 +710,27 @@ public final class CreateOrderRspProto {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.signMsg_ = signMsg_;
+        result.signValue_ = signValue_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.orderNo_ = orderNo_;
+        result.serverTime_ = serverTime_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.orderDatetime_ = orderDatetime_;
+        result.merchantId_ = merchantId_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.merchantId_ = merchantId_;
+        result.backgroundMerUrl_ = backgroundMerUrl_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.receiveUrl_ = receiveUrl_;
+        result.merRemark1_ = merRemark1_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.ext1_ = ext1_;
+        result.merOrderNum_ = merOrderNum_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -747,34 +747,34 @@ public final class CreateOrderRspProto {
 
       public Builder mergeFrom(com.zc.web.message.pay.CreateOrderRspProto.CreateOrderRsp other) {
         if (other == com.zc.web.message.pay.CreateOrderRspProto.CreateOrderRsp.getDefaultInstance()) return this;
-        if (other.hasSignMsg()) {
+        if (other.hasSignValue()) {
           bitField0_ |= 0x00000001;
-          signMsg_ = other.signMsg_;
+          signValue_ = other.signValue_;
           onChanged();
         }
-        if (other.hasOrderNo()) {
+        if (other.hasServerTime()) {
           bitField0_ |= 0x00000002;
-          orderNo_ = other.orderNo_;
-          onChanged();
-        }
-        if (other.hasOrderDatetime()) {
-          bitField0_ |= 0x00000004;
-          orderDatetime_ = other.orderDatetime_;
+          serverTime_ = other.serverTime_;
           onChanged();
         }
         if (other.hasMerchantId()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           merchantId_ = other.merchantId_;
           onChanged();
         }
-        if (other.hasReceiveUrl()) {
-          bitField0_ |= 0x00000010;
-          receiveUrl_ = other.receiveUrl_;
+        if (other.hasBackgroundMerUrl()) {
+          bitField0_ |= 0x00000008;
+          backgroundMerUrl_ = other.backgroundMerUrl_;
           onChanged();
         }
-        if (other.hasExt1()) {
+        if (other.hasMerRemark1()) {
+          bitField0_ |= 0x00000010;
+          merRemark1_ = other.merRemark1_;
+          onChanged();
+        }
+        if (other.hasMerOrderNum()) {
           bitField0_ |= 0x00000020;
-          ext1_ = other.ext1_;
+          merOrderNum_ = other.merOrderNum_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -804,224 +804,150 @@ public final class CreateOrderRspProto {
       }
       private int bitField0_;
 
-      // optional string signMsg = 1;
-      private java.lang.Object signMsg_ = "";
+      // optional string signValue = 1;
+      private java.lang.Object signValue_ = "";
       /**
-       * <code>optional string signMsg = 1;</code>
+       * <code>optional string signValue = 1;</code>
        */
-      public boolean hasSignMsg() {
+      public boolean hasSignValue() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional string signMsg = 1;</code>
+       * <code>optional string signValue = 1;</code>
        */
-      public java.lang.String getSignMsg() {
-        java.lang.Object ref = signMsg_;
+      public java.lang.String getSignValue() {
+        java.lang.Object ref = signValue_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          signMsg_ = s;
+          signValue_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string signMsg = 1;</code>
+       * <code>optional string signValue = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getSignMsgBytes() {
-        java.lang.Object ref = signMsg_;
+          getSignValueBytes() {
+        java.lang.Object ref = signValue_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          signMsg_ = b;
+          signValue_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string signMsg = 1;</code>
+       * <code>optional string signValue = 1;</code>
        */
-      public Builder setSignMsg(
+      public Builder setSignValue(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        signMsg_ = value;
+        signValue_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string signMsg = 1;</code>
+       * <code>optional string signValue = 1;</code>
        */
-      public Builder clearSignMsg() {
+      public Builder clearSignValue() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        signMsg_ = getDefaultInstance().getSignMsg();
+        signValue_ = getDefaultInstance().getSignValue();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string signMsg = 1;</code>
+       * <code>optional string signValue = 1;</code>
        */
-      public Builder setSignMsgBytes(
+      public Builder setSignValueBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        signMsg_ = value;
+        signValue_ = value;
         onChanged();
         return this;
       }
 
-      // optional string orderNo = 2;
-      private java.lang.Object orderNo_ = "";
+      // optional string serverTime = 2;
+      private java.lang.Object serverTime_ = "";
       /**
-       * <code>optional string orderNo = 2;</code>
+       * <code>optional string serverTime = 2;</code>
        */
-      public boolean hasOrderNo() {
+      public boolean hasServerTime() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional string orderNo = 2;</code>
+       * <code>optional string serverTime = 2;</code>
        */
-      public java.lang.String getOrderNo() {
-        java.lang.Object ref = orderNo_;
+      public java.lang.String getServerTime() {
+        java.lang.Object ref = serverTime_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          orderNo_ = s;
+          serverTime_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string orderNo = 2;</code>
+       * <code>optional string serverTime = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getOrderNoBytes() {
-        java.lang.Object ref = orderNo_;
+          getServerTimeBytes() {
+        java.lang.Object ref = serverTime_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          orderNo_ = b;
+          serverTime_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string orderNo = 2;</code>
+       * <code>optional string serverTime = 2;</code>
        */
-      public Builder setOrderNo(
+      public Builder setServerTime(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        orderNo_ = value;
+        serverTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string orderNo = 2;</code>
+       * <code>optional string serverTime = 2;</code>
        */
-      public Builder clearOrderNo() {
+      public Builder clearServerTime() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        orderNo_ = getDefaultInstance().getOrderNo();
+        serverTime_ = getDefaultInstance().getServerTime();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string orderNo = 2;</code>
+       * <code>optional string serverTime = 2;</code>
        */
-      public Builder setOrderNoBytes(
+      public Builder setServerTimeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        orderNo_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string orderDatetime = 3;
-      private java.lang.Object orderDatetime_ = "";
-      /**
-       * <code>optional string orderDatetime = 3;</code>
-       */
-      public boolean hasOrderDatetime() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string orderDatetime = 3;</code>
-       */
-      public java.lang.String getOrderDatetime() {
-        java.lang.Object ref = orderDatetime_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderDatetime_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string orderDatetime = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getOrderDatetimeBytes() {
-        java.lang.Object ref = orderDatetime_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orderDatetime_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string orderDatetime = 3;</code>
-       */
-      public Builder setOrderDatetime(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        orderDatetime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string orderDatetime = 3;</code>
-       */
-      public Builder clearOrderDatetime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        orderDatetime_ = getDefaultInstance().getOrderDatetime();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string orderDatetime = 3;</code>
-       */
-      public Builder setOrderDatetimeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        orderDatetime_ = value;
+        serverTime_ = value;
         onChanged();
         return this;
       }
@@ -1032,7 +958,7 @@ public final class CreateOrderRspProto {
        * <code>optional string merchantId = 4;</code>
        */
       public boolean hasMerchantId() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>optional string merchantId = 4;</code>
@@ -1072,7 +998,7 @@ public final class CreateOrderRspProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         merchantId_ = value;
         onChanged();
         return this;
@@ -1081,7 +1007,7 @@ public final class CreateOrderRspProto {
        * <code>optional string merchantId = 4;</code>
        */
       public Builder clearMerchantId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         merchantId_ = getDefaultInstance().getMerchantId();
         onChanged();
         return this;
@@ -1094,156 +1020,230 @@ public final class CreateOrderRspProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         merchantId_ = value;
         onChanged();
         return this;
       }
 
-      // optional string receiveUrl = 5;
-      private java.lang.Object receiveUrl_ = "";
+      // optional string backgroundMerUrl = 5;
+      private java.lang.Object backgroundMerUrl_ = "";
       /**
-       * <code>optional string receiveUrl = 5;</code>
+       * <code>optional string backgroundMerUrl = 5;</code>
        */
-      public boolean hasReceiveUrl() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+      public boolean hasBackgroundMerUrl() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional string receiveUrl = 5;</code>
+       * <code>optional string backgroundMerUrl = 5;</code>
        */
-      public java.lang.String getReceiveUrl() {
-        java.lang.Object ref = receiveUrl_;
+      public java.lang.String getBackgroundMerUrl() {
+        java.lang.Object ref = backgroundMerUrl_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          receiveUrl_ = s;
+          backgroundMerUrl_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string receiveUrl = 5;</code>
+       * <code>optional string backgroundMerUrl = 5;</code>
        */
       public com.google.protobuf.ByteString
-          getReceiveUrlBytes() {
-        java.lang.Object ref = receiveUrl_;
+          getBackgroundMerUrlBytes() {
+        java.lang.Object ref = backgroundMerUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          receiveUrl_ = b;
+          backgroundMerUrl_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string receiveUrl = 5;</code>
+       * <code>optional string backgroundMerUrl = 5;</code>
        */
-      public Builder setReceiveUrl(
+      public Builder setBackgroundMerUrl(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
-        receiveUrl_ = value;
+  bitField0_ |= 0x00000008;
+        backgroundMerUrl_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string receiveUrl = 5;</code>
+       * <code>optional string backgroundMerUrl = 5;</code>
        */
-      public Builder clearReceiveUrl() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        receiveUrl_ = getDefaultInstance().getReceiveUrl();
+      public Builder clearBackgroundMerUrl() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        backgroundMerUrl_ = getDefaultInstance().getBackgroundMerUrl();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string receiveUrl = 5;</code>
+       * <code>optional string backgroundMerUrl = 5;</code>
        */
-      public Builder setReceiveUrlBytes(
+      public Builder setBackgroundMerUrlBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
-        receiveUrl_ = value;
+  bitField0_ |= 0x00000008;
+        backgroundMerUrl_ = value;
         onChanged();
         return this;
       }
 
-      // optional string ext1 = 6;
-      private java.lang.Object ext1_ = "";
+      // optional string merRemark1 = 6;
+      private java.lang.Object merRemark1_ = "";
       /**
-       * <code>optional string ext1 = 6;</code>
+       * <code>optional string merRemark1 = 6;</code>
        */
-      public boolean hasExt1() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+      public boolean hasMerRemark1() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional string ext1 = 6;</code>
+       * <code>optional string merRemark1 = 6;</code>
        */
-      public java.lang.String getExt1() {
-        java.lang.Object ref = ext1_;
+      public java.lang.String getMerRemark1() {
+        java.lang.Object ref = merRemark1_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          ext1_ = s;
+          merRemark1_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string ext1 = 6;</code>
+       * <code>optional string merRemark1 = 6;</code>
        */
       public com.google.protobuf.ByteString
-          getExt1Bytes() {
-        java.lang.Object ref = ext1_;
+          getMerRemark1Bytes() {
+        java.lang.Object ref = merRemark1_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          ext1_ = b;
+          merRemark1_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string ext1 = 6;</code>
+       * <code>optional string merRemark1 = 6;</code>
        */
-      public Builder setExt1(
+      public Builder setMerRemark1(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        merRemark1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string merRemark1 = 6;</code>
+       */
+      public Builder clearMerRemark1() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        merRemark1_ = getDefaultInstance().getMerRemark1();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string merRemark1 = 6;</code>
+       */
+      public Builder setMerRemark1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        merRemark1_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string merOrderNum = 7;
+      private java.lang.Object merOrderNum_ = "";
+      /**
+       * <code>optional string merOrderNum = 7;</code>
+       */
+      public boolean hasMerOrderNum() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string merOrderNum = 7;</code>
+       */
+      public java.lang.String getMerOrderNum() {
+        java.lang.Object ref = merOrderNum_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          merOrderNum_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string merOrderNum = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMerOrderNumBytes() {
+        java.lang.Object ref = merOrderNum_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          merOrderNum_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string merOrderNum = 7;</code>
+       */
+      public Builder setMerOrderNum(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000020;
-        ext1_ = value;
+        merOrderNum_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string ext1 = 6;</code>
+       * <code>optional string merOrderNum = 7;</code>
        */
-      public Builder clearExt1() {
+      public Builder clearMerOrderNum() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        ext1_ = getDefaultInstance().getExt1();
+        merOrderNum_ = getDefaultInstance().getMerOrderNum();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string ext1 = 6;</code>
+       * <code>optional string merOrderNum = 7;</code>
        */
-      public Builder setExt1Bytes(
+      public Builder setMerOrderNumBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000020;
-        ext1_ = value;
+        merOrderNum_ = value;
         onChanged();
         return this;
       }
@@ -1275,10 +1275,11 @@ public final class CreateOrderRspProto {
     java.lang.String[] descriptorData = {
       "\n7main/resources/com/zc/messages/pay/Cre" +
       "ateOrderRsp.proto\022\026com.zc.web.message.pa" +
-      "y\"\177\n\016CreateOrderRsp\022\017\n\007signMsg\030\001 \001(\t\022\017\n\007" +
-      "orderNo\030\002 \001(\t\022\025\n\rorderDatetime\030\003 \001(\t\022\022\n\n" +
-      "merchantId\030\004 \001(\t\022\022\n\nreceiveUrl\030\005 \001(\t\022\014\n\004" +
-      "ext1\030\006 \001(\tB\025B\023CreateOrderRspProto"
+      "y\"\216\001\n\016CreateOrderRsp\022\021\n\tsignValue\030\001 \001(\t\022" +
+      "\022\n\nserverTime\030\002 \001(\t\022\022\n\nmerchantId\030\004 \001(\t\022" +
+      "\030\n\020backgroundMerUrl\030\005 \001(\t\022\022\n\nmerRemark1\030" +
+      "\006 \001(\t\022\023\n\013merOrderNum\030\007 \001(\tB\025B\023CreateOrde" +
+      "rRspProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1290,7 +1291,7 @@ public final class CreateOrderRspProto {
           internal_static_com_zc_web_message_pay_CreateOrderRsp_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_pay_CreateOrderRsp_descriptor,
-              new java.lang.String[] { "SignMsg", "OrderNo", "OrderDatetime", "MerchantId", "ReceiveUrl", "Ext1", });
+              new java.lang.String[] { "SignValue", "ServerTime", "MerchantId", "BackgroundMerUrl", "MerRemark1", "MerOrderNum", });
           return null;
         }
       };

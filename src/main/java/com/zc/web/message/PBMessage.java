@@ -15,6 +15,7 @@ public class PBMessage {
 	private String sid;
 	private int error;
 	private String csfid;
+	private String clientIp;
 	
 	private transient String req;	// 请求
 	private transient Message rsp;	// 应答

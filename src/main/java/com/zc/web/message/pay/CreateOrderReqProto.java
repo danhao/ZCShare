@@ -26,350 +26,155 @@ public final class CreateOrderReqProto {
     com.google.protobuf.ByteString
         getVersionBytes();
 
-    // optional string language = 2;
+    // optional string tranCode = 5;
     /**
-     * <code>optional string language = 2;</code>
+     * <code>optional string tranCode = 5;</code>
+     *
+     * <pre>
+     *	optional string charset = 2;
+     *	optional string language = 3;
+     *	optional string signType = 4;
+     * </pre>
      */
-    boolean hasLanguage();
+    boolean hasTranCode();
     /**
-     * <code>optional string language = 2;</code>
+     * <code>optional string tranCode = 5;</code>
+     *
+     * <pre>
+     *	optional string charset = 2;
+     *	optional string language = 3;
+     *	optional string signType = 4;
+     * </pre>
      */
-    java.lang.String getLanguage();
+    java.lang.String getTranCode();
     /**
-     * <code>optional string language = 2;</code>
+     * <code>optional string tranCode = 5;</code>
+     *
+     * <pre>
+     *	optional string charset = 2;
+     *	optional string language = 3;
+     *	optional string signType = 4;
+     * </pre>
      */
     com.google.protobuf.ByteString
-        getLanguageBytes();
+        getTranCodeBytes();
 
-    // optional string inputCharset = 3;
+    // optional string tranAmt = 7;
     /**
-     * <code>optional string inputCharset = 3;</code>
+     * <code>optional string tranAmt = 7;</code>
+     *
+     * <pre>
+     *	optional string merOrderNum = 6;
+     * </pre>
      */
-    boolean hasInputCharset();
+    boolean hasTranAmt();
     /**
-     * <code>optional string inputCharset = 3;</code>
+     * <code>optional string tranAmt = 7;</code>
+     *
+     * <pre>
+     *	optional string merOrderNum = 6;
+     * </pre>
      */
-    java.lang.String getInputCharset();
+    java.lang.String getTranAmt();
     /**
-     * <code>optional string inputCharset = 3;</code>
+     * <code>optional string tranAmt = 7;</code>
+     *
+     * <pre>
+     *	optional string merOrderNum = 6;
+     * </pre>
      */
     com.google.protobuf.ByteString
-        getInputCharsetBytes();
+        getTranAmtBytes();
 
-    // optional string pickupUrl = 4;
+    // optional string feeAmt = 8;
     /**
-     * <code>optional string pickupUrl = 4;</code>
+     * <code>optional string feeAmt = 8;</code>
      */
-    boolean hasPickupUrl();
+    boolean hasFeeAmt();
     /**
-     * <code>optional string pickupUrl = 4;</code>
+     * <code>optional string feeAmt = 8;</code>
      */
-    java.lang.String getPickupUrl();
+    java.lang.String getFeeAmt();
     /**
-     * <code>optional string pickupUrl = 4;</code>
+     * <code>optional string feeAmt = 8;</code>
      */
     com.google.protobuf.ByteString
-        getPickupUrlBytes();
+        getFeeAmtBytes();
 
-    // optional string payType = 7;
+    // optional string frontMerUrl = 10;
     /**
-     * <code>optional string payType = 7;</code>
+     * <code>optional string frontMerUrl = 10;</code>
+     *
+     * <pre>
+     *	optional string currencyType = 9;
+     * </pre>
      */
-    boolean hasPayType();
+    boolean hasFrontMerUrl();
     /**
-     * <code>optional string payType = 7;</code>
+     * <code>optional string frontMerUrl = 10;</code>
+     *
+     * <pre>
+     *	optional string currencyType = 9;
+     * </pre>
      */
-    java.lang.String getPayType();
+    java.lang.String getFrontMerUrl();
     /**
-     * <code>optional string payType = 7;</code>
+     * <code>optional string frontMerUrl = 10;</code>
+     *
+     * <pre>
+     *	optional string currencyType = 9;
+     * </pre>
      */
     com.google.protobuf.ByteString
-        getPayTypeBytes();
+        getFrontMerUrlBytes();
 
-    // optional string signType = 8;
+    // optional string tranDateTime = 12;
     /**
-     * <code>optional string signType = 8;</code>
+     * <code>optional string tranDateTime = 12;</code>
+     *
+     * <pre>
+     *	optional string virCardNoIn = 13;
+     *	optional string isRepeatSubmit = 14;
+     *	optional string goodsName = 15;
+     *	optional string goodsDetail = 16;
+     *	optional string buyerName = 17;
+     *	optional string buyerContact = 18;
+     *	optional string merRemark1 = 19;
+     *	optional string merRemark2 = 20;
+     * </pre>
      */
-    boolean hasSignType();
+    boolean hasTranDateTime();
     /**
-     * <code>optional string signType = 8;</code>
+     * <code>optional string tranDateTime = 12;</code>
+     *
+     * <pre>
+     *	optional string virCardNoIn = 13;
+     *	optional string isRepeatSubmit = 14;
+     *	optional string goodsName = 15;
+     *	optional string goodsDetail = 16;
+     *	optional string buyerName = 17;
+     *	optional string buyerContact = 18;
+     *	optional string merRemark1 = 19;
+     *	optional string merRemark2 = 20;
+     * </pre>
      */
-    java.lang.String getSignType();
+    java.lang.String getTranDateTime();
     /**
-     * <code>optional string signType = 8;</code>
-     */
-    com.google.protobuf.ByteString
-        getSignTypeBytes();
-
-    // optional string orderAmount = 10;
-    /**
-     * <code>optional string orderAmount = 10;</code>
-     */
-    boolean hasOrderAmount();
-    /**
-     * <code>optional string orderAmount = 10;</code>
-     */
-    java.lang.String getOrderAmount();
-    /**
-     * <code>optional string orderAmount = 10;</code>
-     */
-    com.google.protobuf.ByteString
-        getOrderAmountBytes();
-
-    // optional string orderCurrency = 12;
-    /**
-     * <code>optional string orderCurrency = 12;</code>
-     */
-    boolean hasOrderCurrency();
-    /**
-     * <code>optional string orderCurrency = 12;</code>
-     */
-    java.lang.String getOrderCurrency();
-    /**
-     * <code>optional string orderCurrency = 12;</code>
-     */
-    com.google.protobuf.ByteString
-        getOrderCurrencyBytes();
-
-    // optional string orderExpireDatetime = 13;
-    /**
-     * <code>optional string orderExpireDatetime = 13;</code>
-     */
-    boolean hasOrderExpireDatetime();
-    /**
-     * <code>optional string orderExpireDatetime = 13;</code>
-     */
-    java.lang.String getOrderExpireDatetime();
-    /**
-     * <code>optional string orderExpireDatetime = 13;</code>
+     * <code>optional string tranDateTime = 12;</code>
+     *
+     * <pre>
+     *	optional string virCardNoIn = 13;
+     *	optional string isRepeatSubmit = 14;
+     *	optional string goodsName = 15;
+     *	optional string goodsDetail = 16;
+     *	optional string buyerName = 17;
+     *	optional string buyerContact = 18;
+     *	optional string merRemark1 = 19;
+     *	optional string merRemark2 = 20;
+     * </pre>
      */
     com.google.protobuf.ByteString
-        getOrderExpireDatetimeBytes();
-
-    // optional string payerTelephone = 14;
-    /**
-     * <code>optional string payerTelephone = 14;</code>
-     */
-    boolean hasPayerTelephone();
-    /**
-     * <code>optional string payerTelephone = 14;</code>
-     */
-    java.lang.String getPayerTelephone();
-    /**
-     * <code>optional string payerTelephone = 14;</code>
-     */
-    com.google.protobuf.ByteString
-        getPayerTelephoneBytes();
-
-    // optional string payerEmail = 15;
-    /**
-     * <code>optional string payerEmail = 15;</code>
-     */
-    boolean hasPayerEmail();
-    /**
-     * <code>optional string payerEmail = 15;</code>
-     */
-    java.lang.String getPayerEmail();
-    /**
-     * <code>optional string payerEmail = 15;</code>
-     */
-    com.google.protobuf.ByteString
-        getPayerEmailBytes();
-
-    // optional string payerName = 16;
-    /**
-     * <code>optional string payerName = 16;</code>
-     */
-    boolean hasPayerName();
-    /**
-     * <code>optional string payerName = 16;</code>
-     */
-    java.lang.String getPayerName();
-    /**
-     * <code>optional string payerName = 16;</code>
-     */
-    com.google.protobuf.ByteString
-        getPayerNameBytes();
-
-    // optional string payerIDCard = 17;
-    /**
-     * <code>optional string payerIDCard = 17;</code>
-     */
-    boolean hasPayerIDCard();
-    /**
-     * <code>optional string payerIDCard = 17;</code>
-     */
-    java.lang.String getPayerIDCard();
-    /**
-     * <code>optional string payerIDCard = 17;</code>
-     */
-    com.google.protobuf.ByteString
-        getPayerIDCardBytes();
-
-    // optional string pid = 18;
-    /**
-     * <code>optional string pid = 18;</code>
-     */
-    boolean hasPid();
-    /**
-     * <code>optional string pid = 18;</code>
-     */
-    java.lang.String getPid();
-    /**
-     * <code>optional string pid = 18;</code>
-     */
-    com.google.protobuf.ByteString
-        getPidBytes();
-
-    // optional string productName = 19;
-    /**
-     * <code>optional string productName = 19;</code>
-     */
-    boolean hasProductName();
-    /**
-     * <code>optional string productName = 19;</code>
-     */
-    java.lang.String getProductName();
-    /**
-     * <code>optional string productName = 19;</code>
-     */
-    com.google.protobuf.ByteString
-        getProductNameBytes();
-
-    // optional string productId = 20;
-    /**
-     * <code>optional string productId = 20;</code>
-     */
-    boolean hasProductId();
-    /**
-     * <code>optional string productId = 20;</code>
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>optional string productId = 20;</code>
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    // optional string productNum = 21;
-    /**
-     * <code>optional string productNum = 21;</code>
-     */
-    boolean hasProductNum();
-    /**
-     * <code>optional string productNum = 21;</code>
-     */
-    java.lang.String getProductNum();
-    /**
-     * <code>optional string productNum = 21;</code>
-     */
-    com.google.protobuf.ByteString
-        getProductNumBytes();
-
-    // optional string productPrice = 22;
-    /**
-     * <code>optional string productPrice = 22;</code>
-     */
-    boolean hasProductPrice();
-    /**
-     * <code>optional string productPrice = 22;</code>
-     */
-    java.lang.String getProductPrice();
-    /**
-     * <code>optional string productPrice = 22;</code>
-     */
-    com.google.protobuf.ByteString
-        getProductPriceBytes();
-
-    // optional string productDesc = 23;
-    /**
-     * <code>optional string productDesc = 23;</code>
-     */
-    boolean hasProductDesc();
-    /**
-     * <code>optional string productDesc = 23;</code>
-     */
-    java.lang.String getProductDesc();
-    /**
-     * <code>optional string productDesc = 23;</code>
-     */
-    com.google.protobuf.ByteString
-        getProductDescBytes();
-
-    // optional string ext2 = 25;
-    /**
-     * <code>optional string ext2 = 25;</code>
-     */
-    boolean hasExt2();
-    /**
-     * <code>optional string ext2 = 25;</code>
-     */
-    java.lang.String getExt2();
-    /**
-     * <code>optional string ext2 = 25;</code>
-     */
-    com.google.protobuf.ByteString
-        getExt2Bytes();
-
-    // optional string extTL = 26;
-    /**
-     * <code>optional string extTL = 26;</code>
-     */
-    boolean hasExtTL();
-    /**
-     * <code>optional string extTL = 26;</code>
-     */
-    java.lang.String getExtTL();
-    /**
-     * <code>optional string extTL = 26;</code>
-     */
-    com.google.protobuf.ByteString
-        getExtTLBytes();
-
-    // optional string issuerId = 27;
-    /**
-     * <code>optional string issuerId = 27;</code>
-     */
-    boolean hasIssuerId();
-    /**
-     * <code>optional string issuerId = 27;</code>
-     */
-    java.lang.String getIssuerId();
-    /**
-     * <code>optional string issuerId = 27;</code>
-     */
-    com.google.protobuf.ByteString
-        getIssuerIdBytes();
-
-    // optional string pan = 28;
-    /**
-     * <code>optional string pan = 28;</code>
-     */
-    boolean hasPan();
-    /**
-     * <code>optional string pan = 28;</code>
-     */
-    java.lang.String getPan();
-    /**
-     * <code>optional string pan = 28;</code>
-     */
-    com.google.protobuf.ByteString
-        getPanBytes();
-
-    // optional string tradeNature = 29;
-    /**
-     * <code>optional string tradeNature = 29;</code>
-     */
-    boolean hasTradeNature();
-    /**
-     * <code>optional string tradeNature = 29;</code>
-     */
-    java.lang.String getTradeNature();
-    /**
-     * <code>optional string tradeNature = 29;</code>
-     */
-    com.google.protobuf.ByteString
-        getTradeNatureBytes();
+        getTranDateTimeBytes();
   }
   /**
    * Protobuf type {@code com.zc.web.message.pay.CreateOrderReq}
@@ -427,119 +232,29 @@ public final class CreateOrderReqProto {
               version_ = input.readBytes();
               break;
             }
-            case 18: {
+            case 42: {
               bitField0_ |= 0x00000002;
-              language_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              inputCharset_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              pickupUrl_ = input.readBytes();
+              tranCode_ = input.readBytes();
               break;
             }
             case 58: {
-              bitField0_ |= 0x00000010;
-              payType_ = input.readBytes();
+              bitField0_ |= 0x00000004;
+              tranAmt_ = input.readBytes();
               break;
             }
             case 66: {
-              bitField0_ |= 0x00000020;
-              signType_ = input.readBytes();
+              bitField0_ |= 0x00000008;
+              feeAmt_ = input.readBytes();
               break;
             }
             case 82: {
-              bitField0_ |= 0x00000040;
-              orderAmount_ = input.readBytes();
+              bitField0_ |= 0x00000010;
+              frontMerUrl_ = input.readBytes();
               break;
             }
             case 98: {
-              bitField0_ |= 0x00000080;
-              orderCurrency_ = input.readBytes();
-              break;
-            }
-            case 106: {
-              bitField0_ |= 0x00000100;
-              orderExpireDatetime_ = input.readBytes();
-              break;
-            }
-            case 114: {
-              bitField0_ |= 0x00000200;
-              payerTelephone_ = input.readBytes();
-              break;
-            }
-            case 122: {
-              bitField0_ |= 0x00000400;
-              payerEmail_ = input.readBytes();
-              break;
-            }
-            case 130: {
-              bitField0_ |= 0x00000800;
-              payerName_ = input.readBytes();
-              break;
-            }
-            case 138: {
-              bitField0_ |= 0x00001000;
-              payerIDCard_ = input.readBytes();
-              break;
-            }
-            case 146: {
-              bitField0_ |= 0x00002000;
-              pid_ = input.readBytes();
-              break;
-            }
-            case 154: {
-              bitField0_ |= 0x00004000;
-              productName_ = input.readBytes();
-              break;
-            }
-            case 162: {
-              bitField0_ |= 0x00008000;
-              productId_ = input.readBytes();
-              break;
-            }
-            case 170: {
-              bitField0_ |= 0x00010000;
-              productNum_ = input.readBytes();
-              break;
-            }
-            case 178: {
-              bitField0_ |= 0x00020000;
-              productPrice_ = input.readBytes();
-              break;
-            }
-            case 186: {
-              bitField0_ |= 0x00040000;
-              productDesc_ = input.readBytes();
-              break;
-            }
-            case 202: {
-              bitField0_ |= 0x00080000;
-              ext2_ = input.readBytes();
-              break;
-            }
-            case 210: {
-              bitField0_ |= 0x00100000;
-              extTL_ = input.readBytes();
-              break;
-            }
-            case 218: {
-              bitField0_ |= 0x00200000;
-              issuerId_ = input.readBytes();
-              break;
-            }
-            case 226: {
-              bitField0_ |= 0x00400000;
-              pan_ = input.readBytes();
-              break;
-            }
-            case 234: {
-              bitField0_ |= 0x00800000;
-              tradeNature_ = input.readBytes();
+              bitField0_ |= 0x00000020;
+              tranDateTime_ = input.readBytes();
               break;
             }
           }
@@ -625,20 +340,32 @@ public final class CreateOrderReqProto {
       }
     }
 
-    // optional string language = 2;
-    public static final int LANGUAGE_FIELD_NUMBER = 2;
-    private java.lang.Object language_;
+    // optional string tranCode = 5;
+    public static final int TRANCODE_FIELD_NUMBER = 5;
+    private java.lang.Object tranCode_;
     /**
-     * <code>optional string language = 2;</code>
+     * <code>optional string tranCode = 5;</code>
+     *
+     * <pre>
+     *	optional string charset = 2;
+     *	optional string language = 3;
+     *	optional string signType = 4;
+     * </pre>
      */
-    public boolean hasLanguage() {
+    public boolean hasTranCode() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional string language = 2;</code>
+     * <code>optional string tranCode = 5;</code>
+     *
+     * <pre>
+     *	optional string charset = 2;
+     *	optional string language = 3;
+     *	optional string signType = 4;
+     * </pre>
      */
-    public java.lang.String getLanguage() {
-      java.lang.Object ref = language_;
+    public java.lang.String getTranCode() {
+      java.lang.Object ref = tranCode_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -646,42 +373,56 @@ public final class CreateOrderReqProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          language_ = s;
+          tranCode_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string language = 2;</code>
+     * <code>optional string tranCode = 5;</code>
+     *
+     * <pre>
+     *	optional string charset = 2;
+     *	optional string language = 3;
+     *	optional string signType = 4;
+     * </pre>
      */
     public com.google.protobuf.ByteString
-        getLanguageBytes() {
-      java.lang.Object ref = language_;
+        getTranCodeBytes() {
+      java.lang.Object ref = tranCode_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        language_ = b;
+        tranCode_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    // optional string inputCharset = 3;
-    public static final int INPUTCHARSET_FIELD_NUMBER = 3;
-    private java.lang.Object inputCharset_;
+    // optional string tranAmt = 7;
+    public static final int TRANAMT_FIELD_NUMBER = 7;
+    private java.lang.Object tranAmt_;
     /**
-     * <code>optional string inputCharset = 3;</code>
+     * <code>optional string tranAmt = 7;</code>
+     *
+     * <pre>
+     *	optional string merOrderNum = 6;
+     * </pre>
      */
-    public boolean hasInputCharset() {
+    public boolean hasTranAmt() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional string inputCharset = 3;</code>
+     * <code>optional string tranAmt = 7;</code>
+     *
+     * <pre>
+     *	optional string merOrderNum = 6;
+     * </pre>
      */
-    public java.lang.String getInputCharset() {
-      java.lang.Object ref = inputCharset_;
+    public java.lang.String getTranAmt() {
+      java.lang.Object ref = tranAmt_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -689,42 +430,46 @@ public final class CreateOrderReqProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          inputCharset_ = s;
+          tranAmt_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string inputCharset = 3;</code>
+     * <code>optional string tranAmt = 7;</code>
+     *
+     * <pre>
+     *	optional string merOrderNum = 6;
+     * </pre>
      */
     public com.google.protobuf.ByteString
-        getInputCharsetBytes() {
-      java.lang.Object ref = inputCharset_;
+        getTranAmtBytes() {
+      java.lang.Object ref = tranAmt_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        inputCharset_ = b;
+        tranAmt_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    // optional string pickupUrl = 4;
-    public static final int PICKUPURL_FIELD_NUMBER = 4;
-    private java.lang.Object pickupUrl_;
+    // optional string feeAmt = 8;
+    public static final int FEEAMT_FIELD_NUMBER = 8;
+    private java.lang.Object feeAmt_;
     /**
-     * <code>optional string pickupUrl = 4;</code>
+     * <code>optional string feeAmt = 8;</code>
      */
-    public boolean hasPickupUrl() {
+    public boolean hasFeeAmt() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional string pickupUrl = 4;</code>
+     * <code>optional string feeAmt = 8;</code>
      */
-    public java.lang.String getPickupUrl() {
-      java.lang.Object ref = pickupUrl_;
+    public java.lang.String getFeeAmt() {
+      java.lang.Object ref = feeAmt_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -732,42 +477,50 @@ public final class CreateOrderReqProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          pickupUrl_ = s;
+          feeAmt_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string pickupUrl = 4;</code>
+     * <code>optional string feeAmt = 8;</code>
      */
     public com.google.protobuf.ByteString
-        getPickupUrlBytes() {
-      java.lang.Object ref = pickupUrl_;
+        getFeeAmtBytes() {
+      java.lang.Object ref = feeAmt_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        pickupUrl_ = b;
+        feeAmt_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    // optional string payType = 7;
-    public static final int PAYTYPE_FIELD_NUMBER = 7;
-    private java.lang.Object payType_;
+    // optional string frontMerUrl = 10;
+    public static final int FRONTMERURL_FIELD_NUMBER = 10;
+    private java.lang.Object frontMerUrl_;
     /**
-     * <code>optional string payType = 7;</code>
+     * <code>optional string frontMerUrl = 10;</code>
+     *
+     * <pre>
+     *	optional string currencyType = 9;
+     * </pre>
      */
-    public boolean hasPayType() {
+    public boolean hasFrontMerUrl() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional string payType = 7;</code>
+     * <code>optional string frontMerUrl = 10;</code>
+     *
+     * <pre>
+     *	optional string currencyType = 9;
+     * </pre>
      */
-    public java.lang.String getPayType() {
-      java.lang.Object ref = payType_;
+    public java.lang.String getFrontMerUrl() {
+      java.lang.Object ref = frontMerUrl_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -775,42 +528,68 @@ public final class CreateOrderReqProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          payType_ = s;
+          frontMerUrl_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string payType = 7;</code>
+     * <code>optional string frontMerUrl = 10;</code>
+     *
+     * <pre>
+     *	optional string currencyType = 9;
+     * </pre>
      */
     public com.google.protobuf.ByteString
-        getPayTypeBytes() {
-      java.lang.Object ref = payType_;
+        getFrontMerUrlBytes() {
+      java.lang.Object ref = frontMerUrl_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        payType_ = b;
+        frontMerUrl_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    // optional string signType = 8;
-    public static final int SIGNTYPE_FIELD_NUMBER = 8;
-    private java.lang.Object signType_;
+    // optional string tranDateTime = 12;
+    public static final int TRANDATETIME_FIELD_NUMBER = 12;
+    private java.lang.Object tranDateTime_;
     /**
-     * <code>optional string signType = 8;</code>
+     * <code>optional string tranDateTime = 12;</code>
+     *
+     * <pre>
+     *	optional string virCardNoIn = 13;
+     *	optional string isRepeatSubmit = 14;
+     *	optional string goodsName = 15;
+     *	optional string goodsDetail = 16;
+     *	optional string buyerName = 17;
+     *	optional string buyerContact = 18;
+     *	optional string merRemark1 = 19;
+     *	optional string merRemark2 = 20;
+     * </pre>
      */
-    public boolean hasSignType() {
+    public boolean hasTranDateTime() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional string signType = 8;</code>
+     * <code>optional string tranDateTime = 12;</code>
+     *
+     * <pre>
+     *	optional string virCardNoIn = 13;
+     *	optional string isRepeatSubmit = 14;
+     *	optional string goodsName = 15;
+     *	optional string goodsDetail = 16;
+     *	optional string buyerName = 17;
+     *	optional string buyerContact = 18;
+     *	optional string merRemark1 = 19;
+     *	optional string merRemark2 = 20;
+     * </pre>
      */
-    public java.lang.String getSignType() {
-      java.lang.Object ref = signType_;
+    public java.lang.String getTranDateTime() {
+      java.lang.Object ref = tranDateTime_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -818,796 +597,33 @@ public final class CreateOrderReqProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          signType_ = s;
+          tranDateTime_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string signType = 8;</code>
+     * <code>optional string tranDateTime = 12;</code>
+     *
+     * <pre>
+     *	optional string virCardNoIn = 13;
+     *	optional string isRepeatSubmit = 14;
+     *	optional string goodsName = 15;
+     *	optional string goodsDetail = 16;
+     *	optional string buyerName = 17;
+     *	optional string buyerContact = 18;
+     *	optional string merRemark1 = 19;
+     *	optional string merRemark2 = 20;
+     * </pre>
      */
     public com.google.protobuf.ByteString
-        getSignTypeBytes() {
-      java.lang.Object ref = signType_;
+        getTranDateTimeBytes() {
+      java.lang.Object ref = tranDateTime_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        signType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string orderAmount = 10;
-    public static final int ORDERAMOUNT_FIELD_NUMBER = 10;
-    private java.lang.Object orderAmount_;
-    /**
-     * <code>optional string orderAmount = 10;</code>
-     */
-    public boolean hasOrderAmount() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>optional string orderAmount = 10;</code>
-     */
-    public java.lang.String getOrderAmount() {
-      java.lang.Object ref = orderAmount_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          orderAmount_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string orderAmount = 10;</code>
-     */
-    public com.google.protobuf.ByteString
-        getOrderAmountBytes() {
-      java.lang.Object ref = orderAmount_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orderAmount_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string orderCurrency = 12;
-    public static final int ORDERCURRENCY_FIELD_NUMBER = 12;
-    private java.lang.Object orderCurrency_;
-    /**
-     * <code>optional string orderCurrency = 12;</code>
-     */
-    public boolean hasOrderCurrency() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
-    }
-    /**
-     * <code>optional string orderCurrency = 12;</code>
-     */
-    public java.lang.String getOrderCurrency() {
-      java.lang.Object ref = orderCurrency_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          orderCurrency_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string orderCurrency = 12;</code>
-     */
-    public com.google.protobuf.ByteString
-        getOrderCurrencyBytes() {
-      java.lang.Object ref = orderCurrency_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orderCurrency_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string orderExpireDatetime = 13;
-    public static final int ORDEREXPIREDATETIME_FIELD_NUMBER = 13;
-    private java.lang.Object orderExpireDatetime_;
-    /**
-     * <code>optional string orderExpireDatetime = 13;</code>
-     */
-    public boolean hasOrderExpireDatetime() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
-    }
-    /**
-     * <code>optional string orderExpireDatetime = 13;</code>
-     */
-    public java.lang.String getOrderExpireDatetime() {
-      java.lang.Object ref = orderExpireDatetime_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          orderExpireDatetime_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string orderExpireDatetime = 13;</code>
-     */
-    public com.google.protobuf.ByteString
-        getOrderExpireDatetimeBytes() {
-      java.lang.Object ref = orderExpireDatetime_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orderExpireDatetime_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string payerTelephone = 14;
-    public static final int PAYERTELEPHONE_FIELD_NUMBER = 14;
-    private java.lang.Object payerTelephone_;
-    /**
-     * <code>optional string payerTelephone = 14;</code>
-     */
-    public boolean hasPayerTelephone() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
-    }
-    /**
-     * <code>optional string payerTelephone = 14;</code>
-     */
-    public java.lang.String getPayerTelephone() {
-      java.lang.Object ref = payerTelephone_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          payerTelephone_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string payerTelephone = 14;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPayerTelephoneBytes() {
-      java.lang.Object ref = payerTelephone_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        payerTelephone_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string payerEmail = 15;
-    public static final int PAYEREMAIL_FIELD_NUMBER = 15;
-    private java.lang.Object payerEmail_;
-    /**
-     * <code>optional string payerEmail = 15;</code>
-     */
-    public boolean hasPayerEmail() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
-    }
-    /**
-     * <code>optional string payerEmail = 15;</code>
-     */
-    public java.lang.String getPayerEmail() {
-      java.lang.Object ref = payerEmail_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          payerEmail_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string payerEmail = 15;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPayerEmailBytes() {
-      java.lang.Object ref = payerEmail_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        payerEmail_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string payerName = 16;
-    public static final int PAYERNAME_FIELD_NUMBER = 16;
-    private java.lang.Object payerName_;
-    /**
-     * <code>optional string payerName = 16;</code>
-     */
-    public boolean hasPayerName() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
-    }
-    /**
-     * <code>optional string payerName = 16;</code>
-     */
-    public java.lang.String getPayerName() {
-      java.lang.Object ref = payerName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          payerName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string payerName = 16;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPayerNameBytes() {
-      java.lang.Object ref = payerName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        payerName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string payerIDCard = 17;
-    public static final int PAYERIDCARD_FIELD_NUMBER = 17;
-    private java.lang.Object payerIDCard_;
-    /**
-     * <code>optional string payerIDCard = 17;</code>
-     */
-    public boolean hasPayerIDCard() {
-      return ((bitField0_ & 0x00001000) == 0x00001000);
-    }
-    /**
-     * <code>optional string payerIDCard = 17;</code>
-     */
-    public java.lang.String getPayerIDCard() {
-      java.lang.Object ref = payerIDCard_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          payerIDCard_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string payerIDCard = 17;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPayerIDCardBytes() {
-      java.lang.Object ref = payerIDCard_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        payerIDCard_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string pid = 18;
-    public static final int PID_FIELD_NUMBER = 18;
-    private java.lang.Object pid_;
-    /**
-     * <code>optional string pid = 18;</code>
-     */
-    public boolean hasPid() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
-    }
-    /**
-     * <code>optional string pid = 18;</code>
-     */
-    public java.lang.String getPid() {
-      java.lang.Object ref = pid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          pid_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string pid = 18;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPidBytes() {
-      java.lang.Object ref = pid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string productName = 19;
-    public static final int PRODUCTNAME_FIELD_NUMBER = 19;
-    private java.lang.Object productName_;
-    /**
-     * <code>optional string productName = 19;</code>
-     */
-    public boolean hasProductName() {
-      return ((bitField0_ & 0x00004000) == 0x00004000);
-    }
-    /**
-     * <code>optional string productName = 19;</code>
-     */
-    public java.lang.String getProductName() {
-      java.lang.Object ref = productName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          productName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string productName = 19;</code>
-     */
-    public com.google.protobuf.ByteString
-        getProductNameBytes() {
-      java.lang.Object ref = productName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        productName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string productId = 20;
-    public static final int PRODUCTID_FIELD_NUMBER = 20;
-    private java.lang.Object productId_;
-    /**
-     * <code>optional string productId = 20;</code>
-     */
-    public boolean hasProductId() {
-      return ((bitField0_ & 0x00008000) == 0x00008000);
-    }
-    /**
-     * <code>optional string productId = 20;</code>
-     */
-    public java.lang.String getProductId() {
-      java.lang.Object ref = productId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          productId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string productId = 20;</code>
-     */
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      java.lang.Object ref = productId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        productId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string productNum = 21;
-    public static final int PRODUCTNUM_FIELD_NUMBER = 21;
-    private java.lang.Object productNum_;
-    /**
-     * <code>optional string productNum = 21;</code>
-     */
-    public boolean hasProductNum() {
-      return ((bitField0_ & 0x00010000) == 0x00010000);
-    }
-    /**
-     * <code>optional string productNum = 21;</code>
-     */
-    public java.lang.String getProductNum() {
-      java.lang.Object ref = productNum_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          productNum_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string productNum = 21;</code>
-     */
-    public com.google.protobuf.ByteString
-        getProductNumBytes() {
-      java.lang.Object ref = productNum_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        productNum_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string productPrice = 22;
-    public static final int PRODUCTPRICE_FIELD_NUMBER = 22;
-    private java.lang.Object productPrice_;
-    /**
-     * <code>optional string productPrice = 22;</code>
-     */
-    public boolean hasProductPrice() {
-      return ((bitField0_ & 0x00020000) == 0x00020000);
-    }
-    /**
-     * <code>optional string productPrice = 22;</code>
-     */
-    public java.lang.String getProductPrice() {
-      java.lang.Object ref = productPrice_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          productPrice_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string productPrice = 22;</code>
-     */
-    public com.google.protobuf.ByteString
-        getProductPriceBytes() {
-      java.lang.Object ref = productPrice_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        productPrice_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string productDesc = 23;
-    public static final int PRODUCTDESC_FIELD_NUMBER = 23;
-    private java.lang.Object productDesc_;
-    /**
-     * <code>optional string productDesc = 23;</code>
-     */
-    public boolean hasProductDesc() {
-      return ((bitField0_ & 0x00040000) == 0x00040000);
-    }
-    /**
-     * <code>optional string productDesc = 23;</code>
-     */
-    public java.lang.String getProductDesc() {
-      java.lang.Object ref = productDesc_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          productDesc_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string productDesc = 23;</code>
-     */
-    public com.google.protobuf.ByteString
-        getProductDescBytes() {
-      java.lang.Object ref = productDesc_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        productDesc_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string ext2 = 25;
-    public static final int EXT2_FIELD_NUMBER = 25;
-    private java.lang.Object ext2_;
-    /**
-     * <code>optional string ext2 = 25;</code>
-     */
-    public boolean hasExt2() {
-      return ((bitField0_ & 0x00080000) == 0x00080000);
-    }
-    /**
-     * <code>optional string ext2 = 25;</code>
-     */
-    public java.lang.String getExt2() {
-      java.lang.Object ref = ext2_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          ext2_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string ext2 = 25;</code>
-     */
-    public com.google.protobuf.ByteString
-        getExt2Bytes() {
-      java.lang.Object ref = ext2_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        ext2_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string extTL = 26;
-    public static final int EXTTL_FIELD_NUMBER = 26;
-    private java.lang.Object extTL_;
-    /**
-     * <code>optional string extTL = 26;</code>
-     */
-    public boolean hasExtTL() {
-      return ((bitField0_ & 0x00100000) == 0x00100000);
-    }
-    /**
-     * <code>optional string extTL = 26;</code>
-     */
-    public java.lang.String getExtTL() {
-      java.lang.Object ref = extTL_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          extTL_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string extTL = 26;</code>
-     */
-    public com.google.protobuf.ByteString
-        getExtTLBytes() {
-      java.lang.Object ref = extTL_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        extTL_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string issuerId = 27;
-    public static final int ISSUERID_FIELD_NUMBER = 27;
-    private java.lang.Object issuerId_;
-    /**
-     * <code>optional string issuerId = 27;</code>
-     */
-    public boolean hasIssuerId() {
-      return ((bitField0_ & 0x00200000) == 0x00200000);
-    }
-    /**
-     * <code>optional string issuerId = 27;</code>
-     */
-    public java.lang.String getIssuerId() {
-      java.lang.Object ref = issuerId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          issuerId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string issuerId = 27;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIssuerIdBytes() {
-      java.lang.Object ref = issuerId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        issuerId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string pan = 28;
-    public static final int PAN_FIELD_NUMBER = 28;
-    private java.lang.Object pan_;
-    /**
-     * <code>optional string pan = 28;</code>
-     */
-    public boolean hasPan() {
-      return ((bitField0_ & 0x00400000) == 0x00400000);
-    }
-    /**
-     * <code>optional string pan = 28;</code>
-     */
-    public java.lang.String getPan() {
-      java.lang.Object ref = pan_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          pan_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string pan = 28;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPanBytes() {
-      java.lang.Object ref = pan_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pan_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    // optional string tradeNature = 29;
-    public static final int TRADENATURE_FIELD_NUMBER = 29;
-    private java.lang.Object tradeNature_;
-    /**
-     * <code>optional string tradeNature = 29;</code>
-     */
-    public boolean hasTradeNature() {
-      return ((bitField0_ & 0x00800000) == 0x00800000);
-    }
-    /**
-     * <code>optional string tradeNature = 29;</code>
-     */
-    public java.lang.String getTradeNature() {
-      java.lang.Object ref = tradeNature_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          tradeNature_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string tradeNature = 29;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTradeNatureBytes() {
-      java.lang.Object ref = tradeNature_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        tradeNature_ = b;
+        tranDateTime_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1616,29 +632,11 @@ public final class CreateOrderReqProto {
 
     private void initFields() {
       version_ = "";
-      language_ = "";
-      inputCharset_ = "";
-      pickupUrl_ = "";
-      payType_ = "";
-      signType_ = "";
-      orderAmount_ = "";
-      orderCurrency_ = "";
-      orderExpireDatetime_ = "";
-      payerTelephone_ = "";
-      payerEmail_ = "";
-      payerName_ = "";
-      payerIDCard_ = "";
-      pid_ = "";
-      productName_ = "";
-      productId_ = "";
-      productNum_ = "";
-      productPrice_ = "";
-      productDesc_ = "";
-      ext2_ = "";
-      extTL_ = "";
-      issuerId_ = "";
-      pan_ = "";
-      tradeNature_ = "";
+      tranCode_ = "";
+      tranAmt_ = "";
+      feeAmt_ = "";
+      frontMerUrl_ = "";
+      tranDateTime_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1656,73 +654,19 @@ public final class CreateOrderReqProto {
         output.writeBytes(1, getVersionBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getLanguageBytes());
+        output.writeBytes(5, getTranCodeBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getInputCharsetBytes());
+        output.writeBytes(7, getTranAmtBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(4, getPickupUrlBytes());
+        output.writeBytes(8, getFeeAmtBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBytes(7, getPayTypeBytes());
+        output.writeBytes(10, getFrontMerUrlBytes());
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeBytes(8, getSignTypeBytes());
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeBytes(10, getOrderAmountBytes());
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeBytes(12, getOrderCurrencyBytes());
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeBytes(13, getOrderExpireDatetimeBytes());
-      }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        output.writeBytes(14, getPayerTelephoneBytes());
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeBytes(15, getPayerEmailBytes());
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        output.writeBytes(16, getPayerNameBytes());
-      }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        output.writeBytes(17, getPayerIDCardBytes());
-      }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        output.writeBytes(18, getPidBytes());
-      }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        output.writeBytes(19, getProductNameBytes());
-      }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        output.writeBytes(20, getProductIdBytes());
-      }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        output.writeBytes(21, getProductNumBytes());
-      }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        output.writeBytes(22, getProductPriceBytes());
-      }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        output.writeBytes(23, getProductDescBytes());
-      }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        output.writeBytes(25, getExt2Bytes());
-      }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        output.writeBytes(26, getExtTLBytes());
-      }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
-        output.writeBytes(27, getIssuerIdBytes());
-      }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
-        output.writeBytes(28, getPanBytes());
-      }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
-        output.writeBytes(29, getTradeNatureBytes());
+        output.writeBytes(12, getTranDateTimeBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1739,95 +683,23 @@ public final class CreateOrderReqProto {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getLanguageBytes());
+          .computeBytesSize(5, getTranCodeBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getInputCharsetBytes());
+          .computeBytesSize(7, getTranAmtBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getPickupUrlBytes());
+          .computeBytesSize(8, getFeeAmtBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, getPayTypeBytes());
+          .computeBytesSize(10, getFrontMerUrlBytes());
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(8, getSignTypeBytes());
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(10, getOrderAmountBytes());
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(12, getOrderCurrencyBytes());
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(13, getOrderExpireDatetimeBytes());
-      }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(14, getPayerTelephoneBytes());
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(15, getPayerEmailBytes());
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(16, getPayerNameBytes());
-      }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(17, getPayerIDCardBytes());
-      }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(18, getPidBytes());
-      }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(19, getProductNameBytes());
-      }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(20, getProductIdBytes());
-      }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(21, getProductNumBytes());
-      }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(22, getProductPriceBytes());
-      }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(23, getProductDescBytes());
-      }
-      if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(25, getExt2Bytes());
-      }
-      if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(26, getExtTLBytes());
-      }
-      if (((bitField0_ & 0x00200000) == 0x00200000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(27, getIssuerIdBytes());
-      }
-      if (((bitField0_ & 0x00400000) == 0x00400000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(28, getPanBytes());
-      }
-      if (((bitField0_ & 0x00800000) == 0x00800000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(29, getTradeNatureBytes());
+          .computeBytesSize(12, getTranDateTimeBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1947,52 +819,16 @@ public final class CreateOrderReqProto {
         super.clear();
         version_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        language_ = "";
+        tranCode_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        inputCharset_ = "";
+        tranAmt_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        pickupUrl_ = "";
+        feeAmt_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        payType_ = "";
+        frontMerUrl_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
-        signType_ = "";
+        tranDateTime_ = "";
         bitField0_ = (bitField0_ & ~0x00000020);
-        orderAmount_ = "";
-        bitField0_ = (bitField0_ & ~0x00000040);
-        orderCurrency_ = "";
-        bitField0_ = (bitField0_ & ~0x00000080);
-        orderExpireDatetime_ = "";
-        bitField0_ = (bitField0_ & ~0x00000100);
-        payerTelephone_ = "";
-        bitField0_ = (bitField0_ & ~0x00000200);
-        payerEmail_ = "";
-        bitField0_ = (bitField0_ & ~0x00000400);
-        payerName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000800);
-        payerIDCard_ = "";
-        bitField0_ = (bitField0_ & ~0x00001000);
-        pid_ = "";
-        bitField0_ = (bitField0_ & ~0x00002000);
-        productName_ = "";
-        bitField0_ = (bitField0_ & ~0x00004000);
-        productId_ = "";
-        bitField0_ = (bitField0_ & ~0x00008000);
-        productNum_ = "";
-        bitField0_ = (bitField0_ & ~0x00010000);
-        productPrice_ = "";
-        bitField0_ = (bitField0_ & ~0x00020000);
-        productDesc_ = "";
-        bitField0_ = (bitField0_ & ~0x00040000);
-        ext2_ = "";
-        bitField0_ = (bitField0_ & ~0x00080000);
-        extTL_ = "";
-        bitField0_ = (bitField0_ & ~0x00100000);
-        issuerId_ = "";
-        bitField0_ = (bitField0_ & ~0x00200000);
-        pan_ = "";
-        bitField0_ = (bitField0_ & ~0x00400000);
-        tradeNature_ = "";
-        bitField0_ = (bitField0_ & ~0x00800000);
         return this;
       }
 
@@ -2028,95 +864,23 @@ public final class CreateOrderReqProto {
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.language_ = language_;
+        result.tranCode_ = tranCode_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.inputCharset_ = inputCharset_;
+        result.tranAmt_ = tranAmt_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.pickupUrl_ = pickupUrl_;
+        result.feeAmt_ = feeAmt_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.payType_ = payType_;
+        result.frontMerUrl_ = frontMerUrl_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.signType_ = signType_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        result.orderAmount_ = orderAmount_;
-        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
-          to_bitField0_ |= 0x00000080;
-        }
-        result.orderCurrency_ = orderCurrency_;
-        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
-          to_bitField0_ |= 0x00000100;
-        }
-        result.orderExpireDatetime_ = orderExpireDatetime_;
-        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
-          to_bitField0_ |= 0x00000200;
-        }
-        result.payerTelephone_ = payerTelephone_;
-        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
-          to_bitField0_ |= 0x00000400;
-        }
-        result.payerEmail_ = payerEmail_;
-        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
-          to_bitField0_ |= 0x00000800;
-        }
-        result.payerName_ = payerName_;
-        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
-          to_bitField0_ |= 0x00001000;
-        }
-        result.payerIDCard_ = payerIDCard_;
-        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
-          to_bitField0_ |= 0x00002000;
-        }
-        result.pid_ = pid_;
-        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
-          to_bitField0_ |= 0x00004000;
-        }
-        result.productName_ = productName_;
-        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
-          to_bitField0_ |= 0x00008000;
-        }
-        result.productId_ = productId_;
-        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
-          to_bitField0_ |= 0x00010000;
-        }
-        result.productNum_ = productNum_;
-        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
-          to_bitField0_ |= 0x00020000;
-        }
-        result.productPrice_ = productPrice_;
-        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
-          to_bitField0_ |= 0x00040000;
-        }
-        result.productDesc_ = productDesc_;
-        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
-          to_bitField0_ |= 0x00080000;
-        }
-        result.ext2_ = ext2_;
-        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
-          to_bitField0_ |= 0x00100000;
-        }
-        result.extTL_ = extTL_;
-        if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
-          to_bitField0_ |= 0x00200000;
-        }
-        result.issuerId_ = issuerId_;
-        if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
-          to_bitField0_ |= 0x00400000;
-        }
-        result.pan_ = pan_;
-        if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
-          to_bitField0_ |= 0x00800000;
-        }
-        result.tradeNature_ = tradeNature_;
+        result.tranDateTime_ = tranDateTime_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2138,119 +902,29 @@ public final class CreateOrderReqProto {
           version_ = other.version_;
           onChanged();
         }
-        if (other.hasLanguage()) {
+        if (other.hasTranCode()) {
           bitField0_ |= 0x00000002;
-          language_ = other.language_;
+          tranCode_ = other.tranCode_;
           onChanged();
         }
-        if (other.hasInputCharset()) {
+        if (other.hasTranAmt()) {
           bitField0_ |= 0x00000004;
-          inputCharset_ = other.inputCharset_;
+          tranAmt_ = other.tranAmt_;
           onChanged();
         }
-        if (other.hasPickupUrl()) {
+        if (other.hasFeeAmt()) {
           bitField0_ |= 0x00000008;
-          pickupUrl_ = other.pickupUrl_;
+          feeAmt_ = other.feeAmt_;
           onChanged();
         }
-        if (other.hasPayType()) {
+        if (other.hasFrontMerUrl()) {
           bitField0_ |= 0x00000010;
-          payType_ = other.payType_;
+          frontMerUrl_ = other.frontMerUrl_;
           onChanged();
         }
-        if (other.hasSignType()) {
+        if (other.hasTranDateTime()) {
           bitField0_ |= 0x00000020;
-          signType_ = other.signType_;
-          onChanged();
-        }
-        if (other.hasOrderAmount()) {
-          bitField0_ |= 0x00000040;
-          orderAmount_ = other.orderAmount_;
-          onChanged();
-        }
-        if (other.hasOrderCurrency()) {
-          bitField0_ |= 0x00000080;
-          orderCurrency_ = other.orderCurrency_;
-          onChanged();
-        }
-        if (other.hasOrderExpireDatetime()) {
-          bitField0_ |= 0x00000100;
-          orderExpireDatetime_ = other.orderExpireDatetime_;
-          onChanged();
-        }
-        if (other.hasPayerTelephone()) {
-          bitField0_ |= 0x00000200;
-          payerTelephone_ = other.payerTelephone_;
-          onChanged();
-        }
-        if (other.hasPayerEmail()) {
-          bitField0_ |= 0x00000400;
-          payerEmail_ = other.payerEmail_;
-          onChanged();
-        }
-        if (other.hasPayerName()) {
-          bitField0_ |= 0x00000800;
-          payerName_ = other.payerName_;
-          onChanged();
-        }
-        if (other.hasPayerIDCard()) {
-          bitField0_ |= 0x00001000;
-          payerIDCard_ = other.payerIDCard_;
-          onChanged();
-        }
-        if (other.hasPid()) {
-          bitField0_ |= 0x00002000;
-          pid_ = other.pid_;
-          onChanged();
-        }
-        if (other.hasProductName()) {
-          bitField0_ |= 0x00004000;
-          productName_ = other.productName_;
-          onChanged();
-        }
-        if (other.hasProductId()) {
-          bitField0_ |= 0x00008000;
-          productId_ = other.productId_;
-          onChanged();
-        }
-        if (other.hasProductNum()) {
-          bitField0_ |= 0x00010000;
-          productNum_ = other.productNum_;
-          onChanged();
-        }
-        if (other.hasProductPrice()) {
-          bitField0_ |= 0x00020000;
-          productPrice_ = other.productPrice_;
-          onChanged();
-        }
-        if (other.hasProductDesc()) {
-          bitField0_ |= 0x00040000;
-          productDesc_ = other.productDesc_;
-          onChanged();
-        }
-        if (other.hasExt2()) {
-          bitField0_ |= 0x00080000;
-          ext2_ = other.ext2_;
-          onChanged();
-        }
-        if (other.hasExtTL()) {
-          bitField0_ |= 0x00100000;
-          extTL_ = other.extTL_;
-          onChanged();
-        }
-        if (other.hasIssuerId()) {
-          bitField0_ |= 0x00200000;
-          issuerId_ = other.issuerId_;
-          onChanged();
-        }
-        if (other.hasPan()) {
-          bitField0_ |= 0x00400000;
-          pan_ = other.pan_;
-          onChanged();
-        }
-        if (other.hasTradeNature()) {
-          bitField0_ |= 0x00800000;
-          tradeNature_ = other.tradeNature_;
+          tranDateTime_ = other.tranDateTime_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2354,1704 +1028,522 @@ public final class CreateOrderReqProto {
         return this;
       }
 
-      // optional string language = 2;
-      private java.lang.Object language_ = "";
+      // optional string tranCode = 5;
+      private java.lang.Object tranCode_ = "";
       /**
-       * <code>optional string language = 2;</code>
+       * <code>optional string tranCode = 5;</code>
+       *
+       * <pre>
+       *	optional string charset = 2;
+       *	optional string language = 3;
+       *	optional string signType = 4;
+       * </pre>
        */
-      public boolean hasLanguage() {
+      public boolean hasTranCode() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional string language = 2;</code>
+       * <code>optional string tranCode = 5;</code>
+       *
+       * <pre>
+       *	optional string charset = 2;
+       *	optional string language = 3;
+       *	optional string signType = 4;
+       * </pre>
        */
-      public java.lang.String getLanguage() {
-        java.lang.Object ref = language_;
+      public java.lang.String getTranCode() {
+        java.lang.Object ref = tranCode_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          language_ = s;
+          tranCode_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string language = 2;</code>
+       * <code>optional string tranCode = 5;</code>
+       *
+       * <pre>
+       *	optional string charset = 2;
+       *	optional string language = 3;
+       *	optional string signType = 4;
+       * </pre>
        */
       public com.google.protobuf.ByteString
-          getLanguageBytes() {
-        java.lang.Object ref = language_;
+          getTranCodeBytes() {
+        java.lang.Object ref = tranCode_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          language_ = b;
+          tranCode_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string language = 2;</code>
+       * <code>optional string tranCode = 5;</code>
+       *
+       * <pre>
+       *	optional string charset = 2;
+       *	optional string language = 3;
+       *	optional string signType = 4;
+       * </pre>
        */
-      public Builder setLanguage(
+      public Builder setTranCode(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        language_ = value;
+        tranCode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string language = 2;</code>
+       * <code>optional string tranCode = 5;</code>
+       *
+       * <pre>
+       *	optional string charset = 2;
+       *	optional string language = 3;
+       *	optional string signType = 4;
+       * </pre>
        */
-      public Builder clearLanguage() {
+      public Builder clearTranCode() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        language_ = getDefaultInstance().getLanguage();
+        tranCode_ = getDefaultInstance().getTranCode();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string language = 2;</code>
+       * <code>optional string tranCode = 5;</code>
+       *
+       * <pre>
+       *	optional string charset = 2;
+       *	optional string language = 3;
+       *	optional string signType = 4;
+       * </pre>
        */
-      public Builder setLanguageBytes(
+      public Builder setTranCodeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        language_ = value;
+        tranCode_ = value;
         onChanged();
         return this;
       }
 
-      // optional string inputCharset = 3;
-      private java.lang.Object inputCharset_ = "";
+      // optional string tranAmt = 7;
+      private java.lang.Object tranAmt_ = "";
       /**
-       * <code>optional string inputCharset = 3;</code>
+       * <code>optional string tranAmt = 7;</code>
+       *
+       * <pre>
+       *	optional string merOrderNum = 6;
+       * </pre>
        */
-      public boolean hasInputCharset() {
+      public boolean hasTranAmt() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional string inputCharset = 3;</code>
+       * <code>optional string tranAmt = 7;</code>
+       *
+       * <pre>
+       *	optional string merOrderNum = 6;
+       * </pre>
        */
-      public java.lang.String getInputCharset() {
-        java.lang.Object ref = inputCharset_;
+      public java.lang.String getTranAmt() {
+        java.lang.Object ref = tranAmt_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          inputCharset_ = s;
+          tranAmt_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string inputCharset = 3;</code>
+       * <code>optional string tranAmt = 7;</code>
+       *
+       * <pre>
+       *	optional string merOrderNum = 6;
+       * </pre>
        */
       public com.google.protobuf.ByteString
-          getInputCharsetBytes() {
-        java.lang.Object ref = inputCharset_;
+          getTranAmtBytes() {
+        java.lang.Object ref = tranAmt_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          inputCharset_ = b;
+          tranAmt_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string inputCharset = 3;</code>
+       * <code>optional string tranAmt = 7;</code>
+       *
+       * <pre>
+       *	optional string merOrderNum = 6;
+       * </pre>
        */
-      public Builder setInputCharset(
+      public Builder setTranAmt(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000004;
-        inputCharset_ = value;
+        tranAmt_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string inputCharset = 3;</code>
+       * <code>optional string tranAmt = 7;</code>
+       *
+       * <pre>
+       *	optional string merOrderNum = 6;
+       * </pre>
        */
-      public Builder clearInputCharset() {
+      public Builder clearTranAmt() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        inputCharset_ = getDefaultInstance().getInputCharset();
+        tranAmt_ = getDefaultInstance().getTranAmt();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string inputCharset = 3;</code>
+       * <code>optional string tranAmt = 7;</code>
+       *
+       * <pre>
+       *	optional string merOrderNum = 6;
+       * </pre>
        */
-      public Builder setInputCharsetBytes(
+      public Builder setTranAmtBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000004;
-        inputCharset_ = value;
+        tranAmt_ = value;
         onChanged();
         return this;
       }
 
-      // optional string pickupUrl = 4;
-      private java.lang.Object pickupUrl_ = "";
+      // optional string feeAmt = 8;
+      private java.lang.Object feeAmt_ = "";
       /**
-       * <code>optional string pickupUrl = 4;</code>
+       * <code>optional string feeAmt = 8;</code>
        */
-      public boolean hasPickupUrl() {
+      public boolean hasFeeAmt() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional string pickupUrl = 4;</code>
+       * <code>optional string feeAmt = 8;</code>
        */
-      public java.lang.String getPickupUrl() {
-        java.lang.Object ref = pickupUrl_;
+      public java.lang.String getFeeAmt() {
+        java.lang.Object ref = feeAmt_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          pickupUrl_ = s;
+          feeAmt_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string pickupUrl = 4;</code>
+       * <code>optional string feeAmt = 8;</code>
        */
       public com.google.protobuf.ByteString
-          getPickupUrlBytes() {
-        java.lang.Object ref = pickupUrl_;
+          getFeeAmtBytes() {
+        java.lang.Object ref = feeAmt_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          pickupUrl_ = b;
+          feeAmt_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string pickupUrl = 4;</code>
+       * <code>optional string feeAmt = 8;</code>
        */
-      public Builder setPickupUrl(
+      public Builder setFeeAmt(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        pickupUrl_ = value;
+        feeAmt_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string pickupUrl = 4;</code>
+       * <code>optional string feeAmt = 8;</code>
        */
-      public Builder clearPickupUrl() {
+      public Builder clearFeeAmt() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        pickupUrl_ = getDefaultInstance().getPickupUrl();
+        feeAmt_ = getDefaultInstance().getFeeAmt();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string pickupUrl = 4;</code>
+       * <code>optional string feeAmt = 8;</code>
        */
-      public Builder setPickupUrlBytes(
+      public Builder setFeeAmtBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        pickupUrl_ = value;
+        feeAmt_ = value;
         onChanged();
         return this;
       }
 
-      // optional string payType = 7;
-      private java.lang.Object payType_ = "";
+      // optional string frontMerUrl = 10;
+      private java.lang.Object frontMerUrl_ = "";
       /**
-       * <code>optional string payType = 7;</code>
+       * <code>optional string frontMerUrl = 10;</code>
+       *
+       * <pre>
+       *	optional string currencyType = 9;
+       * </pre>
        */
-      public boolean hasPayType() {
+      public boolean hasFrontMerUrl() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional string payType = 7;</code>
+       * <code>optional string frontMerUrl = 10;</code>
+       *
+       * <pre>
+       *	optional string currencyType = 9;
+       * </pre>
        */
-      public java.lang.String getPayType() {
-        java.lang.Object ref = payType_;
+      public java.lang.String getFrontMerUrl() {
+        java.lang.Object ref = frontMerUrl_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          payType_ = s;
+          frontMerUrl_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string payType = 7;</code>
+       * <code>optional string frontMerUrl = 10;</code>
+       *
+       * <pre>
+       *	optional string currencyType = 9;
+       * </pre>
        */
       public com.google.protobuf.ByteString
-          getPayTypeBytes() {
-        java.lang.Object ref = payType_;
+          getFrontMerUrlBytes() {
+        java.lang.Object ref = frontMerUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          payType_ = b;
+          frontMerUrl_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string payType = 7;</code>
+       * <code>optional string frontMerUrl = 10;</code>
+       *
+       * <pre>
+       *	optional string currencyType = 9;
+       * </pre>
        */
-      public Builder setPayType(
+      public Builder setFrontMerUrl(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000010;
-        payType_ = value;
+        frontMerUrl_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string payType = 7;</code>
+       * <code>optional string frontMerUrl = 10;</code>
+       *
+       * <pre>
+       *	optional string currencyType = 9;
+       * </pre>
        */
-      public Builder clearPayType() {
+      public Builder clearFrontMerUrl() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        payType_ = getDefaultInstance().getPayType();
+        frontMerUrl_ = getDefaultInstance().getFrontMerUrl();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string payType = 7;</code>
+       * <code>optional string frontMerUrl = 10;</code>
+       *
+       * <pre>
+       *	optional string currencyType = 9;
+       * </pre>
        */
-      public Builder setPayTypeBytes(
+      public Builder setFrontMerUrlBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000010;
-        payType_ = value;
+        frontMerUrl_ = value;
         onChanged();
         return this;
       }
 
-      // optional string signType = 8;
-      private java.lang.Object signType_ = "";
+      // optional string tranDateTime = 12;
+      private java.lang.Object tranDateTime_ = "";
       /**
-       * <code>optional string signType = 8;</code>
+       * <code>optional string tranDateTime = 12;</code>
+       *
+       * <pre>
+       *	optional string virCardNoIn = 13;
+       *	optional string isRepeatSubmit = 14;
+       *	optional string goodsName = 15;
+       *	optional string goodsDetail = 16;
+       *	optional string buyerName = 17;
+       *	optional string buyerContact = 18;
+       *	optional string merRemark1 = 19;
+       *	optional string merRemark2 = 20;
+       * </pre>
        */
-      public boolean hasSignType() {
+      public boolean hasTranDateTime() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional string signType = 8;</code>
+       * <code>optional string tranDateTime = 12;</code>
+       *
+       * <pre>
+       *	optional string virCardNoIn = 13;
+       *	optional string isRepeatSubmit = 14;
+       *	optional string goodsName = 15;
+       *	optional string goodsDetail = 16;
+       *	optional string buyerName = 17;
+       *	optional string buyerContact = 18;
+       *	optional string merRemark1 = 19;
+       *	optional string merRemark2 = 20;
+       * </pre>
        */
-      public java.lang.String getSignType() {
-        java.lang.Object ref = signType_;
+      public java.lang.String getTranDateTime() {
+        java.lang.Object ref = tranDateTime_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          signType_ = s;
+          tranDateTime_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string signType = 8;</code>
+       * <code>optional string tranDateTime = 12;</code>
+       *
+       * <pre>
+       *	optional string virCardNoIn = 13;
+       *	optional string isRepeatSubmit = 14;
+       *	optional string goodsName = 15;
+       *	optional string goodsDetail = 16;
+       *	optional string buyerName = 17;
+       *	optional string buyerContact = 18;
+       *	optional string merRemark1 = 19;
+       *	optional string merRemark2 = 20;
+       * </pre>
        */
       public com.google.protobuf.ByteString
-          getSignTypeBytes() {
-        java.lang.Object ref = signType_;
+          getTranDateTimeBytes() {
+        java.lang.Object ref = tranDateTime_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          signType_ = b;
+          tranDateTime_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>optional string signType = 8;</code>
+       * <code>optional string tranDateTime = 12;</code>
+       *
+       * <pre>
+       *	optional string virCardNoIn = 13;
+       *	optional string isRepeatSubmit = 14;
+       *	optional string goodsName = 15;
+       *	optional string goodsDetail = 16;
+       *	optional string buyerName = 17;
+       *	optional string buyerContact = 18;
+       *	optional string merRemark1 = 19;
+       *	optional string merRemark2 = 20;
+       * </pre>
        */
-      public Builder setSignType(
+      public Builder setTranDateTime(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000020;
-        signType_ = value;
+        tranDateTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string signType = 8;</code>
+       * <code>optional string tranDateTime = 12;</code>
+       *
+       * <pre>
+       *	optional string virCardNoIn = 13;
+       *	optional string isRepeatSubmit = 14;
+       *	optional string goodsName = 15;
+       *	optional string goodsDetail = 16;
+       *	optional string buyerName = 17;
+       *	optional string buyerContact = 18;
+       *	optional string merRemark1 = 19;
+       *	optional string merRemark2 = 20;
+       * </pre>
        */
-      public Builder clearSignType() {
+      public Builder clearTranDateTime() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        signType_ = getDefaultInstance().getSignType();
+        tranDateTime_ = getDefaultInstance().getTranDateTime();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string signType = 8;</code>
+       * <code>optional string tranDateTime = 12;</code>
+       *
+       * <pre>
+       *	optional string virCardNoIn = 13;
+       *	optional string isRepeatSubmit = 14;
+       *	optional string goodsName = 15;
+       *	optional string goodsDetail = 16;
+       *	optional string buyerName = 17;
+       *	optional string buyerContact = 18;
+       *	optional string merRemark1 = 19;
+       *	optional string merRemark2 = 20;
+       * </pre>
        */
-      public Builder setSignTypeBytes(
+      public Builder setTranDateTimeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000020;
-        signType_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string orderAmount = 10;
-      private java.lang.Object orderAmount_ = "";
-      /**
-       * <code>optional string orderAmount = 10;</code>
-       */
-      public boolean hasOrderAmount() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional string orderAmount = 10;</code>
-       */
-      public java.lang.String getOrderAmount() {
-        java.lang.Object ref = orderAmount_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderAmount_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string orderAmount = 10;</code>
-       */
-      public com.google.protobuf.ByteString
-          getOrderAmountBytes() {
-        java.lang.Object ref = orderAmount_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orderAmount_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string orderAmount = 10;</code>
-       */
-      public Builder setOrderAmount(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-        orderAmount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string orderAmount = 10;</code>
-       */
-      public Builder clearOrderAmount() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        orderAmount_ = getDefaultInstance().getOrderAmount();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string orderAmount = 10;</code>
-       */
-      public Builder setOrderAmountBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-        orderAmount_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string orderCurrency = 12;
-      private java.lang.Object orderCurrency_ = "";
-      /**
-       * <code>optional string orderCurrency = 12;</code>
-       */
-      public boolean hasOrderCurrency() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
-      }
-      /**
-       * <code>optional string orderCurrency = 12;</code>
-       */
-      public java.lang.String getOrderCurrency() {
-        java.lang.Object ref = orderCurrency_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderCurrency_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string orderCurrency = 12;</code>
-       */
-      public com.google.protobuf.ByteString
-          getOrderCurrencyBytes() {
-        java.lang.Object ref = orderCurrency_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orderCurrency_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string orderCurrency = 12;</code>
-       */
-      public Builder setOrderCurrency(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
-        orderCurrency_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string orderCurrency = 12;</code>
-       */
-      public Builder clearOrderCurrency() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        orderCurrency_ = getDefaultInstance().getOrderCurrency();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string orderCurrency = 12;</code>
-       */
-      public Builder setOrderCurrencyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
-        orderCurrency_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string orderExpireDatetime = 13;
-      private java.lang.Object orderExpireDatetime_ = "";
-      /**
-       * <code>optional string orderExpireDatetime = 13;</code>
-       */
-      public boolean hasOrderExpireDatetime() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
-      }
-      /**
-       * <code>optional string orderExpireDatetime = 13;</code>
-       */
-      public java.lang.String getOrderExpireDatetime() {
-        java.lang.Object ref = orderExpireDatetime_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderExpireDatetime_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string orderExpireDatetime = 13;</code>
-       */
-      public com.google.protobuf.ByteString
-          getOrderExpireDatetimeBytes() {
-        java.lang.Object ref = orderExpireDatetime_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orderExpireDatetime_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string orderExpireDatetime = 13;</code>
-       */
-      public Builder setOrderExpireDatetime(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000100;
-        orderExpireDatetime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string orderExpireDatetime = 13;</code>
-       */
-      public Builder clearOrderExpireDatetime() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        orderExpireDatetime_ = getDefaultInstance().getOrderExpireDatetime();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string orderExpireDatetime = 13;</code>
-       */
-      public Builder setOrderExpireDatetimeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000100;
-        orderExpireDatetime_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string payerTelephone = 14;
-      private java.lang.Object payerTelephone_ = "";
-      /**
-       * <code>optional string payerTelephone = 14;</code>
-       */
-      public boolean hasPayerTelephone() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
-      }
-      /**
-       * <code>optional string payerTelephone = 14;</code>
-       */
-      public java.lang.String getPayerTelephone() {
-        java.lang.Object ref = payerTelephone_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          payerTelephone_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string payerTelephone = 14;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPayerTelephoneBytes() {
-        java.lang.Object ref = payerTelephone_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          payerTelephone_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string payerTelephone = 14;</code>
-       */
-      public Builder setPayerTelephone(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000200;
-        payerTelephone_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string payerTelephone = 14;</code>
-       */
-      public Builder clearPayerTelephone() {
-        bitField0_ = (bitField0_ & ~0x00000200);
-        payerTelephone_ = getDefaultInstance().getPayerTelephone();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string payerTelephone = 14;</code>
-       */
-      public Builder setPayerTelephoneBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000200;
-        payerTelephone_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string payerEmail = 15;
-      private java.lang.Object payerEmail_ = "";
-      /**
-       * <code>optional string payerEmail = 15;</code>
-       */
-      public boolean hasPayerEmail() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
-      }
-      /**
-       * <code>optional string payerEmail = 15;</code>
-       */
-      public java.lang.String getPayerEmail() {
-        java.lang.Object ref = payerEmail_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          payerEmail_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string payerEmail = 15;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPayerEmailBytes() {
-        java.lang.Object ref = payerEmail_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          payerEmail_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string payerEmail = 15;</code>
-       */
-      public Builder setPayerEmail(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000400;
-        payerEmail_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string payerEmail = 15;</code>
-       */
-      public Builder clearPayerEmail() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        payerEmail_ = getDefaultInstance().getPayerEmail();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string payerEmail = 15;</code>
-       */
-      public Builder setPayerEmailBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000400;
-        payerEmail_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string payerName = 16;
-      private java.lang.Object payerName_ = "";
-      /**
-       * <code>optional string payerName = 16;</code>
-       */
-      public boolean hasPayerName() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
-      }
-      /**
-       * <code>optional string payerName = 16;</code>
-       */
-      public java.lang.String getPayerName() {
-        java.lang.Object ref = payerName_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          payerName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string payerName = 16;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPayerNameBytes() {
-        java.lang.Object ref = payerName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          payerName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string payerName = 16;</code>
-       */
-      public Builder setPayerName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000800;
-        payerName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string payerName = 16;</code>
-       */
-      public Builder clearPayerName() {
-        bitField0_ = (bitField0_ & ~0x00000800);
-        payerName_ = getDefaultInstance().getPayerName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string payerName = 16;</code>
-       */
-      public Builder setPayerNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000800;
-        payerName_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string payerIDCard = 17;
-      private java.lang.Object payerIDCard_ = "";
-      /**
-       * <code>optional string payerIDCard = 17;</code>
-       */
-      public boolean hasPayerIDCard() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
-      }
-      /**
-       * <code>optional string payerIDCard = 17;</code>
-       */
-      public java.lang.String getPayerIDCard() {
-        java.lang.Object ref = payerIDCard_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          payerIDCard_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string payerIDCard = 17;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPayerIDCardBytes() {
-        java.lang.Object ref = payerIDCard_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          payerIDCard_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string payerIDCard = 17;</code>
-       */
-      public Builder setPayerIDCard(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00001000;
-        payerIDCard_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string payerIDCard = 17;</code>
-       */
-      public Builder clearPayerIDCard() {
-        bitField0_ = (bitField0_ & ~0x00001000);
-        payerIDCard_ = getDefaultInstance().getPayerIDCard();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string payerIDCard = 17;</code>
-       */
-      public Builder setPayerIDCardBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00001000;
-        payerIDCard_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string pid = 18;
-      private java.lang.Object pid_ = "";
-      /**
-       * <code>optional string pid = 18;</code>
-       */
-      public boolean hasPid() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
-      }
-      /**
-       * <code>optional string pid = 18;</code>
-       */
-      public java.lang.String getPid() {
-        java.lang.Object ref = pid_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          pid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string pid = 18;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPidBytes() {
-        java.lang.Object ref = pid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string pid = 18;</code>
-       */
-      public Builder setPid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00002000;
-        pid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string pid = 18;</code>
-       */
-      public Builder clearPid() {
-        bitField0_ = (bitField0_ & ~0x00002000);
-        pid_ = getDefaultInstance().getPid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string pid = 18;</code>
-       */
-      public Builder setPidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00002000;
-        pid_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string productName = 19;
-      private java.lang.Object productName_ = "";
-      /**
-       * <code>optional string productName = 19;</code>
-       */
-      public boolean hasProductName() {
-        return ((bitField0_ & 0x00004000) == 0x00004000);
-      }
-      /**
-       * <code>optional string productName = 19;</code>
-       */
-      public java.lang.String getProductName() {
-        java.lang.Object ref = productName_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          productName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string productName = 19;</code>
-       */
-      public com.google.protobuf.ByteString
-          getProductNameBytes() {
-        java.lang.Object ref = productName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          productName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string productName = 19;</code>
-       */
-      public Builder setProductName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00004000;
-        productName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productName = 19;</code>
-       */
-      public Builder clearProductName() {
-        bitField0_ = (bitField0_ & ~0x00004000);
-        productName_ = getDefaultInstance().getProductName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productName = 19;</code>
-       */
-      public Builder setProductNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00004000;
-        productName_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string productId = 20;
-      private java.lang.Object productId_ = "";
-      /**
-       * <code>optional string productId = 20;</code>
-       */
-      public boolean hasProductId() {
-        return ((bitField0_ & 0x00008000) == 0x00008000);
-      }
-      /**
-       * <code>optional string productId = 20;</code>
-       */
-      public java.lang.String getProductId() {
-        java.lang.Object ref = productId_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          productId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string productId = 20;</code>
-       */
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        java.lang.Object ref = productId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          productId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string productId = 20;</code>
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00008000;
-        productId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productId = 20;</code>
-       */
-      public Builder clearProductId() {
-        bitField0_ = (bitField0_ & ~0x00008000);
-        productId_ = getDefaultInstance().getProductId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productId = 20;</code>
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00008000;
-        productId_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string productNum = 21;
-      private java.lang.Object productNum_ = "";
-      /**
-       * <code>optional string productNum = 21;</code>
-       */
-      public boolean hasProductNum() {
-        return ((bitField0_ & 0x00010000) == 0x00010000);
-      }
-      /**
-       * <code>optional string productNum = 21;</code>
-       */
-      public java.lang.String getProductNum() {
-        java.lang.Object ref = productNum_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          productNum_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string productNum = 21;</code>
-       */
-      public com.google.protobuf.ByteString
-          getProductNumBytes() {
-        java.lang.Object ref = productNum_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          productNum_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string productNum = 21;</code>
-       */
-      public Builder setProductNum(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00010000;
-        productNum_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productNum = 21;</code>
-       */
-      public Builder clearProductNum() {
-        bitField0_ = (bitField0_ & ~0x00010000);
-        productNum_ = getDefaultInstance().getProductNum();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productNum = 21;</code>
-       */
-      public Builder setProductNumBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00010000;
-        productNum_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string productPrice = 22;
-      private java.lang.Object productPrice_ = "";
-      /**
-       * <code>optional string productPrice = 22;</code>
-       */
-      public boolean hasProductPrice() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
-      }
-      /**
-       * <code>optional string productPrice = 22;</code>
-       */
-      public java.lang.String getProductPrice() {
-        java.lang.Object ref = productPrice_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          productPrice_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string productPrice = 22;</code>
-       */
-      public com.google.protobuf.ByteString
-          getProductPriceBytes() {
-        java.lang.Object ref = productPrice_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          productPrice_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string productPrice = 22;</code>
-       */
-      public Builder setProductPrice(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00020000;
-        productPrice_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productPrice = 22;</code>
-       */
-      public Builder clearProductPrice() {
-        bitField0_ = (bitField0_ & ~0x00020000);
-        productPrice_ = getDefaultInstance().getProductPrice();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productPrice = 22;</code>
-       */
-      public Builder setProductPriceBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00020000;
-        productPrice_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string productDesc = 23;
-      private java.lang.Object productDesc_ = "";
-      /**
-       * <code>optional string productDesc = 23;</code>
-       */
-      public boolean hasProductDesc() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
-      }
-      /**
-       * <code>optional string productDesc = 23;</code>
-       */
-      public java.lang.String getProductDesc() {
-        java.lang.Object ref = productDesc_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          productDesc_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string productDesc = 23;</code>
-       */
-      public com.google.protobuf.ByteString
-          getProductDescBytes() {
-        java.lang.Object ref = productDesc_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          productDesc_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string productDesc = 23;</code>
-       */
-      public Builder setProductDesc(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00040000;
-        productDesc_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productDesc = 23;</code>
-       */
-      public Builder clearProductDesc() {
-        bitField0_ = (bitField0_ & ~0x00040000);
-        productDesc_ = getDefaultInstance().getProductDesc();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string productDesc = 23;</code>
-       */
-      public Builder setProductDescBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00040000;
-        productDesc_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string ext2 = 25;
-      private java.lang.Object ext2_ = "";
-      /**
-       * <code>optional string ext2 = 25;</code>
-       */
-      public boolean hasExt2() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
-      }
-      /**
-       * <code>optional string ext2 = 25;</code>
-       */
-      public java.lang.String getExt2() {
-        java.lang.Object ref = ext2_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          ext2_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string ext2 = 25;</code>
-       */
-      public com.google.protobuf.ByteString
-          getExt2Bytes() {
-        java.lang.Object ref = ext2_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          ext2_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string ext2 = 25;</code>
-       */
-      public Builder setExt2(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00080000;
-        ext2_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string ext2 = 25;</code>
-       */
-      public Builder clearExt2() {
-        bitField0_ = (bitField0_ & ~0x00080000);
-        ext2_ = getDefaultInstance().getExt2();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string ext2 = 25;</code>
-       */
-      public Builder setExt2Bytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00080000;
-        ext2_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string extTL = 26;
-      private java.lang.Object extTL_ = "";
-      /**
-       * <code>optional string extTL = 26;</code>
-       */
-      public boolean hasExtTL() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
-      }
-      /**
-       * <code>optional string extTL = 26;</code>
-       */
-      public java.lang.String getExtTL() {
-        java.lang.Object ref = extTL_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          extTL_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string extTL = 26;</code>
-       */
-      public com.google.protobuf.ByteString
-          getExtTLBytes() {
-        java.lang.Object ref = extTL_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          extTL_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string extTL = 26;</code>
-       */
-      public Builder setExtTL(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00100000;
-        extTL_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string extTL = 26;</code>
-       */
-      public Builder clearExtTL() {
-        bitField0_ = (bitField0_ & ~0x00100000);
-        extTL_ = getDefaultInstance().getExtTL();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string extTL = 26;</code>
-       */
-      public Builder setExtTLBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00100000;
-        extTL_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string issuerId = 27;
-      private java.lang.Object issuerId_ = "";
-      /**
-       * <code>optional string issuerId = 27;</code>
-       */
-      public boolean hasIssuerId() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
-      }
-      /**
-       * <code>optional string issuerId = 27;</code>
-       */
-      public java.lang.String getIssuerId() {
-        java.lang.Object ref = issuerId_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          issuerId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string issuerId = 27;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIssuerIdBytes() {
-        java.lang.Object ref = issuerId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          issuerId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string issuerId = 27;</code>
-       */
-      public Builder setIssuerId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00200000;
-        issuerId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string issuerId = 27;</code>
-       */
-      public Builder clearIssuerId() {
-        bitField0_ = (bitField0_ & ~0x00200000);
-        issuerId_ = getDefaultInstance().getIssuerId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string issuerId = 27;</code>
-       */
-      public Builder setIssuerIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00200000;
-        issuerId_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string pan = 28;
-      private java.lang.Object pan_ = "";
-      /**
-       * <code>optional string pan = 28;</code>
-       */
-      public boolean hasPan() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
-      }
-      /**
-       * <code>optional string pan = 28;</code>
-       */
-      public java.lang.String getPan() {
-        java.lang.Object ref = pan_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          pan_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string pan = 28;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPanBytes() {
-        java.lang.Object ref = pan_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pan_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string pan = 28;</code>
-       */
-      public Builder setPan(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00400000;
-        pan_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string pan = 28;</code>
-       */
-      public Builder clearPan() {
-        bitField0_ = (bitField0_ & ~0x00400000);
-        pan_ = getDefaultInstance().getPan();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string pan = 28;</code>
-       */
-      public Builder setPanBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00400000;
-        pan_ = value;
-        onChanged();
-        return this;
-      }
-
-      // optional string tradeNature = 29;
-      private java.lang.Object tradeNature_ = "";
-      /**
-       * <code>optional string tradeNature = 29;</code>
-       */
-      public boolean hasTradeNature() {
-        return ((bitField0_ & 0x00800000) == 0x00800000);
-      }
-      /**
-       * <code>optional string tradeNature = 29;</code>
-       */
-      public java.lang.String getTradeNature() {
-        java.lang.Object ref = tradeNature_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          tradeNature_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string tradeNature = 29;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTradeNatureBytes() {
-        java.lang.Object ref = tradeNature_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          tradeNature_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string tradeNature = 29;</code>
-       */
-      public Builder setTradeNature(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00800000;
-        tradeNature_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string tradeNature = 29;</code>
-       */
-      public Builder clearTradeNature() {
-        bitField0_ = (bitField0_ & ~0x00800000);
-        tradeNature_ = getDefaultInstance().getTradeNature();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string tradeNature = 29;</code>
-       */
-      public Builder setTradeNatureBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00800000;
-        tradeNature_ = value;
+        tranDateTime_ = value;
         onChanged();
         return this;
       }
@@ -4083,19 +1575,10 @@ public final class CreateOrderReqProto {
     java.lang.String[] descriptorData = {
       "\n7main/resources/com/zc/messages/pay/Cre" +
       "ateOrderReq.proto\022\026com.zc.web.message.pa" +
-      "y\"\341\003\n\016CreateOrderReq\022\017\n\007version\030\001 \001(\t\022\020\n" +
-      "\010language\030\002 \001(\t\022\024\n\014inputCharset\030\003 \001(\t\022\021\n" +
-      "\tpickupUrl\030\004 \001(\t\022\017\n\007payType\030\007 \001(\t\022\020\n\010sig" +
-      "nType\030\010 \001(\t\022\023\n\013orderAmount\030\n \001(\t\022\025\n\rorde" +
-      "rCurrency\030\014 \001(\t\022\033\n\023orderExpireDatetime\030\r" +
-      " \001(\t\022\026\n\016payerTelephone\030\016 \001(\t\022\022\n\npayerEma" +
-      "il\030\017 \001(\t\022\021\n\tpayerName\030\020 \001(\t\022\023\n\013payerIDCa" +
-      "rd\030\021 \001(\t\022\013\n\003pid\030\022 \001(\t\022\023\n\013productName\030\023 \001",
-      "(\t\022\021\n\tproductId\030\024 \001(\t\022\022\n\nproductNum\030\025 \001(" +
-      "\t\022\024\n\014productPrice\030\026 \001(\t\022\023\n\013productDesc\030\027" +
-      " \001(\t\022\014\n\004ext2\030\031 \001(\t\022\r\n\005extTL\030\032 \001(\t\022\020\n\010iss" +
-      "uerId\030\033 \001(\t\022\013\n\003pan\030\034 \001(\t\022\023\n\013tradeNature\030" +
-      "\035 \001(\tB\025B\023CreateOrderReqProto"
+      "y\"\177\n\016CreateOrderReq\022\017\n\007version\030\001 \001(\t\022\020\n\010" +
+      "tranCode\030\005 \001(\t\022\017\n\007tranAmt\030\007 \001(\t\022\016\n\006feeAm" +
+      "t\030\010 \001(\t\022\023\n\013frontMerUrl\030\n \001(\t\022\024\n\014tranDate" +
+      "Time\030\014 \001(\tB\025B\023CreateOrderReqProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -4107,7 +1590,7 @@ public final class CreateOrderReqProto {
           internal_static_com_zc_web_message_pay_CreateOrderReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_pay_CreateOrderReq_descriptor,
-              new java.lang.String[] { "Version", "Language", "InputCharset", "PickupUrl", "PayType", "SignType", "OrderAmount", "OrderCurrency", "OrderExpireDatetime", "PayerTelephone", "PayerEmail", "PayerName", "PayerIDCard", "Pid", "ProductName", "ProductId", "ProductNum", "ProductPrice", "ProductDesc", "Ext2", "ExtTL", "IssuerId", "Pan", "TradeNature", });
+              new java.lang.String[] { "Version", "TranCode", "TranAmt", "FeeAmt", "FrontMerUrl", "TranDateTime", });
           return null;
         }
       };
