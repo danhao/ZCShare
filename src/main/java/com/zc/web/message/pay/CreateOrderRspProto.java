@@ -100,6 +100,21 @@ public final class CreateOrderRspProto {
      */
     com.google.protobuf.ByteString
         getMerOrderNumBytes();
+
+    // optional string transIp = 8;
+    /**
+     * <code>optional string transIp = 8;</code>
+     */
+    boolean hasTransIp();
+    /**
+     * <code>optional string transIp = 8;</code>
+     */
+    java.lang.String getTransIp();
+    /**
+     * <code>optional string transIp = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getTransIpBytes();
   }
   /**
    * Protobuf type {@code com.zc.web.message.pay.CreateOrderRsp}
@@ -180,6 +195,11 @@ public final class CreateOrderRspProto {
             case 58: {
               bitField0_ |= 0x00000020;
               merOrderNum_ = input.readBytes();
+              break;
+            }
+            case 66: {
+              bitField0_ |= 0x00000040;
+              transIp_ = input.readBytes();
               break;
             }
           }
@@ -480,6 +500,49 @@ public final class CreateOrderRspProto {
       }
     }
 
+    // optional string transIp = 8;
+    public static final int TRANSIP_FIELD_NUMBER = 8;
+    private java.lang.Object transIp_;
+    /**
+     * <code>optional string transIp = 8;</code>
+     */
+    public boolean hasTransIp() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional string transIp = 8;</code>
+     */
+    public java.lang.String getTransIp() {
+      java.lang.Object ref = transIp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          transIp_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string transIp = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTransIpBytes() {
+      java.lang.Object ref = transIp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transIp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       signValue_ = "";
       serverTime_ = "";
@@ -487,6 +550,7 @@ public final class CreateOrderRspProto {
       backgroundMerUrl_ = "";
       merRemark1_ = "";
       merOrderNum_ = "";
+      transIp_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -517,6 +581,9 @@ public final class CreateOrderRspProto {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeBytes(7, getMerOrderNumBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBytes(8, getTransIpBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -550,6 +617,10 @@ public final class CreateOrderRspProto {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(7, getMerOrderNumBytes());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, getTransIpBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -679,6 +750,8 @@ public final class CreateOrderRspProto {
         bitField0_ = (bitField0_ & ~0x00000010);
         merOrderNum_ = "";
         bitField0_ = (bitField0_ & ~0x00000020);
+        transIp_ = "";
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -731,6 +804,10 @@ public final class CreateOrderRspProto {
           to_bitField0_ |= 0x00000020;
         }
         result.merOrderNum_ = merOrderNum_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.transIp_ = transIp_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -775,6 +852,11 @@ public final class CreateOrderRspProto {
         if (other.hasMerOrderNum()) {
           bitField0_ |= 0x00000020;
           merOrderNum_ = other.merOrderNum_;
+          onChanged();
+        }
+        if (other.hasTransIp()) {
+          bitField0_ |= 0x00000040;
+          transIp_ = other.transIp_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1248,6 +1330,80 @@ public final class CreateOrderRspProto {
         return this;
       }
 
+      // optional string transIp = 8;
+      private java.lang.Object transIp_ = "";
+      /**
+       * <code>optional string transIp = 8;</code>
+       */
+      public boolean hasTransIp() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional string transIp = 8;</code>
+       */
+      public java.lang.String getTransIp() {
+        java.lang.Object ref = transIp_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          transIp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string transIp = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTransIpBytes() {
+        java.lang.Object ref = transIp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transIp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string transIp = 8;</code>
+       */
+      public Builder setTransIp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        transIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string transIp = 8;</code>
+       */
+      public Builder clearTransIp() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        transIp_ = getDefaultInstance().getTransIp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string transIp = 8;</code>
+       */
+      public Builder setTransIpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        transIp_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.zc.web.message.pay.CreateOrderRsp)
     }
 
@@ -1275,11 +1431,11 @@ public final class CreateOrderRspProto {
     java.lang.String[] descriptorData = {
       "\n7main/resources/com/zc/messages/pay/Cre" +
       "ateOrderRsp.proto\022\026com.zc.web.message.pa" +
-      "y\"\216\001\n\016CreateOrderRsp\022\021\n\tsignValue\030\001 \001(\t\022" +
+      "y\"\237\001\n\016CreateOrderRsp\022\021\n\tsignValue\030\001 \001(\t\022" +
       "\022\n\nserverTime\030\002 \001(\t\022\022\n\nmerchantId\030\004 \001(\t\022" +
       "\030\n\020backgroundMerUrl\030\005 \001(\t\022\022\n\nmerRemark1\030" +
-      "\006 \001(\t\022\023\n\013merOrderNum\030\007 \001(\tB\025B\023CreateOrde" +
-      "rRspProto"
+      "\006 \001(\t\022\023\n\013merOrderNum\030\007 \001(\t\022\017\n\007transIp\030\010 " +
+      "\001(\tB\025B\023CreateOrderRspProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1291,7 +1447,7 @@ public final class CreateOrderRspProto {
           internal_static_com_zc_web_message_pay_CreateOrderRsp_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_zc_web_message_pay_CreateOrderRsp_descriptor,
-              new java.lang.String[] { "SignValue", "ServerTime", "MerchantId", "BackgroundMerUrl", "MerRemark1", "MerOrderNum", });
+              new java.lang.String[] { "SignValue", "ServerTime", "MerchantId", "BackgroundMerUrl", "MerRemark1", "MerOrderNum", "TransIp", });
           return null;
         }
       };

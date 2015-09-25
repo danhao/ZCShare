@@ -9,4 +9,5 @@ message CreateOrderRsp {
 	optional string backgroundMerUrl = 5;
 	optional string merRemark1 = 6;
 	optional string merOrderNum = 7;
+	optional string transIp = 8;
 }
