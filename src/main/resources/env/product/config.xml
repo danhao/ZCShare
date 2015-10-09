@@ -3,7 +3,7 @@
 	<global key="1234567890" mode="dev">
 	    <!-- 公共的资源库 -->
 		<res id="0" username="zc" password="zc" url="jdbc:mysql://10.232.43.173:3306/zc_res" driver="com.mysql.jdbc.Driver" />
-		<allinpay key="11111aaaaa" merchantId="0000001502"/>
+		<allinpay key="1443151035" merchantId="0000010696"/>
 	</global>
 	
 	<zone id="1" name="zone1" host="0.0.0.0" hostOut="119.29.139.33" httpPort="30001" adminPort="31001" payPort="32001" callPort="33001">
