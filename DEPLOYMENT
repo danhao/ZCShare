@@ -1,3 +1,7 @@
 服务器环境：
-export LC_ALL=zh_CN.UTF-8
+/etc/sysconfig/i18n
+LANG="zh_CN.UTF-8"
+SYSFONT="latarcyrheb-sun16"
+ 
+source /etc/sysconfig/i18n 
 
