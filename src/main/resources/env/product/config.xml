@@ -6,9 +6,9 @@
 		<allinpay key="1443151035" merchantId="0000010696"/>
 	</global>
 	
-	<zone id="1" name="zone1" host="0.0.0.0" hostOut="211.156.182.45" httpPort="30001" adminPort="31001" payPort="32001" callPort="33001">
+	<zone id="1" name="zone1" host="0.0.0.0" hostOut="39.108.191.18" httpPort="30001" adminPort="31001" payPort="32001" callPort="33001">
 		<db>
-		    <mongo masterHost="127.0.0.1" masterPort="27018" dbname="zc_data" username="" password="" slaveHost="127.0.0.1" slavePort="27019"/>
+		    <mongo masterHost="127.0.0.1" masterPort="27017" dbname="zc_data" username="" password=""/>
 		</db>
 	</zone>
 </root>
