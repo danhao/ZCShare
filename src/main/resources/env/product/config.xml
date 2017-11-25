@@ -2,7 +2,7 @@
 <root>
 	<global key="1234567890" mode="dev">
 	    <!-- 公共的资源库 -->
-		<res id="0" username="zc" password="zc" url="jdbc:mysql://127.0.0.1:3306/zc_res" driver="com.mysql.jdbc.Driver" />
+		<res id="0" username="root" password="1234" url="jdbc:mysql://127.0.0.1:3306/zc_res" driver="com.mysql.jdbc.Driver" />
 		<allinpay key="1443151035" merchantId="0000010696"/>
 	</global>
 	
